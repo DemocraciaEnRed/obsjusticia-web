@@ -1,3 +1,29 @@
 h1,h2,h3,h4,h5,h6,.title,.subtitle{
   font-family: 'Staatliches', $family-sans-serif;
 }
+
+//==========================
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+//==========================
+
+@for $i from 1 through 9 {
+  .is-#{100 * $i} {
+    @include font-weight(100 * $i)
+  }
+}
+
+.image.is-centered{
+  margin: 0 auto;
+}
+
+.has-shadow {
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.has-text-shadow{
+   text-shadow: 0px 2px 2px #0e0e0e;
+}

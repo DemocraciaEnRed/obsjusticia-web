@@ -16,3 +16,15 @@ $colors: (
     "warning": ($warning, $warning-invert),
     "danger": ($danger, $danger-invert),
 );
+
+$body-background-color: $grey-lightest;
+
+// Navbar Variables
+// https://bulma.io/documentation/components/navbar/
+
+$navbar-background-color: $grey-lightest;
+$navbar-box-shadow-size: 0 0 0 0;
+$navbar-height: 7.25rem;
+
+$footer-background-color: $dark;
+$footer-color: true;
