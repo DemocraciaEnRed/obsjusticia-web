@@ -1,11 +1,13 @@
 <template>
   <div>
     <TheNavbar />
-    <div class="container">
-      <div class="columns is-centered mb-6">
-        <div class="column is-8">
-          <div class="content">
-            <nuxt />
+    <div class="section">
+      <div class="container">
+        <div class="columns is-centered mb-6">
+          <div class="column is-8">
+            <div class="content">
+              <nuxt />
+            </div>
           </div>
         </div>
       </div>

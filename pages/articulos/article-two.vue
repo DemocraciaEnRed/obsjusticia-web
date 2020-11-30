@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  layout: 'articulos'
+  layout: 'articles'
 }
 </script>
 
