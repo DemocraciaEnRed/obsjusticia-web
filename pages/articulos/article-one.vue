@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="title is-1">
+    <h1>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit
     </h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto corporis magnam itaque recusandae, deleniti deserunt nobis eius totam dignissimos. Minus hic reprehenderit facere laboriosam nesciunt quae, assumenda natus deleniti nisi.</p>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  layout: 'articulos'
+  layout: 'articles'
 }
 </script>
 

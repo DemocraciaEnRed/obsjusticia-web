@@ -43,5 +43,8 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-
+.navbar-item{
+  font-weight: 600;
+  text-transform: uppercase;
+}
 </style>

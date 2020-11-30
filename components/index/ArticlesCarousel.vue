@@ -14,23 +14,25 @@
       <div v-else class="my-6">
         <VueSlickCarousel v-bind="settings">
           <div v-for="article in articles" :key="`article-${article.id}`" class="articles-card">
-            <div class="card is-flex is-justify-content-space-around is-flex-direction-column">
-              <div class="card-content is-flex-grow-1">
-                <p class="title">
-                  {{ article.title }}
-                </p>
-                <p class="subtitle">
-                  Jeff Atwood
-                </p>
+            <NuxtLink :to="`articulos/${article.id}`">
+              <div class="card is-flex is-justify-content-space-around is-flex-direction-column">
+                <div class="card-content is-flex-grow-1">
+                  <p class="title">
+                    {{ article.title }}
+                  </p>
+                  <p class="subtitle">
+                    Jeff Atwood
+                  </p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <span>
+                      <i class="fas fa-eye" />&nbsp;Leer el articulo
+                    </span>
+                  </p>
+                </footer>
               </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    <i class="fas fa-eye" />&nbsp;Leer el articulo
-                  </span>
-                </p>
-              </footer>
-            </div>
+            </NuxtLink>
           </div>
         </VueSlickCarousel>
       </div>

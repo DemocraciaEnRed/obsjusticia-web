@@ -1,7 +1,15 @@
 <template>
   <div>
     <TheNavbar />
-    <nuxt />
+    <div class="container">
+      <div class="columns is-centered mb-6">
+        <div class="column is-8">
+          <div class="content">
+            <nuxt />
+          </div>
+        </div>
+      </div>
+    </div>
     <TheFooter />
   </div>
 </template>
