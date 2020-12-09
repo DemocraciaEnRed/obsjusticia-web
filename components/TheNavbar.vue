@@ -1,38 +1,32 @@
 <template>
-  <b-navbar wrapper-class="container">
+  <b-navbar wrapper-class="" centered transparent>
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
-          src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+          src="~/assets/images/logo_justa@3x.png"
           alt="Lightweight UI components for Vue.js based on Bulma"
+          class="logo-navbar"
         >
       </b-navbar-item>
     </template>
     <template slot="start">
       <b-navbar-item href="#">
-        Home
+        INICIO
       </b-navbar-item>
       <b-navbar-item href="#">
-        Documentation
+        ARTICULOS
       </b-navbar-item>
-      <b-navbar-dropdown label="Info">
-        <b-navbar-item href="#">
-          About
-        </b-navbar-item>
-        <b-navbar-item href="#">
-          Contact
-        </b-navbar-item>
-      </b-navbar-dropdown>
-    </template>
-
-    <template slot="end">
-      <b-navbar-item tag="div">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light"> Log in </a>
-        </div>
+      <b-navbar-item href="#">
+        PROCESOS
+      </b-navbar-item>
+      <b-navbar-item href="#">
+        TRANSPARENCIA
+      </b-navbar-item>
+      <b-navbar-item href="#">
+        OBSERVATORIO
+      </b-navbar-item>
+      <b-navbar-item href="#">
+        JUSTICIA Y GENERO
       </b-navbar-item>
     </template>
   </b-navbar>
@@ -46,5 +40,8 @@ export default {}
 .navbar-item{
   font-weight: 600;
   text-transform: uppercase;
+}
+.logo-navbar{
+  margin-left: 8em;
 }
 </style>

@@ -1,27 +1,33 @@
 <template>
-  <footer class="footer">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="has-text-centered has-text-left-desktop">
-              <b>Bulma</b> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </div>
-        </div>
-        <div class="column">
-          <img src="https://dummyimage.com/400" alt="" class="image is-centered footer-image">
-        </div>
+  <footer class="footer pb-0 px-0">
+    <div class="footer-top mx-6">
+      <img src="~/assets/images/justa@3x.png" class="footer-image">
+    </div>
+    <div class="columns footer-bot px-6 is-size-4">
+      <div class="column is-flex is-justify-content-center is-align-items-center">
+        Desarrollado con ♥ por Democracia en Red
       </div>
+      <div class="column is-flex is-justify-content-center is-align-items-center">
+        Todos los derechos reservados 2020
+      </div>
+      <div class="column is-flex is-justify-content-center is-align-items-center" />
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
-.footer{
+.footer-top{
   color: #FFF;
+  height: 20em;
+  display: flex;
+  align-items: center;
   .footer-image{
     width: 100px;
   }
-}
+ }
+ .footer-bot{
+   background-color: #20424f;
+   color: white;
+   height: 5em;
+ }
 </style>

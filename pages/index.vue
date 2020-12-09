@@ -1,13 +1,20 @@
 <template>
   <div>
-    <section class="container">
-      <Carousel />
-      <ArticlesCarousel />
-      <section class="section">
-        <h3 class="title has-text-primary has-text-centered">
-          Próximamente
-        </h3>
-      </section>
+    <section class="w-100">
+      <div>
+        <Carousel />
+        <ArticlesCarousel />
+        <div class="ver-mas is-flex is-justify-content-center is-align-content-center">
+          <a href="/articulos" class="is-flex has-text-black">
+            <h5>Ver todos los articulos</h5>
+            <b-icon class="ml-5 mt-3" icon="arrow-right" size="is-small" />
+          </a>
+        </div>
+      </div>
+      <Vacantes />
+      <Procesos />
+      <Ranking />
+      <Contactanos />
     </section>
   </div>
 </template>
@@ -23,3 +30,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .ver-mas{
+    font-size: 2em;
+    font-weight: 800;
+    color: #000000;
+  }
+</style>
