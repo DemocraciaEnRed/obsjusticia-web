@@ -1,22 +1,21 @@
 <template>
-  <div>
-    <section class="w-100">
-      <div>
-        <Carousel />
+  <section>
+    <Carousel />
+    <section class="section">
+      <div class="container">
         <ArticlesCarousel />
-        <div class="ver-mas is-flex is-justify-content-center is-align-content-center">
-          <a href="/articulos" class="is-flex has-text-black">
-            <h5>Ver todos los articulos</h5>
-            <b-icon class="ml-5 mt-3" icon="arrow-right" size="is-small" />
+        <br>
+        <br>
+          <a href="/articulos" class="has-text-black">
+            <h5 class="title is-3 is-size-4-touch has-text-centered">Ver todos los articulos <i class="fas fa-arrow-right"></i></h5>
           </a>
-        </div>
       </div>
-      <Vacantes />
-      <Procesos />
-      <Ranking />
-      <Contactanos />
     </section>
-  </div>
+    <Vacantes />
+    <Procesos />
+    <Ranking />
+    <Contactanos />
+  </section>
 </template>
 
 <script>
@@ -32,9 +31,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .ver-mas{
-    font-size: 2em;
-    font-weight: 800;
-    color: #000000;
-  }
+.ver-mas {
+  font-size: 2em;
+  font-weight: 800;
+  color: #000000;
+}
 </style>

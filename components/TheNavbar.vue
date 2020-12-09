@@ -1,5 +1,5 @@
 <template>
-  <b-navbar wrapper-class="" centered transparent>
+  <b-navbar wrapper-class="container" centered transparent>
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -42,6 +42,6 @@ export default {}
   text-transform: uppercase;
 }
 .logo-navbar{
-  margin-left: 8em;
+  // margin-left: 8em;
 }
 </style>

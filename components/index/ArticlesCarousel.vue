@@ -11,8 +11,8 @@
           Ocurrió un error obtuviendo la galeria
         </h4>
       </div>
-      <div v-else class="m-6">
-        <h3 class="articulos-title my-5">
+      <div v-else class="">
+        <h3 class="articulos-title">
           Articulos
         </h3>
         <VueSlickCarousel v-bind="settings">
@@ -20,24 +20,18 @@
             <NuxtLink :to="`articulos/${article.id}`">
               <div class="card">
                 <div class="card-image">
-                  <figure class="image is-5by5">
-                    <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`">
+                  <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/images/${article.imagen}.jpg`)})`">
+                    <!-- <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`"> -->
                   </figure>
                 </div>
                 <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-6">
-                        {{ article.fecha }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <p class="title is-4">
-                      {{ article.titulo }}
-                    </p>
-                    {{ article.autor }}
-                  </div>
+                  <p class="title is-6">
+                    {{ article.fecha }}
+                  </p>
+                  <p class="title is-4">
+                    {{ article.titulo }}
+                  </p>
+                  {{ article.autor }}
                 </div>
               </div>
             </NuxtLink>
@@ -97,12 +91,7 @@ export default {
 
 <style lang="scss" scoped>
 .articles-card {
-  padding: 30px 10px;
-  .card{
-    .media{
-      margin-bottom: 0.8em;
-    }
-  }
+  padding: 10px 10px 20px 10px;
   .title{
      display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -115,15 +104,20 @@ export default {
     font-weight: 900;
     text-align: left;
     color: #000000;
-    margin-left: 2em;
   }
-
-  .image{
-    overflow: hidden;
-    height: 26em;
-    img{
-      width: 100%;
-      height: auto;
-    }
+  .card-content{
+    min-height: 160px;
   }
+  .card-image .image{
+    background-size: cover;
+    background-position: center center;;
+  }
+  // .image{
+  //   overflow: hidden;
+  //   height: 26em;
+  //   img{
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
 </style>
