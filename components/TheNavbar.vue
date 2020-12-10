@@ -1,5 +1,5 @@
 <template>
-  <b-navbar wrapper-class="container" centered transparent>
+  <b-navbar wrapper-class="container" transparent>
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -9,23 +9,23 @@
         >
       </b-navbar-item>
     </template>
-    <template slot="start">
-      <b-navbar-item href="#">
+    <template slot="end">
+      <b-navbar-item tag="nuxt-link" to="/">
         INICIO
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="nuxt-link" to="/articulos">
         ARTICULOS
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="nuxt-link" to="/">
         PROCESOS
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="nuxt-link" to="/">
         TRANSPARENCIA
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="nuxt-link" to="/">
         OBSERVATORIO
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="nuxt-link" to="/">
         JUSTICIA Y GENERO
       </b-navbar-item>
     </template>
@@ -40,8 +40,5 @@ export default {}
 .navbar-item{
   font-weight: 600;
   text-transform: uppercase;
-}
-.logo-navbar{
-  // margin-left: 8em;
 }
 </style>

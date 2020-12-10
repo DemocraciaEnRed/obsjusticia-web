@@ -1,162 +1,111 @@
 <template>
-  <div class="my-6">
-    <p class="has-text-centered is-size-1">
-      ¿Que pasa <span class="has-text-weight-bold">con los concursos de los Jueces y Fiscales?</span>
-    </p>
-    <div class="vacante-jueces">
-      <div>
-        <img class="ml-6" src="~/assets/images/asset-jueces.png">
-        <p class="mb-5 ml-6 is-size-3">
+<section>
+  <div class="section">
+    <div class="container">
+      <p class="has-text-centered is-size-2 mb-6">
+        ¿Que pasa <span class="has-text-weight-bold">con los concursos de los Jueces y Fiscales?</span>
+      </p>
+      <div class="has-text-centered has-text-left-desktop">
+        <img src="~/assets/images/asset-jueces.png">
+        <p class="mb-5 is-size-4">
           Vacantes para <span class="has-text-weight-bold violeta">jueces y juezas</span>
         </p>
-        <div class="columns jueces-container py-4">
-          <div class="column p-5 m-3">
-            <div class="box-text">
-              <p class="is-size-1 has-text-left has-text-weight-bold">
-                50
-              </p>
-              <p class="is-size-5 has-text-left has-text-weight-bold">
-                EN EL PODER JUDICIAL
-              </p>
+      </div>
+      <div class="columns is-mobile is-centered">
+        <div class="column is-10-tablet is-narrow-mobile has-text-centered has-text-left-desktop jueces-container">
+          <div class="columns">
+            <div class="column">
+              <div class="px-3 py-4">
+                <p class="is-size-1 has-text-weight-bold">50</p>
+                <p class="is-size-5">EN EL PODER JUDICIAL</p>
+                <div class="line-violeta" />
+
+              </div>
             </div>
-            <div class="line-17" />
+            <div class="column">
+              <div class="px-3 py-4">
+                <p class="is-size-1 has-text-weight-bold">35</p>
+                <p class="is-size-5">CON CONCURSOS INICIADOS</p>
+                <div class="line-violeta" />
+
+              </div>
+            </div>
+            <div class="column">
+              <div class="px-3 py-4">
+                <p class="is-size-1 has-text-weight-bold">15</p>
+                <p class="is-size-5">SIN CONCURSOS INICIADOS</p>
+                <div class="line-violeta" />
+
+              </div>
+            </div>
+            <div class="column">
+              <div class="px-3 py-4">
+                <p class="is-size-1 has-text-weight-bold">10</p>
+                <p class="is-size-5">EN EL PODER EJECUTIVO</p>
+                <div class="line-violeta" />
+
+              </div>
+            </div>
+            <div class="column">
+              <div class="px-3 py-4">
+                <p class="is-size-1 has-text-weight-bold">5</p>
+                <p class="is-size-5">EN EL SENADO</p>
+                <div class="line-violeta" />
+              </div>
+            </div>
           </div>
-          <div class="column p-5 m-3">
-            <div class="box-text">
-              <p class="is-size-1 has-text-left has-text-weight-bold">
-                35
-              </p>
-              <p class="is-size-5 has-text-left has-text-weight-bold">
-                CON CONCURSOS INICIADOS
-              </p>
+        </div>
+        <div class="column is-2 is-hidden-mobile"></div>
+      </div>
+      <br>
+      <div class="has-text-centered has-text-right-desktop">
+        <img class="fiscales-pic-head" src="~/assets/images/asset-fiscales.png">
+        <p class="mb-5 is-size-4">
+          Vacantes para <span class="has-text-weight-bold naranja">fiscales</span>
+        </p>
+      </div>
+      <div class="columns is-mobile is-centered">
+        <div class="column is-10-tablet is-narrow-mobile is-offset-2-tablet has-text-centered has-text-right-desktop fiscales-container">
+          <div class="columns">
+
+          <div class="column">
+            <div class="px-3 py-4">
+              <p class="is-size-1 has-text-weight-bold">30</p>
+              <p class="is-size-5">EN EL MINISTERIO PUBLICO SOCIAL</p>
+              <div class="line-naranja" />
+
             </div>
-            <div class="line-17" />
           </div>
-          <div class="column p-5 m-3">
-            <div class="box-text">
-              <p class="is-size-1 has-text-left has-text-weight-bold">
-                15
-              </p>
-              <p class="is-size-5 has-text-left has-text-weight-bold">
-                SIN CONCURSOS INICIADOS
-              </p>
+          <div class="column">
+            <div class="px-3 py-4">
+              <p class="is-size-1 has-text-weight-bold">30</p>
+              <p class="is-size-5">CON CURSOS INICIADOS</p>
+              <div class="line-naranja" />
+
             </div>
-            <div class="line-17" />
           </div>
-          <div class="column p-5 m-3">
-            <div class="box-text">
-              <p class="is-size-1 has-text-left has-text-weight-bold">
-                10
-              </p>
-              <p class="is-size-5 has-text-left has-text-weight-bold">
-                EN EL PODER EJECUTIVO
-              </p>
+          <div class="column">
+            <div class="px-3 py-4">
+              <p class="is-size-1 has-text-weight-bold">30</p>
+              <p class="is-size-5">SIN CONCURSADOS INICIADOS</p>
+              <div class="line-naranja" />
+
             </div>
-            <div class="line-17" />
           </div>
-          <div class="column p-5 m-3">
-            <div class="box-text">
-              <p class="is-size-1 has-text-left has-text-weight-bold">
-                5
-              </p>
-              <p class="is-size-5 has-text-left has-text-weight-bold">
-                EN EL SENADO
-              </p>
-            </div>
-            <div class="line-17" />
           </div>
         </div>
       </div>
-    </div>
-    <div class="vacante-fiscales">
-      <img class="mr-6" src="~/assets/images/asset-fiscales.png">
-      <p class="mb-5 mr-6 is-size-3">
-        Vacantes para <span class="has-text-weight-bold naranja">fiscales</span>
-      </p>
-      <div class="columns fiscales-container py-4">
-        <div class="column p-5 m-3">
-          <div class="box-text">
-            <p class="is-size-1 has-text-right has-text-weight-bold">
-              30
-            </p>
-            <p class="is-size-5 has-text-right has-text-weight-bold">
-              EN EL MINISTERIO PUBLICO FISCAL
-            </p>
-          </div>
-          <div class="line-9" />
-        </div>
-        <div class="column p-5 m-3">
-          <div class="box-text">
-            <p class="is-size-1 has-text-right has-text-weight-bold">
-              20
-            </p>
-            <p class="is-size-5 has-text-right has-text-weight-bold">
-              CON CONCURSOS INICIADOS
-            </p>
-          </div>
-          <div class="line-9" />
-        </div>
-        <div class="column p-5 m-3">
-          <div class="box-text">
-            <p class="is-size-1 has-text-right has-text-weight-bold">
-              10
-            </p>
-            <p class="is-size-5 has-text-right has-text-weight-bold">
-              SIN CONCURSOS INICIADOS
-            </p>
-          </div>
-          <div class="line-9" />
-        </div>
-        <div class="column p-5 m-3">
-          <div class="box-text">
-            <p class="is-size-1 has-text-right has-text-weight-bold">
-              10
-            </p>
-            <p class="is-size-5 has-text-right has-text-weight-bold">
-              EN EL PODER EJECUTIVO
-            </p>
-          </div>
-          <div class="line-9" />
-        </div>
-        <div class="column p-5 m-3">
-          <div class="box-text">
-            <p class="is-size-1 has-text-right has-text-weight-bold">
-              5
-            </p>
-            <p class="is-size-5 has-text-right has-text-weight-bold">
-              EN EL SENADO
-            </p>
-          </div>
-          <div class="line-9" />
-        </div>
-      </div>
-    </div>
-    <div class="column is-one-quarter has-background-grey-lighter my-6" style="margin: auto;">
-      <p class="title is-size-3 has-text-centered">
-        PROXIMAMENTE
-      </p>
     </div>
   </div>
+</section>
 </template>
 <style lang="scss" scoped>
-  .vacante-jueces{
-      display: flex;
-      width: 60%;
-  }
-  .vacante-fiscales{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-bottom: 6em;
-  }
-
-  .fiscales-container{
-      background-color: rgba(229, 157, 63, 0.3);
-      width: 60%;
-      height: 15em;
-      padding-right: 7em;
-  }
+.jueces-container{
+  background-color: rgba(159, 94, 183, 0.3);
+}
+.fiscales-container{
+  background-color: rgba(229, 157, 63, 0.3);
+}
 
   .naranja{
       color: #e59d3f;
@@ -164,22 +113,19 @@
   .violeta{
       color: #9f5eb7;
   }
-  .jueces-container{
-      background-color: rgba(159, 94, 183, 0.3);
-  }
-  .line-17 {
-    width: 70px;
+
+  .line-violeta {
+    display: inline-block;
+    width: 80px;
     height: 3px;
-    margin: 1em 35px 0 0;
+    margin-top: 1rem;
     background-color: #9f5eb7;
  }
- .line-9 {
-    width: 70px;
+ .line-naranja {
+    display: inline-block;
+    width: 80px;
     height: 3px;
-    margin: 1em 0 0 8em;
+    margin-top: 1rem;
     background-color: #e59d3f;
 }
- .box-text{
-   height: 8em;
- }
 </style>

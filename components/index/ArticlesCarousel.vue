@@ -16,22 +16,22 @@
           Articulos
         </h3>
         <VueSlickCarousel v-bind="settings">
-          <div v-for="article in articles" :key="`article-${article.id}`" class="articles-card">
-            <NuxtLink :to="`articulos/${article.id}`">
+          <div v-for="article in articles" :key="`article-${article.slug}`" class="articles-card">
+            <NuxtLink :to="`articulos/${article.slug}`">
               <div class="card">
                 <div class="card-image">
-                  <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/images/${article.imagen}.jpg`)})`">
+                  <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`">
                     <!-- <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`"> -->
                   </figure>
                 </div>
                 <div class="card-content">
                   <p class="title is-6">
-                    {{ article.fecha }}
+                    {{ article.date.split('T')[0] }}
                   </p>
-                  <p class="title is-4">
-                    {{ article.titulo }}
+                  <p class="title is-4 has-text-link">
+                    {{ article.title }}
                   </p>
-                  {{ article.autor }}
+                  {{ article.author }}
                 </div>
               </div>
             </NuxtLink>
@@ -46,8 +46,16 @@
 export default {
   fetchOnServer: false,
   async fetch () {
-    const articles = await this.$axios.$get('http://localhost:3000/articulos.json')
-    this.articles = articles.slice(0, 6)
+    const articles = await this.$content('articles')
+      .only(['slug', 'title', 'date', 'author', 'image'])
+      .sortBy('date', 'desc')
+      .limit(7)
+      .fetch()
+      .catch((err) => {
+        // error({ statusCode: 404, message: 'Page not found' })
+        console.log(err)
+      })
+    this.articles = articles
   },
   data () {
     return {

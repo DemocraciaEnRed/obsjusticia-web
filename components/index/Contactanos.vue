@@ -1,41 +1,52 @@
 <template>
-  <div class="columns background-color p-6">
-    <div class="column m-5">
-      <p class="is-size-4 has-text-weight-bold">
-        Podemos colaborar juntos
-      </p>
-      <p class="is-size-2 has-text-weight-bold has-text-white">
-        Contactanos para:
-      </p>
-    </div>
-    <div class="column m-5 is-size-5">
-      <ul class="is-small" style="list-style: disc;">
-        <li class="m-3 has-text-weight-bold">
-          SOLICITAR INFORMACION
-        </li>
-        <li class="m-3 has-text-weight-bold">
-          REALIZAR DENUNCIAS
-        </li>
-        <li class="m-3 has-text-weight-bold">
-          BRINDAR INFORMACION
-        </li>
-      </ul>
-    </div>
-    <div class="column m-5 is-size-5">
-      <ul class="is-small" style="list-style: disc;">
-        <li class="m-3 has-text-weight-bold">
-          SER PARTE DE LAS CAMPAÑAS
-        </li>
-        <li class="m-3 has-text-weight-bold">
-          MEJORAR JUSTA
-        </li>
-      </ul>
-    </div>
-    <div class="column m-5 is-flex is-justify-content-center is-align-items-center">
-      <b-button size="is-large" class="px-6">
-        Contactanos
-        <b-icon icon="arrow-right" size="is-small" class="pl-4" />
-      </b-button>
+  <div class="background-color">
+    <div class="section">
+      <div class="container">
+        <div class="columns has-text-centered has-text-left-desktop">
+          <div class="column">
+            <p class="is-size-4 has-text-weight-bold">
+              Podemos colaborar juntos
+            </p>
+            <p class="is-size-2 has-text-weight-bold has-text-white">
+              Contactanos para:
+            </p>
+          </div>
+          <div class="column ">
+            <ul class="is-small" style="list-style: disc;">
+              <li class="m-3 has-text-weight-bold">
+                SOLICITAR INFORMACION
+              </li>
+              <li class="m-3 has-text-weight-bold">
+                REALIZAR DENUNCIAS
+              </li>
+              <li class="m-3 has-text-weight-bold">
+                BRINDAR INFORMACION
+              </li>
+              <li class="m-3 has-text-weight-bold is-hidden-desktop">
+                SER PARTE DE LAS CAMPAÑAS
+              </li>
+              <li class="m-3 has-text-weight-bold is-hidden-desktop">
+                MEJORAR JUSTA
+              </li>
+            </ul>
+          </div>
+          <div class="column is-hidden-touch">
+            <ul class="is-small" style="list-style: disc;">
+              <li class="m-3 has-text-weight-bold">
+                SER PARTE DE LAS CAMPAÑAS
+              </li>
+              <li class="m-3 has-text-weight-bold">
+                MEJORAR JUSTA
+              </li>
+            </ul>
+          </div>
+          <div class="column m-5 is-flex is-justify-content-center is-align-items-center">
+            <div class="button is-large px-6 is-white">
+              Contactanos&nbsp;&nbsp;<i class="fas fa-arrow-right has-text-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
