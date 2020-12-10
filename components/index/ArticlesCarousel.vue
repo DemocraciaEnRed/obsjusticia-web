@@ -110,7 +110,7 @@ export default {
   }
   .card-image .image{
     background-size: cover;
-    background-position: center center;;
+    background-position: center center;
   }
   // .image{
   //   overflow: hidden;
