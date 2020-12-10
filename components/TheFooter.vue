@@ -2,7 +2,6 @@
   <div>
     <div class="footer-top">
       <div class="section py-0">
-
         <div class="container">
           <img src="~/assets/images/justa@3x.png" class="image">
         </div>

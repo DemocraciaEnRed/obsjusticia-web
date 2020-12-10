@@ -14,7 +14,7 @@
               DENUNCIAS
             </p>
             <div class="has-background-black mt-3 px-5 py-2 has-text-white is-size-5 desde-1998 has-text-white is-inline-block">
-                DESDE <span class="has-text-weight-bold">1998</span>
+              DESDE <span class="has-text-weight-bold">1998</span>
             </div>
           </div>
         </div>
