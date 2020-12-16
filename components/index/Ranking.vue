@@ -1,5 +1,5 @@
 <template>
-  <div class="has-background-white">
+  <div class="has-background-white" id="transparencia">
     <div class="section">
       <div class="container">
         <div class="columns is-vcentered">
@@ -18,9 +18,6 @@
           <div class="column is-narrow is-offset-3 has-text-centered">
             <div class="py-4">
               <div>
-                <img src="~/assets/images/trophy.png">
-              </div>
-              <div>
                 <img src="~/assets/images/consejoMagistratura.png">
               </div>
             </div>
@@ -29,6 +26,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="has-text-centered my-2">
+        <b-button size="is-large" type="is-light">
+          <p class="is-size-5 m-5">
+            PROXIMAMENTE
+          </p>
+        </b-button>
       </div>
     </div>
   </div>

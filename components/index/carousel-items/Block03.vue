@@ -39,7 +39,7 @@
 // }
 
 .bg-container{
-  background: url('~assets/images/header_img.png');
+  background: url('~assets/images/Group 205.png');
   background-size: cover;
   background-position: center center;
   // object-fit: contain;

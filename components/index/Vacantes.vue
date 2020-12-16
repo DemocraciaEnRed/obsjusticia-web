@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="concursos">
     <div class="section">
       <div class="container">
         <p class="has-text-centered is-size-2 mb-6">

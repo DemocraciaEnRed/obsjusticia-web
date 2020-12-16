@@ -39,7 +39,7 @@
 // }
 
 .bg-container{
-  background: url('~assets/images/header_img.png');
+  background: url('~assets/images/image (1).png');
   background-size: cover;
   background-position: center center;
   // object-fit: contain;

@@ -4,10 +4,10 @@
       <Block01 />
     </b-carousel-item>
     <b-carousel-item>
-      <Block01 />
+      <Block02 />
     </b-carousel-item>
     <b-carousel-item>
-      <Block01 />
+      <Block03 />
     </b-carousel-item>
   </b-carousel>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="procesos">
     <div class="section">
       <div class="container">
         <p class="has-text-centered is-size-2 mb-4">
@@ -65,6 +65,13 @@
     <div class="img-container">
       <img src="~/assets/images/grupo-ojos@2x.png" class="image is-hidden-touch">
       <img src="~/assets/images/grupo-ojos-mobile@2x.png" class="image is-hidden-desktop">
+    </div>
+    <div class="has-text-centered my-5">
+      <b-button size="is-large" type="is-light">
+        <p class="is-size-5 m-5">
+          PROXMAMENTE
+        </p>
+      </b-button>
     </div>
   </section>
 </template>

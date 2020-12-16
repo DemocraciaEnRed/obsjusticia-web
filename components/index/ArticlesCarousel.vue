@@ -24,11 +24,11 @@
                     <!-- <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`"> -->
                   </figure>
                 </div>
-                <div class="card-content">
-                  <p class="title is-6">
+                <div class="card-content is-flex is-flex-direction-column is-justify-content-space-between">
+                  <p class="is-6 has-text-weight-bold is-raleway">
                     {{ article.date.split('T')[0] }}
                   </p>
-                  <p class="title is-4 has-text-link">
+                  <p class="title is-size-4 is-raleway has-text-weight-bold">
                     {{ article.title }}
                   </p>
                   {{ article.author }}

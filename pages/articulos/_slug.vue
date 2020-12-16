@@ -35,10 +35,10 @@
         <div class="columns">
           <div class="column is-three-quarters">
             <div class="content has-text-justified">
-              <p class="is-size-5">
+              <p class="is-size-4 is-chivo">
                 <i>{{ article.description }}</i>
               </p>
-              <nuxt-content :document="article" />
+              <nuxt-content :document="article" class="is-size-4 is-chivo"/>
             </div>
           </div>
           <div class="column">

@@ -16,17 +16,14 @@
       <b-navbar-item tag="nuxt-link" to="/articulos">
         ARTICULOS
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/">
+      <b-navbar-item tag="nuxt-link" to="/#procesos">
         PROCESOS
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/">
+      <b-navbar-item tag="nuxt-link" to="/#transparencia">
         TRANSPARENCIA
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/">
-        OBSERVATORIO
-      </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/">
-        JUSTICIA Y GENERO
+      <b-navbar-item tag="nuxt-link" to="/#concursos">
+        CONCURSOS
       </b-navbar-item>
     </template>
   </b-navbar>
