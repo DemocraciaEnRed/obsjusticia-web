@@ -53,9 +53,8 @@
 }
 .block-text-container{
   padding: 30px 40px;
-  background-color: #6f3285;
+  background-color: #6f3285ab;
   background-blend-mode: multiply;
-  opacity: 0.7;
 }
 .upper-logo-container{
   padding: 5px 15px;
