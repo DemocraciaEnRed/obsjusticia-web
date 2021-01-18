@@ -69,7 +69,7 @@
     <div class="has-text-centered my-5">
       <b-button size="is-large" type="is-light">
         <p class="is-size-5 m-5">
-          PROXMAMENTE
+          PROXIMAMENTE
         </p>
       </b-button>
     </div>
