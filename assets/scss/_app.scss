@@ -1,5 +1,6 @@
 h1,h2,h3,h4,h5,h6,.title,.subtitle{
-  font-family: 'Staatliches', $family-sans-serif;
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
 }
 
 //==========================
@@ -36,6 +37,26 @@ h1,h2,h3,h4,h5,h6,.title,.subtitle{
   font-family: 'Chivo', $family-sans-serif;
 }
 
-body{
-  color: #000000;
+// =========================
+
+.carousel .carousel-indicator .indicator-item .indicator-style.is-dots{
+  height: 15px;
+  width: 15px;
+}
+.carousel .carousel-indicator{
+  padding-top: 0.9rem;
+}
+
+.slick-prev.custom-arrow-left::before{
+  font-size: 30px;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
+  color: $primary;
+}
+.slick-next.custom-arrow-right::before{
+  font-size: 30px;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f061";
+  color: $primary;
+}
+.slick-prev{
+  left: -32px !important;
 }

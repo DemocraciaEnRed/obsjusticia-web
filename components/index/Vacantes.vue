@@ -2,17 +2,18 @@
   <section id="concursos">
     <div class="section">
       <div class="container">
-        <p class="has-text-centered is-size-2 mb-6">
-          ¿Que pasa <span class="has-text-weight-bold">con los concursos de los Jueces y Fiscales?</span>
-        </p>
+        <h2 class="has-text-centered subtitle is-2 mb-6">
+          ¿Qué pasa <span class="has-text-weight-bold">con los concursos de los Jueces y Fiscales?</span>
+        </h2>
         <div class="has-text-centered has-text-left-desktop">
-          <img src="~/assets/images/asset-jueces.png">
-          <p class="mb-5 is-size-4">
-            Vacantes para <span class="has-text-weight-bold violeta">jueces y juezas</span>
-          </p>
+          <img src="~/assets/images/asset-jueces@3x.png" width="100">
+          <h4 class="subtitle is-4 mb-6">
+            Vacantes para <span class="has-text-weight-bold">jueces y juezas</span>
+          </h4>
         </div>
         <div class="columns is-mobile is-centered">
           <div class="column is-10-tablet is-narrow-mobile has-text-centered has-text-left-desktop jueces-container">
+            <div class="filler-jueces" />
             <div class="columns">
               <div class="column">
                 <div class="px-3 py-4">
@@ -75,15 +76,16 @@
         </div>
         <br>
         <div class="has-text-centered has-text-right-desktop">
-          <img class="fiscales-pic-head" src="~/assets/images/asset-fiscales.png">
-          <p class="mb-5 is-size-4">
+          <img class="fiscales-pic-head" width="120" src="~/assets/images/asset-fiscales@3x.png">
+          <h4 class="subtitle is-4 mb-6">
             Vacantes para <span class="has-text-weight-bold naranja">fiscales</span>
-          </p>
+          </h4>
         </div>
         <div class="columns is-mobile is-centered">
           <div class="column is-10-tablet is-narrow-mobile is-offset-2-tablet has-text-centered has-text-right-desktop fiscales-container">
+            <div class="fiscales-jueces" />
             <div class="columns">
-              <div class="column">
+              <div class="column is-3">
                 <div class="px-3 py-4">
                   <p class="is-size-1 has-text-weight-bold">
                     30
@@ -94,7 +96,7 @@
                   <div class="line-naranja" />
                 </div>
               </div>
-              <div class="column">
+              <div class="column is-3">
                 <div class="px-3 py-4">
                   <p class="is-size-1 has-text-weight-bold">
                     30
@@ -105,7 +107,7 @@
                   <div class="line-naranja" />
                 </div>
               </div>
-              <div class="column">
+              <div class="column is-3">
                 <div class="px-3 py-4">
                   <p class="is-size-1 has-text-weight-bold">
                     30
@@ -119,16 +121,39 @@
             </div>
           </div>
         </div>
+        <div class="has-text-centered my-6">
+          <a disabled class="button is-light is-medium is-raleway is-800 is-uppercase has-text-black">
+            PRÓXIMAMENTE
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
 .jueces-container{
-  background-color: rgba(159, 94, 183, 0.3);
+  background-color: #d6c2dd;
+  position:relative;
 }
 .fiscales-container{
-  background-color: rgba(229, 157, 63, 0.3);
+  background-color:#ebd5b9;
+  position:relative;
+}
+.filler-jueces{
+  position: absolute;
+  right: 100%;
+  height: 100%;
+  background-color: #d6c2dd;
+  width: 500%;
+  top: 0;
+}
+.fiscales-jueces{
+  position: absolute;
+  left: 100%;
+  height: 100%;
+  background-color: #ebd5b9;
+  width: 500%;
+  top: 0;
 }
 
   .naranja{

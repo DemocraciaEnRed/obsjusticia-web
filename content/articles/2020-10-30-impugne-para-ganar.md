@@ -2,6 +2,7 @@
 title: Impugne para ganar
 description: Estudiamos en detalle 10 concursos finalizados por el Consejo en 2018 y advertimos que lograron mejoras en el puntaje un tercio de quienes objetaron la calificación de sus antecedente. En uno de los casos investigados, el 83% de las impugnaciones resultaron exitosas. En promedio, los cuestionamientos a la corrección del contenido del curriculum permitieron avanzar cinco posiciones en los órdenes de mérito. En el 70% de los concursos analizados, los beneficiarios de las impugnaciones lograron entrar en las ternas y en las listas complementarias remitidas a la Casa Rosada
 date: 2020-10-30
+type: Estudios
 author: Irene Benito
 image: justicia.jpg
 ---

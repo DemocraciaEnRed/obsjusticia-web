@@ -3,7 +3,7 @@
 $primary : #059185;
 $body-size: 14px;
 // $secondary : #371575;
-$family-primary: 'Roboto', $family-sans-serif;
+$family-primary: 'Chivo', $family-sans-serif;
 $primary-invert: findColorInvert($primary);
 $colors: (
     "white": ($white, $black),
@@ -18,7 +18,7 @@ $colors: (
 );
 
 $body-background-color: $grey-lightest;
-
+$text: $black;
 // Navbar Variables
 // https://bulma.io/documentation/components/navbar/
 
@@ -29,3 +29,5 @@ $navbar-height: 7.25rem;
 $footer-background-color: #20424f;
 $footer-padding: 2rem 1.5rem;
 $footer-color: #FFF;
+
+$carousel-indicator-color: $black;

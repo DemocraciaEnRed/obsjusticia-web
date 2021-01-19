@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="columns my-6 is-vcentered is-centered ">
-        <div class="column is-6-tablet is-8-desktop">
+        <div class="column is-6-tablet is-7-desktop">
           <p class="is-size-2 is-raleway">
             ¿Que motiva <span class="has-text-weight-bold">JusTA?</span>
           </p>
@@ -29,15 +29,15 @@
             </p>
           </div>
         </div>
-        <div class="column is-6-tablet is-4-desktop">
-          <img src="~/assets/images/bloque-fotos-up-right.png" class="image">
+        <div class="column is-6-tablet is-5-desktop">
+          <img src="~/assets/images/bloque-fotos-up-right-small.png" class="image">
         </div>
       </div>
       <div class="columns my-6 is-vcentered is-centered">
-        <div class="column is-6-tablet is-3-desktop">
-          <img src="~/assets/images/bloque-fotos-up-left.png" class="image">
+        <div class="column is-6-tablet is-4-desktop">
+          <img src="~/assets/images/bloque-fotos-up-left-small.png" class="image">
         </div>
-        <div class="column is-offset-1-desktop is-offset-0-tablet is-6-tablet is-8-desktop">
+        <div class="column is-offset-1-desktop is-offset-0-tablet is-6-tablet is-7-desktop">
           <p class="is-size-2 is-raleway">
             ¿Que contenidos <span class="has-text-weight-bold">publica JusTA?</span>
           </p>
@@ -103,13 +103,11 @@
   }
 
   .image{
-      width: 100%;
+    width: 100%;
   }
   .content{
-    font-weight: 300;
-    color: #000;
-    font-family: 'Chivo', $family-sans-serif;
-
+    // font-weight: 400
+    font-size: 1.1rem;
   }
 
 </style>

@@ -4,6 +4,7 @@ title: Pertenecer sigue siendo un privilegio
 description: Los planteles del sistema judicial revelan una tendencia endogámica que persiste pese a que existe una ley desde 2013 que modifica el ingreso. El concepto de “la familia judicial” no es una exageración. Los lazos de sangre y de amistad han funcionado como mecanismo predominante de ingreso a los cargos de los ministerios públicos y de la Justicia. Una ley de 2013 que contempla cambios en el ingreso se cumple en los Ministerios Públicos Fiscal y de la Defensa pero no en el Poder Judicial de la Nación.
 date: 2020-10-16
 author: ACIJ
+type: Articulo
 image: historia.jpg
 ---
 

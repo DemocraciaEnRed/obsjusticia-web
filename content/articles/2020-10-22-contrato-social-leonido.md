@@ -3,6 +3,7 @@ title: Un contrato social “leonino”
 description: Quienes se inscriben en un concurso para cubrir vacantes judiciales nacionales aceptan que al final del camino se someterán a una decisión discrecional. ¿Hay derecho a protestar después? El jefe del Poder Ejecutivo puede elegir libremente y sin plazo a cualquiera de los tres postulantes que integran las propuestas elaboradas por los organismos encargados de sustanciar los concursos. Ese margen de discrecionalidad, que en 1994 fue celebrado como una conquista extraordinaria para los principios de independencia judicial y de igualdad ante la ley, hoy luce incapaz de dar respuesta a ciertos reclamos, como el de paridad de género. Un amparo interpuesto por la ganadora de un concurso pone en cuestión aún más aquella potestad en virtud de los tratados internacionales y de una interpretación progresiva de los derechos humanos.
 date: 2020-10-22
 author: Irene Benito
+type: Concursos
 image: dice.jpg
 ---
 

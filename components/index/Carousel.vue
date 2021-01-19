@@ -1,5 +1,5 @@
 <template>
-  <b-carousel :indicator="true" :indicator-inside="false" indicator-position="is-bottom" :indicator-background="true" indicator-style="is-lines">
+  <b-carousel :indicator="true" :indicator-inside="false" indicator-position="is-bottom" :indicator-background="false" indicator-style="is-dots">
     <b-carousel-item>
       <Block01 />
     </b-carousel-item>

@@ -4,6 +4,7 @@ description: El sistema judicial nacional se resiste a darse reglas de ética qu
 date: 2020-10-16
 author: ACIJ
 image: sin-codigo.jpg
+type: Informe
 tags:
 - ACIJ
 - Sistema Judicial

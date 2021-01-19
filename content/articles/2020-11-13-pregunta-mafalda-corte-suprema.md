@@ -3,6 +3,7 @@ title: Una pregunta de Mafalda para la Corte Suprema
 description: El máximo tribunal argentino sostiene que los ciudadanos no tienen derecho a saber cuántos y qué casos estudia, y desde cuándo. Un pedido de acceso a la información pública obtuvo como respuesta que la Corte “no está obligada” a publicitar su agenda de trabajo jurisdiccional pendiente. En otras democracias del continente, como Brasil, México y los Estados Unidos, las cabezas del sistema judicial tienen una política de transparencia que contrasta con la del cuerpo argentino. El vacío revela cierto atraso o desinterés en establecer una comunicación directa con la ciudadanía.
 date: 2020-11-13
 author: ACIJ
+type: Reforma judicial
 image: portada-mafalda.jpg
 ---
 

@@ -1,24 +1,12 @@
 <template>
   <div>
     <div class="footer-top">
-      <div class="section py-0">
+      <div class="section pt-2 pb-6">
         <div class="container">
-          <img src="~/assets/images/justa.png" class="image">
+          <img src="~/assets/images/acij-logo.png" class="image mb-4">
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="columns">
-          <div class="column has-text-centered has-text-left-desktop">
-            <img src="~/assets/images/Group 76@2x.png" class="image">
-          </div>
-          <div class="column has-text-centered has-text-right-desktop is-flex is-align-items-center is-justify-content-center">
-            Todos los derechos reservados 2020
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -29,7 +17,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   .image{
-    max-width: 120px;
+    // max-width: 120px;
     margin: 0 auto;
     @media screen and (min-width: $tablet){
       margin: 0 auto 0 0;

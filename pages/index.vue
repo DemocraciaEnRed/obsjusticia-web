@@ -4,11 +4,6 @@
     <section class="section">
       <div class="container">
         <ArticlesCarousel />
-        <br>
-        <br>
-        <a href="/articulos" class="has-text-black">
-          <h5 class="title is-3 is-size-4-touch has-text-centered">Ver todos los articulos <i class="fas fa-arrow-right" /></h5>
-        </a>
       </div>
     </section>
     <Vacantes />
@@ -23,6 +18,7 @@ import Carousel from '~/components/index/Carousel'
 import ArticlesCarousel from '~/components/index/ArticlesCarousel'
 export default {
   name: 'HomePage',
+  layout: 'home',
   components: {
     Carousel,
     ArticlesCarousel

@@ -4,7 +4,7 @@
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
           src="~/assets/images/logo_justa@3x.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
+          alt="Justa"
           class="logo-navbar"
         >
       </b-navbar-item>
@@ -14,7 +14,7 @@
         INICIO
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/articulos">
-        ARTICULOS
+        ARTÍCULOS
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/#procesos">
         PROCESOS
@@ -25,8 +25,8 @@
       <b-navbar-item tag="nuxt-link" to="/#concursos">
         CONCURSOS
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="quienes-somos">
-        QUIENES SOMOS
+      <b-navbar-item tag="nuxt-link" to="/quienes-somos">
+        QUIÉNES SOMOS
       </b-navbar-item>
     </template>
   </b-navbar>
@@ -40,5 +40,6 @@ export default {}
 .navbar-item{
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Raleway', $family-primary;
 }
 </style>

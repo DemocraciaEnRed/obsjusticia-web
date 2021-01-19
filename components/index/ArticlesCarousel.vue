@@ -12,8 +12,8 @@
         </h4>
       </div>
       <div v-else class="">
-        <h3 class="articulos-title">
-          Articulos
+        <h3 class="title is-2 is-900 articulos-title my-6">
+          Artículos
         </h3>
         <VueSlickCarousel v-bind="settings">
           <div v-for="article in articles" :key="`article-${article.slug}`" class="articles-card">
@@ -25,8 +25,10 @@
                   </figure>
                 </div>
                 <div class="card-content is-flex is-flex-direction-column is-justify-content-space-between">
-                  <p class="is-6 has-text-weight-bold is-raleway">
-                    {{ article.date.split('T')[0] }}
+                  <p class="is-6 has-text-weight-bold is-raleway is-uppercase">
+                    <!-- {{ article.date.split('T')[0] }} -->
+                    {{ article.type }}
+                    <!-- INFORME -->
                   </p>
                   <p class="title is-size-4 is-raleway has-text-weight-bold">
                     {{ article.title }}
@@ -36,8 +38,22 @@
               </div>
             </NuxtLink>
           </div>
+          <template slot="prevArrow">
+            <div class="custom-arrow-left">
+            </div>
+          </template>
+          <template slot="nextArrow">
+            <div class="custom-arrow-right">
+            </div>
+          </template>
         </VueSlickCarousel>
       </div>
+    </div>
+    <br>
+    <div class="has-text-centered my-6">
+      <router-link to="/articulos" class="is-size-4 is-raleway is-800 is-uppercase has-text-black">
+        VER TODOS LOS ARTICULOS&nbsp;&nbsp;<i class="fas fa-arrow-right" />
+      </router-link>
     </div>
   </section>
 </template>
@@ -47,7 +63,7 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'date', 'author', 'image'])
+      .only(['slug', 'title', 'date', 'type', 'author', 'image'])
       .sortBy('date', 'desc')
       .limit(7)
       .fetch()
@@ -107,12 +123,6 @@ export default {
     overflow: hidden;
   }
 }
-  .articulos-title{
-    font-size: 30px;
-    font-weight: 900;
-    text-align: left;
-    color: #000000;
-  }
   .card-content{
     min-height: 160px;
   }
