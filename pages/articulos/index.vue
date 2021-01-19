@@ -18,12 +18,12 @@
                     <figure class="image is-2by1" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
                   </div>
                   <div class="media-content">
-                      <p class="is-raleway is-size-5 has-text-black">
-                        {{ article.date.split('T')[0] }}
-                      </p>
-                      <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
-                        {{ article.title }}
-                      </h1>
+                    <p class="is-raleway is-size-5 has-text-black">
+                      {{ article.date.split('T')[0] }}
+                    </p>
+                    <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
+                      {{ article.title }}
+                    </h1>
                     <p class="subtitle is-raleway is'size-6">
                       Por {{ article.author }}
                     </p>

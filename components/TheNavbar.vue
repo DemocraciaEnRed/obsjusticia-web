@@ -25,6 +25,9 @@
       <b-navbar-item tag="nuxt-link" to="/#concursos">
         CONCURSOS
       </b-navbar-item>
+      <b-navbar-item tag="nuxt-link" to="quienes-somos">
+        QUIENES SOMOS
+      </b-navbar-item>
     </template>
   </b-navbar>
 </template>
