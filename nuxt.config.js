@@ -1,8 +1,7 @@
 export default {
-  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'ACIJ - Observatorio de Justicia',
+    title: 'Justa - ACIJ - Observatorio de Justicia',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -66,14 +65,10 @@ export default {
     scss: ['~assets/scss/_variables.scss']
   },
   publicRuntimeConfig: {
-    strapiURL: process.env.STRAPI_URL
+    // strapiURL: process.env.STRAPI_URL
   },
   privateRuntimeConfig: {
     // strapiUrl: process.env.STRAPI_URL
-  },
-  strapi: {
-    entities: [],
-    url: process.env.STRAPI_URL || 'http://localhost:1337'
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
