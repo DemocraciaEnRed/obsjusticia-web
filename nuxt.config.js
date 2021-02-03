@@ -48,8 +48,6 @@ export default {
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://strapi.io/documentation/v3.x/getting-started/nuxt-js.html
-    '@nuxtjs/strapi',
     // https://github.com/nuxt-community/modules/tree/master/packages/markdownit
     '@nuxtjs/markdownit',
     // https://content.nuxtjs.org/installation
