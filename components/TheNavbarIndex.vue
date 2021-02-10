@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar index-navbar" role="navigation" aria-label="main navigation">
     <div class="container">
-      <div class="navbar-brand">
+      <!-- <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
           <img
             src="~/assets/images/logo_justa@3x.png"
@@ -21,38 +21,38 @@
           <span aria-hidden="true" />
           <span aria-hidden="true" />
         </a>
-      </div>
+      </div> -->
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end" style="margin: 0 auto;">
           <div class="navbar-item">
-            <router-link to="/" class="nav-link has-text-black" :class="{'active': $route.name == 'index'}">
-              INICIO
+            <router-link to="/" class="nav-link has-text-white" :class="{'active': $route.name == 'index'}">
+              Inicio
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/articulos" class="nav-link has-text-black">
-              ARTÍCULOS
+            <router-link to="/articulos" class="nav-link has-text-white">
+              Artículos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#procesos" class="nav-link has-text-black">
-              PROCESOS
+            <router-link to="/#procesos" class="nav-link has-text-white">
+              Procesos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#transparencia" class="nav-link has-text-black">
-              TRANSPARENCIA
+            <router-link to="/#transparencia" class="nav-link has-text-white">
+              Transparencia
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#concursos" class="nav-link has-text-black">
-              CONCURSOS
+            <router-link to="/#concursos" class="nav-link has-text-white">
+              Concursos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/quienes-somos" class="nav-link has-text-black">
-              QUÍENES SOMOS
+            <router-link to="/quienes-somos" class="nav-link has-text-white">
+              Quiénes somos
             </router-link>
           </div>
         </div>
@@ -75,21 +75,25 @@ export default {
 .index-navbar{
   position: absolute;
   width: 100%;
-  background-color: rgba(196, 196, 196, 0.6);
+  // background-color: rgba(196, 196, 196, 0.6);
+  background-color: transparent;
 }
 
 .nav-link{
   font-weight: 600;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-family: "Raleway", $family-primary;
   padding: 5px 10px;
   background-color: transparent;
   border-radius: 5px;
+  color: #FFF;
   &.active{
     background-color: rgba(215, 215, 215, 0.8);
+    color: #000 !important;
   }
   &:hover{
     background-color: rgba(215, 215, 215, 0.8);
+    color: #000 !important;
   }
 }
 </style>

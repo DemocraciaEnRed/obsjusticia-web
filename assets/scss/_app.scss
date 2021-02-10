@@ -6,7 +6,7 @@ h1,h2,h3,h4,h5,h6,.title,.subtitle{
 //==========================
 
 @mixin font-weight($weight) {
-  font-weight: $weight;
+  font-weight: $weight !important;
 }
 
 //==========================
@@ -37,15 +37,19 @@ h1,h2,h3,h4,h5,h6,.title,.subtitle{
   font-family: 'Chivo', $family-sans-serif;
 }
 
+.button{
+  border-radius: 0;
+}
+
 // =========================
 
-.carousel .carousel-indicator .indicator-item .indicator-style.is-dots{
-  height: 15px;
-  width: 15px;
-}
-.carousel .carousel-indicator{
-  padding-top: 0.9rem;
-}
+// .carousel .carousel-indicator .indicator-item .indicator-style.is-dots{
+//   height: 15px;
+//   width: 15px;
+// }
+// .carousel .carousel-indicator{
+//   padding-top: 0.9rem;
+// }
 
 .slick-prev.custom-arrow-left::before{
   font-size: 30px;

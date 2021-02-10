@@ -1,6 +1,6 @@
 <template>
   <b-navbar wrapper-class="container" transparent>
-    <template slot="brand">
+    <!-- <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
           src="~/assets/images/logo_justa@3x.png"
@@ -8,25 +8,25 @@
           class="logo-navbar"
         >
       </b-navbar-item>
-    </template>
+    </template> -->
     <template slot="end">
       <b-navbar-item tag="nuxt-link" to="/">
-        INICIO
+        Inicio
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/articulos">
-        ARTÍCULOS
+        Artículos
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/#procesos">
-        PROCESOS
+        Procesos
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/#transparencia">
-        TRANSPARENCIA
+        Transparencia
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/#concursos">
-        CONCURSOS
+        Concursos
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
-        QUIÉNES SOMOS
+        Quiénes somos
       </b-navbar-item>
     </template>
   </b-navbar>
@@ -39,7 +39,7 @@ export default {}
 <style lang="scss" scoped>
 .navbar-item{
   font-weight: 600;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-family: 'Raleway', $family-primary;
 }
 </style>

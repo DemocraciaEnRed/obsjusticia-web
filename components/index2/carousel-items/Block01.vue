@@ -42,10 +42,13 @@
 }
 .block-item{
   padding: 30px;
+  // padding-bottom: 200px;
+
   @media screen and (min-width: $tablet){
   padding-top: 140px;
-  min-height: 500px;
+  min-height: 700px;
   padding: 0;
+  padding-bottom: 150px;
   }
 }
 .block-text-container{
@@ -55,7 +58,7 @@
 }
 .upper-logo-container{
   padding: 2px 8px;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
   background-color: #6f3285;
 }
 .lower-logo-container{

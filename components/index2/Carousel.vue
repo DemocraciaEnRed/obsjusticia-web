@@ -1,14 +1,14 @@
 <template>
-  <b-carousel :indicator="true" :indicator-inside="false" indicator-position="is-bottom" :indicator-background="false" indicator-style="is-dots">
+  <b-carousel :indicator="false" :indicator-inside="false" indicator-position="is-bottom" :indicator-background="false" indicator-style="is-dots">
     <b-carousel-item>
       <Block01 />
     </b-carousel-item>
-    <b-carousel-item>
+    <!-- <b-carousel-item>
       <Block02 />
     </b-carousel-item>
     <b-carousel-item>
       <Block03 />
-    </b-carousel-item>
+    </b-carousel-item> -->
   </b-carousel>
 </template>
 
