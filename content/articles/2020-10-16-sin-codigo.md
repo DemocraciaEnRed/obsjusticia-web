@@ -4,11 +4,9 @@ description: El sistema judicial nacional se resiste a darse reglas de ética qu
 date: 2020-10-16
 author: ACIJ
 image: sin-codigo.jpg
-type: Informe
+category: columna
 tags:
-- ACIJ
-- Sistema Judicial
-- Martín Fierro
+- disciplina
 ---
 
 Además de las escasas disposiciones de los códigos procesales, ¿cómo sabemos si un juez o fiscal actúa éticamente? Es una pregunta muy difícil de responder porque, a diferencia de la mayoría de los países y de algunas provincias argentinas, no existe un código de ética para la magistratura nacional. Hay algunas reglas relativas a los procedimientos, sobre todo vinculadas a las excusaciones y recusaciones, pero no un texto normativo que detalle las conductas permitidas y prohibidas a jueces, fiscales y defensores públicos de la Nación. A la vez, hay códigos internacionales cuya incorporación efectiva al ordenamiento local es debatida, como los Principios de Bangalore sobre Conducta Judicial de la Organización de las Naciones Unidas (ONU); el Estatuto Internacional del Juez de la Unión Internacional de Magistrados y el Código Iberoamericano de Ética Judicial (para mayor información, ver este artículo de Chequeado.com). En el Consejo de la Magistratura se debate hace años la necesidad de contar con un Código de Ética Judicial sancionado por ese órgano, pero, quién sabe los motivos, los consejeros nunca han llegado a tratar ninguno de los proyectos presentados. Más allá de que con la incorporación con jerarquía constitucional del Pacto de Derechos Civiles y Políticos de la ONU, y de la Convención Americana de Derechos Humanos es plausible sostener que la conducta de los jueces argentinos debe ajustarse a ellos, hay que reconocer que nuestros órganos judiciales no los consideran vigentes, al menos en el plano de la ética. Y, entonces, no hay norma. ¿Cuál es la consecuencia de esta laguna normativa? Que, por un lado, los magistrados carecen de una hoja de ruta sobre qué deben y qué no deben hacer como consecuencia del cargo que asumieron, y, por el otro, que litigantes, partes y la ciudadanía en general tampoco pueden exigir ciertos patrones de comportamiento ni denunciar los casos de incumplimiento.

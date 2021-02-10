@@ -22,16 +22,26 @@
                       <!-- <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`"> -->
                     </figure>
                   </div>
-                  <div class="card-content is-flex is-flex-direction-column is-justify-content-space-between">
-                    <p class="is-6 has-text-weight-bold is-raleway is-uppercase">
-                      <!-- {{ article.date.split('T')[0] }} -->
-                      {{ article.type }}
-                      <!-- INFORME -->
-                    </p>
-                    <p class="title is-size-5 is-raleway has-text-weight-bold">
-                      {{ article.title }}
-                    </p>
-                    {{ article.author }}
+                  <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
+                    <div class="is-clearfix">
+                      <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
+                        {{ article.category }}
+                      </p>
+                      <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
+                        {{ article.date.split('T')[0] }}
+                      </p>
+                    </div>
+                    <div>
+                      <p class="title is-5 is-raleway has-text-weight-bold">
+                        {{ article.title }}
+                      </p>
+                      <p class="subtitle is-6 is-raleway has-text-grey">
+                        {{ article.author }}
+                      </p>
+                    </div>
+                    <div class="tags">
+                      <span v-for="(tag,index) in article.tags" :key="`tag-${index}`" class="tag is-capitalized">{{ tag }}</span>
+                    </div>
                   </div>
                 </div>
               </NuxtLink>
@@ -57,7 +67,7 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'date', 'type', 'author', 'image'])
+      .only(['slug', 'title', 'date', 'category', 'author', 'image', 'tags'])
       .sortBy('date', 'desc')
       .limit(7)
       .fetch()
@@ -112,7 +122,7 @@ export default {
   margin-top: -100px;
 }
 .articles-card {
-  padding: 10px 10px 20px 10px;
+  padding: 10px 7px 15px 7px;
   z-index: 100;
   .title{
      display: -webkit-box;
@@ -122,7 +132,7 @@ export default {
   }
 }
   .card-content{
-    min-height: 160px;
+    min-height: 190px;
   }
   .card-image .image{
     background-size: cover;
