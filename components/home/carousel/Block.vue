@@ -10,7 +10,10 @@
         </p>
       </div>
       <div class="column is-narrow">
-        <router-link to="/quienes-somos" class="button is-white ">
+        <a v-if="block.urlMore" href="" class="button is-white ">
+          Ver más<i class="fas fa-arrow-right ml-4" />
+        </a>
+        <router-link v-if="block.route" to="/quienes-somos" class="button is-white ">
           Ver más<i class="fas fa-arrow-right ml-4" />
         </router-link>
       </div>

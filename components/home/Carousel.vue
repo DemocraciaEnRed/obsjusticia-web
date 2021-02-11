@@ -79,17 +79,27 @@ export default {
       activeBlock: 0,
       blocks: [
         {
-          title: '¿Qué es Iniciativa justa?',
+          title: '¿Qué es Iniciativa JusTA?',
           content: 'Conocé información en tiempo real sobre los procesos mediante los cuales se eligen los jueces y fiscales, los resultados del sistema de sanciones, la transparencia y rendición de cuentas de  instituciones judiciales.',
-          urlMore: 'https://google.com',
-          background: '/bloques/bloque01.png',
+          urlMore: null,
+          route: '/quienes-somos',
+          background: '/bloques/bloque01.jpg',
+          isArticle: false
+        },
+        {
+          title: 'Nuestros artículos',
+          content: 'Entrá acá para ver nuestros artículos sobre el funcionamiento de la justicia, transparencia, selección de jueces/as y fiscales, procesos disciplinarios y género y justicia.',
+          urlMore: null,
+          route: '/articulos',
+          background: '/bloques/bloque01.jpg',
           isArticle: false
         },
         {
           title: 'Articulo destacado',
           content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-          urlMore: 'https://google.com',
-          background: '/bloques/bloque02.png',
+          urlMore: null,
+          route: '/articulos',
+          background: '/bloques/bloque02.jpg',
           isArticle: true
         }
 

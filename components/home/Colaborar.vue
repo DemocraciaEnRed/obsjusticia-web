@@ -7,7 +7,7 @@
       </h1>
       <hr>
       <br>
-      <a href="" class="button is-primary"><span class="mr-3">Contactanos</span><i class="fas fa-arrow-right" /></a>
+      <a href="https://preguntarparaacordar.typeform.com/to/X2k0vO5B" target="_blank" class="button is-primary"><span class="mr-3">Contactanos</span><i class="fas fa-arrow-right" /></a>
     </div>
   </section>
 </template>
