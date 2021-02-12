@@ -35,7 +35,7 @@
             </h2>
           </div> -->
         </div>
-        <div class="column is-5 is-align-self-flex-end pb-0">
+        <div class="column is-6 is-align-self-flex-end pb-0">
           <!-- <div class="block-text-container content has-text-right">
             <h1 class="subtitle is-3 has-text-white">
               ¿Qué es<br><b class="is-800">Iniciativa jusTa?</b>
@@ -57,6 +57,10 @@
             :indicator-background="false"
             indicator-style="is-dots"
             :interval="8000"
+            icon-pack="fas fa-3x"
+            icon-prev="fa-chevron-left has-text-primary"
+            icon-next="fa-chevron-right has-text-primary"
+            :pause-info="false"
           >
             <b-carousel-item v-for="(block, index) in blocks" :key="`block-${index}`">
               <Block :block="block" />
@@ -73,6 +77,29 @@ import Block from './carousel/Block.vue'
 export default {
   components: {
     Block
+  },
+  fetchOnServer: false,
+  async fetch () {
+    const articles = await this.$content('articles')
+      .where({ highlight: true })
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
+      .sortBy('date', 'desc')
+      .limit(3)
+      .fetch()
+      .catch((err) => {
+        // error({ statusCode: 404, message: 'Page not found' })
+        console.log(err)
+      })
+    articles.forEach((article) => {
+      this.blocks.push({
+        title: article.title,
+        content: article.description,
+        urlMore: null,
+        route: `/articulos/${article.slug}`,
+        background: require(`../../assets/images/${article.image}`),
+        isArticle: true
+      })
+    })
   },
   data () {
     return {
@@ -93,16 +120,7 @@ export default {
           route: '/articulos',
           background: '/bloques/bloque01.jpg',
           isArticle: false
-        },
-        {
-          title: 'Articulo destacado',
-          content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-          urlMore: null,
-          route: '/articulos',
-          background: '/bloques/bloque02.jpg',
-          isArticle: true
         }
-
       ]
     }
   },

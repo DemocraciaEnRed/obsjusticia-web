@@ -35,7 +35,8 @@
       </div>
       <img src="~/assets/img/procesos-dots.svg" class="image is-centered" alt="Procesos">
       <br>
-      <a href="" class="button is-primary-dark"><span class="mr-3">Ver todos los datos</span><i class="fas fa-arrow-right" /></a>
+      <!-- <a href="#" class="button is-primary-dark"><span class="mr-3">Ver todos los datos</span><i class="fas fa-arrow-right" /></a> -->
+      <a href="#" class="button is-primary-dark" disabled>Proximamente</a>
     </div>
   </section>
 </template>

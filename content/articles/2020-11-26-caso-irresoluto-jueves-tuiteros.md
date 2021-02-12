@@ -8,6 +8,7 @@ image: twitter.jpg
 tags: 
 - genero
 - seleccion
+highlight: false
 ---
 
 Uno de los problemas de que no exista un Código de Ética en el Poder Judicial de la Nación es que no hay ninguna regla sobre lo que deben hacer y no deben hacer sus integrantes. Así, aunque suene reñido con el sentido común, el Consejo de la Magistratura fácilmente desestima denuncias de acciones que representan una grave afrenta para la imagen y el prestigio de una Justicia muy desprestigiada con el argumento de que no son conductas tipificadas. Uno de los ejemplos más claros es el caso de los jueces “tuiteros” y hay uno a cada lado de la famosa grieta.

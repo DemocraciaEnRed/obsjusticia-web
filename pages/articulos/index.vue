@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="hero is-primary">
+    <div class="hero is-primary is-medium">
       <div class="hero-body">
         <h1 class="title is-1 has-text-centered">
           ARTÍCULOS
@@ -34,7 +34,7 @@
                     {{ article.description }}
                   </i>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
-                    <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary">
+                    <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary is-capitalized">
                       <i class="fas fa-hashtag" />
                       &nbsp;{{ tag }}
                     </span>
