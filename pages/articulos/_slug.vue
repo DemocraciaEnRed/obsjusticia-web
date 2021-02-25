@@ -1,6 +1,34 @@
 <template>
-  <section>
-    <div class="hero is-dark is-medium">
+  <section class="has-background-white">
+    <div class="filler has-background-primary" />
+    <div class="section the-header mb-2">
+      <div class="container has-text-centered">
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <nuxt-link :to="`/articulos`" class="has-text-white">
+                    Artículos
+                  </nuxt-link>
+                </li>
+                <li class="is-active">
+                  <a href="#" class="has-text-white" aria-current="page">{{ article.title }}</a>
+                </li>
+              </ul>
+            </nav>
+            <img :src="require(`~/assets/images/${article.image}`)" class="image mb-5" alt="">
+          </div>
+        </div>
+        <h1 class="title is-3 is-size-5-touch mb-3">
+          {{ article.title }}
+        </h1>
+        <p>
+          por {{ article.author }}
+        </p>
+      </div>
+    </div>
+    <!-- <div class="hero is-dark is-medium">
       <div
         class="background-image"
         :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`"
@@ -13,12 +41,9 @@
             {{ article.title }}
           </h1>
           <div class="line my-5" />
-          <p class="is-size-5 is-size-6-touch">
-            por {{ article.author }}
-          </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="title-container has-text-white" :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`">
       <div class="fondo-negro has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
         <h1 class="has-text-white">
@@ -30,85 +55,59 @@
         </p>
       </div>
     </div> -->
-    <div class="section">
-      <div class="container">
+    <div class="section mt-0 mt-4 mb-0">
+      <div class="container mb-6">
         <div class="columns">
-          <div class="column is-three-quarters">
-            <div class="content has-text-justified">
-              <p class="is-size-4 is-chivo">
-                <i>{{ article.description }}</i>
-              </p>
-              <nuxt-content :document="article" class="is-size-4 is-chivo"/>
-            </div>
-          </div>
-          <div class="column">
+          <div class="column is-2">
             <div class="data-content pl-3">
-              <p class="is-size-5 mb-2">
+              <p class="mb-2">
                 <b>Autor</b>
               </p>
               <p>{{ article.author }}</p>
-              <p class="is-size-5 my-2">
+              <p class="my-2">
                 <b>Publicado el</b>
               </p>
               <p>{{ article.date.split('T')[0] }}</p>
-              <p class="is-size-5 my-2">
+              <p class="my-2">
                 <b>Tags</b>
               </p>
-              <div class="tags" v-if="article.tags && article.tags.length > 0">
-                <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary">{{ tag }}</span>
+              <div v-if="article.tags && article.tags.length > 0" class="tags">
+                <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">{{ tag }}</span>
               </div>
             </div>
-            <!-- <div class="box">
-              <div class="has-text-centered">
-                <p class="is-size-1">TEMAS</p>
-                <div class="mt-4">
-                  <p class="is-size-4">
-                    #ACIJ #JUDICIAL #MAFALDA #REDESSOCIALES
-                  </p>
-                </div>
-              </div>
-              <div class="columns has-text-centered is-size-2 mt-5">
-                <div class="column">
-                  <a href="https://www.facebook.com/ACIJ.ORG">
-                    <span class="icon">
-                      <i class="fab fa-facebook-f" />
-                    </span>
-                  </a>
-                </div>
-                <div class="column">
-                  <a href="https://twitter.com/ACIJargentina">
-                    <span class="icon">
-                      <i class="fab fa-twitter" />
-                    </span>
-                  </a>
-                </div>
-                <div class="column">
-                  <a
-                    href="https://www.linkedin.com/company/asociacióncivilporlaigualdadylajusticia/"
-                  >
-                    <span class="icon">
-                      <i class="fab fa-linkedin" />
-                    </span>
-                  </a>
-                </div>
-                <div class="column">
-                  <a href="https://www.youtube.com/user/CanalACIJ">
-                    <span class="icon">
-                      <i class="fab fa-youtube" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div> -->
+          </div>
+          <div class="column is-8">
+            <div class="content has-text-justified">
+              <p class="is-chivo">
+                <i>{{ article.description }}</i>
+              </p>
+              <hr>
+              <nuxt-content :document="article" class="" />
+            </div>
+            <div v-if="article.tags && article.tags.length > 0" class="tags">
+              <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">{{ tag }}</span>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="container is-fluid">
+        <h1 class="title is-3">
+          Ver otros articulos relacionados
+        </h1>
+        <AlternativeCarousel :skip-article="article.slug" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+// import Carousel from '~/components/articles/Carousel'
+import AlternativeCarousel from '~/components/articles/AlternativeCarousel'
+
 export default {
+  components: {
+    AlternativeCarousel
+  },
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     return { article }
@@ -117,12 +116,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.the-header{
+  margin-top: -140px;
+  img {
+    border-radius: 8px;
+  }
+}
+.filler{
+  height: 230px;
+}
 .background-dark-layer {
   background-color: black;
   position: relative;
   width: 100%;
   height: 100%;
   opacity: 0.7;
+}
+.content{
+  hr {
+    background-color: #C4C4C4;
+    height: 1px;
+  }
 }
 .line {
   width: 25%;
@@ -146,9 +160,5 @@ export default {
   width: 100%;
   background-size: cover;
   background-position: center center;
-}
-.data-content{
-  border-left: 3px solid $dark;
-  padding-left: 15px;
 }
 </style>

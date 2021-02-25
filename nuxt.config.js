@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Justa - ACIJ - Observatorio de Justicia',
@@ -28,6 +29,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/vue-slick-carousel.js', mode: 'client' },
+    { src: '~/plugins/vue-masonry.js', mode: 'client' },
     { src: '~/plugins/services.js' }
   ],
 

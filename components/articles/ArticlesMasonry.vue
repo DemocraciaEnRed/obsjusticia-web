@@ -1,8 +1,8 @@
 <template>
-  <section class="has-background-primary p-5">
-    <div class="container">
+  <div>
+    <no-ssr>
       <div v-if="$fetchState.pending" class="section">
-        <h4 class="subtitle has-text-white is-4 has-text-centered">
+        <h4 class="subtitle has-text-dark is-4 has-text-centered">
           <i class="fas fa-sync fa-spin" />&nbsp; Cargando articulos
         </h4>
       </div>
@@ -13,8 +13,8 @@
           </h4>
         </div>
         <div v-else class="">
-          <VueSlickCarousel v-bind="settings" class="monkey">
-            <div v-for="article in articles" :key="`article-${article.slug}`" class="articles-card">
+          <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container">
+            <div v-for="(article, index) in articles" :key="index" v-masonry-tile class="articles-card">
               <NuxtLink :to="`articulos/${article.slug}`">
                 <div class="card">
                   <div class="card-image">
@@ -40,28 +40,18 @@
                       </p>
                     </div>
                     <div class="tags">
-                      <span v-for="(tag,index) in article.tags" :key="`tag-${index}`" class="tag is-special is-capitalized">{{ tag }}</span>
+                      <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
                     </div>
                   </div>
                 </div>
               </NuxtLink>
             </div>
-            <template slot="prevArrow">
-              <div class="custom-arrow-left" />
-            </template>
-            <template slot="nextArrow">
-              <div class="custom-arrow-right" />
-            </template>
-          </VueSlickCarousel>
+          </div>
         </div>
       </div>
-      <div class="has-text-centered mb-4">
-        <a href="" class="button is-primary-dark"><span class="mr-3">Ver todos los articulos</span><i class="fas fa-arrow-right" /></a>
-      </div>
-    </div>
-  </section>
+    </no-ssr>
+  </div>
 </template>
-
 <script>
 export default {
   fetchOnServer: false,
@@ -69,7 +59,6 @@ export default {
     const articles = await this.$content('articles')
       .only(['slug', 'title', 'date', 'category', 'author', 'image', 'tags'])
       .sortBy('date', 'desc')
-      .limit(7)
       .fetch()
       .catch((err) => {
         // error({ statusCode: 404, message: 'Page not found' })
@@ -79,51 +68,20 @@ export default {
   },
   data () {
     return {
-      test: 0,
-      articles: [],
-      settings: {
-        arrows: false,
-        dots: false,
-        focusOnSelect: true,
-        autoplay: true,
-        autoplaySpeed: 7000,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        touchThreshold: 5,
-        adaptiveHeight: true,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 2,
-              adaptiveHeight: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              adaptiveHeight: true
-            }
-          }
-        ]
-      }
+      articles: []
     }
+  },
+  mounted () {
+    this.$redrawVueMasonry()
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.monkey{
-  margin-top: -100px;
-}
 .articles-card {
   padding: 10px 7px 15px 7px;
   z-index: 100;
+  width: calc(100% / 4);
   .title{
      display: -webkit-box;
     -webkit-line-clamp: 3;

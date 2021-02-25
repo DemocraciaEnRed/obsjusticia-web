@@ -26,32 +26,32 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end" style="margin: 0 auto;">
           <div class="navbar-item">
-            <router-link to="/" class="nav-link has-text-white" :class="{'active': $route.name == 'index'}">
+            <router-link to="/" class="nav-link" :class="{'active': $route.name == 'index', 'has-text-dark': dark, 'has-text-white': !dark}">
               Inicio
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/articulos" class="nav-link has-text-white">
+            <router-link to="/articulos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Artículos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#procesos" class="nav-link has-text-white">
+            <router-link to="/#procesos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Procesos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#transparencia" class="nav-link has-text-white">
+            <router-link to="/#transparencia" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Transparencia
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#concursos" class="nav-link has-text-white">
+            <router-link to="/#concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Concursos
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/quienes-somos" class="nav-link has-text-white">
+            <router-link to="/quienes-somos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Quiénes somos
             </router-link>
           </div>
@@ -63,6 +63,13 @@
 
 <script>
 export default {
+  props: {
+    dark: {
+      type: Boolean,
+      required: false,
+      default: () => false
+    }
+  },
   computed: {
     isHome () {
       return this.$route

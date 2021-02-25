@@ -1,13 +1,57 @@
 <template>
-  <section>
-    <div class="hero is-primary is-medium">
-      <div class="hero-body">
-        <h1 class="title is-1 has-text-centered">
-          ARTÍCULOS
+  <section class="">
+    <div class="filler has-background-primary" />
+    <div class="section">
+      <div class="container last-articles">
+        <h1 class="title is-1 has-text-white">
+          Últimos articulos
         </h1>
+        <b-carousel
+          :interval="8000"
+          :pause-info="false"
+          :indicator="false"
+          :arrow="false"
+        >
+          <b-carousel-item v-for="article in articles" :key="article.slug">
+            <div class="last-articles-container is-flex">
+              <div class="article-picture" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
+              <div class="article-text box is-radiusless has-text-centered is-flex is-flex-direction-column is-justify-content-center">
+                <h1 class="title is-3 has-text-black m-0">
+                  {{ article.title }}
+                </h1>
+                <hr>
+                <div class="content has-text-justified">
+                  <p class="text-description">
+                    {{ article.description }}
+                  </p>
+                </div>
+                <div class="is-flex is-flex-direction-row is-justify-content-space-between">
+                  <p>Por {{ article.author }}<span class="mx-2">| </span> {{ article.date.split('T')[0] }}</p>
+                  <div v-if="article.tags && article.tags.length > 0" class="tags">
+                    <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
+                      <i class="fas fa-hashtag" />
+                      &nbsp;{{ tag }}
+                    </span>
+                  </div>
+                </div>
+                <div class="mt-5 has-text-centered">
+                  <nuxt-link :to="`/articulos/${article.slug}`" class="has-text-primary is-size-5">
+                    Ver el articulo completo <i class="fas fa-arrow-right fa-lg" />
+                  </nuxt-link>
+                </div>
+              </div>
+            </div>
+          </b-carousel-item>
+        </b-carousel>
+        <div class="my-6 py-5">
+          <h1 class="subtitle is-3">
+            Todos los articulos
+          </h1>
+          <ArticlesMasonry />
+        </div>
       </div>
     </div>
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-8">
@@ -46,12 +90,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </section>
 </template>
 
 <script>
+import ArticlesMasonry from '@/components/articles/ArticlesMasonry'
+
 export default {
+  components: {
+    ArticlesMasonry
+  },
   async asyncData ({ $content, params }) {
     const articles = await $content('articles')
       .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags'])
@@ -73,5 +122,39 @@ export default {
 .media .media-left figure{
   background-size: cover;
   background-position: center center;
+}
+.filler{
+  height: 430px;
+}
+.last-articles{
+  margin-top: -320px;
+}
+.last-articles-container{
+  width: 100%;
+  z-index: 10;
+  .article-picture{
+    background-size: cover;
+    background-position: center center;
+    width: 60%
+  }
+  .article-text{
+    width: 50%;
+    max-height: 400px;
+    min-height: 400px;
+    padding: 20px 40px;
+    hr{
+      width: 200px;
+      background-color: #000;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .text-description{
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      // line-height: normal;
+    }
+  }
 }
 </style>
