@@ -20,7 +20,7 @@
               ¿Que motiva <span class="has-text-weight-bolder has-special-blue is-900">JusTA?</span>
             </h1>
             <div class="line" />
-            <div class="content">
+            <div class="content has-text-justified">
               <p>
                 Observamos que mientras hay un consenso general de que la ciudadanía necesita una justicia más eficaz, transparente e independiente pero que, a la vez, hace décadas que no muestra cambios sustantivos en ninguna de esas tres facetas. El estado actual del sistema judicial es una de las causas de la deteriorada salud de la democracia, algo que es percibido por una buena parte de la sociedad civil en todas las encuestas de opinión que se realizan sobre la materia.
               </p>
@@ -45,7 +45,7 @@
     </section>
     <div class="hero is-special">
       <div class="hero-body">
-        <div class="container">
+        <div class="container has-text-justified">
           <div class="columns is-multiline">
             <div class="column is-4">
               <h1 class="title is-1">
@@ -101,7 +101,7 @@
             <div class="line" />
           </div>
         </div>
-        <div class="columns">
+        <div class="columns has-text-justified">
           <div class="column">
             <h1 class="title is-5 has-special-blue">
               Transparencia
