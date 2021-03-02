@@ -14,7 +14,7 @@
         >
           <b-carousel-item v-for="article in articles" :key="article.slug">
             <div class="last-articles-container is-flex">
-              <div class="article-picture" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
+              <div class="article-picture" :style="`background-image: url(${require(`~/assets/img/articulos/${article.image}`)})`" />
               <div class="article-text box is-radiusless has-text-centered is-flex is-flex-direction-column is-justify-content-center">
                 <h1 class="title is-3 has-text-black m-0">
                   {{ article.title }}
@@ -45,7 +45,7 @@
         </b-carousel>
         <div class="my-6 py-5">
           <h1 class="subtitle is-3">
-            Todos los articulos
+            Todos los artículos
           </h1>
           <ArticlesMasonry />
         </div>

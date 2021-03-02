@@ -4,7 +4,7 @@ description: Quienes se inscriben en un concurso para cubrir vacantes judiciales
 date: 2020-10-22
 author: Irene Benito
 category: investigaciones
-image: dice.jpg
+image: justicia.jpg
 tags: 
 - género
 - selección

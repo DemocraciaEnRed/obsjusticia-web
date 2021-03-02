@@ -1,5 +1,5 @@
 ---
-title: Caso irresoluto
+title: El caso irresoluto de los jueces tuiteros (y grieteros)
 description: La magistratura no debería comportarse en las redes sociales como un usuario más y, sin embargo, tiene la cancha abierta para hacerlo. La ausencia de reglas éticas “condena” a la ciudadanía a soportar que quienes deban impartir justicia se conduzcan en Twitter, no como juristas, sino como foristas rabiosos. Hubo dos casos emblemáticos de jueces de ambos polos del espectro político que tuitearon insultos para representantes del partido rival y no fueron sancionados disciplinariamente. En este tema la Argentina también da la espalda a las convenciones internacionales.
 date: 2020-11-26
 author: Ezequiel Nino

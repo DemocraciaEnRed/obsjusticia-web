@@ -5,11 +5,11 @@
         <div class="container">
           <div class="columns is-mobile is-multiline mb-5 is-vcentered">
             <div class="column is-12-mobile is-3-desktop">
-              <img src="~/assets/images/acij-logo.png" width="167" class="image acij-logo">
+              <img src="~/assets/img/acij-logo.png" width="167" class="image acij-logo">
             </div>
             <div class="column is-6-mobile is-2-desktop links-columns">
               <ul>
-                <li><a href="#" class="has-text-white">Articulos</a></li>
+                <li><a href="#" class="has-text-white">Artículos</a></li>
                 <li><a href="#" class="has-text-white">Selección</a></li>
               </ul>
             </div>

@@ -17,7 +17,7 @@
                 </li>
               </ul>
             </nav>
-            <img :src="require(`~/assets/images/${article.image}`)" class="image mb-5" alt="">
+            <img :src="require(`~/assets/img/articulos/${article.image}`)" class="image mb-5 is-fullwidth" :alt="article.title">
           </div>
         </div>
         <h1 class="title is-3 is-size-5-touch mb-3">
@@ -28,33 +28,6 @@
         </p>
       </div>
     </div>
-    <!-- <div class="hero is-dark is-medium">
-      <div
-        class="background-image"
-        :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`"
-      >
-        <div class="background-dark-layer" />
-      </div>
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title is-1 is-size-3-touch has-text-white m-0">
-            {{ article.title }}
-          </h1>
-          <div class="line my-5" />
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="title-container has-text-white" :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`">
-      <div class="fondo-negro has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
-        <h1 class="has-text-white">
-          {{ article.title }}
-        </h1>
-        <div class="line mb-6" />
-        <p class="is-size-3">
-          por {{ article.author }}
-        </p>
-      </div>
-    </div> -->
     <div class="section mt-0 mt-4 mb-0">
       <div class="container mb-6">
         <div class="columns">
@@ -92,7 +65,7 @@
       </div>
       <div class="container is-fluid">
         <h1 class="title is-3">
-          Ver otros articulos relacionados
+          Ver otros artículos relacionados
         </h1>
         <AlternativeCarousel :skip-article="article.slug" />
       </div>

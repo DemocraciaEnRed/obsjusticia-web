@@ -4,7 +4,7 @@ description: Estudiamos en detalle 10 concursos finalizados por el Consejo en 20
 date: 2020-10-30
 category: columna
 author: Irene Benito
-image: justicia.jpg
+image: dice.jpg
 tags:
 - disciplina
 highlight: false

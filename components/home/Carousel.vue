@@ -1,19 +1,5 @@
 <template>
   <div class="bg-container">
-    <!-- <img
-        :key="activeBg"
-        :src="activeBg"
-        data-toggle="tooltip"
-        data-placement="bottom"
-        title="goTop"
-        class="imgBg"
-        alt=""
-      > -->
-    <!-- <transition name="fade">
-      <div v-for="(block, index) in blocks" :key="`img-${index}`" class="imgBg-container">
-        <div class="imgBg" v-if="index == activeBlock" :style="{backgroundImage: url(block.background)}"></div>
-      </div>
-    </transition> -->
     <transition name="fade">
       <!-- // eslint-disable-next-line vue/no-use-v-if-with-v-for -->
       <div :key="activeBlock" class="imgBg" :style="{backgroundImage: `url(${blocks[activeBlock].background})`}" />>
@@ -21,34 +7,9 @@
     <div class="container">
       <div class="columns is-vcentered block-item">
         <div class="column">
-          <!-- <figure class="image is-96x96 mb-4">
-            <img class="is-rounded" src="~/assets/images/ojos.gif">
-          </figure> -->
           <img src="~/assets/img/logo-white.svg" class="iamge" width="480">
-          <!-- <div class="upper-logo-container is-inline-block">
-            <span class="is-raleway is-500 has-text-white is-size-5">Estamos observando a la justicia</span>
-          </div>
-          <br>
-          <div class="lower-logo-container is-inline-block">
-            <h2 class="subtitle is-3 has-text-white my-2">
-              <span class="is-600">JusTA</span><br>Plataforma por una justicia<br>transparente y abierta
-            </h2>
-          </div> -->
         </div>
         <div class="column is-6 is-align-self-flex-end pb-0">
-          <!-- <div class="block-text-container content has-text-right">
-            <h1 class="subtitle is-3 has-text-white">
-              ¿Qué es<br><b class="is-800">Iniciativa jusTa?</b>
-            </h1>
-            <p class="has-text-white">
-              Conocé información en tiempo real sobre los procesos mediante los cuales se eligen los jueces y fiscales, los resultados del sistema de sanciones, la transparencia y rendición de cuentas de  instituciones judiciales.
-            </p>
-            <div class="buttons is-right">
-              <router-link to="/quienes-somos" class="button is-light is-rounded ">
-                Ver más&nbsp;<i class="fas fa-arrow-right" />
-              </router-link>
-            </div>
-          </div> -->
           <b-carousel
             v-model="activeBlock"
             :indicator="true"
@@ -96,7 +57,7 @@ export default {
         content: article.description,
         urlMore: null,
         route: `/articulos/${article.slug}`,
-        background: require(`../../assets/images/${article.image}`),
+        background: require(`../../assets/img/articulos/${article.image}`),
         isArticle: true
       })
     })
@@ -107,7 +68,7 @@ export default {
       blocks: [
         {
           title: '¿Qué es Iniciativa JusTA?',
-          content: 'Conocé información en tiempo real sobre los procesos mediante los cuales se eligen los jueces y fiscales, los resultados del sistema de sanciones, la transparencia y rendición de cuentas de  instituciones judiciales.',
+          content: 'Plataforma JusTA es una iniciativa para el intercambio de información, propuestas, diálogos y reclamos sobre el sistema de justicia. Promovemos una mayor apertura y rendición de cuentas del Poder Judicial y los Ministerios Públicos a través de una sección de artículos de análisis y otras de datos abiertos sobre procesos de selección y disciplinarios de jueces, juezas y fiscales, y un ranking de transparencia de estas instituciones.',
           urlMore: null,
           route: '/quienes-somos',
           background: '/bloques/bloque01.jpg',

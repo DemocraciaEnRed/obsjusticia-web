@@ -22,13 +22,13 @@
             <div class="line" />
             <div class="content has-text-justified">
               <p>
-                Observamos que mientras hay un consenso general de que la ciudadanía necesita una justicia más eficaz, transparente e independiente pero que, a la vez, hace décadas que no muestra cambios sustantivos en ninguna de esas tres facetas. El estado actual del sistema judicial es una de las causas de la deteriorada salud de la democracia, algo que es percibido por una buena parte de la sociedad civil en todas las encuestas de opinión que se realizan sobre la materia.
+                Observamos que mientras hay un consenso general de que la ciudadanía necesita una <b><u>justicia más eficaz, transparente e independiente</u></b> pero que, a la vez, hace décadas que no muestra cambios sustantivos en ninguna de esas tres facetas. <b><u>El estado actual del sistema judicial es una de las causas de la deteriorada salud de la democracia</u></b>, algo que es percibido por una buena parte de la sociedad civil en todas las encuestas de opinión que se realizan sobre la materia.
               </p>
               <p>
-                Tenemos una justicia con enormes defectos, con problemas estructurales de funcionamiento que se arrastran desde hace décadas, pero, también, de independencia, opacidad y falta de rendición de cuentas.<br>Quienes utilizamos cotidianamente la justicia (profesionales del derecho, integrantes del propio sistema de justicia, organizaciones de la sociedad civil), sumados a la academia, el periodismo y a otros analistas e investigadores, tenemos mucho para decir, promover y sumar en este objetivo. Algo similar sucede con tantos integrantes del sistema judicial que sienten que debe haber cambios en las instituciones a las que pertenecen para que se sientan mejor representados por ellas.
+                Tenemos una justicia con enormes defectos, con <b>problemas estructurales de funcionamiento</b> que se arrastran desde hace décadas, pero, también, <b>de independencia, opacidad y falta de rendición de cuentas.</b><br><b>Quienes utilizamos cotidianamente la justicia</b> (profesionales del derecho, integrantes del propio sistema de justicia, organizaciones de la sociedad civil), sumados a la academia, el periodismo y a otros analistas e investigadores, <b>tenemos mucho para decir, promover y sumar en este objetivo</b>. Algo similar sucede con tantos integrantes del sistema judicial que sienten que debe haber cambios en las instituciones a las que pertenecen para que se sientan mejor representados por ellas.
               </p>
               <p>
-                Proponemos JusTA como una iniciativa de intercambio de información, propuestas, diálogos, reclamos, interacciones con los actores del sistema judicial y cualquier otro tipo de vinculación virtuosa que surja de hacernos escuchar. JusTA promueve una mayor apertura y rendición de cuentas hacia la ciudadanía de los órganos del sistema judicial nacional (particularmente la Corte Suprema y el Consejo de la Magistratura, pero, también, el Ministerio Público Fiscal y de la Defensa).
+                Proponemos <b><u>JusTA como una iniciativa de intercambio de información, propuestas, diálogos, reclamos, interacciones</u></b> con los actores del sistema judicial y cualquier otro tipo de vinculación virtuosa que surja de hacernos escuchar. <b><u>JusTA promueve una mayor apertura y rendición de cuentas hacia la ciudadanía de los órganos del sistema judicial nacional</u></b> (particularmente la Corte Suprema y el Consejo de la Magistratura, pero, también, el Ministerio Público Fiscal y de la Defensa).
               </p>
             </div>
           </div>
@@ -36,7 +36,7 @@
         <div class="columns is-centered">
           <div class="column is-6">
             <h1 class="title is-2">
-              ¿Que contenidos <span class="has-text-weight-bolder has-special-violet is-900">publica JusTA?</span>
+              ¿Qué contenidos <span class="has-text-weight-bolder has-special-violet is-900">publica JusTA?</span>
             </h1>
             <div class="line-violet" />
           </div>
@@ -45,14 +45,14 @@
     </section>
     <div class="hero is-special">
       <div class="hero-body">
-        <div class="container has-text-justified">
+        <div class="container">
           <div class="columns is-multiline">
             <div class="column is-4">
               <h1 class="title is-1">
                 1.
               </h1>
               <div class="content mb-6">
-                <p>Identifica y resume información relevante sobre el sistema judicial argentino que hoy es de difícil acceso, se solicita otra que no se encuentra disponible y se la visibiliza. </p>
+                <p><b><u>Identifica y resume información</u></b> relevante sobre el sistema judicial argentino que hoy es de difícil acceso, se solicita otra que no se encuentra disponible y se la visibiliza. </p>
               </div>
             </div>
             <div class="column is-4">
@@ -60,7 +60,7 @@
                 2.
               </h1>
               <div class="content mb-6">
-                <p>Visualizan y publican datos sobre el sistema de justicia de forma accesible.</p>
+                <p><b><u>Visualizan y publican datos</u></b> sobre el sistema de justicia de forma accesible.</p>
               </div>
             </div>
             <div class="column is-4">
@@ -68,7 +68,7 @@
                 3.
               </h1>
               <div class="content mb-6">
-                <p>Examinan distintos aspectos de las instituciones que lo integran, cuya necesaria mejora es vital, y se realizan propuestas</p>
+                <p>Examinan distintos aspectos de las instituciones que lo integran, cuya necesaria mejora es vital, y se <b><u>realizan propuestas</u></b></p>
               </div>
             </div>
             <div class="column is-4">
@@ -76,7 +76,7 @@
                 4.
               </h1>
               <div class="content mb-6">
-                <p>Se realizan intercambios entre distintos actores vinculados al sistema judicial y se promueven acciones colaborativas.</p>
+                <p>Se realizan intercambios entre distintos actores vinculados al sistema judicial y <b><u>se promueven acciones colaborativas.</u></b></p>
               </div>
             </div>
             <div class="column is-4">
@@ -84,7 +84,7 @@
                 5.
               </h1>
               <div class="content mb-6">
-                <p>Se publican opiniones de expertos sobre temas estructurales vinculados al funcionamiento del sistema judicial y su independencia.</p>
+                <p><b><u>Se publican opiniones de expertos</u></b> sobre temas estructurales vinculados al funcionamiento del sistema judicial y su independencia.</p>
               </div>
             </div>
           </div>
@@ -101,13 +101,13 @@
             <div class="line" />
           </div>
         </div>
-        <div class="columns has-text-justified">
+        <div class="columns">
           <div class="column">
             <h1 class="title is-5 has-special-blue">
               Transparencia
             </h1>
             <div class="content">
-              <p>La transparencia activa y pasiva de la Corte Suprema, Consejo de la Magistratura, Ministerio Público Fiscal y Ministerio Público de la Defensa</p>
+              <p>La <b><u>transparencia activa y pasiva</u></b> de la Corte Suprema, Consejo de la Magistratura, Ministerio Público Fiscal y Ministerio Público de la Defensa</p>
             </div>
           </div>
           <div class="column">
@@ -115,7 +115,7 @@
               Selección de autoridades
             </h1>
             <div class="content">
-              <p>La forma de selección de sus autoridades y personal</p>
+              <p>La forma de <b><u>selección de sus autoridades y personal</u></b></p>
             </div>
           </div>
           <div class="column">
@@ -123,7 +123,7 @@
               Procesos disciplinarios
             </h1>
             <div class="content">
-              <p>Los procesos disciplinarios y acusatorios contra sus integrantes</p>
+              <p>Los <b><u>procesos disciplinarios</u></b> y acusatorios contra sus integrantes</p>
             </div>
           </div>
           <div class="column">
@@ -132,14 +132,14 @@
             </h1>
             <div class="content">
               <p>
-                Los tiempos de los procesos que generan la extendida sensación de ausencia de justicia y los problemas de independencia especialmente relacionados a sus vínculos con los poderes políticos, actores económicos, servicios de inteligencia, entre otros.
+                Los <b><u>tiempos</u></b> de los procesos que generan la extendida sensación de ausencia de justicia y los <b><u>problemas de independencia</u></b> especialmente relacionados a sus vínculos con los poderes políticos, actores económicos, servicios de inteligencia, entre otros.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <Colaborar class="has-special-blue-bg"/>
+    <Colaborar class="has-special-blue-bg" />
   </section>
 </template>
 

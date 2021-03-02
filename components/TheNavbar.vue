@@ -1,14 +1,5 @@
 <template>
   <b-navbar wrapper-class="container" transparent>
-    <!-- <template slot="brand">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <img
-          src="~/assets/images/logo_justa@3x.png"
-          alt="Justa"
-          class="logo-navbar"
-        >
-      </b-navbar-item>
-    </template> -->
     <template slot="end">
       <b-navbar-item tag="nuxt-link" to="/">
         Inicio
@@ -16,17 +7,17 @@
       <b-navbar-item tag="nuxt-link" to="/articulos">
         Artículos
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/#procesos">
-        Procesos
+      <b-navbar-item tag="nuxt-link" to="/#seleccion">
+        Selección
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/#transparencia">
-        Transparencia
+      <b-navbar-item tag="nuxt-link" to="/disciplina">
+        Disciplina
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/#concursos">
-        Concursos
-      </b-navbar-item>
+      <a href="https://www.causasdecorrupcion.org/" target="_blank">
+        Corrupción
+      </a>
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
-        Quiénes somos
+        Iniciativa JusTA
       </b-navbar-item>
     </template>
   </b-navbar>

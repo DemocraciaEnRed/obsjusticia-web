@@ -1,7 +1,7 @@
 <template>
-  <section id="vacantes">
+  <section id="seleccion">
     <div class="container">
-      <div class="columns is-vcentered is-desktop">
+      <div class="columns is-vcentered is-desktop mt-0">
         <div class="column is-3-desktop introduction-column">
           <h1 class="title is-3">
             ¿Qué pasa con los concursos de <span class="has-text-primary">Jueces</span> y <span class="has-text-secondary">Fiscales</span>?
@@ -20,8 +20,11 @@
         </div>
         <div class="column is-4-desktop is-offset-1-desktop jueces-column">
           <img src="~/assets/img/jueves-image.svg" class="image mb-3" width="120" alt="">
-          <h1 class="subtitle is-4">
+          <h1 class="subtitle is-4 mb-1">
             Vacantes para <span class="has-text-primary"><b>Jueces y juezas</b></span>
+          </h1>
+          <h1 class="mb-3">
+            Vacantes totales para cargos de <span class="has-text-primary"><b>Jueces y juezas</b></span>: <span class="is-600 has-text-primary">27</span>
           </h1>
           <div class="columns is-mobile">
             <div class="column is-4">

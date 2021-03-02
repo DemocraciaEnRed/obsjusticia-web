@@ -18,7 +18,7 @@
               <i class="far fa-calendar fa-lg" />
             </p>
             <p class="has-text-magenta-dark">
-              <b>Proximamente</b><br>Accedé a los pedidos de información que realizamos para JusTA
+              <b>Próximamente</b><br>Accedé a los pedidos de información que realizamos para JusTA
             </p>
           </div>
         </div>

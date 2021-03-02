@@ -1,28 +1,6 @@
 <template>
   <nav class="navbar index-navbar" role="navigation" aria-label="main navigation">
     <div class="container">
-      <!-- <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img
-            src="~/assets/images/logo_justa@3x.png"
-            alt="Justa"
-            class="logo-navbar"
-          >
-        </a>
-
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </a>
-      </div> -->
-
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end" style="margin: 0 auto;">
           <div class="navbar-item">
@@ -36,23 +14,23 @@
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#procesos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Procesos
+            <router-link to="/#seleccion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Selección
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#transparencia" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Transparencia
+            <router-link to="/disciplina" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Disciplina
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Concursos
-            </router-link>
+            <a href="https://www.causasdecorrupcion.org/" target="_blank"  class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Corrupción
+            </a>
           </div>
           <div class="navbar-item">
             <router-link to="/quienes-somos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Quiénes somos
+              Iniciativa JusTA
             </router-link>
           </div>
         </div>

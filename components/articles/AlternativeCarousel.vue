@@ -16,9 +16,7 @@
           <NuxtLink :to="`/articulos/${article.slug}`">
             <div class="card">
               <div class="card-image">
-                <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/images/${article.image}`)})`">
-                  <!-- <img :src="require(`../../assets/images/${article.imagen}.jpg`)" :alt="`${article.title}`"> -->
-                </figure>
+                <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/img/articulos/${article.image}`)})`" />
               </div>
               <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
                 <div class="is-clearfix">

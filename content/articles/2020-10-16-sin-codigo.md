@@ -1,5 +1,5 @@
 ---
-title: SIN CÓDIGO
+title: Sin código
 description: El sistema judicial nacional se resiste a darse reglas de ética que regulen la conducta de sus miembros ¿Qué pueden y qué no pueden hacer los jueces, fiscales y defensores públicos? La pregunta carece de respuesta en la justicia nacional y federal. La ausencia de un Código de Ética Judicial se traduce en niveles bajísimos de sanción para los transgresores. La renuencia a llenar el vacío incluye un desconocimiento en la práctica de las pautas de los tratados internacionales.
 date: 2020-10-16
 author: ACIJ
