@@ -6,7 +6,7 @@
       </h1>
       <hr>
       <p class="count-number my-5">
-        <span class="is-600 is-size-3">3854</span><br><span class="is-400">DENUNCIAS</span>
+        <span class="is-600 is-size-3">3854</span><br><span class="is-400">DENUNCIAS TOTALES</span>
       </p>
       <p class="is-900 is-size-5 my-5">
         Desde 1998
@@ -14,22 +14,22 @@
       <div class="columns is-centered">
         <div class="column is-2">
           <p class="count-number my-2">
-            <span class="is-400 is-size-3 color-green">247</span><br><span class="is-400">DENUNCIAS<br></span>
+            <span class="is-400 is-size-3 color-green">3353</span><br><span class="is-400">DESESTIMADAS<br></span>
           </p>
         </div>
         <div class="column is-2">
           <p class="count-number my-2">
-            <span class="is-400 is-size-3 color-green">27</span><br><span class="is-400">JUICIOS<br>POLITICOS</span>
+            <span class="is-400 is-size-3 color-green">245</span><br><span class="is-400">JUICIOS<br>POLITICOS</span>
           </p>
         </div>
         <div class="column is-2">
           <p class="count-number my-2">
-            <span class="is-400 is-size-3 color-green">40</span><br><span class="is-400">DENUNCIAS ACTIVAS<br>POR CADUCAR</span>
+            <span class="is-400 is-size-3 color-green">42</span><br><span class="is-400">SANCIONES</span>
           </p>
         </div>
         <div class="column is-2">
           <p class="count-number my-2">
-            <img src="~/assets/img/shiny-left.png" class="thingy" alt=""><span class="is-400 is-size-3 color-red">200</span><img src="~/assets/img/shiny-right.png" class="thingy" alt=""><br><span class="is-400">DENUNCIAS ACTIVAS<br>POR CADUCAR</span>
+            <img src="~/assets/img/shiny-left.png" class="thingy" alt=""><span class="is-400 is-size-3 color-red">25</span><img src="~/assets/img/shiny-right.png" class="thingy" alt=""><br><span class="is-400">DENUNCIAS ACTIVAS<br>POR CADUCAR</span>
           </p>
         </div>
       </div>
