@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="overflow: auto">
     <Carousel />
     <ArticlesCarousel />
     <Vacantes />
