@@ -64,7 +64,7 @@ export default {
     scss: ['~assets/scss/_variables.scss']
   },
   publicRuntimeConfig: {
-    // strapiURL: process.env.STRAPI_URL
+    dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021'
   },
   privateRuntimeConfig: {
     // strapiUrl: process.env.STRAPI_URL

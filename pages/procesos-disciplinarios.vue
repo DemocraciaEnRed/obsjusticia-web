@@ -13,8 +13,10 @@
                 Te vamos a mostrar cómo funcionan los procesos de denuncias a jueces de la Nación
               </h1>
               <br>
-              <p><i class="far fa-calendar fa-3x mb-2"/></p>
-              <p class="is-size-4"><b>22 AÑOS</b></p>
+              <p><i class="far fa-calendar fa-3x mb-2" /></p>
+              <p class="is-size-4">
+                <b>22 AÑOS</b>
+              </p>
             </div>
             <hr class="has-background-black">
             <div class="is-clearfix">
@@ -26,19 +28,19 @@
               </p>
             </div>
             <div class="columns mt-6 is-centered">
-              <div class="column is-2">
+              <div class="column is-3">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
                 <span class="is-700 is-size-3 color-green">3370</span><br><span class="is-400">DESESTIMADAS<br></span>
               </div>
-              <div class="column is-2">
+              <div class="column is-3">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
                 <span class="is-700 is-size-3 color-green">245</span><br><span class="is-400">CADUCADAS<br></span>
               </div>
-              <div class="column is-2">
+              <div class="column is-3">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
                 <span class="is-700 is-size-3 color-green">42</span><br><span class="is-400">SANCIONES<br></span>
               </div>
-              <div class="column is-2">
+              <div class="column is-3">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
                 <span class="is-700 is-size-3 color-green">36</span><br><span class="is-400">JUICIOS PÓLITICOS<br></span>
               </div>
@@ -54,19 +56,149 @@
       <a href="#graphs" class="go-fullscreen button is-light"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a>
       <div class="the-buttons buttons is-centered">
         <a href="#lexico" class="button is-primary">Léxico para no abogades</a>
-        <a href="#fuente" class="button is-light">Fuente</a>
-        <a href="#creditos" class="button is-light">Creditos</a>
+        <a href="#fuente" class="button is-light">Fuentes y notas</a>
+        <a href="#creditos" class="button is-light">Créditos</a>
       </div>
+      <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a>
       <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" allowfullscreen class="the-graphs" loading="lazy" />
     </div>
-    <div class="section specialbg">
-      <img id="lexico" src="~/assets/img/001.png" class="image is-centered">
+    <div id="lexico" class="section specialbg">
+      <!-- <img id="lexico" src="~/assets/img/001.png" class="image is-centered"> -->
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-9">
+            <h1 class="title is-2 has-text-centered">
+              Léxico para no abogades
+            </h1>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-5">
+                    🗑️ Destimada
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>La mayoría de las causas fueron desestimadas. Un alto número se desestiman <b><i>inlimines</i></b>, esto significa que no cumplen con los requisitos mínimos establecidos por el consejo de la Magistratura</p>
+                </div>
+              </div>
+            </div>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-5">
+                    ⚰️ Causas caducadas
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son acsos de injusticias.</p>
+                </div>
+              </div>
+            </div>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-5">
+                    ⚖️ Juicio Político
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>
+                    Algunas denuncias por su nivel de gravedad llegan a un Jurado de Enjuiciamiento
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-5">
+                    👩‍⚖️ Sanción
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>
+                    Estas son las causas que tuvieron una sanción, puede ser una sanción firme, sanción disciplinaria y por esto reciben una advertencia, un apercibimiento o una multa
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-5">
+                    👻 Renuncia
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>
+                    En muchos casos el juez renuncia antes de que la denuncia termine
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="section specialbg">
-      <img id="fuente" src="~/assets/img/002.png" class="image is-centered">
+    <div id="fuente" class="section specialbg">
+      <div class="container has-text-centered">
+        <h1 class="title is-2">
+          Fuente y notas
+        </h1>
+        <br>
+        <h6 class="subtitle is-5">
+          Última actualización
+        </h6>
+        <h6 class="title is-5">
+          {{ $config.dataDateUpdated }}
+        </h6>
+        <div class="content">
+          <p class="is-300">
+            Las visualizaciones de esta web se basan en los datos oficiales publicados en el consejo de la magistratura
+          </p>
+          <p class="is-300">
+            Data set original de expedientes en trámite de denuncias a magistrados — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+          </p>
+          <p class="is-300">
+            Data set original de expedientes culminados de denuncias a magistrados — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+          </p>
+          <p class="is-300">
+            Data set original de juicios políticos — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+          </p>
+          <p>Los datos están <b>incompletos</b> y en muchos casos no podemos certificar su rigurosidad<br>No hay datos publicados con perspectiva de género<br>Intentaremos actualizar y mejorar estos datos</p>
+        </div>
+      </div>
     </div>
-    <div class="section specialbg">
-      <img id="creditos" src="~/assets/img/003.png" class="image is-centered">
+    <div id="creditos" class="section specialbg">
+      <div class="container has-text-centered">
+        <h1 class="title is-2">
+          Créditos
+        </h1>
+        <br>
+        <h6 class="subtitle is-5 mb-3">
+          Idea general
+        </h6>
+        <a href="https://acij.org.ar" target="_blank"><img src="~/assets/img/acij-logo-black.png" width="170" class="image is-centered"></a>
+        <br>
+        <h6 class="subtitle is-5 mb-3">
+          Desarrollado por
+        </h6>
+        <a href="https://democraciaenred.org" target="_blank"><img src="~/assets/img/logo-der-black.svg" width="170" class="image is-centered"></a>
+        <br>
+        <h6 class="subtitle is-5">
+          Visualización de datos
+        </h6>
+        <h6 class="title is-5">
+          Javier Ceqiq<br>javier@correo.com
+        </h6>
+        <br>
+        <h6 class="subtitle is-5">
+          Diseño
+        </h6>
+        <h6 class="title is-5">
+          Marien Sequera<br>esmarienkafer@gmail.com
+        </h6>
+      </div>
     </div>
   </section>
 </template>
@@ -114,5 +246,11 @@ background-color: #00B1AF;
   position: absolute;
   top: 20px;
   right: 40px;
+}
+.go-fullscreen-bottom{
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  color: #6b6b6b;
 }
 </style>
