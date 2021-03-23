@@ -7,6 +7,9 @@
       <b-navbar-item tag="nuxt-link" to="/articulos">
         Artículos
       </b-navbar-item>
+      <b-navbar-item tag="nuxt-link" to="/procesos-disciplinarios">
+        Artículos
+      </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/#seleccion">
         Selección
       </b-navbar-item>

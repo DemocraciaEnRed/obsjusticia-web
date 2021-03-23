@@ -14,6 +14,11 @@
             </router-link>
           </div>
           <div class="navbar-item">
+            <router-link to="/procesos-disciplinarios" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Procesos
+            </router-link>
+          </div>
+          <div class="navbar-item">
             <router-link to="/#seleccion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Selección
             </router-link>
