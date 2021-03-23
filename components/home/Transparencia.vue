@@ -9,7 +9,7 @@
           <div class="line-violeta">
             <div class="filler" />
           </div>
-          <div class="content">
+          <div class="content is-size-5">
             <p>
               Medimos la transparencia de los órganos del sistema de justicia nacional
               según el cumplimiento de la ley nacional de acceso a la información.

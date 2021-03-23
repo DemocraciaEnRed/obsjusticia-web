@@ -7,13 +7,13 @@
             <div class="column is-12-mobile is-3-desktop">
               <img src="~/assets/img/acij-logo.png" width="167" class="image acij-logo">
             </div>
-            <div class="column is-6-mobile is-2-desktop links-columns">
+            <div class="column is-6-mobile is-3-desktop links-columns">
               <ul>
                 <li><a href="#" class="has-text-white">Artículos</a></li>
                 <li><a href="#" class="has-text-white">Selección</a></li>
               </ul>
             </div>
-            <div class="column is-6-mobile is-2-desktop links-columns">
+            <div class="column is-6-mobile is-3-desktop links-columns">
               <ul>
                 <li><a href="#" class="has-text-white">¿Qué es iniciativa justa?</a></li>
                 <li><a href="#" class="has-text-white">Disciplina</a></li>
@@ -23,10 +23,7 @@
           <div>
             <div class="columns">
               <div class="column">
-                <a herf="https://democraciaenred.org"><img src="~/assets/img/der-footer-full.png" class="image der-logo" alt=" Desarrollado con ♥ por Democracia en Red"></a>
-              </div>
-              <div class="column has-text-right-desktop has-text-centered-touch">
-                Todos los derechos reservados 2020
+                <a herf="https://democraciaenred.org"><img src="~/assets/img/logo-der.svg" class="image der-logo" alt=" Desarrollado con ♥ por Democracia en Red"></a>
               </div>
             </div>
           </div>
@@ -52,6 +49,9 @@
     @include from($desktop) {
         margin: 0 auto 0 0;
     }
+ }
+ .der-logo {
+   width: 160px;
  }
  .links-columns{
   text-align: center;
