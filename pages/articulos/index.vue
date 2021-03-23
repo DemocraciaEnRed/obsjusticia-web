@@ -4,7 +4,7 @@
     <div class="section">
       <div class="container last-articles">
         <h1 class="title is-1 has-text-white">
-          Últimos articulos
+          Últimos artículos
         </h1>
         <b-carousel
           :interval="8000"
@@ -36,7 +36,7 @@
                 </div>
                 <div class="mt-5 has-text-centered">
                   <nuxt-link :to="`/articulos/${article.slug}`" class="has-text-primary is-size-5">
-                    Ver el articulo completo <i class="fas fa-arrow-right fa-lg" />
+                    Ver el artículo completo <i class="fas fa-arrow-right fa-lg" />
                   </nuxt-link>
                 </div>
               </div>

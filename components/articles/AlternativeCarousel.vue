@@ -2,7 +2,7 @@
   <section class="">
     <div v-if="$fetchState.pending" class="section">
       <h4 class="subtitle has-text-white is-4 has-text-centered">
-        <i class="fas fa-sync fa-spin" />&nbsp; Cargando articulos
+        <i class="fas fa-sync fa-spin" />&nbsp; Cargando artículos
       </h4>
     </div>
     <div v-else>
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="has-text-centered my-5">
-      <a href="" class="button is-primary-dark"><span class="mr-3">Ver todos los articulos</span><i class="fas fa-arrow-right" /></a>
+      <a href="/articulos" class="button is-primary-dark"><span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" /></a>
     </div>
   </section>
 </template>

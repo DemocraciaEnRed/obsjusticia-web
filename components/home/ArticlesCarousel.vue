@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="has-text-centered mb-4">
-        <a href="" class="button is-primary-dark"><span class="mr-3">Ver todos los articulos</span><i class="fas fa-arrow-right" /></a>
+        <a href="/articulos" class="button is-primary-dark"><span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" /></a>
       </div>
     </div>
   </section>
