@@ -6,63 +6,82 @@
         <div class="columns is-centered my-6">
           <div class="column is-8">
             <div class="has-text-centered">
-              <h1 class="title is-2">
+              <h1 class="title is-2 is-700">
                 Procesos disciplinarios a jueces y juezas
               </h1>
-              <h1 class="subtitle is-3">
-                Te vamos a mostrar cómo funcionan los procesos de denuncias a jueces de la Nación
-              </h1>
               <br>
-              <p><i class="far fa-calendar fa-3x mb-2" /></p>
-              <p class="is-size-4">
-                <b>22 AÑOS</b>
+              <p class="is-size-5">
+                ¡Te vamos a mostrar cómo funcionan los procesos de denuncias a jueces de la Nación!
               </p>
+              <br>
+              <br>
+              <p class="is-size-5"><i class="far fa-calendar fa-2x mb-3" /></p>
+              <p class="is-size-3 is-800">
+                22 AÑOS
+              </p>
+              <br>
+              <br>
             </div>
             <hr class="has-background-black">
             <div class="is-clearfix">
-              <p class="is-pulled-left">
+              <p class="is-pulled-left is-size-5">
                 1998
               </p>
-              <p class="is-pulled-right">
+              <p class="is-pulled-right is-size-5">
                 2020
               </p>
             </div>
-            <div class="columns mt-6 is-centered">
-              <div class="column is-3">
+            <div class="columns mt-3 is-centered">
+              <div class="column is-narrow">
+                <div class="px-2">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-3 color-green">3370</span><br><span class="is-400">DESESTIMADAS<br></span>
+                <span class="is-700 is-size-2">3370</span><br><span class="is-400">DESESTIMADAS<br></span>
+                </div>
               </div>
-              <div class="column is-3">
+              <div class="column is-narrow">
+                <div class="px-2">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-3 color-green">245</span><br><span class="is-400">CADUCADAS<br></span>
+                <span class="is-700 is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
+                </div>
               </div>
-              <div class="column is-3">
+              <div class="column is-narrow">
+                <div class="px-2">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-3 color-green">42</span><br><span class="is-400">SANCIONES<br></span>
+                <span class="is-700 is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
+                </div>
               </div>
-              <div class="column is-3">
+              <div class="column is-narrow">
+                <div class="px-2">
                 <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-3 color-green">36</span><br><span class="is-400">JUICIOS PÓLITICOS<br></span>
+                <span class="is-700 is-size-2">36</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
+                </div>
               </div>
             </div>
             <div class="buttons is-centered mt-6">
-              <a href="#graphs" class="button is-primary">IR A LOS GRÁFICOS</a>
+              <a href="#graphs" class="button is-primary"><i class="fas fa-chart-area fa-fw" />&nbsp;GRÁFICOS</a>
+              <a href="#lexico" class="button is-light">Léxico para no abogades</a>
+              <a href="#fuente" class="button is-light">Fuentes y notas</a>
+              <a href="#creditos" class="button is-light">Créditos</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="overlay-graphs">
-      <a href="#graphs" class="go-fullscreen button is-light"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a>
-      <div class="the-buttons buttons is-centered">
-        <a href="#lexico" class="button is-primary">Léxico para no abogades</a>
-        <a href="#fuente" class="button is-light">Fuentes y notas</a>
-        <a href="#creditos" class="button is-light">Créditos</a>
+    <div class="overlay-graphs container-fluid">
+      <div class="columns is-centered">
+        <div class="column is-8-desktop is-12 is-offset-1-desktop">
+          <a href="#graphs" class="go-fullscreen button is-dark is-outlined"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a>
+          <!-- <div class="the-buttons buttons is-centered">
+            <a href="#lexico" class="button is-primary">Léxico para no abogades</a>
+            <a href="#fuente" class="button is-light">Fuentes y notas</a>
+            <a href="#creditos" class="button is-light">Créditos</a>
+          </div> -->
+          <!-- <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a> -->
+          <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" />
+        </div>
       </div>
-      <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a>
-      <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" allowfullscreen class="the-graphs" loading="lazy" />
     </div>
-    <div id="lexico" class="section specialbg">
+    <div id="lexico" class="section">
       <!-- <img id="lexico" src="~/assets/img/001.png" class="image is-centered"> -->
       <div class="container">
         <div class="columns is-centered">
@@ -73,8 +92,11 @@
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
                 <div class="column is-4">
-                  <h5 class="title is-5">
-                    🗑️ Destimada
+                  <h5 class="title is-4">
+                    Destimada
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    🗑️
                   </h5>
                 </div>
                 <div class="column is-8">
@@ -85,8 +107,11 @@
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
                 <div class="column is-4">
-                  <h5 class="title is-5">
-                    ⚰️ Causas caducadas
+                  <h5 class="title is-4">
+                    Causas caducadas
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    ⚰️
                   </h5>
                 </div>
                 <div class="column is-8">
@@ -97,8 +122,11 @@
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
                 <div class="column is-4">
-                  <h5 class="title is-5">
-                    ⚖️ Juicio Político
+                  <h5 class="title is-4">
+                    Juicio Político
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    ⚖️
                   </h5>
                 </div>
                 <div class="column is-8">
@@ -111,8 +139,11 @@
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
                 <div class="column is-4">
-                  <h5 class="title is-5">
-                    👩‍⚖️ Sanción
+                  <h5 class="title is-4">
+                    Sanción
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    👩‍⚖️
                   </h5>
                 </div>
                 <div class="column is-8">
@@ -125,8 +156,11 @@
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
                 <div class="column is-4">
-                  <h5 class="title is-5">
-                    👻 Renuncia
+                  <h5 class="title is-4">
+                    Renuncia
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    👻
                   </h5>
                 </div>
                 <div class="column is-8">
@@ -140,7 +174,7 @@
         </div>
       </div>
     </div>
-    <div id="fuente" class="section specialbg">
+    <div id="fuente" class="section">
       <div class="container has-text-centered">
         <h1 class="title is-2">
           Fuente y notas
@@ -149,7 +183,7 @@
         <h6 class="subtitle is-5">
           Última actualización
         </h6>
-        <h6 class="title is-5">
+        <h6 class="title is-5 is-800">
           {{ $config.dataDateUpdated }}
         </h6>
         <div class="content">
@@ -157,33 +191,36 @@
             Las visualizaciones de esta web se basan en los datos oficiales publicados en el consejo de la magistratura
           </p>
           <p class="is-300">
-            Data set original de expedientes en trámite de denuncias a magistrados — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+            Data set original de expedientes en trámite de denuncias a magistrados — <a href="http://consejoabierto.pjn.gov.ar/dataset/expedientesentramite" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
           </p>
           <p class="is-300">
-            Data set original de expedientes culminados de denuncias a magistrados — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+            Data set original de expedientes culminados de denuncias a magistrados — <a href="http://consejoabierto.pjn.gov.ar/dataset/expedientesculminados" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
           </p>
           <p class="is-300">
-            Data set original de juicios políticos — <a href="#" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+            Data set original de juicios políticos — <a href="http://consejoabierto.pjn.gov.ar/dataset/juiciospoliticos" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
           </p>
           <p>Los datos están <b>incompletos</b> y en muchos casos no podemos certificar su rigurosidad<br>No hay datos publicados con perspectiva de género<br>Intentaremos actualizar y mejorar estos datos</p>
         </div>
       </div>
     </div>
-    <div id="creditos" class="section specialbg">
+    <div id="creditos" class="section">
       <div class="container has-text-centered">
         <h1 class="title is-2">
           Créditos
         </h1>
         <br>
+        <br>
         <h6 class="subtitle is-5 mb-3">
           Idea general
         </h6>
-        <a href="https://acij.org.ar" target="_blank"><img src="~/assets/img/acij-logo-black.png" width="170" class="image is-centered"></a>
+        <a href="https://acij.org.ar" target="_blank"><img src="~/assets/img/acij-logo-black.png" width="150" class="image is-centered"></a>
+        <br>
         <br>
         <h6 class="subtitle is-5 mb-3">
           Desarrollado por
         </h6>
-        <a href="https://democraciaenred.org" target="_blank"><img src="~/assets/img/logo-der-black.svg" width="170" class="image is-centered"></a>
+        <a href="https://democraciaenred.org" target="_blank"><img src="~/assets/img/logo-der-black.svg" width="150" class="image is-centered"></a>
+        <br>
         <br>
         <h6 class="subtitle is-5">
           Visualización de datos
@@ -191,6 +228,7 @@
         <h6 class="title is-5">
           Javier Ceqiq<br>javier@correo.com
         </h6>
+        <br>
         <br>
         <h6 class="subtitle is-5">
           Diseño
@@ -225,27 +263,32 @@ background-color: #00B1AF;
   line-height: normal;
 }
 .the-graphs{
-  width: 100vw;
+  width: 100%;
+  // width: 100vw;
   height: 100vh;
+  max-height: 1080px;
+  overflow-y: hidden;
 }
 .specialbg{
   background-color: #ebebeb;
 }
 .overlay-graphs{
-  min-height: 100vh;
-  width: 100vw;
-  position:relative;
+  // min-height: 100vh;
+  // width: 100vw;
   .the-buttons{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
   }
+  .column{
+    position: relative
+  }
 }
 .go-fullscreen{
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 27px;
 }
 .go-fullscreen-bottom{
   position: absolute;
