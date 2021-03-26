@@ -9,14 +9,17 @@
             </div>
             <div class="column is-6-mobile is-3-desktop links-columns">
               <ul>
-                <li><a href="#" class="has-text-white">Artículos</a></li>
-                <li><a href="#" class="has-text-white">Selección</a></li>
+                <li><a href="/articulos" class="has-text-white">Artículos</a></li>
+                <li><a href="/seleccion" class="has-text-white">Selección</a></li>
+                <li><a href="https://www.causasdecorrupcion.org/" target="_blank" class="has-text-white">Corrupción</a></li>
+                <li><a href="/transparencia" class="has-text-white">Transparencia</a></li>
               </ul>
             </div>
             <div class="column is-6-mobile is-3-desktop links-columns">
               <ul>
-                <li><a href="#" class="has-text-white">¿Qué es iniciativa justa?</a></li>
-                <li><a href="#" class="has-text-white">Disciplina</a></li>
+                <li><a href="/quienes-somos" class="has-text-white">¿Qué es iniciativa justa?</a></li>
+                <li><a href="/procesos-disciplinarios" class="has-text-white">Disciplina</a></li>
+                <li><a href="mailto:info@acij.org.ar" class="has-text-white">Contacto</a></li>
               </ul>
             </div>
           </div>

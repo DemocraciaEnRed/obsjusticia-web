@@ -26,11 +26,10 @@
                   </p>
                 </div>
                 <div class="is-flex is-flex-direction-row is-justify-content-space-between">
-                  <p>Por {{ article.author }}<span class="mx-2">| </span> {{ article.date.split('T')[0] }}</p>
+                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date.split('T')[0].split('-').reverse().join('-') }}</p>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
-                      <i class="fas fa-hashtag" />
-                      &nbsp;{{ tag }}
+                      {{ tag }}
                     </span>
                   </div>
                 </div>
@@ -63,7 +62,7 @@
                   </div>
                   <div class="media-content">
                     <p class="is-raleway is-size-5 has-text-black">
-                      {{ article.date.split('T')[0] }}
+                       {{ article.date.split('T')[0].split('-').reverse().join('-') }}
                     </p>
                     <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
                       {{ article.title }}
@@ -79,8 +78,7 @@
                   </i>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary is-capitalized">
-                      <i class="fas fa-hashtag" />
-                      &nbsp;{{ tag }}
+                      {{ tag }}
                     </span>
                   </div>
                   <hr class="has-background-black">

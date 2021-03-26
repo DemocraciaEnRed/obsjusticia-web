@@ -6,8 +6,8 @@ author: Ezequiel Nino
 category: Investigacion
 image: twitter.jpg
 tags: 
-- genero
-- seleccion
+- género
+- selección
 highlight: false
 ---
 

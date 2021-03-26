@@ -1,14 +1,12 @@
 <template>
   <section id="seleccion">
     <div class="container">
-      <div class="columns is-vcentered is-desktop mt-0">
+      <div class="columns is-desktop mt-0">
         <div class="column is-3-desktop introduction-column">
           <h1 class="title is-3">
             ¿Qué pasa con los concursos de <span class="has-text-primary">Jueces</span> y <span class="has-text-secondary">Fiscales</span>?
           </h1>
-          <div class="line-blue">
-            <div class="filler" />
-          </div>
+          <div class="line-blue"></div>
           <div class="content">
             <p>
               Analizamos la forma en la que se llevan a cabo los procesos de selección de jueces.
@@ -23,7 +21,7 @@
           <h1 class="subtitle is-4 mb-1">
             Vacantes para <span class="has-text-primary"><b>jueces y juezas</b></span>
           </h1>
-          <h1 class="mb-3 is-size-5">
+          <h1 class="mt-4 mb-3 is-size-5">
             <span class="is-600 has-text-primary">254</span> vacantes en total
           </h1>
           <div class="columns is-mobile">
@@ -41,14 +39,14 @@
               <p class="count-number my-2">
                 <span class="is-400 is-size-3 has-text-primary">126</span><br><span class="is-400">EN EL CONSEJO DE<br>LA MAGISTRATURA</span>
               </p>
-              <h1 class="title is-6-tablet is-12-mobile is-4 has-text-secondary my-2 pt-4 pl-5 title-border-left">
+              <h1 class="title is-6-tablet is-12-mobile is-5 has-text-secondary my-2 pt-4 pl-5 title-border-left">
                 Concursos
               </h1>
                <p class="count-number my-2">
-                <span class="is-400 is-size-3 has-text-primary mr-6">56</span><span class="is-400">INICIADOS</span>
+                <span class="is-400 is-size-4 has-text-primary mr-6">56</span><span class="is-400 is-size-6">INICIADOS</span>
               </p>
               <p class="count-number my-2">
-                <span class="is-400 is-size-5 has-text-primary mr-3">Sin<br>datos*</span><span class="is-400">SIN INICIAR</span>
+                <span class="is-400 is-size-5 has-text-primary mr-3">Sin<br>datos*</span><span class="is-400 is-size-6 fix-position">SIN INICIAR</span>
               </p>
             </div>
           </div>
@@ -76,14 +74,14 @@
                 <p class="count-number my-2">
                   <span class="is-400 is-size-3 has-text-secondary">44</span><br><span class="is-400"><span class="is-size-7-touch">EN EL MINISTERIO<br>PÚBLICO FISCAL</span></span>
                 </p>
-                <h1 class="title is-6-tablet is-12-mobile is-4 has-text-secondary-dark my-2 pt-4 pr-5 title-border-right">
+                <h1 class="title is-6-tablet is-12-mobile is-5 has-text-secondary-dark my-2 pt-4 pr-5 title-border-right">
                   Concursos
                 </h1>
                 <p class="count-number my-2">
-                  <span class="is-400 mr-5">INICIADOS</span><span class="is-400 is-size-3 has-text-secondary">17</span>
+                  <span class="is-400 mr-5 is-size-6">INICIADOS</span><span class="is-400 is-size-4 has-text-secondary">17</span>
                 </p>
                 <p class="count-number my-2">
-                  <span class="is-400 mr-5">SIN INICIAR</span><span class="is-400 is-size-5 has-text-secondary">Sin<br>datos*</span>
+                  <span class="is-400 mr-5 is-size-6">SIN INICIAR</span><span class="is-400 is-size-5 has-text-secondary">Sin<br>datos*</span>
                 </p>
               </div>
             </div>
@@ -102,8 +100,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#seleccion {
+  background: #EDF2FE;
+}
 #vacantes{
   background: #EDF2FE;
+}
+.fix-position{
+  top: -15px;
+  position: relative;
 }
 .darker-blue{
   background: #DAE5FD;
@@ -150,6 +155,7 @@ export default {
 
  .introduction-column{
   padding: 4rem 2rem;
+  align-self: center;
     @include from($desktop) {
       padding-left: 1rem;
       padding-right: 1rem;
