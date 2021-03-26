@@ -15,7 +15,9 @@
               </p>
               <br>
               <br>
-              <p class="is-size-5"><i class="far fa-calendar fa-2x mb-3" /></p>
+              <p class="is-size-5">
+                <i class="far fa-calendar fa-2x mb-3" />
+              </p>
               <p class="is-size-3 is-800">
                 22 AÑOS
               </p>
@@ -34,26 +36,26 @@
             <div class="columns mt-3 is-centered">
               <div class="column is-narrow">
                 <div class="px-2">
-                <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-2">3370</span><br><span class="is-400">DESESTIMADAS<br></span>
+                  <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
+                  <span class="is-700 is-size-2">3370</span><br><span class="is-400">DESESTIMADAS<br></span>
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
+                  <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
+                  <span class="is-700 is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
+                  <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
+                  <span class="is-700 is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                <span class="is-700 is-size-2">36</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
+                  <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
+                  <span class="is-700 is-size-2">36</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
                 </div>
               </div>
             </div>
