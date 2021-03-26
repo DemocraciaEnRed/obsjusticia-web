@@ -6,7 +6,7 @@
       </h1>
       <hr>
       <p class="count-number my-5">
-        <span class="is-600 is-size-3">3854</span><br><span class="is-400">DENUNCIAS TOTALES</span>
+        <span class="is-600 is-size-3">3770</span><br><span class="is-400">DENUNCIAS TOTALES</span>
       </p>
       <p class="is-900 is-size-5 my-5">
         Desde 1998
@@ -14,12 +14,12 @@
       <div class="columns is-centered">
         <div class="column is-2">
           <p class="count-number my-2">
-            <span class="is-400 is-size-3 color-green">3353</span><br><span class="is-400">DESESTIMADAS<br></span>
+            <span class="is-400 is-size-3 color-green">3360</span><br><span class="is-400">DESESTIMADAS<br></span>
           </p>
         </div>
         <div class="column is-2">
           <p class="count-number my-2">
-            <span class="is-400 is-size-3 color-green">245</span><br><span class="is-400">JUICIOS<br>POLITICOS</span>
+            <span class="is-400 is-size-3 color-green">245</span><br><span class="is-400">CADUCADAS POR EL<br>PASO DEL TIEMPO</span>
           </p>
         </div>
         <div class="column is-2">
@@ -35,7 +35,7 @@
       </div>
       <img src="~/assets/img/procesos-dots.svg" class="image is-centered" alt="Procesos">
       <br>
-      <a href="#" class="button is-primary-dark" disabled>Ver más</a>
+      <a href="/procesos-disciplinarios" class="button is-primary-dark">Ver más</a>
     </div>
   </section>
 </template>

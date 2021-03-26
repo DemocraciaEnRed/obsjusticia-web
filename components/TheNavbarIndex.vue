@@ -15,17 +15,17 @@
           </div>
           <div class="navbar-item">
             <router-link to="/procesos-disciplinarios" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Procesos
+              Disciplina
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/#seleccion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+            <router-link to="/seleccion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Selección
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/disciplina" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Disciplina
+            <router-link to="/transparencia" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Transparencia
             </router-link>
           </div>
           <div class="navbar-item">

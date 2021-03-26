@@ -2,7 +2,7 @@
   <div class="block-container">
     <div class="block-text-container content has-text-left" :class="{'is-highlight': block.isArticle}">
       <h1 v-if="block.isArticle" class="title is-6 has-text-white">
-        <i class="fas fa-star" />&nbsp;Artículo destacado
+        Artículo destacado
       </h1>
       <h1 class="subtitle is-4 has-text-white is-400">
         {{ block.title }}
