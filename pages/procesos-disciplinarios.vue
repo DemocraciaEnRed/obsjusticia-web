@@ -69,19 +69,16 @@
         </div>
       </div>
     </section>
-    <div class="overlay-graphs container-fluid">
-      <div class="columns is-centered">
-        <div class="column is-8-desktop is-12 is-offset-1-desktop">
-          <a href="#graphs" class="go-fullscreen button is-dark is-outlined"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a>
-          <!-- <div class="the-buttons buttons is-centered">
-            <a href="#lexico" class="button is-primary">Léxico para no abogades</a>
-            <a href="#fuente" class="button is-light">Fuentes y notas</a>
-            <a href="#creditos" class="button is-light">Créditos</a>
-          </div> -->
-          <!-- <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a> -->
-          <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" />
-        </div>
-      </div>
+    <div class="overlay-graphs container">
+      <!-- <a href="#graphs" class="go-fullscreen button is-dark is-outlined"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a> -->
+      <!-- <div class="the-buttons buttons is-centered">
+        <a href="#lexico" class="button is-primary">Léxico para no abogades</a>
+        <a href="#fuente" class="button is-light">Fuentes y notas</a>
+        <a href="#creditos" class="button is-light">Créditos</a>
+      </div> -->
+      <!-- <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a> -->
+      <!-- <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" /> -->
+      <iframe id="graphs" src="http://localhost:8000" class="the-graphs" loading="lazy" />
     </div>
     <div id="lexico" class="section">
       <!-- <img id="lexico" src="~/assets/img/001.png" class="image is-centered"> -->
@@ -95,7 +92,7 @@
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Destimada
+                    Desestimada
                   </h5>
                   <h5 class="subtitle is-5">
                     🗑️
@@ -228,15 +225,7 @@
           Visualización de datos
         </h6>
         <h6 class="title is-5">
-          Javier Ceqiq<br>javier@correo.com
-        </h6>
-        <br>
-        <br>
-        <h6 class="subtitle is-5">
-          Diseño
-        </h6>
-        <h6 class="title is-5">
-          Marien Sequera<br>esmarienkafer@gmail.com
+          Javier Lujan<br><a href=" http://javierlujan.com.ar/" target="_blank">http://javierlujan.com.ar/</a>
         </h6>
       </div>
     </div>
