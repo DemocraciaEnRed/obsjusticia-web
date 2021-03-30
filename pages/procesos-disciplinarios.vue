@@ -77,8 +77,8 @@
         <a href="#creditos" class="button is-light">Créditos</a>
       </div> -->
       <!-- <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a> -->
-      <!-- <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" /> -->
-      <iframe id="graphs" src="http://localhost:8000" class="the-graphs" loading="lazy" />
+      <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" />
+      <!-- <iframe id="graphs" src="http://localhost:8000" class="the-graphs" loading="lazy" /> -->
     </div>
     <div id="lexico" class="section">
       <!-- <img id="lexico" src="~/assets/img/001.png" class="image is-centered"> -->
