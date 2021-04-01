@@ -1,8 +1,8 @@
 <template>
   <section id="seleccion">
     <div class="container">
-      <div class="columns is-desktop mt-0">
-        <div class="column is-3-desktop introduction-column">
+      <div class="columns mt-0">
+        <div class="column is-2-desktop introduction-column">
           <h1 class="title is-3">
             ¿Qué pasa con los concursos de <span class="has-text-primary">Jueces</span> y <span class="has-text-secondary">Fiscales</span>?
           </h1>
@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-4-desktop is-offset-1-desktop jueces-column">
+        <div class="column is-5-desktop jueces-column">
           <img src="~/assets/img/jueves-image.svg" class="image mb-3" width="120" alt="">
           <h1 class="subtitle is-4 mb-1">
             Vacantes para <span class="has-text-primary"><b>jueces y juezas</b></span>
@@ -24,55 +24,55 @@
           <h1 class="mt-4 mb-3 is-size-5">
             <span class="is-600 has-text-primary">254</span> vacantes en total
           </h1>
-          <div class="columns is-mobile">
-            <div class="column is-4">
+          <div class="columns">
+            <div class="column is-12-mobile is-4">
               <p class="count-number my-2">
                 <span class="is-400 is-size-3 has-text-primary">105</span><br><span class="is-400">EN EL PODER<br>EJECUTIVO</span>
               </p>
             </div>
-            <div class="column is-3">
+            <div class="column is-12-mobile is-3">
               <p class="count-number my-2">
                 <span class="is-400 is-size-3 has-text-primary">23</span><br><span class="is-400">EN EL<br>SENADO</span>
               </p>
             </div>
-            <div class="column is-5">
+            <div class="column is-12-mobile is-5">
               <p class="count-number my-2">
                 <span class="is-400 is-size-3 has-text-primary">126</span><br><span class="is-400">EN EL CONSEJO DE<br>LA MAGISTRATURA</span>
               </p>
-              <h1 class="title is-6-tablet is-12-mobile is-5 has-text-secondary my-2 pt-4 pl-5 title-border-left">
+              <h1 class="title is-6-tablet is-12-mobile is-size-5-mobile is-size-5-tablet is-size-6 is-size-5-fullhd has-text-secondary my-2 pt-4 pl-5 title-border-left">
                 Concursos
               </h1>
                <p class="count-number my-2">
                 <span class="is-400 is-size-4 has-text-primary mr-6">56</span><span class="is-400 is-size-6">INICIADOS</span>
               </p>
               <p class="count-number my-2">
-                <span class="is-400 is-size-5 has-text-primary mr-3">Sin<br>datos*</span><span class="is-400 is-size-6 fix-position">SIN INICIAR</span>
+                <span class="is-400 is-size-5 has-text-primary mr-3 is-inline-block has-text-left">Sin datos*</span><span class="is-400 is-size-6">SIN INICIAR</span>
               </p>
             </div>
           </div>
           <p><span class="is-400 is-size-4 has-text-primary">(*)</span> Estos datos no pueden construirse actualmente de la información disponible.</p>
         </div>
-        <div class="column is-4-desktop darker-blue fiscales-column">
+        <div class="column is-5-desktop darker-blue fiscales-column">
           <div class="bg-filler" />
           <div class="on-top">
             <img src="~/assets/img/fiscales-image.svg" class="image mb-3" width="120" alt="">
             <h1 class="subtitle is-4">
               Vacantes para <span class="has-text-secondary"><b>fiscales</b></span>
             </h1>
-            <div class="columns is-mobile">
-              <div class="column is-4">
+            <div class="columns">
+              <div class="column is-12-mobile is-4 is-3-fullhd">
                 <p class="count-number my-2">
-                  <span class="is-400 is-size-4 has-text-secondary">Sin datos*</span><br><span class="is-400"><span class="is-size-7-touch">EN EL PODER<br>EJECUTIVO</span></span>
+                  <span class="is-400 is-size-4 has-text-secondary">Sin datos*</span><br><span class="is-400">EN EL PODER<br>EJECUTIVO</span>
                 </p>
               </div>
-              <div class="column is-4">
+              <div class="column is-12-mobile is-4-desktop">
                 <p class="count-number my-2">
                   <span class="is-400 is-size-4 has-text-secondary">Sin datos*</span><br><span class="is-400">EN EL<br>SENADO</span>
                 </p>
               </div>
-              <div class="column is-5">
+              <div class="column is-5 is-12-mobile">
                 <p class="count-number my-2">
-                  <span class="is-400 is-size-3 has-text-secondary">44</span><br><span class="is-400"><span class="is-size-7-touch">EN EL MINISTERIO<br>PÚBLICO FISCAL</span></span>
+                  <span class="is-400 is-size-3 has-text-secondary">44</span><br><span class="is-400">EN EL MINISTERIO<br>PÚBLICO FISCAL</span>
                 </p>
                 <h1 class="title is-6-tablet is-12-mobile is-5 has-text-secondary-dark my-2 pt-4 pr-5 title-border-right">
                   Concursos
@@ -81,7 +81,7 @@
                   <span class="is-400 mr-5 is-size-6">INICIADOS</span><span class="is-400 is-size-4 has-text-secondary">17</span>
                 </p>
                 <p class="count-number my-2">
-                  <span class="is-400 mr-5 is-size-6">SIN INICIAR</span><span class="is-400 is-size-5 has-text-secondary">Sin<br>datos*</span>
+                  <span class="is-400 mr-5 is-size-6">SIN INICIAR</span><span class="is-400 is-size-5 has-text-secondary is-inline-block has-text-right">Sin datos*</span>
                 </p>
               </div>
             </div>
@@ -126,6 +126,9 @@ export default {
     z-index: 10;
     position:relative;
   }
+}
+.title {
+  word-break: normal;
 }
 .title-border-left {
   border-top: 2px solid #1C3262;
