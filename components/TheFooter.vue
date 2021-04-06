@@ -11,7 +11,7 @@
               <ul>
                 <li><a href="/articulos" class="has-text-white">Artículos</a></li>
                 <li><a href="/seleccion" class="has-text-white">Selección</a></li>
-                <li><a href="https://www.causasdecorrupcion.org/" target="_blank" class="has-text-white">Corrupción</a></li>
+                <li><a href="/corrupcion" class="has-text-white">Corrupción</a></li>
                 <li><a href="/transparencia" class="has-text-white">Transparencia</a></li>
               </ul>
             </div>

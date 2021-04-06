@@ -16,7 +16,7 @@
       <b-navbar-item tag="nuxt-link" to="/disciplina">
         Disciplina
       </b-navbar-item>
-      <a href="https://www.causasdecorrupcion.org/" target="_blank">
+      <a href="/corrupcion">
         Corrupción
       </a>
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
