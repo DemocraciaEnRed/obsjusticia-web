@@ -32,7 +32,7 @@
       <div class="container mb-6">
         <div class="columns">
           <div class="column is-2">
-            <div class="data-content pl-3">
+            <div class="data-content">
               <p class="mb-2">
                 <b>Autor</b>
               </p>

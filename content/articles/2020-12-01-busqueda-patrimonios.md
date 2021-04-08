@@ -1,15 +1,18 @@
 ---
 title: En busca de los patrimonios supremos
-description: El acceso a las declaraciones juradas de quienes integran el máximo tribunal del país fue el producto de más de seis años de gestión, pero los datos publicitados impiden sacar conclusiones.
+description: Seis años llevó a ACIJ conseguir los patrimonios de la Corte
 date: 2020-12-01
 author: Irene Benito
 category: Investigacion
-image: patrimonios-supremos.jpg
+image: 2020-12-01-busqueda-patrimonios.jpg
 tags: 
+- ética
 - transparencia
 - corte suprema
 highlight: false
 ---
+
+**El acceso a las declaraciones juradas de quienes integran el máximo tribunal del país fue el producto de más de seis años de gestión, pero los datos publicitados impiden sacar conclusiones.**
 
 **Los ministros Carlos Rosenkrantz, Juan Carlos Maqueda, Elena Highton, Ricardo Lorenzetti y Horacio Rosatti aceptaron la publicidad de sus declaraciones juradas en junio de 2019. Fue el punto final para una petición que habíamos planteado con ACIJ por primera vez en 2012. La difusión de la información es un triunfo relativo en términos de transparencia y de prevención de la corrupción porque la Corte se aplica a sí misma un criterio de divulgación de bienes mucho más restrictivo que el que siguen los demás poderes del Estado y hasta los propios funcionarios judiciales**
 
@@ -17,19 +20,11 @@ La Corte Suprema de Justicia de la Nación liberó las declaraciones juradas de 
 
 Ocurre que la Corte, a diferencia de los poderes políticos del Estado Nacional, decidió aplicarse a sí misma un criterio “fiscalista”. Esto quiere decir que sólo ventila los documentos correspondientes a la liquidación de los impuestos a las ganancias y a los bienes personales en la Administración Federal de Ingresos Públicos (AFIP). Esos instrumentos contienen información desprovista de detalles que habiliten los seguimientos interanuales, y es mucho más escueta que la que las autoridades del Gobierno, del Congreso y de los demás organismos proporcionan a la Oficina Anticorrupción. Los datos que el máximo tribunal puso a disposición de la ciudadanía son incluso menores en términos cualitativos y cuantitativos que los que surgen de las declaraciones juradas de los funcionarios judiciales que dependen de él.
 
-> “Nosotros veíamos que existía un sistema de acceso a las declaraciones
-> juradas de los integrantes de los demás poderes del Estado que, si
-> bien era deficiente, cumplía el objetivo. Sin embargo, la cabeza del
-> Poder Judicial omitía esta obligación. Por eso emprendimos este camino
-> de acceder a los patrimonios de los ministros de la Corte de la
-> Nación, que fue un recorrido con abundantes vicisitudes y más de seis
-> años de resistencias”, recordó Sebastián Pilo, director de ACIJ.
+> “Nosotros veíamos que existía un sistema de acceso a las declaraciones juradas de los integrantes de los demás poderes del Estado que, si bien era deficiente, cumplía el objetivo. Sin embargo, la cabeza del Poder Judicial omitía esta obligación. Por eso emprendimos este camino de acceder a los patrimonios de los ministros de la Corte de la Nación, que fue un recorrido con abundantes vicisitudes y más de seis años de resistencias”, recordó Sebastián Pilo, director de ACIJ.
 
 El camino transitado para conseguir la apertura se encontró con otra frustración cuando aquel acontecimiento histórico sucedió. Este itinerario récord en la categoría “proceso kafkiano” comenzó con el envío de notas en 2012 y 2013, que no fueron respondidas. A partir de 2014, ACIJ intentó en distintas ocasiones llenar el formulario digital previsto en la Acordada 9 de ese año, sin lograr acceder a los datos. Luego se intentó un requerimiento basado en la Ley Nacional de Acceso a la Información Pública 27.275. “El pedido fue rechazado y la oficina encargada de la respuesta, la Dirección de Relaciones Institucionales, expresó que las declaraciones juradas debían ser requeridas exclusivamente a través del formulario web -que no funcionaba-, lo que motivó el reclamo ante el presidente de la Corte, Carlos Rosenkrantz. A pesar de este rechazo, el juez Horacio Rosatti respondió el pedido con la indicación que sus manifestaciones de bienes ya se encontraban disponibles en [su sitio web personal](https://www.juezrosatti.com.ar/)”, dice [el informe que ACIJ elaboró acerca de este asunto](https://acij.org.ar/wp-content/uploads/2019/07/An%C3%A1lisis-y-recomendaciones-sobre-las-DD-JJ-de-la-CSJN.pdf).
 
 Finalmente la Corte resolvió por unanimidad que las declaraciones juradas debían ser entregadas con el argumento de que la denegación de la solicitud colocaba a ACIJ en la imposibilidad de satisfacer su pedido, en violación de los principios de publicidad y transparencia. Luego de dos semanas y algunas postergaciones, el 10 de julio de 2019 hubo una audiencia entre nuestra ONG y la Dirección de Relaciones Institucionales de la Corte Suprema en la que facilitaron las declaraciones juradas patrimoniales de sus cinco integrantes, Rosenkrantz, Juan Carlos Maqueda, Elena Highton, Ricardo Lorenzetti y Rosatti, correspondientes a los períodos 2015, 2016 y 2017. No entregaron los datos relativos a los ejercicios previos respecto de quienes habían ingresado con anterioridad al cuerpo ni tampoco los referidos a 2018, y no ofrecieron explicaciones acerca de este déficit.
-
-  
 
 ### Adiós a la trazabilidad
 

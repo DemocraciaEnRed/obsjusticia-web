@@ -6,6 +6,8 @@ author: ACIJ
 category: investigaciones
 image: portada-mafalda.jpg
 tags:
+- acceso a la información
+- corte suprema
 - transparencia
 highlight: false
 ---

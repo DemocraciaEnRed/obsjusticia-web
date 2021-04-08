@@ -92,6 +92,10 @@ html{
   background-color: #EDF2FE;
   color: #467CF6;
   border-radius: 0;
-  height: 28px;
-  font-size: 13px;
+  // height: 28px;
+  // font-size: 13px;
+  height: auto;
+  font-size: 12px;
+  padding: 5px 0.75rem;
+  white-space: break-spaces;
 }

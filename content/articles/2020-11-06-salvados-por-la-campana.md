@@ -6,8 +6,9 @@ author: Marcelo Giullitti Oliva
 category: Investigacion
 image: campana.jpg
 tags: 
+- control
 - consejo de la magistratura
-- acusación y disciplina
+- disciplina
 highlight: false
 ---
 
