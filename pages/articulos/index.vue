@@ -25,7 +25,7 @@
                     {{ article.description }}
                   </p>
                 </div>
-                <div class="is-flex is-flex-direction-row is-justify-content-space-between">
+                <div class="is-flex is-flex-direction-row">
                   <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date.split('T')[0].split('-').reverse().join('-') }}</p>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">

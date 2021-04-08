@@ -1,6 +1,6 @@
 ---
 title: Salvados por la campana
-description: Desde 2006, en el Consejo de la Magistratura de la Nación caducaron 245 denuncias contra jueces y juezas sin que sean investigadas.
+description: Desde 2006, caducaron 245 denuncias sin investigación en el Consejo
 date: 2020-11-06
 author: Marcelo Giullitti Oliva
 category: Investigacion
