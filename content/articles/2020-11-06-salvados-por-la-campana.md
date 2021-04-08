@@ -4,7 +4,7 @@ description: Desde 2006, caducaron 245 denuncias sin investigación en el Consej
 date: 2020-11-06
 author: Marcelo Giullitti Oliva
 category: Investigacion
-image: campana.jpg
+image: 2020-11-06-salvados-por-la-campana.jpg
 tags: 
 - control
 - consejo de la magistratura
