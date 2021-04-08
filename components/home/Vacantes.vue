@@ -102,6 +102,7 @@ export default {
 <style lang="scss" scoped>
 #seleccion {
   background: #EDF2FE;
+  overflow: hidden;
 }
 #vacantes{
   background: #EDF2FE;

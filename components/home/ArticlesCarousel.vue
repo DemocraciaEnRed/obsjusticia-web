@@ -21,22 +21,23 @@
                     <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/img/articulos/${article.image}`)})`" />
                   </div>
                   <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
-                    <div class="is-clearfix">
+                    <div class="my-1">
+                    <div class="is-clearfix mb-3">
                       <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
                         {{ article.category }}
                       </p>
                       <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                         {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                        {{ article.date.split('T')[0].split('-').reverse().join('-') }}
                       </p>
                     </div>
-                    <div>
-                      <p class="title is-5 is-raleway has-text-weight-bold">
+                      <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
                         {{ article.title }}
                       </p>
-                      <p class="subtitle is-6 is-raleway has-text-grey">
+                      <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                         {{ article.author }}
                       </p>
                     </div>
+                      <p class="my-1">{{article.description}}</p>
                     <div class="tags">
                       <span v-for="(tag,index) in article.tags" :key="`tag-${index}`" class="tag is-special is-capitalized">{{ tag }}</span>
                     </div>
@@ -53,7 +54,7 @@
           </VueSlickCarousel>
         </div>
       </div>
-      <div class="has-text-centered mb-4">
+      <div class="has-text-centered mb-4 mt-5">
         <a href="/articulos" class="button is-primary-dark"><span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" /></a>
       </div>
     </div>
@@ -65,7 +66,7 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'date', 'category', 'author', 'image', 'tags'])
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
       .sortBy('date', 'desc')
       .limit(7)
       .fetch()
@@ -127,10 +128,11 @@ export default {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    // min-height: 60px;
   }
 }
   .card-content{
-    min-height: 190px;
+    min-height: 300px;
   }
   .card-image .image{
     background-size: cover;

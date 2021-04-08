@@ -21,22 +21,23 @@
                     <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/img/articulos/${article.image}`)})`" />
                   </div>
                   <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
-                    <div class="is-clearfix">
-                      <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
-                        {{ article.category }}
-                      </p>
-                      <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                         {{ article.date.split('T')[0].split('-').reverse().join('-') }}
-                      </p>
-                    </div>
                     <div>
-                      <p class="title is-5 is-raleway has-text-weight-bold">
+                      <div class="is-clearfix mb-3">
+                        <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
+                          {{ article.category }}
+                        </p>
+                        <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
+                          {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                        </p>
+                      </div>
+                      <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
                         {{ article.title }}
                       </p>
-                      <p class="subtitle is-6 is-raleway has-text-grey">
+                      <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                         {{ article.author }}
                       </p>
                     </div>
+                    <p class="my-5">{{article.description}}</p>
                     <div class="tags">
                       <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
                     </div>
@@ -55,7 +56,7 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'date', 'category', 'author', 'image', 'tags'])
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
       .sortBy('date', 'desc')
       .fetch()
       .catch((err) => {
