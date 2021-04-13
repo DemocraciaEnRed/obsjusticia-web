@@ -169,6 +169,23 @@
                 </div>
               </div>
             </div>
+            <div class="my-4 has-background-white px-6 py-5">
+              <div class="columns">
+                <div class="column is-4">
+                  <h5 class="title is-4">
+                    Consejo de la Magistratura
+                  </h5>
+                  <h5 class="subtitle is-5">
+                    🏛️
+                  </h5>
+                </div>
+                <div class="column is-8">
+                  <p>
+                    El Consejo de la Magistratura es el órgano creado por la Constitución para seleccionar jueces y juezas, tramitar procesos disciplinarios o de remoción y administrar los recursos del Poder Judicial de la Nación
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
