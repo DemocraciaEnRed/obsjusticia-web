@@ -1,85 +1,89 @@
 <template>
-  <section class="section is-medium px-0 has-text-centered">
-    <h1 :id="scrollId" class="title is-4 is-400 is-spaced">
-      Datos sobre el cumplimiento de la obligación de <span class="is-700">transparencia activa</span> según tipo de información que exige la ley
-    </h1>
-    <br>
-    <div class="columns">
-      <div class="column">
-        <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('4')}`" /><br>Si publica
+  <section :id="scrollId" class="hero is-fullheight">
+    <div class="hero-body px-0 has-text-centered">
+      <div class="container">
+        <h1 class="title is-4 is-400 is-spaced">
+          Datos sobre el cumplimiento de la obligación de <span class="is-700">transparencia activa</span> según tipo de información que exige la ley
+        </h1>
+        <br>
+        <div class="columns">
+          <div class="column">
+            <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('4')}`" /><br>Si publica
+          </div>
+          <div class="column">
+            <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('3')}`" /><br>Publica parcialmente
+          </div>
+          <div class="column">
+            <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('2')}`" /><br>Publica de manera limitada
+          </div>
+          <div class="column">
+            <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('1')}`" /><br>No publica
+          </div>
+        </div>
+        <br>
+        <div v-if="$fetchState.pending" class="p-6 has-text-centered">
+          <h1 class="title is-4 is-700">
+            <i class="fas fa-sync fa-spin fa-2x has-text-orange" />
+          </h1>
+          <h1 class="title is-4 is-700 is-spaced">
+            Cargando...
+          </h1>
+        </div>
+        <div v-else-if="$fetchState.error" class="p-6 has-text-centered">
+          <h1 class="title is-4 is-700">
+            <i class="fas fa-times fa-2x has-text-orange" />
+          </h1>
+          <h1 class="title is-4 is-700 is-spaced">
+            Error al cargar los datos... Intente nuevamente
+          </h1>
+        </div>
+        <div v-else>
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="40%" />
+                <th class="has-text-centered">
+                  CMN
+                </th>
+                <th class="has-text-centered">
+                  CSJN
+                </th>
+                <th class="has-text-centered">
+                  MPD
+                </th>
+                <th class="has-text-centered">
+                  MPF
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(area,i) in data" :key="`area-${i}`">
+                <td class="has-text-right">
+                  {{ area.area }}
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.cmn)}`">
+                  <i class="fas fa-circle fa-lg" />
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.csjn)}`">
+                  <i class="fas fa-circle fa-lg" />
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.mpd)}`">
+                  <i class="fas fa-circle fa-lg" />
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.mpf)}`">
+                  <i class="fas fa-circle fa-lg" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content">
+          <p class="is-size-5">
+            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
+          </p>
+          <p><b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b></p>
+        </div>
       </div>
-      <div class="column">
-        <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('3')}`" /><br>Publica parcialmente
-      </div>
-      <div class="column">
-        <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('2')}`" /><br>Publica de manera limitada
-      </div>
-      <div class="column">
-        <i class="fas fa-circle fa-2x mb-2" :style="`color: ${getColor('1')}`" /><br>No publica
-      </div>
-    </div>
-    <br>
-    <div v-if="$fetchState.pending" class="p-6 has-text-centered">
-      <h1 class="title is-4 is-700">
-        <i class="fas fa-sync fa-spin fa-2x has-text-orange" />
-      </h1>
-      <h1 class="title is-4 is-700 is-spaced">
-        Cargando...
-      </h1>
-    </div>
-    <div v-else-if="$fetchState.error" class="p-6 has-text-centered">
-      <h1 class="title is-4 is-700">
-        <i class="fas fa-times fa-2x has-text-orange" />
-      </h1>
-      <h1 class="title is-4 is-700 is-spaced">
-        Error al cargar los datos... Intente nuevamente
-      </h1>
-    </div>
-    <div v-else>
-      <table class="table">
-        <thead>
-          <tr>
-            <th width="40%" />
-            <th class="has-text-centered">
-              CMN
-            </th>
-            <th class="has-text-centered">
-              CSJN
-            </th>
-            <th class="has-text-centered">
-              MPD
-            </th>
-            <th class="has-text-centered">
-              MPF
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(area,i) in data" :key="`area-${i}`">
-            <td class="has-text-right">
-              {{ area.area }}
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.cmn)}`">
-              <i class="fas fa-circle fa-lg" />
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.csjn)}`">
-              <i class="fas fa-circle fa-lg" />
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.mpd)}`">
-              <i class="fas fa-circle fa-lg" />
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(area.mpf)}`">
-              <i class="fas fa-circle fa-lg" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="content">
-      <p class="is-size-5">
-        <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-      </p>
-      <p><b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b></p>
     </div>
   </section>
 </template>

@@ -1,87 +1,91 @@
 <template>
-  <section class="section is-medium px-0 has-text-centered">
-    <h1 :id="scrollId" class="title is-4 is-700 is-spaced">
-      Desagregación de los índices
-    </h1>
-    <br>
-    <div v-if="$fetchState.pending" class="p-6 has-text-centered">
-      <h1 class="title is-4 is-700">
-        <i class="fas fa-sync fa-spin fa-2x has-text-orange" />
-      </h1>
-      <h1 class="title is-4 is-700 is-spaced">
-        Cargando...
-      </h1>
-    </div>
-    <div v-else-if="$fetchState.error" class="p-6 has-text-centered">
-      <h1 class="title is-4 is-700">
-        <i class="fas fa-times fa-2x has-text-orange" />
-      </h1>
-      <h1 class="title is-4 is-700 is-spaced">
-        Error al cargar los datos... Intente nuevamente
-      </h1>
-    </div>
-    <div v-else>
-      <table class="table">
-        <thead>
-          <tr>
-            <th width="40%" />
-            <th class="has-text-centered">
-              CMN
-            </th>
-            <th class="has-text-centered">
-              CSJN
-            </th>
-            <th class="has-text-centered">
-              MPD
-            </th>
-            <th class="has-text-centered">
-              MPF
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(area,i) in data" :key="`area-${i}`">
-            <td class="has-text-right">
-              {{ area.area }}
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
-              {{ area.cmn ? area.cmn : '-' }}
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
-              {{ area.csjn ? area.csjn : '-' }}
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
-              {{ area.mpd ? area.mpd : '-' }}
-            </td>
-            <td class="data-value has-text-centered is-size-5" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
-              {{ area.mpf ? area.mpf : '-' }}
-            </td>
-          </tr>
-        </tbody>
-        <tfoot v-if="promedio">
-          <tr>
-            <td />
-            <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
-              {{ promedio.cmn }}
-            </td>
-            <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
-              {{ promedio.csjn }}
-            </td>
-            <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
-              {{ promedio.mpd }}
-            </td>
-            <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
-              {{ promedio.mpf }}
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-    <div class="content">
-      <p class="is-size-5">
-        <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-      </p>
-      <p><b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b></p>
+  <section :id="scrollId" class="hero is-fullheight">
+    <div class="hero-body px-0 has-text-centered">
+      <div class="container">
+        <h1 class="title is-4 is-700 is-spaced">
+          Desagregación de los índices
+        </h1>
+        <br>
+        <div v-if="$fetchState.pending" class="p-6 has-text-centered">
+          <h1 class="title is-4 is-700">
+            <i class="fas fa-sync fa-spin fa-2x has-text-orange" />
+          </h1>
+          <h1 class="title is-4 is-700 is-spaced">
+            Cargando...
+          </h1>
+        </div>
+        <div v-else-if="$fetchState.error" class="p-6 has-text-centered">
+          <h1 class="title is-4 is-700">
+            <i class="fas fa-times fa-2x has-text-orange" />
+          </h1>
+          <h1 class="title is-4 is-700 is-spaced">
+            Error al cargar los datos... Intente nuevamente
+          </h1>
+        </div>
+        <div v-else>
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="40%" />
+                <th class="has-text-centered">
+                  CMN
+                </th>
+                <th class="has-text-centered">
+                  CSJN
+                </th>
+                <th class="has-text-centered">
+                  MPD
+                </th>
+                <th class="has-text-centered">
+                  MPF
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(area,i) in data" :key="`area-${i}`">
+                <td class="has-text-right">
+                  {{ area.area }}
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
+                  {{ area.cmn ? area.cmn : '-' }}
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
+                  {{ area.csjn ? area.csjn : '-' }}
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
+                  {{ area.mpd ? area.mpd : '-' }}
+                </td>
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
+                  {{ area.mpf ? area.mpf : '-' }}
+                </td>
+              </tr>
+            </tbody>
+            <tfoot v-if="promedio">
+              <tr>
+                <td />
+                <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
+                  {{ promedio.cmn }}
+                </td>
+                <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
+                  {{ promedio.csjn }}
+                </td>
+                <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
+                  {{ promedio.mpd }}
+                </td>
+                <td class="data-value has-text-centered is-size-6" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
+                  {{ promedio.mpf }}
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="content">
+          <p class="is-size-5">
+            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
+          </p>
+          <p><b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b></p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
