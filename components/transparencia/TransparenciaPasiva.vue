@@ -1,0 +1,24 @@
+<template>
+  <section class="section is-medium px-0 has-text-centered">
+    <h1 class="title is-4 is-700">
+      <i class="fas fa-search has-text-orange fa-2x" />
+    </h1>
+    <h1 :id="scrollId" class="title is-4 is-700 is-spaced">
+      ¿Qué es la Transparencia Pasiva (TP)?
+    </h1>
+    <h1 class="subtitle is-4">
+      La TP es la obligación de las instituciones prevista en la ley de entregar la información pública que le sea solicitada por las personas en forma completa, oportuna y comprensible y, de ser posible, en formatos electrónicos abiertos.
+    </h1>
+  </section>
+</template>
+<script>
+export default {
+  props: {
+    scrollId: {
+      type: String,
+      required: false,
+      default: () => 'default-id'
+    }
+  }
+}
+</script>

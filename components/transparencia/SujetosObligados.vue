@@ -1,0 +1,24 @@
+<template>
+  <section class="section is-medium px-0 has-text-centered">
+    <h1 class="title is-4 is-700">
+      <i class="fas fa-search has-text-orange fa-2x" />
+    </h1>
+    <h1 :id="scrollId" class="title is-4 is-700 is-spaced">
+      ¿Quiénes son los Sujetos Obligados?
+    </h1>
+    <h1 class="subtitle is-4">
+      Son sujetos obligados por la ley los poderes del Estado (el Poder Ejecutivo Nacional, el Poder Legislativo, el Poder Judicial, el Consejo de la Magistratura, el Ministerio Público Fiscal y el Ministerio Público de la Defensa),  así como organismos autárquicos, empresas y sociedades con participación estatal y otras dependencias.
+    </h1>
+  </section>
+</template>
+<script>
+export default {
+  props: {
+    scrollId: {
+      type: String,
+      required: false,
+      default: () => 'default-id'
+    }
+  }
+}
+</script>

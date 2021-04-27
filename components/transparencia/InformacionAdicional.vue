@@ -1,0 +1,58 @@
+<template>
+  <section class="section is-medium px-0 has-text-centered">
+    <h1 :id="scrollId" class="title is-4 is-700 is-spaced">
+      Información adicional
+    </h1>
+    <br>
+    <div class="columns is-vcentered is-centered my-6">
+      <div class="column is-narrow">
+        <i class="far fa-file-pdf has-text-orange fa-5x" />
+      </div>
+      <div class="column has-text-left is-9">
+        <h1 class="subtitle is-4">
+          ¿Cuál fue la metodología utilizada para esta evaluación?
+        </h1>
+        <h1 class="title is-5">
+          (Próximamente)
+        </h1>
+      </div>
+    </div>
+    <div class="columns is-vcentered is-centered my-6">
+      <div class="column is-narrow">
+        <i class="far fa-file-pdf has-text-orange fa-5x" />
+      </div>
+      <div class="column has-text-left is-9">
+        <h1 class="subtitle is-4">
+          ¿Cómo puedo realizar un pedido de acceso a la información pública a cualquiera de las instituciones del sistema de justicia?
+        </h1>
+        <h1 class="title is-5">
+          (Próximamente)
+        </h1>
+      </div>
+    </div>
+    <div class="columns is-vcentered is-centered my-6">
+      <div class="column is-narrow">
+        <i class="far fa-file-pdf has-text-orange fa-5x" />
+      </div>
+      <div class="column has-text-left is-9">
+        <h1 class="subtitle is-4">
+          Pedidos de acceso a la información realizados por ACIJ a los distintos organismos
+        </h1>
+        <h1 class="title is-5">
+          (Próximamente)
+        </h1>
+      </div>
+    </div>
+  </section>
+</template>
+<script>
+export default {
+  props: {
+    scrollId: {
+      type: String,
+      required: false,
+      default: () => 'default-id'
+    }
+  }
+}
+</script>
