@@ -30,6 +30,7 @@ export default {
     { src: '~/plugins/vue-slick-carousel.js', mode: 'client' },
     { src: '~/plugins/vue-masonry.js', mode: 'client' },
     { src: '~/plugins/vue-scrollactive.js', mode: 'client' },
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
     { src: '~/plugins/services.js' }
   ],
 

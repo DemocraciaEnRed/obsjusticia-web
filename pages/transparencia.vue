@@ -27,58 +27,6 @@
         </div>
       </div>
     </div>
-
-    <!--
-    <div id="fuente" class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-2">
-          Fuente y notas
-        </h1>
-        <br>
-        <h6 class="subtitle is-5">
-          Última actualización
-        </h6>
-        <h6 class="title is-5 is-800">
-          {{ $config.dataDateUpdated }}
-        </h6>
-        <div class="content">
-          <p class="is-300">
-            Las visualizaciones de esta web se basan en los datos oficiales publicados en el consejo de la magistratura
-          </p>
-          <p class="is-300">
-            Data set original de expedientes en trámite de denuncias a magistrados — <a href="http://consejoabierto.pjn.gov.ar/dataset/expedientesentramite" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
-          </p>
-          <p class="is-300">
-            Data set original de expedientes culminados de denuncias a magistrados — <a href="http://consejoabierto.pjn.gov.ar/dataset/expedientesculminados" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
-          </p>
-          <p class="is-300">
-            Data set original de juicios políticos — <a href="http://consejoabierto.pjn.gov.ar/dataset/juiciospoliticos" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
-          </p>
-          <p>Los datos están <b>incompletos</b> y en muchos casos no podemos certificar su rigurosidad<br>No hay datos publicados con perspectiva de género<br>Intentaremos actualizar y mejorar estos datos</p>
-        </div>
-      </div>
-    </div>
-    <div id="creditos" class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-2">
-          Créditos
-        </h1>
-        <br>
-        <br>
-        <h6 class="subtitle is-5 mb-3">
-          Idea general
-        </h6>
-        <a href="https://acij.org.ar" target="_blank"><img src="~/assets/img/acij-logo-black.png" width="150" class="image is-centered"></a>
-        <br>
-        <br>
-        <h6 class="subtitle is-5 mb-3">
-          Desarrollado por
-        </h6>
-        <a href="https://democraciaenred.org" target="_blank"><img src="~/assets/img/logo-der-black.svg" width="150" class="image is-centered"></a>
-        <br>
-        <br>
-      </div>
-    </div> -->
   </section>
 </template>
 

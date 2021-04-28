@@ -16,9 +16,12 @@
       <b-navbar-item tag="nuxt-link" to="/disciplina">
         Disciplina
       </b-navbar-item>
-      <a href="/corrupcion">
+      <b-navbar-item tag="nuxt-link" to="/concurso">
+        Concurso
+      </b-navbar-item>
+      <!-- <a href="/corrupcion">
         Corrupción
-      </a>
+      </a> -->
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
         Iniciativa JusTA
       </b-navbar-item>
