@@ -32,8 +32,8 @@
             <!-- <a href="/corrupcion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Corrupción
             </a> -->
-            <router-link to="/concurso" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Concurso
+            <router-link to="/concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Concursos
             </router-link>
           </div>
           <div class="navbar-item">

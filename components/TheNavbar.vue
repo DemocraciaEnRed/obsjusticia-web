@@ -16,8 +16,11 @@
       <b-navbar-item tag="nuxt-link" to="/disciplina">
         Disciplina
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/concurso">
-        Concurso
+      <b-navbar-item tag="nuxt-link" to="/transparencia">
+        Transparencia
+      </b-navbar-item>
+      <b-navbar-item tag="nuxt-link" to="/concursos">
+        Concursos
       </b-navbar-item>
       <!-- <a href="/corrupcion">
         Corrupción

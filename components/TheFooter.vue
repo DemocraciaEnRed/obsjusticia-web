@@ -11,8 +11,8 @@
               <ul>
                 <li><a href="/articulos" class="has-text-white">Artículos</a></li>
                 <li><a href="/seleccion" class="has-text-white">Selección</a></li>
-                <li><a href="/corrupcion" class="has-text-white">Corrupción</a></li>
-                <li><a href="/transparencia" class="has-text-white">Transparencia</a></li>
+                <li><router-link to="/transparencia" class="has-text-white">Transparencia</router-link></li>
+                <li><router-link to="/concursos" class="has-text-white">Concursos</router-link></li>
               </ul>
             </div>
             <div class="column is-6-mobile is-3-desktop links-columns">
