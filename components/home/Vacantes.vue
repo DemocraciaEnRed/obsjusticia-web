@@ -1,94 +1,46 @@
 <template>
-  <section id="seleccion">
-    <div class="container">
-      <div class="columns mt-0">
-        <div class="column is-2-desktop introduction-column">
-          <h1 class="title is-3">
-            ¿Qué pasa con los concursos de <span class="has-text-primary">Jueces</span> y <span class="has-text-secondary">Fiscales</span>?
-          </h1>
-          <div class="line-blue"></div>
-          <div class="content">
-            <p>
-              Analizamos la forma en la que se llevan a cabo los procesos de selección de jueces.
-            </p>
-            <div class="has-text-left">
-              <a href="" class="button is-size-5 is-primary mt-5" disabled>Próximamente</a>
-            </div>
-          </div>
+  <section id="vacantes" class="section" >
+    <div class="container has-text-centered">
+      <h1 class="title is-3">
+        Concursos de jueces, <br>juezas y fiscales
+      </h1>
+      <hr>
+      <p class="count-number my-5">
+        <span class="is-600 is-size-3">368</span><br><span class="is-400">VACANTES TOTALES</span>
+      </p>
+      <div class="columns is-centered my-10">
+        <div class="column is-6-tablet ">
+           <img src="~/assets/img/jueves-image.svg"  width="120" alt="">
+           <h3 class="blue is-size-3 has-text-weight-bold">Jueces y juezas</h3>
+           <div class="columns mt-10">
+             <div class="column">
+                <span class="blue is-size-2">240</span><br>
+                <span class="">VACANTES</span>
+              </div>
+              <div class="column">
+                <span class="blue is-size-2">236*</span><br>
+                <span>TRÁMITES <br>EN CURSO</span>
+              </div>
+           </div>
         </div>
-        <div class="column is-5-desktop jueces-column">
-          <img src="~/assets/img/jueves-image.svg" class="image mb-3" width="120" alt="">
-          <h1 class="subtitle is-4 mb-1">
-            Vacantes para <span class="has-text-primary"><b>jueces y juezas</b></span>
-          </h1>
-          <h1 class="mt-4 mb-3 is-size-5">
-            <span class="is-600 has-text-primary">254</span> vacantes en total
-          </h1>
-          <div class="columns">
-            <div class="column is-12-mobile is-4">
-              <p class="count-number my-2">
-                <span class="is-400 is-size-3 has-text-primary">105</span><br><span class="is-400">EN EL PODER<br>EJECUTIVO</span>
-              </p>
+        <div class="column is-6-tablet ">
+          <img src="~/assets/img/fiscales-image.svg"  width="120" alt="">
+          <h3 class="is-size-3 has-text-weight-bold violet">Fiscales</h3>
+          <div class="columns mt-20">
+            <div class="column">
+              <span class="violet is-size-2">128</span><br>
+              <span>VACANTES</span>
             </div>
-            <div class="column is-12-mobile is-3">
-              <p class="count-number my-2">
-                <span class="is-400 is-size-3 has-text-primary">23</span><br><span class="is-400">EN EL<br>SENADO</span>
-              </p>
+            <div class="column">
+              <span class="violet is-size-2">63*</span><br>
+              <span>TRÁMITES <br>EN CURSO</span>
             </div>
-            <div class="column is-12-mobile is-5">
-              <p class="count-number my-2">
-                <span class="is-400 is-size-3 has-text-primary">126</span><br><span class="is-400">EN EL CONSEJO DE<br>LA MAGISTRATURA</span>
-              </p>
-              <h1 class="title is-6-tablet is-12-mobile is-size-5-mobile is-size-5-tablet is-size-6 is-size-5-fullhd has-text-secondary my-2 pt-4 pl-5 title-border-left">
-                Concursos
-              </h1>
-               <p class="count-number my-2">
-                <span class="is-400 is-size-4 has-text-primary mr-6">56</span><span class="is-400 is-size-6">INICIADOS</span>
-              </p>
-              <p class="count-number my-2">
-                <span class="is-400 is-size-5 has-text-primary mr-3 is-inline-block has-text-left">Sin datos*</span><span class="is-400 is-size-6">SIN INICIAR</span>
-              </p>
-            </div>
-          </div>
-          <p><span class="is-400 is-size-4 has-text-primary">(*)</span> Estos datos no pueden construirse actualmente de la información disponible.</p>
-        </div>
-        <div class="column is-5-desktop darker-blue fiscales-column">
-          <div class="bg-filler" />
-          <div class="on-top">
-            <img src="~/assets/img/fiscales-image.svg" class="image mb-3" width="120" alt="">
-            <h1 class="subtitle is-4">
-              Vacantes para <span class="has-text-secondary"><b>fiscales</b></span>
-            </h1>
-            <div class="columns">
-              <div class="column is-12-mobile is-4 is-3-fullhd">
-                <p class="count-number my-2">
-                  <span class="is-400 is-size-4 has-text-secondary">Sin datos*</span><br><span class="is-400">EN EL PODER<br>EJECUTIVO</span>
-                </p>
-              </div>
-              <div class="column is-12-mobile is-4-desktop">
-                <p class="count-number my-2">
-                  <span class="is-400 is-size-4 has-text-secondary">Sin datos*</span><br><span class="is-400">EN EL<br>SENADO</span>
-                </p>
-              </div>
-              <div class="column is-5 is-12-mobile">
-                <p class="count-number my-2">
-                  <span class="is-400 is-size-3 has-text-secondary">44</span><br><span class="is-400">EN EL MINISTERIO<br>PÚBLICO FISCAL</span>
-                </p>
-                <h1 class="title is-6-tablet is-12-mobile is-5 has-text-secondary-dark my-2 pt-4 pr-5 title-border-right">
-                  Concursos
-                </h1>
-                <p class="count-number my-2">
-                  <span class="is-400 mr-5 is-size-6">INICIADOS</span><span class="is-400 is-size-4 has-text-secondary">17</span>
-                </p>
-                <p class="count-number my-2">
-                  <span class="is-400 mr-5 is-size-6">SIN INICIAR</span><span class="is-400 is-size-5 has-text-secondary is-inline-block has-text-right">Sin datos*</span>
-                </p>
-              </div>
-            </div>
-            <p><span class="is-400 is-size-4 has-text-primary">(*)</span> Estos datos no pueden construirse actualmente de la información disponible.</p>
           </div>
         </div>
       </div>
+      <p class="my-5 is-raleway"><strong class="has-text-weight-bold">(*)</strong> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.</p>
+      <p  class="mb-5 violet">Ingresá para ver el detalle de los concursos</p>
+      <a href="/procesos-disciplinarios" class="button is-primary-dark violet-bg">Ver más</a>
     </div>
   </section>
 </template>
@@ -100,105 +52,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.blue{
+  color: #467cf6;
+}
+.violet{
+  color: #3157ac;
+}
+.violet-bg{
+  background: #3157ac;
+}
 #seleccion {
-  background: #EDF2FE;
+  background: #edf2fe;
   overflow: hidden;
 }
 #vacantes{
   background: #EDF2FE;
 }
-.fix-position{
-  top: -15px;
-  position: relative;
+hr{
+  height: 2px;
+  width: 170px;
+  margin: 0 auto;
+  background-color: $dark
 }
-.darker-blue{
-  background: #DAE5FD;
-  position:relative;
-  .bg-filler{
-    position: absolute;
-    left: 0;
-    top:0;
-    height: 100%;
-    width: 100vw;
-  background: #DAE5FD;
-  z-index: 5;
-  }
-  .on-top{
-    z-index: 10;
-    position:relative;
-  }
+.count-number{
+  line-height: normal;
 }
-.title {
-  word-break: normal;
+.color-red{
+  color: #EF1D1D;
 }
-.title-border-left {
-  border-top: 2px solid #1C3262;
-  border-left: 2px solid #1C3262;
+.color-green{
+  color: #5CCBC9;
 }
-.title-border-right {
-  border-top: 2px solid #1C3262;
-  border-right: 2px solid #1C3262;
+.thingy{
+  margin-bottom: -7px;
 }
-.line-blue {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 3px;
-    margin-top: 1rem;
-    background-color: #1C3262;
-    margin-bottom: 1rem;
-    .filler{
-      position: absolute;
-      right: 100%;
-      height: 3px;
-      background-color: #1C3262;
-      width: 100vw;
-      top: 0;
-    }
- }
-
- .introduction-column{
-  padding: 4rem 2rem;
-  align-self: center;
-    @include from($desktop) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
- }
- .fiscales-column{
-  padding: 4rem 2rem;
-   .image{
-     margin: 0 auto;
-   }
-   text-align: center;
-
-  // @media screen and (min-width: $tablet){
-    @include from($desktop) {
-   .image{
-     margin: 0 0 0 auto;
-    }
-     text-align: right;
-
-  }
- }
- .jueces-column{
-  padding: 4rem 2rem;
-  .image{
-     margin: 0 auto;
-   }
-   text-align: center;
-  // @media screen and (max-width: $tablet){
-    @include from($desktop) {
-   .image{
-     margin: 0 auto 0 0;
-    }
-    text-align: left;
-
-  }
- }
-//  .fiscales-column{
-//   @media screen and (min-width: $tablet){
-
-//   }
-//  }
 </style>
