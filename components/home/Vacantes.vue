@@ -40,7 +40,7 @@
       </div>
       <p class="my-5 is-raleway"><strong class="has-text-weight-bold">(*)</strong> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.</p>
       <p  class="mb-5 violet">Ingresá para ver el detalle de los concursos</p>
-      <a href="/procesos-disciplinarios" class="button is-primary-dark violet-bg">Ver más</a>
+      <a href="#" class="button is-primary-dark violet-bg">Ver más</a>
     </div>
   </section>
 </template>
