@@ -44,7 +44,9 @@
         </div>
         <div v-else>
           <div v-if="type == 'graph'">
-            <v-parallel-chart class="chart" :option="parallelChartOptions" />
+            <client-only>
+              <v-parallel-chart class="chart" :option="parallelChartOptions" />
+            </client-only>
           </div>
           <div v-else-if="type == 'table'" class="is-flex is-flex-direction-row my-5 px-6">
             <div class="first-table">
