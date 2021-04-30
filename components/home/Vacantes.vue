@@ -10,9 +10,9 @@
       </p>
       <div class="columns is-centered my-10">
         <div class="column is-6-tablet ">
-           <img src="~/assets/img/jueves-image.svg"  width="120" alt="">
-           <h3 class="blue is-size-3 has-text-weight-bold">Jueces y juezas</h3>
-           <div class="columns mt-10">
+           <img src="~/assets/img/jueves-image.svg"  height="50" alt="">
+           <h3 class="blue title is-size-3 has-text-weight-bold mb-10">Jueces y juezas</h3>
+           <div class="columns">
              <div class="column">
                 <span class="blue is-size-2">240</span><br>
                 <span class="">VACANTES</span>
@@ -24,9 +24,9 @@
            </div>
         </div>
         <div class="column is-6-tablet ">
-          <img src="~/assets/img/fiscales-image.svg"  width="120" alt="">
-          <h3 class="is-size-3 has-text-weight-bold violet">Fiscales</h3>
-          <div class="columns mt-20">
+          <img src="~/assets/img/fiscales-image.svg"  height="50" alt="">
+          <h3 class="is-size-3 title has-text-weight-bold violet">Fiscales</h3>
+          <div class="columns">
             <div class="column">
               <span class="violet is-size-2">128</span><br>
               <span>VACANTES</span>
@@ -40,7 +40,7 @@
       </div>
       <p class="my-5 is-raleway"><strong class="has-text-weight-bold">(*)</strong> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.</p>
       <p  class="mb-5 violet">Ingresá para ver el detalle de los concursos</p>
-      <a href="#" class="button is-primary-dark violet-bg">Ver más</a>
+      <a href="/transparencia" class="button is-primary-dark violet-bg">Ver más</a>
     </div>
   </section>
 </template>
@@ -52,7 +52,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.title{
+  margin-bottom: 20px;
+}
 .blue{
   color: #467cf6;
 }
