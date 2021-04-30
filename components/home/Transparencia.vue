@@ -27,6 +27,7 @@ section{
 background-color: #ffeeed;
 }
 .red-bg{
+  color: white;
   background-color: #b7342c;
 }
 .line-violeta {
