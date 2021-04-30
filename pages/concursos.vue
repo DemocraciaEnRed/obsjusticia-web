@@ -3,12 +3,12 @@
     <div class="py-6">
       <div class="container my-6 py-6">
         <div class="columns">
-          <div class="column is-offset-2">
+          <div class="column is-8 is-offset-2">
+            <Puntajes scroll-id="puntajes" />
             <Header scroll-id="ley" />
             <Seleccion scroll-id="seleccion" />
             <Vacantes scroll-id="vacantes" />
             <Proceso scroll-id="proceso" />
-            <Puntajes scroll-id="puntajes" />
             <Influencias scroll-id="influencias" />
             <Conclusiones scroll-id="conclusiones" />
             <Lexico scroll-id="lexico" />

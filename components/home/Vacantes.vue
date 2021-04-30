@@ -1,5 +1,5 @@
 <template>
-  <section id="vacantes" class="section" >
+  <section id="vacantes" class="section">
     <div class="container has-text-centered">
       <h1 class="title is-3">
         Concursos de jueces, <br>juezas y fiscales
@@ -10,22 +10,26 @@
       </p>
       <div class="columns is-centered my-10">
         <div class="column is-6-tablet ">
-           <img src="~/assets/img/jueves-image.svg"  width="120" alt="">
-           <h3 class="blue is-size-3 has-text-weight-bold">Jueces y juezas</h3>
-           <div class="columns mt-10">
-             <div class="column">
-                <span class="blue is-size-2">240</span><br>
-                <span class="">VACANTES</span>
-              </div>
-              <div class="column">
-                <span class="blue is-size-2">236*</span><br>
-                <span>TRÁMITES <br>EN CURSO</span>
-              </div>
-           </div>
+          <img src="~/assets/img/jueves-image.svg" width="120" alt="">
+          <h3 class="blue is-size-3 has-text-weight-bold">
+            Jueces y juezas
+          </h3>
+          <div class="columns mt-10">
+            <div class="column">
+              <span class="blue is-size-2">240</span><br>
+              <span class="">VACANTES</span>
+            </div>
+            <div class="column">
+              <span class="blue is-size-2">236*</span><br>
+              <span>TRÁMITES <br>EN CURSO</span>
+            </div>
+          </div>
         </div>
         <div class="column is-6-tablet ">
-          <img src="~/assets/img/fiscales-image.svg"  width="120" alt="">
-          <h3 class="is-size-3 has-text-weight-bold violet">Fiscales</h3>
+          <img src="~/assets/img/fiscales-image.svg" width="120" alt="">
+          <h3 class="is-size-3 has-text-weight-bold violet">
+            Fiscales
+          </h3>
           <div class="columns mt-20">
             <div class="column">
               <span class="violet is-size-2">128</span><br>
@@ -38,8 +42,12 @@
           </div>
         </div>
       </div>
-      <p class="my-5 is-raleway"><strong class="has-text-weight-bold">(*)</strong> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.</p>
-      <p  class="mb-5 violet">Ingresá para ver el detalle de los concursos</p>
+      <p class="my-5 is-raleway">
+        <strong class="has-text-weight-bold">(*)</strong> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.
+      </p>
+      <p class="mb-5 violet">
+        Ingresá para ver el detalle de los concursos
+      </p>
       <a href="#" class="button is-primary-dark violet-bg">Ver más</a>
     </div>
   </section>

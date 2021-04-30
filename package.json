@@ -15,12 +15,12 @@
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/style-resources": "^1.0.0",
-    "chart.js": "^2.9.4",
     "chroma-js": "^2.1.1",
     "core-js": "^3.11.0",
+    "echarts": "^5.1.1",
     "nuxt": "^2.15.4",
     "nuxt-buefy": "^0.4.7",
-    "vue-chartjs": "^3.5.0",
+    "vue-echarts": "^6.0.0-rc.4",
     "vue-masonry": "^0.12.0",
     "vue-scrollactive": "^0.9.3",
     "vue-slick-carousel": "^1.0.6"
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@vue/composition-api": "^1.0.0-rc.7",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
     "eslint-plugin-nuxt": "^1.0.0",

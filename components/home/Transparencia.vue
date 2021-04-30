@@ -6,7 +6,7 @@
           <h1 class="title is-3">
             Transparencia del sistema de justicia argentino
           </h1>
-          <div class="line-violeta"></div>
+          <div class="line-violeta" />
           <div class="content is-size-5">
             <p>
               Medimos la transparencia de los órganos del sistema de justicia nacional
