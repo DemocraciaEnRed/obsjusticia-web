@@ -9,15 +9,9 @@
           <div class="line-violeta" />
           <div class="content is-size-5">
             <p>
-              Medimos la transparencia de los órganos del sistema de justicia nacional
-              según el cumplimiento de la ley nacional de acceso a la información.
+              Medimos la transparencia de los órganos del sistema de justicia nacional según el cumplimiento de la <b>Ley de Acceso a la Información Pública Argentina.</b>
             </p>
-            <p class="has-text-magenta-dark">
-              <i class="far fa-calendar fa-lg" />
-            </p>
-            <p class="has-text-magenta-dark">
-              <b>Próximamente</b><br>Accedé a los pedidos de información que realizamos para JusTA
-            </p>
+            <a href="/transparencia" class="button  red-bg">Ver más</a>
           </div>
         </div>
         <div class="column">
@@ -30,7 +24,10 @@
 
 <style lang="scss" scoped>
 section{
-background-color: #F4EDFE;
+background-color: #ffeeed;
+}
+.red-bg{
+  background-color: #b7342c;
 }
 .line-violeta {
     display: inline-block;
