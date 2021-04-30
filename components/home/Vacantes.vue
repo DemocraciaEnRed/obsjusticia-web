@@ -1,5 +1,5 @@
 <template>
-  <section id="vacantes" class="section" >
+  <section id="vacantes" class="section">
     <div class="container has-text-centered">
       <h1 class="title is-3">
         Concursos de jueces, <br>juezas y fiscales

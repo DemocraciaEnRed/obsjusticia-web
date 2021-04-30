@@ -3,7 +3,7 @@
     <div class="py-6">
       <div class="container my-6 py-6">
         <div class="columns">
-          <div class="column is-offset-2">
+          <div class="column is-8 is-offset-2">
             <Header scroll-id="ley" />
             <Seleccion scroll-id="seleccion" />
             <Vacantes scroll-id="vacantes" />

@@ -104,10 +104,10 @@ export default {
       .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags'])
       .sortBy('date', 'desc')
       .fetch()
-      .catch((err) => {
-        // error({ statusCode: 404, message: 'Page not found' })
-        console.log(err)
-      })
+      // .catch((err) => {
+      // error({ statusCode: 404, message: 'Page not found' })
+      // console.err(err)
+      // })
     return { articles }
   }
 }
