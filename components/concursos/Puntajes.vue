@@ -162,32 +162,32 @@ export default {
       data: null,
       type: 'table',
       lugares: [
-        { disabled: false, key: '1', label: '412-CN Crim y Corr Federal - Sala' },
-        { disabled: false, key: '2', label: '413-CN Civ y Com Federal - Sala I' },
-        { disabled: true, key: '3', label: '433-JN Crim y Corr Federal N°12' },
-        { disabled: false, key: '4', label: '418-CN en lo Penal Económico - Sala A' },
-        { disabled: false, key: '5', label: '430-JN en lo Penal Económico N°10' },
-        { disabled: false, key: '6', label: '415-CN Civ y Com Federal - Sala Esp Def de la Comp' },
-        { disabled: true, key: '7', label: '427-JN Civ y Com Federal N° 2' },
-        { disabled: true, key: '8', label: '409-CF de Mendoza - Sala A' },
-        { disabled: true, key: '9', label: '390-TOCF 2 Rosario' },
-        { disabled: true, key: '10', label: '414-CF Mar del Plata' },
-        { disabled: true, key: '11', label: '416-CN del Trabajo - Sala VII' },
-        { disabled: true, key: '12', label: '408-CN en lo Comercial de la Capital - Sala B' },
-        { disabled: true, key: '13', label: '417-JN en lo Crim y Corr de la Capital N° 1' },
-        { disabled: true, key: '14', label: '389-TOCF N° 1 y 6 de la Capital' },
-        { disabled: true, key: '15', label: '386-JN Civ y Com Federal N° 9 y 10' },
-        { disabled: true, key: '16', label: '357-CF de Tucumán' },
-        { disabled: true, key: '17', label: '358-JN Crim y Corr N° 2 de Lomas de Zamora' },
-        { disabled: true, key: '18', label: '332-TOCF de Posadas' },
-        { disabled: true, key: '19', label: '356-TOCF de Formosa' },
-        { disabled: true, key: '20', label: '333-TOCF de Bahía Blanca' },
-        { disabled: true, key: '21', label: '345-TOCF de Resistencia' },
-        { disabled: true, key: '22', label: '377-CF de Salta - Sala I' },
-        { disabled: true, key: '23', label: '381-CF de San Justo' },
-        { disabled: true, key: '24', label: '391-CF de la Seguridad Social' },
-        { disabled: true, key: '25', label: '393-CF de la Plata' },
-        { disabled: true, key: '26', label: '399-CF de San Martín' }
+        { disabled: false, key: '1', label: '332-TOCF de Posadas' },
+        { disabled: false, key: '2', label: '333-TOCF de Bahía Blanca' },
+        { disabled: false, key: '3', label: '345-TOCF de Resistencia' },
+        { disabled: false, key: '4', label: '356-TOCF de Formosa' },
+        { disabled: true, key: '5', label: '357-CF de Tucumán' },
+        { disabled: true, key: '6', label: '358-JN Crim y Corr N° 2 de Lomas de Zamora' },
+        { disabled: true, key: '7', label: '377-CF de Salta - Sala I' },
+        { disabled: true, key: '8', label: '381-CF de San Justo' },
+        { disabled: true, key: '9', label: '386-JN Civ y Com Federal N° 9 y 10' },
+        { disabled: true, key: '10', label: '389-TOCF N° 1 y 6 de la Capital' },
+        { disabled: true, key: '11', label: '390-TOCF 2 Rosario' },
+        { disabled: true, key: '12', label: '391-CF de la Seguridad Social' },
+        { disabled: true, key: '13', label: '393-CF de la Plata' },
+        { disabled: true, key: '14', label: '399-CF de San Martín' },
+        { disabled: true, key: '15', label: '408-CN en lo Comercial de la Capital - Sala B' },
+        { disabled: true, key: '16', label: '409-CF de Mendoza - Sala A' },
+        { disabled: false, key: '17', label: '412-CN Crim y Corr Federal - Sala' },
+        { disabled: false, key: '18', label: '413-CN Civ y Com Federal - Sala I' },
+        { disabled: false, key: '19', label: '414-CF Mar del Plata' },
+        { disabled: false, key: '20', label: '415-CN Civ y Com Federal - Sala Esp Def de la Comp' },
+        { disabled: false, key: '21', label: '416-CN del Trabajo - Sala VII' },
+        { disabled: true, key: '22', label: '417-JN en lo Crim y Corr de la Capital N° 1' },
+        { disabled: false, key: '23', label: '418-CN en lo Penal Económico - Sala A' },
+        { disabled: true, key: '24', label: '427-JN Civ y Com Federal N° 2' },
+        { disabled: false, key: '25', label: '430-JN en lo Penal Económico N°10' },
+        { disabled: true, key: '26', label: '433-JN Crim y Corr Federal N°12' }
       ],
       sheetSelected: '1',
       keys: [
@@ -449,15 +449,15 @@ export default {
   color: #467CF6;
 }
 .first-table{
-  width: 250px;
+  width: 170px;
   .table{
     width: 100%
     thead th {
     }
     tbody td{
-      text-align: right;
+      text-align: left;
       border-right: 1px solid black;
-      max-width: 250px;
+      max-width: 170px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -485,10 +485,10 @@ export default {
 }
 .table{
   background-color: transparent;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 
   td {
-    padding: 5px 5px;
+    padding: 2px 5px;
     color: black;
     vertical-align: middle;
     border-bottom: 0;
