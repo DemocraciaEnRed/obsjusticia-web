@@ -10,7 +10,7 @@
             <div class="select is-fullwidth">
               <select v-model="sheetSelected">
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
-                  {{ place.label }}
+                  {{ place.label }} ({{place.status}})
                 </option>
               </select>
             </div>
@@ -95,18 +95,18 @@
                 </thead>
                 <tbody>
                   <tr v-for="(p,i) in data" :key="`orden-${i}`">
-                    <td>{{ p.oposicion }}</td>
-                    <td>{{ p.antecedentes }}</td>
-                    <td>{{ p.primerasum }}</td>
+                    <td>{{ p.oposicion != null ? p.oposicion : '-' }}</td>
+                    <td>{{ p.antecedentes != null ? p.antecedentes : '-' }}</td>
+                    <td>{{ p.primerasum != null ? p.primerasum : '-' }}</td>
                     <td class="has-background-warning">
-                      {{ p.primerordenmerito }}
+                      {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
                     </td>
                     <td class="is-uppercase" :class="{'has-text-orange': p.impugnacion == 'si'}">
-                      {{ p.impugnacion }}
+                      {{ p.impugnacion != null ? p.impugnacion : '-' }}
                     </td>
-                    <td>{{ p.impugnacionopocision }}</td>
-                    <td>{{ p.impugnacionantecedentes }}</td>
-                    <td>{{ p.nuevasumatoria }}</td>
+                    <td>{{ p.impugnacionopocision != null ? p.impugnacionopocision : '-' }}</td>
+                    <td>{{ p.impugnacionantecedentes != null ? p.impugnacionantecedentes : '-' }}</td>
+                    <td>{{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -116,14 +116,32 @@
                 <thead>
                   <tr>
                     <th class="is-uppercase has-background-orange">
-                      Nuevo Orden de Mérito
+                      Nuevo<br>Orden<br>de Mérito
+                    </th>
+                    <th class="is-uppercase has-background-orange">
+                      Entrevista
+                    </th>
+                    <th class="is-uppercase has-background-orange">
+                      Terna<br>comisión
+                    </th>
+                    <th class="is-uppercase has-background-orange">
+                      Terna<br>plenario
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="(p,i) in data" :key="`orden-${i}`">
                     <td class="has-background-warning">
-                      {{ p.nuevoordenmerito }}
+                      {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
+                    </td>
+                    <td class="has-background-warning">
+                      {{ p.entrevista != null ? p.entrevista : '-' }}
+                    </td>
+                    <td class="has-background-warning">
+                      {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
+                    </td>
+                    <td class="has-background-warning">
+                      {{ p.ternaplenario != null ? p.ternaplenario : '-' }}
                     </td>
                   </tr>
                 </tbody>
@@ -149,6 +167,15 @@ export default {
     }
   },
   async fetch () {
+    if (this.status == null) {
+      const dataStatus = await fetch(
+        'https://spreadsheets.google.com/feeds/list/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/1/public/full?alt=json'
+      ).then((res) => {
+        return res.json()
+      })
+      this.status = this.extractDataStatus(dataStatus)
+      this.fillLugares(this.status)
+    }
     const data = await fetch(
       `https://spreadsheets.google.com/feeds/list/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/${this.sheetSelected}/public/full?alt=json`
     ).then((res) => {
@@ -157,39 +184,22 @@ export default {
     this.data = this.extractData(data)
     this.prepareChart(this.data)
   },
+  fetchOnServer: false,
   data () {
     return {
       data: null,
       type: 'table',
-      lugares: [
-        { disabled: false, key: '1', label: '332-TOCF de Posadas' },
-        { disabled: false, key: '2', label: '333-TOCF de Bahía Blanca' },
-        { disabled: false, key: '3', label: '345-TOCF de Resistencia' },
-        { disabled: false, key: '4', label: '356-TOCF de Formosa' },
-        { disabled: true, key: '5', label: '357-CF de Tucumán' },
-        { disabled: true, key: '6', label: '358-JN Crim y Corr N° 2 de Lomas de Zamora' },
-        { disabled: true, key: '7', label: '377-CF de Salta - Sala I' },
-        { disabled: true, key: '8', label: '381-CF de San Justo' },
-        { disabled: true, key: '9', label: '386-JN Civ y Com Federal N° 9 y 10' },
-        { disabled: true, key: '10', label: '389-TOCF N° 1 y 6 de la Capital' },
-        { disabled: true, key: '11', label: '390-TOCF 2 Rosario' },
-        { disabled: true, key: '12', label: '391-CF de la Seguridad Social' },
-        { disabled: true, key: '13', label: '393-CF de la Plata' },
-        { disabled: true, key: '14', label: '399-CF de San Martín' },
-        { disabled: true, key: '15', label: '408-CN en lo Comercial de la Capital - Sala B' },
-        { disabled: true, key: '16', label: '409-CF de Mendoza - Sala A' },
-        { disabled: false, key: '17', label: '412-CN Crim y Corr Federal - Sala' },
-        { disabled: false, key: '18', label: '413-CN Civ y Com Federal - Sala I' },
-        { disabled: false, key: '19', label: '414-CF Mar del Plata' },
-        { disabled: false, key: '20', label: '415-CN Civ y Com Federal - Sala Esp Def de la Comp' },
-        { disabled: false, key: '21', label: '416-CN del Trabajo - Sala VII' },
-        { disabled: true, key: '22', label: '417-JN en lo Crim y Corr de la Capital N° 1' },
-        { disabled: false, key: '23', label: '418-CN en lo Penal Económico - Sala A' },
-        { disabled: true, key: '24', label: '427-JN Civ y Com Federal N° 2' },
-        { disabled: false, key: '25', label: '430-JN en lo Penal Económico N°10' },
-        { disabled: true, key: '26', label: '433-JN Crim y Corr Federal N°12' }
+      status: null,
+      statusKeys: [
+        'nombre',
+        'id',
+        'estado',
+        'mostrar'
       ],
-      sheetSelected: '1',
+      lugares: [
+        { disabled: false, key: '2', label: 'Cargando' }
+      ],
+      sheetSelected: '2',
       keys: [
         'nombre',
         'oposicion',
@@ -237,7 +247,7 @@ export default {
         },
         parallelAxis: [
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -20, align: 'left', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Orden de Merito' },
-          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Orden de Merito + Impugnacion' },
+          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Impugnación' },
           { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Entrevista' },
           { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Terna Comisión' },
           { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Terna Plenario' }
@@ -274,8 +284,8 @@ export default {
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion</b>:&nbsp;&nbsp;&nbsp;${personData.oposicion}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Antecedentes</b>:&nbsp;&nbsp;&nbsp;${personData.antecedentes}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px; padding-bottom: 10px;"><b>Sumatoria</b>:&nbsp;&nbsp;&nbsp;${personData.primerasum}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>¿Impugnaciones?</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacion.toUpperCase()}</p>`
-            if (personData.impugnacion.toLowerCase() === 'si') {
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>¿Impugnaciones?</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacion != null ? personData.impugnacion.toUpperCase() : '-'}</p>`
+            if (personData.impugnacion != null && personData.impugnacion.toLowerCase() === 'si') {
               aux += `
                 <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionopocision}</p>
                 <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Antecedentes</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionantecedentes}</p>
@@ -298,16 +308,6 @@ export default {
               <p style="font-size:11px; text-align: left; line-height: normal; padding-top: 10px; ">${personData.nota}</p>
               `
             }
-            // if (personData.ternacomision === '*') {
-            //   aux += `
-            //   <p style="font-size:11px; text-align: left; line-height: normal; padding-top: 3px; padding-bottom: 3px;">* Participante renuncio o no se presentó a entrevista</p>
-            //   `
-            // }
-            // if (personData.ternaplenario === '*') {
-            //   aux += `
-            //   <p style="font-size:11px; text-align: left; line-height: normal; padding-top: 3px; ">* Participante renuncio o no se presentó a entrevista</p>
-            //   `
-            // }
             return aux
           }
         },
@@ -343,6 +343,32 @@ export default {
     }
   },
   methods: {
+    extractDataStatus (data) {
+      // eslint-disable-next-line prefer-const
+      let output = []
+      data.feed.entry.forEach((entry) => {
+        // eslint-disable-next-line prefer-const
+        let marker = {}
+        this.statusKeys.forEach((key) => {
+          marker[key] = entry[`gsx$${key}`].$t !== '' ? entry[`gsx$${key}`].$t : null
+        })
+        output.push(marker)
+      })
+      return output
+    },
+    fillLugares (data) {
+      const output = []
+      data.forEach((l) => {
+        const aux = {
+          disabled: l.mostrar !== 'TRUE',
+          key: l.id,
+          label: l.nombre,
+          status: l.estado
+        }
+        output.push(aux)
+      })
+      this.lugares = output
+    },
     extractData (data) {
       // eslint-disable-next-line prefer-const
       let output = []
@@ -449,10 +475,15 @@ export default {
   color: #467CF6;
 }
 .first-table{
+  margin-bottom: 0;
   width: 170px;
   .table{
+    tbody {
+      box-shadow: 5px 1px 4px -2px #00000078;
+    }
     width: 100%
     thead th {
+      border-right: 1px solid black;
     }
     tbody td{
       text-align: left;
@@ -468,6 +499,7 @@ export default {
   overflow: auto;
   thead th {
     width: 100px;
+    font-size: 0.6rem;
   }
   tbody td{
     border-right: 1px solid black;
@@ -475,9 +507,16 @@ export default {
   }
 }
 .third-table{
-  width: 150px;
+  margin-bottom: 0;
+  width: 250px;
   .table {
     width: 100%;
+  }
+  tbody {
+    box-shadow: -5px 1px 4px -2px #00000078;
+  }
+  thead th {
+    font-size: 0.6rem;
   }
   tbody td{
     border-left: 1px solid black;
