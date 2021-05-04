@@ -14,9 +14,7 @@
             <GraficoCumplimiento scroll-id="grafico-cumplimiento" />
             <GraficoDesagregacion scroll-id="grafico-desagregacion" />
             <Glosario scroll-id="glosario" />
-            <SobreTransparenciaPasiva scroll-id="sobre-pa" />
-            <SobreTransparenciaActiva scroll-id="sobre-ta" />
-            <SobreOrganosGarantes scroll-id="sobre-og" />
+            <Conclusiones scroll-id="conclusiones" />
             <InformacionAdicional scroll-id="informacion-adicional" />
             <Fuentes scroll-id="fuentes" />
             <Creditos scroll-id="creditos" />
@@ -42,9 +40,7 @@ import GraficoIndices from '~/components/transparencia/GraficoIndices'
 import GraficoCumplimiento from '~/components/transparencia/GraficoCumplimiento'
 import GraficoDesagregacion from '~/components/transparencia/GraficoDesagregacion'
 import Glosario from '~/components/transparencia/Glosario'
-import SobreTransparenciaActiva from '~/components/transparencia/SobreTransparenciaActiva'
-import SobreTransparenciaPasiva from '~/components/transparencia/SobreTransparenciaPasiva'
-import SobreOrganosGarantes from '~/components/transparencia/SobreOrganosGarantes'
+import Conclusiones from '~/components/transparencia/Conclusiones'
 import InformacionAdicional from '~/components/transparencia/InformacionAdicional'
 import Fuentes from '~/components/transparencia/Fuentes'
 import Creditos from '~/components/transparencia/Creditos'
@@ -64,9 +60,7 @@ export default {
     GraficoCumplimiento,
     GraficoDesagregacion,
     Glosario,
-    SobreTransparenciaActiva,
-    SobreTransparenciaPasiva,
-    SobreOrganosGarantes,
+    Conclusiones,
     InformacionAdicional,
     Fuentes,
     Creditos

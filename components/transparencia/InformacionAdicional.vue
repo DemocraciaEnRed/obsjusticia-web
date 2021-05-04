@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-4 is-700 is-spaced">
+        <h1 class="title is-2 is-700 is-spaced">
           Información adicional
         </h1>
         <br>

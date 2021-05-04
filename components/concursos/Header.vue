@@ -1,12 +1,12 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight">
+  <section :id="scrollId" class="hero">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700">
+        <h1 class="title is-1 is-700">
           Concursos de jueces, juezas y fiscales
         </h1>
         <div class="py-6">
-          <h1 class="title is-3 is-700 is-chivo">
+          <h1 class="title is-2 is-700 is-chivo">
             <span v-if="$fetchState.pending">
               <i class="fas fa-sync fa-fw fa-spin fa-lg" />
             </span>
@@ -17,19 +17,19 @@
               {{ getValue('vacantesTotales') }}
             </span>
           </h1>
-          <h1 class="subtitle is-6 is-chivo">
+          <h1 class="subtitle is-5 is-chivo">
             VACANTES TOTALES
           </h1>
           <br>
           <div class="columns">
             <div class="column">
               <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
-              <h1 class="title is-5 my-4 is-700 is-chivo has-text-primary">
+              <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
                 Jueces y Juezas
               </h1>
               <div class="columns my-5 is-mobile">
                 <div class="column">
-                  <h1 class="title is-3 is-500 is-chivo has-text-primary">
+                  <h1 class="title is-2 is-500 is-chivo has-text-primary">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -40,12 +40,12 @@
                       {{ getValue('vacantesJueces') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-5 is-chivo">
                     VACANTES
                   </h1>
                 </div>
                 <div class="column">
-                  <h1 class="title is-3 is-500 is-chivo has-text-primary">
+                  <h1 class="title is-2 is-500 is-chivo has-text-primary">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -56,7 +56,7 @@
                       {{ getValue('tramitesEnCursoJueces') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-5 is-chivo">
                     TRAMITES<br>EN CURSO
                   </h1>
                 </div>
@@ -64,12 +64,12 @@
             </div>
             <div class="column">
               <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
-              <h1 class="title is-5 my-4 is-700 is-chivo has-text-secondary">
+              <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
                 Fiscales
               </h1>
               <div class="columns my-5 is-mobile">
                 <div class="column">
-                  <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+                  <h1 class="title is-2 is-500 is-chivo has-text-secondary">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -80,12 +80,12 @@
                       {{ getValue('vacantesFiscales') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-5 is-chivo">
                     VACANTES
                   </h1>
                 </div>
                 <div class="column">
-                  <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+                  <h1 class="title is-2 is-500 is-chivo has-text-secondary">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -96,14 +96,14 @@
                       {{ getValue('tramitesEnCursoFiscales') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-5 is-chivo">
                     TRAMITES<br>EN CURSO
                   </h1>
                 </div>
               </div>
             </div>
           </div>
-          <p class="is-300">
+          <p class="is-300 is-size-5">
             <b>(*)</b> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.
           </p>
         </div>

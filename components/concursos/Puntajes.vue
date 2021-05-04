@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container" style="width: 100%;">
-        <h1 class="subtitle is-5">
+        <h1 class="subtitle is-4 line-height-150">
           En el cuadro que sigue encontrarás los puntajes de cada concurso en marcha (algunos anteriores también) y qué candidatos/as se beneficiaron con las impugnaciones y entrevistas personales:
         </h1>
         <div class="field has-addons mx-6">
@@ -10,7 +10,7 @@
             <div class="select is-fullwidth">
               <select v-model="sheetSelected">
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
-                  {{ place.label }} ({{place.status}})
+                  {{ place.label }} ({{ place.status }})
                 </option>
               </select>
             </div>
@@ -89,7 +89,7 @@
                       Impugnación Antecedentes
                     </th>
                     <th class="is-uppercase">
-                      Sumatoria
+                      Sumatoria Impugnación
                     </th>
                   </tr>
                 </thead>
@@ -499,7 +499,7 @@ export default {
   overflow: auto;
   thead th {
     width: 100px;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
   tbody td{
     border-right: 1px solid black;
@@ -516,7 +516,7 @@ export default {
     box-shadow: -5px 1px 4px -2px #00000078;
   }
   thead th {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
   tbody td{
     border-left: 1px solid black;
@@ -524,7 +524,7 @@ export default {
 }
 .table{
   background-color: transparent;
-  font-size: 0.8rem;
+  font-size: 1rem;
 
   td {
     padding: 2px 5px;
