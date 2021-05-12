@@ -67,7 +67,7 @@ export default {
       activeBlock: 0,
       blocks: [
         {
-          title: '¿Qué es Iniciativa JusTA?',
+          title: '¿Qué es JusTA?',
           content: 'Plataforma JusTA es una iniciativa para el intercambio de información, propuestas, diálogos y reclamos sobre el sistema de justicia. Promovemos una mayor apertura y rendición de cuentas del Poder Judicial y los Ministerios Públicos a través de una sección de artículos de análisis y otras de datos abiertos sobre procesos de selección y disciplinarios de jueces, juezas y fiscales, y un ranking de transparencia de estas instituciones.',
           urlMore: null,
           route: '/quienes-somos',

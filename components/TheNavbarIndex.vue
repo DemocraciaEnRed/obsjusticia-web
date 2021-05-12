@@ -19,8 +19,8 @@
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/seleccion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Selección
+            <router-link to="/concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Concursos
             </router-link>
           </div>
           <div class="navbar-item">
@@ -29,16 +29,13 @@
             </router-link>
           </div>
           <div class="navbar-item">
-            <!-- <a href="/corrupcion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+            <router-link to="/corrupcion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Corrupción
-            </a> -->
-            <router-link to="/concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Concursos
             </router-link>
           </div>
           <div class="navbar-item">
             <router-link to="/quienes-somos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Iniciativa JusTA
+              JusTA
             </router-link>
           </div>
         </div>

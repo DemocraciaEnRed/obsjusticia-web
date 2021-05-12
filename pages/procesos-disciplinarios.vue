@@ -19,7 +19,7 @@
                 <i class="far fa-calendar fa-2x mb-3" />
               </p>
               <p class="is-size-3 is-800">
-                22 AÑOS
+                23 AÑOS
               </p>
               <br>
               <br>
@@ -61,7 +61,7 @@
             </div>
             <div class="buttons is-centered mt-6">
               <a href="#graphs" class="button is-primary"><i class="fas fa-chart-area fa-fw" />&nbsp;GRÁFICOS</a>
-              <a href="#lexico" class="button is-light">Léxico para no abogades</a>
+              <a href="#lexico" class="button is-light">Léxico para no especialistas</a>
               <a href="#fuente" class="button is-light">Fuentes y notas</a>
               <a href="#creditos" class="button is-light">Créditos</a>
             </div>
@@ -86,7 +86,7 @@
         <div class="columns is-centered">
           <div class="column is-9">
             <h1 class="title is-2 has-text-centered">
-              Léxico para no abogades
+              Léxico para no especialistas
             </h1>
             <div class="my-4 has-background-white px-6 py-5">
               <div class="columns">
@@ -110,11 +110,11 @@
                     Causas caducadas
                   </h5>
                   <h5 class="subtitle is-5">
-                    ⚰️
+                    📖
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son acsos de injusticias.</p>
+                  <p>(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son casos de injusticias.</p>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@
           <p class="is-300">
             Data set original de juicios políticos — <a href="http://consejoabierto.pjn.gov.ar/dataset/juiciospoliticos" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
           </p>
-          <p>Los datos están <b>incompletos</b> y en muchos casos no podemos certificar su rigurosidad<br>No hay datos publicados con perspectiva de género<br>Intentaremos actualizar y mejorar estos datos</p>
+          <p>Los datos publicados por el Consejo de la Magistratura están incompletos y en muchos casos no podemos certificar su rigurosidad. No hay datos publicados con perspectiva de género</p>
         </div>
       </div>
     </div>

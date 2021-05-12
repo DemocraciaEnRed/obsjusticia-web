@@ -3,7 +3,7 @@
     <div class="hero-body px-0">
       <div class="container">
         <h1 class="title is-2 has-text-centered">
-          Léxico para no abogades
+          Léxico para no especialistas
         </h1>
         <div class="my-4 has-background-white px-6 py-5">
           <div class="columns">
@@ -24,7 +24,7 @@
           <div class="columns">
             <div class="column is-4">
               <h5 class="title is-4">
-                ⚰️
+                📖
                 Antecedentes
               </h5>
               <!-- <h5 class="subtitle is-5">
