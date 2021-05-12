@@ -35,7 +35,9 @@
       </div>
       <img src="~/assets/img/procesos-dots.svg" class="image is-centered" alt="Procesos">
       <br>
-      <a href="/procesos-disciplinarios" class="button is-primary-dark">Ver más</a>
+      <router-link to="/procesos-disciplinarios" class="button is-primary-dark">
+        Ver más
+      </router-link>
     </div>
   </section>
 </template>

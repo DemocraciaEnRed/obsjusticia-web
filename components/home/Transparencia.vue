@@ -11,7 +11,9 @@
             <p>
               Medimos la transparencia de los órganos del sistema de justicia nacional según el cumplimiento de la <b>Ley de Acceso a la Información Pública Argentina.</b>
             </p>
-            <a href="/transparencia" class="button  red-bg">Ver más</a>
+            <router-link to="/transparencia" class="button  red-bg">
+              Ver más
+            </router-link>
           </div>
         </div>
         <div class="column">

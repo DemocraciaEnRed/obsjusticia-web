@@ -1,8 +1,8 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight">
+  <section :id="scrollId" class="hero is-fullheight my-6">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-4 is-400 is-spaced">
+        <h1 class="title is-4 is-400 is-spaced line-height-150">
           Datos sobre el cumplimiento de la obligación de <span class="is-700">transparencia activa</span> según tipo de información que exige la ley
         </h1>
         <br>
@@ -77,11 +77,13 @@
             </tbody>
           </table>
         </div>
-        <div class="content">
-          <p class="is-size-5">
+        <div class="content mb-6">
+          <p class="is-size-4 line-height-150">
             <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
           </p>
-          <p><b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b></p>
+          <p class="is-size-5 line-height-150">
+            <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
+          </p>
         </div>
       </div>
     </div>

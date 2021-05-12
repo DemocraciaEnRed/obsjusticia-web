@@ -22,14 +22,14 @@
                   </div>
                   <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
                     <div class="my-1">
-                    <div class="is-clearfix mb-3">
-                      <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
-                        {{ article.category }}
-                      </p>
-                      <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                        {{ article.date.split('T')[0].split('-').reverse().join('-') }}
-                      </p>
-                    </div>
+                      <div class="is-clearfix mb-3">
+                        <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
+                          {{ article.category }}
+                        </p>
+                        <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
+                          {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                        </p>
+                      </div>
                       <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
                         {{ article.title }}
                       </p>
@@ -37,7 +37,9 @@
                         {{ article.author }}
                       </p>
                     </div>
-                      <p class="my-1">{{article.description}}</p>
+                    <p class="my-1">
+                      {{ article.description }}
+                    </p>
                     <div class="tags">
                       <span v-for="(tag,index) in article.tags" :key="`tag-${index}`" class="tag is-special is-capitalized">{{ tag }}</span>
                     </div>
@@ -55,7 +57,9 @@
         </div>
       </div>
       <div class="has-text-centered mb-4 mt-5">
-        <a href="/articulos" class="button is-primary-dark"><span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" /></a>
+        <router-link to="/articulos" class="button is-primary-dark">
+          <span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" />
+        </router-link>
       </div>
     </div>
   </section>

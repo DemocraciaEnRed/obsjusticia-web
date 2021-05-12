@@ -2,15 +2,20 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0">
       <div class="container">
+<<<<<<< HEAD
         <h1 class="title is-2 has-text-centered">
           Léxico para no especialistas
+=======
+        <h1 class="title is-2 has-text-centered mb-6">
+          Léxico para no abogades
+>>>>>>> cf07eedea63f1d4030e9813f1406557aa64607df
         </h1>
         <div class="my-4 has-background-white px-6 py-5">
           <div class="columns">
             <div class="column is-4">
               <h5 class="title is-4">
                 ✏️
-                Oposición
+                <span class="is-size-5">Oposición</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -24,8 +29,13 @@
           <div class="columns">
             <div class="column is-4">
               <h5 class="title is-4">
+<<<<<<< HEAD
                 📖
                 Antecedentes
+=======
+                ⚰️
+                <span class="is-size-5">Antecedentes</span>
+>>>>>>> cf07eedea63f1d4030e9813f1406557aa64607df
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -40,7 +50,7 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 💼
-                Impugnación
+                <span class="is-size-5">Impugnación</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -57,7 +67,7 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 👩‍⚖️
-                Impugnación oposición
+                <span class="is-size-5">Impugnación oposición</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -74,7 +84,7 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 👨‍⚖️
-                Impugnación de antecedentes
+                <span class="is-size-5">Impugnación de antecedentes</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -91,7 +101,7 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 🏛️
-                Consejo de la Magistratura
+                <span class="is-size-5">Consejo de la Magistratura</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->

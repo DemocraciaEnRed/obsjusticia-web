@@ -2,18 +2,18 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <p class="is-size-5">
+        <p class="is-size-4">
           En esta sección te mostramos cuántas <b>vacantes</b> están en distintas etapas del proceso. De esta forma, se pueden evaluar demoras y asignar responsabilidades a la hora de seleccionar autoridades para los cargos disponibles.
         </p>
         <br>
         <br>
         <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
-        <h1 class="title is-5 my-4 is-700 is-chivo has-text-primary">
+        <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
           Jueces y Juezas
         </h1>
         <div class="columns my-5 is-mobile is-multiline is-centered">
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-primary">
+            <h1 class="title is-2 is-500 is-chivo has-text-primary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -29,7 +29,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-primary">
+            <h1 class="title is-2 is-500 is-chivo has-text-primary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -45,7 +45,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-primary">
+            <h1 class="title is-2 is-500 is-chivo has-text-primary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -61,7 +61,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-primary">
+            <h1 class="title is-2 is-500 is-chivo has-text-primary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -77,7 +77,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-primary">
+            <h1 class="title is-2 is-500 is-chivo has-text-primary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -96,12 +96,12 @@
         <br>
         <br>
         <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
-        <h1 class="title is-5 my-4 is-700 is-chivo has-text-secondary">
+        <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
           Fiscales
         </h1>
         <div class="columns my-5 is-mobile is-multiline is-centered">
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+            <h1 class="title is-2 is-500 is-chivo has-text-secondary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -117,7 +117,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+            <h1 class="title is-2 is-500 is-chivo has-text-secondary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -133,7 +133,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+            <h1 class="title is-2 is-500 is-chivo has-text-secondary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -149,7 +149,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+            <h1 class="title is-2 is-500 is-chivo has-text-secondary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
@@ -165,7 +165,7 @@
             </h1>
           </div>
           <div class="column is-4-mobile">
-            <h1 class="title is-3 is-500 is-chivo has-text-secondary">
+            <h1 class="title is-2 is-500 is-chivo has-text-secondary">
               <span v-if="$fetchState.pending">
                 <i class="fas fa-sync fa-fw fa-spin fa-lg" />
               </span>
