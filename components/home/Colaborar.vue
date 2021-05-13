@@ -3,7 +3,7 @@
     <div class="container has-text-centered">
       <img src="~/assets/img/manitos.gif" width="88" class="image is-centered mb-4" alt="">
       <h1 class="title is-3">
-        Podemos colaborar juntos
+        Podemos colaborar
       </h1>
       <hr>
       <br>

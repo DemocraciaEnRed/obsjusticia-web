@@ -122,7 +122,10 @@ export default {
 
 <style lang="scss" scoped>
 .monkey{
-  margin-top: -100px;
+  margin-top: -50px;
+  @include from($desktop) {
+    margin-top: -100px;
+  }
 }
 .articles-card {
   padding: 10px 7px 15px 7px;

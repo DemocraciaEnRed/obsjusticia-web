@@ -9,7 +9,7 @@
         <div class="column">
           <img src="~/assets/img/logo-white.svg" class="iamge" width="480">
         </div>
-        <div class="column is-6 is-align-self-flex-end pb-0">
+        <div class="column is-6 is-align-self-flex-end carousel-column">
           <b-carousel
             v-model="activeBlock"
             :indicator="true"
@@ -153,5 +153,11 @@ position: relative;
 // }
 .container{
   z-index: 10;
+}
+.carousel-column {
+  padding-bottom: 40px !important;
+  @include from($desktop) {
+    padding-bottom: 0px !important;
+  }
 }
 </style>
