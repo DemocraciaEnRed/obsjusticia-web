@@ -1,5 +1,5 @@
 ---
-title: Reportaje a Paola Bergallo “La agenda de género se aceleró y hoy no podrían nombrarse dos hombres  en la Corte como en 2016"
+title: Reportaje a Paola Bergallo “La agenda de género se aceleró y hoy no podrían nombrarse dos hombres en la Corte como en 2016"
 description: La jurista Bergallo dice que la igualdad aún está lejos.
 date: 2020-11-27
 order: 2
