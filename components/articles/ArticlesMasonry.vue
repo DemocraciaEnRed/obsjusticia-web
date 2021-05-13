@@ -13,7 +13,7 @@
           </h4>
         </div>
         <div v-else class="">
-          <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container">
+          <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
             <div v-for="(article, index) in articles" :key="index" v-masonry-tile class="articles-card">
               <NuxtLink :to="`articulos/${article.slug}`">
                 <div class="card">
@@ -36,8 +36,13 @@
                       <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                         {{ article.author }}
                       </p>
+                      <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                        {{ article.order }}
+                      </p>
                     </div>
-                    <p class="my-5">{{article.description}}</p>
+                    <p class="my-5">
+                      {{ article.description }}
+                    </p>
                     <div class="tags">
                       <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
                     </div>
@@ -56,8 +61,8 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
-      .sortBy('date', 'desc')
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
+      .sortBy('order', 'asc')
       .fetch()
       .catch((err) => {
         // error({ statusCode: 404, message: 'Page not found' })

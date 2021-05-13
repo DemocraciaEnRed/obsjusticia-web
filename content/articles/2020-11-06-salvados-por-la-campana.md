@@ -2,13 +2,14 @@
 title: Salvados por la campana
 description: Desde 2006, caducaron 245 denuncias sin investigación en el Consejo
 date: 2020-11-06
+order: 6
 author: Marcelo Giullitti Oliva
 category: Investigacion
 image: 2020-11-06-salvados-por-la-campana.jpg
 tags: 
-- control
-- consejo de la magistratura
-- disciplina
+- Control
+- Consejo de la Magistratura
+- Disciplina
 highlight: false
 ---
 

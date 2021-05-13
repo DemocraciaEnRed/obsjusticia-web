@@ -1,13 +1,15 @@
 ---
-slug: 2020-10-16-pertenecer-privilegio
 title: Pertenecer sigue siendo un privilegio
 description: La endogamia rige por la transgresión del ingreso democrático
 date: 2020-10-16
-author: ACIJ
+order: 4
+author: Ezequiel Nino
 category: investigaciones
 image: 2020-10-16-pertenecer-privilegio.jpg
 tags: 
-- selección
+  - Poder Judicial
+  - Concursos
+  - Igualdad
 highlight: true
 ---
 

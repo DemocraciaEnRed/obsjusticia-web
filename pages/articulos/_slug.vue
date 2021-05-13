@@ -82,7 +82,7 @@ export default {
     AlternativeCarousel
   },
   async asyncData ({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug).sortBy('order', 'asc').fetch()
     return { article }
   }
 }

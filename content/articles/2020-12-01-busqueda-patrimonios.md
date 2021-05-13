@@ -2,13 +2,14 @@
 title: En busca de los patrimonios supremos
 description: Seis años llevó a ACIJ conseguir los patrimonios de la Corte
 date: 2020-12-01
+order: 5
 author: Irene Benito
 category: Investigacion
 image: 2020-12-01-busqueda-patrimonios.jpg
 tags: 
-- ética
-- transparencia
-- corte suprema
+- Ética
+- Transparencia
+- Corte suprema
 highlight: false
 ---
 

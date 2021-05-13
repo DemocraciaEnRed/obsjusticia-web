@@ -2,6 +2,7 @@
 title: Sin código de ética
 description: El sistema judicial nacional se resiste a darse reglas de ética
 date: 2020-10-16
+order: 8
 author: ACIJ
 image: 2020-10-16-sin-codigo.jpg
 category: columna

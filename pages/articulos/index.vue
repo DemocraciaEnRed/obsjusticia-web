@@ -101,8 +101,9 @@ export default {
   },
   async asyncData ({ $content, params }) {
     const articles = await $content('articles')
-      .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags'])
-      .sortBy('date', 'desc')
+      .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags', 'order'])
+      .sortBy('order', 'asc')
+      // .sortBy('date', 'desc')
       .fetch()
       // .catch((err) => {
       // error({ statusCode: 404, message: 'Page not found' })

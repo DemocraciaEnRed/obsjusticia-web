@@ -56,7 +56,7 @@
           </VueSlickCarousel>
         </div>
       </div>
-      <div class="has-text-centered mb-4 mt-5">
+      <div class="has-text-centered mb-4 mt-6">
         <router-link to="/articulos" class="button is-primary-dark">
           <span class="mr-3">Ver todos los artículos</span><i class="fas fa-arrow-right" />
         </router-link>
@@ -70,9 +70,9 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
-      .sortBy('date', 'desc')
-      .limit(7)
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
+      .sortBy('order', 'asc')
+      .limit(6)
       .fetch()
       .catch((err) => {
         // error({ statusCode: 404, message: 'Page not found' })
@@ -86,7 +86,7 @@ export default {
       articles: [],
       settings: {
         arrows: false,
-        dots: false,
+        dots: true,
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 7000,

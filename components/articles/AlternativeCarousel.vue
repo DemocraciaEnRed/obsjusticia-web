@@ -63,8 +63,8 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
-      .sortBy('date', 'desc')
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
+      .sortBy('order', 'asc')
       .where({ slug: { $ne: this.skipArticle } })
       .limit(5)
       .fetch()

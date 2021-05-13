@@ -2,6 +2,7 @@
 title: El caso irresoluto de los jueces tuiteros (y grieteros)
 description: Jueces que se comportan como fanáticos partidarios
 date: 2020-11-26
+order: 1
 author: Ezequiel Nino
 category: Investigacion
 image: 2020-11-26-caso-irresoluto-jueces-tuiteros.jpg
