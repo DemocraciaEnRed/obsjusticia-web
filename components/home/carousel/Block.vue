@@ -7,13 +7,13 @@
       <h1 class="subtitle is-4 has-text-white is-400">
         {{ block.title }}
       </h1>
-      <div class="columns is-mobile is-vcentered">
+      <div class="columns is-desktop is-vcentered">
         <div class="column">
           <p class="has-text-white is-400 text-description">
             {{ block.content }}
           </p>
         </div>
-        <div class="column is-narrow">
+        <div class="column is-narrow has-text-right mb-2">
           <a v-if="block.urlMore" href="" class="button is-white ">
             Ver más<i class="fas fa-arrow-right ml-4" />
           </a>
@@ -39,10 +39,16 @@ export default {
 
 <style lang="scss" scoped>
 .block-container{
-  padding: 0 40px;
+  padding: 0 10px;
+  @include from($desktop) {
+    padding: 0 40px;
+  }
 }
 .block-text-container{
-  padding: 30px 50px 50px 50px;
+  padding: 30px;
+  @include from($desktop) {
+    padding: 30px 50px 50px 50px;
+  }
   background-color: #000;
   background-blend-mode: multiply;
   min-height: 200px;

@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .block-container{
-  padding: 0 40px;
+    padding: 0 40px;
 }
 .block-text-container{
   padding: 30px 50px 50px 50px;

@@ -96,7 +96,10 @@ export default {
   }
 }
 .filler{
-  height: 230px;
+  height: 160px;
+  @include from($desktop) {
+    height: 230px;
+  }
 }
 .background-dark-layer {
   background-color: black;
