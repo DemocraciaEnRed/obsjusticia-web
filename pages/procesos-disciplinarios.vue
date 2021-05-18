@@ -55,7 +55,7 @@
               <div class="column is-narrow">
                 <div class="px-2">
                   <div class="mb-4" style="height:50px;width:50px;background-color:#CACACA;border-radius:500px;" />
-                  <span class="is-700 is-size-2">36</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
+                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
                 </div>
               </div>
             </div>
