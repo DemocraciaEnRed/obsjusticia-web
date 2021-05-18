@@ -10,7 +10,7 @@
     <a href="#grafico-cumplimiento" class="scrollactive-item">Indice T.A.</a>
     <a href="#grafico-desagregacion" class="scrollactive-item">Desagregación de indices</a>
     <a href="#glosario" class="scrollactive-item">Glosario</a>
-    <a href="#sobre-pa" class="scrollactive-item">Conclusiones</a>
+    <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#informacion-adicional" class="scrollactive-item">Información adicional</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
     <a href="#creditos" class="scrollactive-item">Créditos</a>

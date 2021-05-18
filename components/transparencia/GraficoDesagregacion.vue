@@ -60,7 +60,7 @@
                 </td>
               </tr>
             </tbody>
-            <tfoot v-if="promedio">
+            <!-- <tfoot v-if="promedio">
               <tr>
                 <td />
                 <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
@@ -76,7 +76,7 @@
                   {{ promedio.mpf }}
                 </td>
               </tr>
-            </tfoot>
+            </tfoot> -->
           </table>
         </div>
         <div class="content">

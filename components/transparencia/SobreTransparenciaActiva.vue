@@ -31,13 +31,13 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-poll has-text-orange fa-2x" />
             </h1>
-            <p>El MPF no publica información sobre  las transferencias de fondos provenientes o dirigidos a personas humanas, permisos, concesiones y autorizaciones otorgados, los informes de auditoría, los mecanismos de participación ciudadana, y los mecanismos y procedimientos para la presentación directa de solicitudes, denuncias o reclamos.</p>
+            <p>Ninguno de los sujetos obligados publica de forma completa la información sobre su presupuesto y contrataciones.</p>
           </div>
           <div class="column is-6">
             <h1 class="title is-4 is-700">
               <i class="fas fa-copy has-text-orange fa-2x" />
             </h1>
-            <p>El MPD no publica información sobre transferencias de fondos, permisos, concesiones y autorizaciones otorgados, informes de auditoría, mecanismos de participación ciudadana,  mecanismos y procedimientos para la presentación directa de solicitudes, denuncias o reclamos y trámites ante el organismo.</p>
+            <p>Ni el MPD ni el MPF publican informes de auditoría.</p>
           </div>
         </div>
       </div>

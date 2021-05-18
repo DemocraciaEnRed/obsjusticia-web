@@ -51,7 +51,7 @@
               <i class="fas fa-hourglass-end has-text-orange fa-2x" />
             </h1>
             <p class="is-size-5">
-              El MPF y MPD respondieron más del  90% de las solicitudes recibidas dentro del plazo de 15 días hábiles establecido por la ley. Los pedidos restantes fueron contestados dentro de los 30 días hábiles que plantea como máximo la ley.
+              El MPF y MPD respondieron el 100% de las solicitudes recibidas dentro del plazo de 15 días hábiles establecido por la ley.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@
               <i class="fas fa-exclamation-triangle has-text-orange fa-2x" />
             </h1>
             <p class="is-size-5">
-              Ninguna de las reglamentaciones contiene garantías contra la remoción arbitraria de sus titulares.
+              La reglamentación del MPF es la única que contiene garantías contra la remoción arbitraria de su titular.
             </p>
           </div>
         </div>

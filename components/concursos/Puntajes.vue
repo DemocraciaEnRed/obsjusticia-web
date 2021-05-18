@@ -135,7 +135,7 @@
                       {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
                     </td>
                     <td class="has-background-warning">
-                      {{ p.entrevista != null ? p.entrevista : '-' }}
+                      {{ p.ordenentrevista != null ? p.ordenentrevista : '-' }}
                     </td>
                     <td class="has-background-warning">
                       {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
