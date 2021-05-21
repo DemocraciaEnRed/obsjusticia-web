@@ -42,8 +42,13 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: 'UA-193021243-1' // Used as fallback if no runtime config is provided
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -66,7 +71,10 @@ export default {
     scss: ['~assets/scss/_variables.scss']
   },
   publicRuntimeConfig: {
-    dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021'
+    dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021',
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   },
   privateRuntimeConfig: {
     // strapiUrl: process.env.STRAPI_URL
