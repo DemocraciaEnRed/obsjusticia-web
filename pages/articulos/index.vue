@@ -25,7 +25,7 @@
                     {{ article.description }}
                   </p>
                 </div>
-                <div class="is-flex is-flex-direction-row">
+                <div class="is-flex is-flex-direction-ro ending-block">
                   <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date.split('T')[0].split('-').reverse().join('-') }}</p>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
@@ -131,15 +131,23 @@ export default {
 .last-articles-container{
   width: 100%;
   z-index: 10;
+  @media (max-width: $desktop){
+    flex-direction: column;
+  }
   .article-picture{
     background-size: cover;
     background-position: center center;
-    width: 60%
+    min-height: 300px;
+    @include from($desktop){
+      width: 60%
+    }
   }
   .article-text{
-    width: 50%;
-    max-height: 400px;
-    min-height: 400px;
+    @include from($desktop){
+      width: 50%;
+      max-height: 400px;
+      min-height: 400px;
+    }
     padding: 20px 40px;
     hr{
       width: 200px;
@@ -153,6 +161,14 @@ export default {
       -webkit-box-orient: vertical;
       overflow: hidden;
       // line-height: normal;
+    }
+    .ending-block {
+      @media (max-width: $desktop){
+        flex-direction: column;
+        .tags {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }
