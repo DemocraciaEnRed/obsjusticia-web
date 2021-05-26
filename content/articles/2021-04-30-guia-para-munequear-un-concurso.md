@@ -5,7 +5,7 @@ date: 2021-04-30
 author: ACIJ
 order: 7
 image: 2021-04-30-guia-para-munequear-un-concurso.jpg
-category: Entrevista
+category: Investigación
 tags:
   - Transparencia
   - Consejo de la Magistratura

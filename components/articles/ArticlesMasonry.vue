@@ -36,9 +36,9 @@
                       <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                         {{ article.author }}
                       </p>
-                      <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                      <!-- <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                         {{ article.order }}
-                      </p>
+                      </p> -->
                     </div>
                     <p class="my-5">
                       {{ article.description }}
@@ -85,7 +85,15 @@ export default {
 .articles-card {
   padding: 10px 7px 15px 7px;
   z-index: 100;
-  width: calc(100% / 4);
+  @media (max-width: $desktop){
+    width: 100%;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  @include from($desktop) {
+    width: calc(100% / 4);
+  }
   .title{
      display: -webkit-box;
     -webkit-line-clamp: 3;
