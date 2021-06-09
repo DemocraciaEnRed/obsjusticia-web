@@ -1,16 +1,16 @@
 ---
 title: Pertenecer sigue siendo un privilegio
 description: La endogamia rige por la transgresión del ingreso democrático
-date: 2020-10-16
+date: 2021-05-26
 order: 4
 author: Ezequiel Nino
 category: investigaciones
-image: 2020-10-16-pertenecer-privilegio.jpg
+image: 2021-05-26-pertenecer-privilegio.jpg
 tags: 
   - Poder Judicial
   - Concursos
   - Igualdad
-highlight: true
+highlight: false
 ---
 
 **Los planteles del sistema judicial revelan una tendencia endogámica que persiste pese a que existe una ley desde 2013 que modifica el ingreso.**

@@ -1,7 +1,7 @@
 ---
 title: Guía para muñequear un concurso
 description: Cómo aprovechar las "oscuridades" del Consejo de la Magistratura
-date: 2021-04-30
+date: 2021-05-26
 author: ACIJ
 order: 7
 image: 2021-04-30-guia-para-munequear-un-concurso.jpg

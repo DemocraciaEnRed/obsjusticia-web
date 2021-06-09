@@ -1,7 +1,7 @@
 ---
 title: Palabras de Alberto Binder, Federico Delgado y Diana Maffia por el lanzamiento de JusTA
 description: Estas tres personalidades del mundo de la academia y el derecho dan su mirada sobre los desafíos de nuestra justicia y lo que JusTA puede aportar a este debate
-date: 2021-04-30
+date: 2021-05-26
 order: 1
 author: JusTA
 image: 2021-04-30-palabras-lanzamiento-juntas.jpg

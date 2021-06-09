@@ -1,10 +1,10 @@
 ---
 title: “La eficacia de la Justicia depende de que sus integrantes no tengan una reputación de parcialidad”
 description: Según Arballo, la ética está en la agenda, aunque no haya avances.
-date: 2020-12-18
+date: 2021-05-26
 order: 3
 author: ACIJ
-image: arballo.jpeg
+image: 2021-05-26-arballo.jpeg
 category: Entrevista
 tags:
 - Ética

@@ -1,7 +1,7 @@
 ---
 title: Salvados por la campana
 description: Desde 2006, caducaron 245 denuncias sin investigación en el Consejo
-date: 2020-11-06
+date: 2021-05-26
 order: 6
 author: Marcelo Giullitti Oliva
 category: Investigacion

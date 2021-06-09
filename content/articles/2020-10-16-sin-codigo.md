@@ -1,24 +1,19 @@
 ---
 title: Sin código de ética
 description: El sistema judicial nacional se resiste a darse reglas de ética
-date: 2020-10-16
+date: 2021-05-26
 order: 8
 author: ACIJ
-image: 2020-10-16-sin-codigo.jpg
+image: 2021-05-26-sin-codigo.jpg
 category: columna
 tags:
 - disciplina
 highlight: false
 ---
 
-**El sistema judicial nacional se resiste a darse reglas de ética que regulen la conducta de sus
-miembros**
+**El sistema judicial nacional se resiste a darse reglas de ética que regulen la conducta de sus miembros**
 
-**¿Qué pueden y qué no pueden hacer los jueces, fiscales y defensores públicos? La pregunta
-carece de respuesta en la justicia nacional y federal. La ausencia de un Código de Ética
-Judicial se traduce en niveles bajísimos de sanción para los transgresores. La renuencia a
-llenar el vacío incluye un desconocimiento en la práctica de las pautas de los tratados
-internacionales.**
+**¿Qué pueden y qué no pueden hacer los jueces, fiscales y defensores públicos? La pregunta carece de respuesta en la justicia nacional y federal. La ausencia de un Código de Ética Judicial se traduce en niveles bajísimos de sanción para los transgresores. La renuencia a llenar el vacío incluye un desconocimiento en la práctica de las pautas de los tratados internacionales.**
 
 Además de las escasas disposiciones de los códigos procesales, ¿cómo sabemos si un juez o fiscal actúa éticamente? Es una pregunta muy difícil de responder porque, a diferencia de la mayoría de los países y de algunas provincias argentinas, no existe un código de ética para la magistratura nacional. Hay algunas reglas relativas a los procedimientos, sobre todo vinculadas a las excusaciones y recusaciones, pero no un texto normativo que detalle las conductas permitidas y prohibidas a jueces, fiscales y defensores públicos de la Nación. A la vez, hay códigos internacionales cuya incorporación efectiva al ordenamiento local es debatida, como los Principios de Bangalore sobre Conducta Judicial de la Organización de las Naciones Unidas (ONU); el Estatuto Internacional del Juez de la Unión Internacional de Magistrados y el Código Iberoamericano de Ética Judicial (para mayor información, ver [este artículo de Chequeado.com](https://chequeado.com/justiciapedia/wp-content/uploads/2014/12/Justiciapedia-Etica-judicial.pdf)). En el Consejo de la Magistratura se debate hace años la necesidad de contar con un Código de Ética Judicial sancionado por ese órgano, pero, quién sabe los motivos, los consejeros nunca han llegado a tratar ninguno de los proyectos presentados.
 

@@ -1,10 +1,10 @@
 ---
 title: La agenda de género se aceleró y hoy no podrían nombrarse dos hombres en la Corte como en 2016
 description: La jurista Bergallo dice que la igualdad aún está lejos.
-date: 2020-11-27
+date: 2021-05-26
 order: 2
 author: Irene Benito
-image: bergallo.jpeg
+image: 2021-05-26-bergallo.jpg
 category: Entrevista
 tags:
 - Género
