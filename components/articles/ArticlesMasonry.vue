@@ -62,7 +62,7 @@ export default {
   async fetch () {
     const articles = await this.$content('articles')
       .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
-      .sortBy('order', 'asc')
+      .sortBy('order', 'desc')
       .fetch()
       .catch((err) => {
         // error({ statusCode: 404, message: 'Page not found' })
