@@ -1,9 +1,9 @@
 ---
 title: El cuento de la buena pipa en el ingreso democrático
 description: La discrecionalidad sigue imperando en los cargos judiciales.
-date: 2021-03-19
+date: 2021-06-15
 author: ACIJ
-image: pipa.png
+image: 2021-06-15-pipa.png
 category: Investigacion
 tags:
 - Poder Judicial
@@ -20,8 +20,7 @@ A esta altura ya sabemos que la ley de ingreso democrático no se cumple en el P
 
 > > “Artículo 10: los concursos para el ingreso al Poder Judicial de la Nación en los cargos referidos se deben realizar en la Corte Suprema de Justicia de la Nación, y los de ingreso al Ministerio Público de la Nación se deben efectuar en la Procuración General de la Nación o en la Defensoría General de la Nación, según corresponda”.
 
-> > “Artículo 11: en cada caso, la Corte Suprema de Justicia de la Nación y el Ministerio Público de la Nación, en el ámbito de sus respectivas competencias, dispondrán la integración de los órganos encargados de sustanciar los concursos.
-Se deberán establecer concursos regionales con alcance en todas las jurisdicciones, a los efectos de garantizar la participación de todos los ciudadanos del país”.
+> > “Artículo 11: en cada caso, la Corte Suprema de Justicia de la Nación y el Ministerio Público de la Nación, en el ámbito de sus respectivas competencias, dispondrán la integración de los órganos encargados de sustanciar los concursos. Se deberán establecer concursos regionales con alcance en todas las jurisdicciones, a los efectos de garantizar la participación de todos los ciudadanos del país”.
 
 Y, sin embargo, los cargos de ingresantes se siguen ocupando por “acomodo” -avisen profes a sus estudiantes de Educación Cívica que el Poder Judicial no siempre cumple las leyes pese a ser su teórico garante-.
 
@@ -43,5 +42,5 @@ La Cámara Nacional de Casación Penal (no federal) explicó que, pese a que no 
 
 La Cámara Federal de Mendoza aprobó la Acordada 9.769/18 que reglamenta un nuevo régimen de “Designaciones, calificación y ascenso de personal”, y la remitió a la Corte para su visto bueno. Aún no recibió respuesta. En cambio, tanto la Cámara Federal de Seguridad Social como la Cámara Nacional del Trabajo refirieron que tienen desde hace tiempo concursos para ingresos y ascensos dentro del fuero, y que anualmente realizan convocatorias públicas y con sus respectivos exámenes. 
 
-ACIJ también pidió información a cada una de las cámaras sobre la cantidad de ingresantes a sus respectivos fueros desde la sanción de la norma. Todos los tribunales remitieron al buscador de la CIJ con la idea de que corresponde chequear una por una las resoluciones de cada tribunal para identificar aquellas que tratan sobre designaciones. El único tribunal que cumplió con la información es la Cámara Nacional del Trabajo: informó 49 ingresantes en 2013; 60 en 2014; 70 en 2015; 99 en 2016; 47 en 2017; 56 en 2017; 55 en 2018 y 8 en 2020. Todos por concurso.  Como se ve, hay diferencias. Aquellos que quieren hacer las cosas como es debido, pueden garantizar el derecho de la ciudadanía a ingresar a trabajar al Poder Judicial.
+ACIJ también pidió información a cada una de las cámaras sobre la cantidad de ingresantes a sus respectivos fueros desde la sanción de la norma. Todos los tribunales remitieron al buscador de la CIJ con la idea de que corresponde chequear una por una las resoluciones de cada tribunal para identificar aquellas que tratan sobre designaciones. El único tribunal que cumplió con enviar la información fue la Cámara Nacional del Trabajo: informó 49 ingresantes en 2013; 60 en 2014; 70 en 2015; 99 en 2016; 47 en 2017; 56 en 2017; 55 en 2018 y 8 en 2020.  En todos los casos  por concurso.  Como se ve, hay diferencias. Quienes quieren hacer las cosas como es debido, pueden garantizar el derecho de la ciudadanía a ingresar a trabajar al Poder Judicial.
 
