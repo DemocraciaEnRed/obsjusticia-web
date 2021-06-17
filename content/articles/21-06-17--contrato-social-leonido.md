@@ -1,10 +1,10 @@
 ---
 title: Un contrato social “leonino”
 description: "Los concursantes aceptan decisiones discrecionales: ¿hay derecho a protestar?"
-date: 21-06-15
+date: 21-06-17
 author: Irene Benito
 category: investigaciones
-image: 21-06-15-contrato-social-leonido.jpg
+image: 21-06-17-contrato-social-leonido.jpg
 tags: 
 - poder ejecutivo
 - igualdad

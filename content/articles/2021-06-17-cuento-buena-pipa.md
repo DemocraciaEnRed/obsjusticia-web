@@ -1,9 +1,9 @@
 ---
 title: El cuento de la buena pipa en el ingreso democrático
 description: La discrecionalidad sigue imperando en los cargos judiciales.
-date: 2021-06-15
+date: 2021-06-17
 author: ACIJ
-image: 2021-06-15-pipa.png
+image: 2021-06-17-pipa.png
 category: Investigacion
 tags:
 - Poder Judicial
