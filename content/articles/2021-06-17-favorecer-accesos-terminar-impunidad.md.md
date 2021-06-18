@@ -4,7 +4,7 @@ description: "Roberto Gargarella advierte sobre la degradación total del modelo
 date: 21-06-17
 author: Irene Benito
 category: entrevista
-image: 21-06-17-contrato-social-leonido.jpg
+image: 2021-06-17-favorecer-accesos-terminar-impunidad.jpg
 tags: 
 - Corte Suprema
 - Poder Judicial 
