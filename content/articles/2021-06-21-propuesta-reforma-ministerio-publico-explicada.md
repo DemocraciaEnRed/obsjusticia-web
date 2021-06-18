@@ -9,7 +9,7 @@ category: Columna
 tags:
 - Ministerio Público
 - Independencia
-highlight: true
+highlight: false
 ---
 
 **Hacen falta reformas urgentes en el sistema judicial, lo cual incluye, obviamente, al Ministerio Público. Pero, estos cambios deben hacerse mediante un proceso participativo y pensando en el mediano y largo plazo, sobre todo para sobrepasar el obstáculo de la falta de consensos.**

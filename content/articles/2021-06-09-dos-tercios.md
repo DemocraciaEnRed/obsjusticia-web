@@ -10,7 +10,7 @@ tags:
 - Independencia
 - Procuración General de la Nación
 - Transparencia
-highlight: true
+highlight: false
 ---
 
 > **Por Alejandro Drucaroff**
