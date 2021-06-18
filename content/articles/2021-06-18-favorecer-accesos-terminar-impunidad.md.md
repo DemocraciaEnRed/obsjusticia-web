@@ -1,10 +1,10 @@
 ---
 title: La Justicia debería favorecer el acceso de los más vulnerables y terminar con la impunidad
 description: Roberto Gargarella advierte sobre la degradación total del modelo menemista
-date: 21-06-17
+date: 21-06-18
 author: Irene Benito
 category: entrevista
-image: 2021-06-17-favorecer-accesos-terminar-impunidad.jpg
+image: 2021-06-18-favorecer-accesos-terminar-impunidad.png
 tags: 
 - Corte Suprema
 - Poder Judicial 
