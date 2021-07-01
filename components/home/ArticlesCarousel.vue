@@ -71,7 +71,7 @@ export default {
   async fetch () {
     const articles = await this.$content('articles')
       .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
-      .sortBy('order', 'desc')
+      .sortBy('date', 'desc')
       .limit(6)
       .fetch()
       .catch((err) => {

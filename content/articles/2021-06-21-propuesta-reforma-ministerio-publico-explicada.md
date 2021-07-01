@@ -5,6 +5,7 @@ date: 2021-06-09
 order: 11
 author: ACIJ
 image: 2021-06-21-propuesta-reforma.jpg
+imageCover: 2021-06-21-propuesta-reforma.jpg
 category: Columna
 tags:
 - Ministerio Público
@@ -80,7 +81,7 @@ Las leyes actuales contenían, al momento de su aprobación, un piso presupuesta
 
 #### Composición del Tribunal de Enjuiciamiento
 
-Las leyes vigentes establecen una composición del Tribunal de Enjuiciamiento de fiscales, defensores y defensoras inferiores que da una decisiva participación al Poder Ejecutivo. La reforma propone una modificación a la composición que, además de disminuir la representación del PEN a una persona, incorpora representación de las mayorías y minorías parlamentarias y la academia. De esta forma, se amplía la participación y se equilibra la participación de los distintos estamentos, lo que ofrece mayores garantías de imparcialidad al Tribunal y aumenta las posibilidades de control sobre sus decisiones.
+Las leyes vigentes establecen una composición del Tribunal de Enjuiciamiento de fiscales, defensores y defensoras inferiores que da una decisiva participación al Poder Ejecutivo. La reforma propone una modificación a la composición que mantiene la representación del PEN y de la academia en una persona, pero reemplaza la representación del Congreso anteriormente en cabeza de un(a) vocal de la mayoría del Senado por un(a) representante de la mayoría y otra de la minoría de la Comisión Bicameral. Si bien la incorporación de las minorías parlamentarias resulta acertada, la composición y diseño mantiene problemas que amenazan la posibilidad de un desempeño absolutamente imparcial del Tribunal.
 
 ## LO QUE FALTA
 

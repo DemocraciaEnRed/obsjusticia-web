@@ -5,6 +5,7 @@ date: 2021-05-26
 author: ACIJ
 order: 7
 image: 2021-04-30-guia-para-munequear-un-concurso.jpg
+imageCover: 2021-04-30-guia-para-munequear-un-concurso.jpg
 category: Investigación
 tags:
   - Transparencia

@@ -43,7 +43,7 @@ export default {
   async fetch () {
     const articles = await this.$content('articles')
       .where({ highlight: true })
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags'])
+      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'imageCover', 'tags'])
       .sortBy('date', 'desc')
       .limit(3)
       .fetch()
@@ -57,7 +57,7 @@ export default {
         content: article.description,
         urlMore: null,
         route: `/articulos/${article.slug}`,
-        background: require(`../../assets/img/articulos/${article.image}`),
+        background: require(`../../assets/img/articulos/${article.imageCover}`),
         isArticle: true
       })
     })

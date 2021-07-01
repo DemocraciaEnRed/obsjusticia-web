@@ -6,6 +6,7 @@ order: 4
 author: Ezequiel Nino
 category: investigaciones
 image: 2021-05-26-pertenecer-privilegio.jpg
+imageCover: 2021-05-26-pertenecer-privilegio.jpg
 tags: 
   - Poder Judicial
   - Concursos

@@ -5,6 +5,7 @@ date: 2021-06-18
 author: Irene Benito
 category: investigaciones
 image: 2021-06-18-contrato-social-leonido.png
+imageCover: 2021-06-18-contrato-social-leonido.png
 tags: 
 - poder ejecutivo
 - igualdad

@@ -1,15 +1,16 @@
 ---
 title: La reforma judicial inadvertida e incumplida
 description: Quisieron promover juezas mujeres, pero luego omitieron hacerlo.
-date: 2021-02-02
+date: 2021-07-01
 author: ACIJ
-image: reforma-inadvertida.jpg
+image: 2021-07-01-reforma-inadvertida.jpg
+imageCover:  covers/2021-07-01-reforma-inadvertida.jpg
 category: Investigacion
 tags:
 - Igualdad
 - Género
 - Consejo de la Magistratura de la Nación
-highlight: false
+highlight: true
 ---
 
 **Los consejeros de la Magistratura cambiaron su reglamento para promover a las candidatas a jueza, pero omitieron la aplicación de esa modificación sustancial**

@@ -5,6 +5,7 @@ date: 2021-05-26
 order: 8
 author: ACIJ
 image: 2021-05-26-sin-codigo.jpg
+imageCover: 2021-05-26-sin-codigo.jpg
 category: columna
 tags:
 - disciplina

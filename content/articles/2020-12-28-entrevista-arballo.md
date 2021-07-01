@@ -5,6 +5,7 @@ date: 2021-05-26
 order: 3
 author: ACIJ
 image: 2021-05-26-arballo.jpeg
+imageCover: 2021-05-26-arballo.jpeg
 category: Entrevista
 tags:
 - Ética

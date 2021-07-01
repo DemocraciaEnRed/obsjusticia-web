@@ -1,15 +1,16 @@
 ---
 title: Cómo embarrar la cancha de los peritos
 description: Un peritaje eficiente depende de la medida justa de datos.
-date: 2020-12-19
+date: 2021-07-01
 author: Alfredo Popritkin
-image: barro.jpg
+image: 2021-07-01-Como-embarrar-la-cancha.jpg
+imageCover: covers/2021-07-01-Como-embarrar-la-cancha.jpg
 category: Columna
 tags:
 - corte suprema
 - investigaciones
 - corrupción
-highlight: false
+highlight: true
 ---
 
 **Por Alfredo Popritkin**

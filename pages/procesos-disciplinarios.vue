@@ -215,6 +215,9 @@
           <p class="is-300">
             Data set original de juicios políticos — <a href="http://consejoabierto.pjn.gov.ar/dataset/juiciospoliticos" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
           </p>
+          <p class="is-300">
+            Data set creado por ACIJ para las visualizaciones de esta sección - <a href="https://github.com/DemocraciaEnRed/obsjusticia-graphs/tree/master/data" target="_blank" class="has-text-black is-400"><u>accede aquí</u> 🔗</a>
+          </p>
           <p>Los datos publicados por el Consejo de la Magistratura están incompletos y en muchos casos no podemos certificar su rigurosidad. No hay datos publicados con perspectiva de género</p>
         </div>
       </div>

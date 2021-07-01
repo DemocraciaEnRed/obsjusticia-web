@@ -6,6 +6,7 @@ order: 5
 author: Irene Benito
 category: Investigacion
 image: 2020-12-01-busqueda-patrimonios.jpg
+imageCover: 2020-12-01-busqueda-patrimonios.jpg
 tags: 
 - Ética
 - Transparencia

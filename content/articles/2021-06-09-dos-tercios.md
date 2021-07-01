@@ -5,6 +5,7 @@ date: 2021-06-09
 order: 10
 author: Alejandro Drucaroff
 image: 2021-06-21-dos-tercios.jpg
+imageCover: 2021-06-21-dos-tercios.jpg
 category: Columna
 tags:
 - Independencia

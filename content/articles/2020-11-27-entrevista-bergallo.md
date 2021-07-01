@@ -5,6 +5,7 @@ date: 2021-05-26
 order: 2
 author: Irene Benito
 image: 2021-05-26-bergallo.jpg
+imageCover: 2021-05-26-bergallo.jpg
 category: Entrevista
 tags:
 - Género

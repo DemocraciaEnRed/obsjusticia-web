@@ -4,6 +4,7 @@ description: Reglas dispares rigen un punto clave del concurso, la selección de
 date: 2021-06-24
 author: Irene Benito
 image: 2021-06-24-dime-como-elige-arbitro.jpg
+imageCover: covers/2021-06-24-dime-como-elige-arbitro.jpg
 category: Investigacion
 tags:
 - Concursos 

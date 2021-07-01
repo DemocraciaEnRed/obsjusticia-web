@@ -35,7 +35,9 @@
                     {{ article.author }}
                   </p>
                 </div>
-                <p class="my-5">{{article.description}}</p>
+                <p class="my-5">
+                  {{article.description}}
+                </p>
                 <div class="tags">
                   <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
                 </div>

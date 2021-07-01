@@ -6,6 +6,7 @@ order: 6
 author: Marcelo Giullitti Oliva
 category: Investigacion
 image: 2020-11-06-salvados-por-la-campana.jpg
+imageCover: 2020-11-06-salvados-por-la-campana.jpg
 tags: 
 - Control
 - Consejo de la Magistratura

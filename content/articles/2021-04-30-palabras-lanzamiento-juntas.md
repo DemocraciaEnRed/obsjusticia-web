@@ -5,6 +5,7 @@ date: 2021-05-26
 order: 1
 author: JusTA
 image: 2021-04-30-palabras-lanzamiento-juntas.jpg
+imageCover: 2021-04-30-palabras-lanzamiento-juntas.jpg
 category: Columna
 tags:
 - Género

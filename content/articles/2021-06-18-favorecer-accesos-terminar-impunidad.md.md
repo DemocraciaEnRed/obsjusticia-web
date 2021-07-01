@@ -5,6 +5,7 @@ date: 2021-06-18
 author: Irene Benito
 category: entrevista
 image: 2021-06-18-favorecer-accesos-terminar-impunidad.png
+imageCover: 2021-06-18-favorecer-accesos-terminar-impunidad.png
 tags: 
 - Corte Suprema
 - Poder Judicial 

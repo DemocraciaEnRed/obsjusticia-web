@@ -4,6 +4,7 @@ description: Su prestigio representa el prestigio de la institucionalidad entera
 date: 2021-06-24
 author: Ezequiel Nino
 image: 2021-06-24-porque-esperamos-mas.jpg
+imageCover: covers/2021-06-24-porque-esperamos-mas.jpg
 category: Columna
 tags:
 - Corte Suprema 
