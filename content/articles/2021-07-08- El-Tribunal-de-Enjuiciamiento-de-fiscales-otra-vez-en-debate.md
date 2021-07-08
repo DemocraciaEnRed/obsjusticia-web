@@ -2,7 +2,7 @@
 title:  El Tribunal de Enjuiciamiento de fiscales otra vez en debate
 description: Cómo es y funciona el órgano de destitución que está en el ojo de la reforma
 date: 2021-07-08
-author: Leonardo Filippini y Agustín Cavana
+author: \*Leonardo Filippini y \**Agustín Cavana
 image: 2021-07-08-El-Tribunal-de-Enjuiciamiento-de-fiscales-otra-vez-en-debate.jpg
 imageCover:  covers/2021-07-08-El-Tribunal-de-Enjuiciamiento-de-fiscales-otra-vez-en-debate.jpg
 category: Columna
@@ -13,19 +13,6 @@ tags:
 highlight: true
 ---
 
-**Ministerio Público Fiscal - Disciplina - Independencia judicial**
-
-
-**El Tribunal de Enjuiciamiento de fiscales otra vez en debate
- Cómo es y funciona el órgano de destitución que está en el ojo de la reforma**
-
-Por Leonardo Filippini\* y Agustín Cavana\*\*
-
-\*Profesor de Derecho de las universidades de Buenos Aires y de Palermo.
-
-\*\*Profesor de Derecho de las universidades de Buenos Aires y Nacional de Moreno.
-
-**El tribunal a cargo de evaluar y eventualmente destituir a fiscales federales y de la Nación fue convocado al menos cinco veces en los últimos años. Desde su creación, su estructura e integración fue objeto de varias reformas, aunque ninguna como la que hoy divide al Congreso.**
 
 Existen varios dispositivos dirigidos a asegurar que los fiscales actúen en forma diligente. Para empezar, el respaldo constitucional a su independencia, autonomía funcional y autarquía financiera. El procedimiento de selección intenta identificar profesionales solventes mediante concursos con impugnaciones y audiencias públicas. El ejercicio de la función, a su vez, se ajusta a límites y controles internos (como la supervisión jerárquica, las instrucciones o las capacitaciones obligatorias) y externos (como el control judicial en los procesos, las exigencias de transparencia activa, o la labor de la Comisión Bicameral Permanente de Seguimiento y Control del Ministerio Público Fiscal de la Nación -MPFN-). El Tribunal de Enjuiciamiento (TDE), en ese contexto, es otra pieza importante del sistema: juzga las faltas que pueden conducir a la remoción.
 
@@ -111,3 +98,8 @@ Este contraste entre el proyecto del Senado y el dictamen de mayoría sugiere qu
 A más de 20 años de su creación, persiste la necesidad de una reflexión sobre el papel del TDE enfocada en su función de asegurar una mejor labor de fiscales y defensores. En las sucesivas reformas o propuestas existe un énfasis en las dinámicas de la representación, en particular del Senado, pero no hay un diagnóstico explícito de los problemas que las distintas composiciones y procedimientos de designación vendrían a subsanar. Los antecedentes indican, además, que el TDE del MPFN ha logrado funcionar, lo que invita y posibilita una reflexión acerca de su desempeño.
 
 En contraste, empero, la discusión no gira de modo significativo en torno al contenido sustantivo del tipo de desempeño que justificaría la remoción de un magistrado. Más allá de algunos supuestos de mayor consenso, no parecemos contar con acuerdos profundos. Las discusiones tampoco refieren abiertamente a las prácticas y experiencias previas de modo de conectar en forma efectiva la propuesta de reforma con los aspectos concretos que podrían o deberían corregirse o mejorarse. Ello sumado a la ausencia de un respaldo claro, como sucedió con la Ley 25.909, naturalmente, se presta a lecturas encontradas. No menos importante, por último, es que el propio Senado mantuvo vacante su representación en el TDE durante períodos extendidos y apeló a procedimientos dispares para definir su vocal, por lo que una discusión cabal del asunto debería explorar también en las dinámicas determinantes de esas vacancias en el organismo en debate.
+
+
+\* Profesor de Derecho de las universidades de Buenos Aires y de Palermo.
+
+\** Profesor de Derecho de las universidades de Buenos Aires y Nacional de Moreno. 

@@ -14,13 +14,7 @@ highlight: true
 ---
 
 
-**Consejo de la Magistratura de la Nación - Disciplina y acusación - Transparencia**
 
-&quot; **Sin controles, la magistratura deviene en monarquía&quot;**
-
-**Por ACIJ**
-
-**El histórico dirigente de la abogacía, Beinusz Szmukler, reivindicó la discusión pública lograda en los primeros tiempos del Consejo de la Magistratura**
 
 **La entrevista en cinco definiciones**
 

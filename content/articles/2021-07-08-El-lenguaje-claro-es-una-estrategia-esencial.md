@@ -13,15 +13,11 @@ tags:
 highlight: true
 ---
 
-**Poder Judicial - Igualdad - Transparencia - Buenas prácticas**
 
-**El lenguaje claro es una estrategia esencial para ampliar el acceso a la justicia**
 
-**Por Natalia Echegoyemberry y Celeste Fernandez**
-
-&quot;El lenguaje es también un medio de dominación y una fuerza social, que sirve para legitimar las relaciones de poder organizado&quot;
 
 Jürgen Habermas
+
 
 **El Poder Judicial se acostumbró a hablarse a sí mismo y a usar una jerga que resulta incomprensible para la ciudadanía a la que sirve o debería servir. Un movimiento pretende deconstruir este resabio colonial o inquisitorial, para que la lengua comience a expresar los derechos universales de un modo crítico, a la luz del derecho a las diferencias.**
 
