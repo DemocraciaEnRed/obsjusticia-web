@@ -2,7 +2,7 @@
 title:  El Tribunal de Enjuiciamiento de fiscales otra vez en debate
 description: Cómo es y funciona el órgano de destitución que está en el ojo de la reforma
 date: 2021-07-08
-author: \*Leonardo Filippini y \**Agustín Cavana
+author: * Leonardo Filippini y \** Agustín Cavana
 image: 2021-07-08-El-Tribunal-de-Enjuiciamiento-de-fiscales-otra-vez-en-debate.jpg
 imageCover:  covers/2021-07-08-El-Tribunal-de-Enjuiciamiento-de-fiscales-otra-vez-en-debate.jpg
 category: Columna
