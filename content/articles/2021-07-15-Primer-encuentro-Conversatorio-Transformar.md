@@ -20,9 +20,11 @@ highlight: true
 **El martes 6 de julio tuvo lugar la sesión inaugural del Conversatorio &quot;Transformar la Justicia&quot;**. 
 **Del encuentro participaron tres juristas de renombre, Aida Kemelmajer de Carlucci, Carlos Arslanian y Ricardo Gil Lavedra, quienes además de una extensa trayectoria profesional y académica han sido parte de procesos (algunos concretados y otros no) de reforma de textos legales sustantivos y otros procedimientales. Incluso Arslanian participó del Consejo Consultivo designado por el actual Poder Ejecutivo en 2020 para proponer reformas al sistema de justicia. Podés acceder al video del encuentro** [**acá**](https://www.youtube.com/watch?v=61pYSaEvA-Y) **.**
 <hr>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/61pYSaEvA-Y" title="Ciclo de Conversaciones “Transformar la Justicia” | Primer encuentro
+<div class="marco">
+    <iframe  src="https://www.youtube.com/embed/61pYSaEvA-Y" title="Ciclo de Conversaciones “Transformar la Justicia” | Primer encuentro
 " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+</div>
 <hr>
 
 Durante la conversación, el órgano judicial que recibió mayores críticas por parte de quienes expusieron fue el Consejo de la Magistratura.
@@ -45,8 +47,21 @@ El próximo conversatorio del Ciclo &quot;Transformar la Justicia&quot; será el
 
 
 <style type="text/css">
- iframe {
+ .marco{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+
+ }
+ .marco iframe {
+     position: absolute;
      margin-left: 80px;
      padding: 10px;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
  }
+
 </style>
