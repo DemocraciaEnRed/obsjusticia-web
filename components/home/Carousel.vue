@@ -62,6 +62,8 @@ export default {
       })
     })
   },
+  // if you need use a external link, should use urlMore property (and route: null)
+  // or if you need use a internal link, should use route property (and urlMore: null)
   data () {
     return {
       activeBlock: 0,
@@ -72,6 +74,14 @@ export default {
           urlMore: null,
           route: '/quienes-somos',
           background: '/bloques/bloque01.jpg',
+          isArticle: false
+        },
+        {
+          title: 'jusTA | justicia transparente y abierta',
+          content: '#JusTA, es una plataforma que busca promover la transparencia e independencia del #PoderJudicial a través de información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento.',
+          urlMore: 'https://youtu.be/B0wMK2QOq6c',
+          route: null,
+          background: '/bloques/bloqueVideo.png',
           isArticle: false
         },
         {

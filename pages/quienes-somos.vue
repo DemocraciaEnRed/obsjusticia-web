@@ -24,6 +24,9 @@
               <p>
                 Observamos que mientras hay un consenso general de que la ciudadanía necesita una <b><u>justicia más eficaz, transparente e independiente</u></b>, a la vez hace décadas que no muestra cambios sustantivos en ninguna de esas tres facetas. <b><u>El estado actual del sistema judicial es una de las causas de la deteriorada salud de la democracia</u></b>, algo que es percibido por una buena parte de la sociedad civil en todas las encuestas de opinión que se realizan sobre la materia.
               </p>
+              <section class="section">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B0wMK2QOq6c" title="jusTA | Porque una justicia transparente y abierta es posible." frameborder="0"></iframe>
+              </section>
               <p>
                 Tenemos una justicia con enormes defectos, con <b>problemas estructurales de funcionamiento</b> que se arrastran desde hace décadas, pero, también, <b>de independencia, opacidad y falta de rendición de cuentas.</b><br><b>Quienes utilizamos cotidianamente la justicia</b> (profesionales del derecho, integrantes del propio sistema de justicia, organizaciones de la sociedad civil), sumados a la academia, el periodismo y a otros analistas e investigadores, <b>tenemos mucho para decir, promover y sumar en este objetivo</b>. Algo similar sucede con tantos integrantes del sistema judicial que sienten que debe haber cambios en las instituciones a las que pertenecen para que se sientan mejor representados por ellas.
               </p>
