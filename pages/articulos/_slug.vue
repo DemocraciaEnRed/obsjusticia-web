@@ -5,7 +5,10 @@
       <div class="container has-text-centered">
         <div class="columns is-centered">
           <div class="column is-6">
-            <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+            <nav
+              class="breadcrumb has-succeeds-separator"
+              aria-label="breadcrumbs"
+            >
               <ul>
                 <li>
                   <nuxt-link :to="`/articulos`" class="has-text-white">
@@ -13,19 +16,23 @@
                   </nuxt-link>
                 </li>
                 <li class="is-active">
-                  <a href="#" class="has-text-white" aria-current="page">{{ article.title }}</a>
+                  <a href="#" class="has-text-white" aria-current="page">{{
+                    article.title
+                  }}</a>
                 </li>
               </ul>
             </nav>
-            <img :src="require(`~/assets/img/articulos/${article.image}`)" class="image mb-5 is-fullwidth" :alt="article.title">
+            <img
+              :src="`${article.image}`"
+              class="image mb-5 is-fullwidth"
+              :alt="article.title"
+            >
           </div>
         </div>
         <h1 class="title is-3 is-size-5-touch mb-3">
           {{ article.title }}
         </h1>
-        <p>
-          por {{ article.author }}
-        </p>
+        <p>por {{ article.author }}</p>
       </div>
     </div>
     <div class="section mt-0 mt-4 mb-0">
@@ -40,12 +47,18 @@
               <p class="my-2">
                 <b>Publicado el</b>
               </p>
-              <p>{{ article.date.split('T')[0].split('-').reverse().join('-') }}</p>
+              <p>
+                {{ article.date.split("T")[0].split("-").reverse().join("-") }}
+              </p>
               <p class="my-2">
                 <b>Tags</b>
               </p>
               <div v-if="article.tags && article.tags.length > 0" class="tags">
-                <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">{{ tag }}</span>
+                <span
+                  v-for="(tag, i) in article.tags"
+                  :key="`tags${i}`"
+                  class="tag is-special is-capitalized"
+                >{{ tag }}</span>
               </div>
             </div>
           </div>
@@ -55,10 +68,16 @@
                 <i>{{ article.description }}</i>
               </p>
               <hr>
-              <nuxt-content :document="article" class="" />
+              <rich-text-renderer
+                :document="article.long_text"
+              />
             </div>
             <div v-if="article.tags && article.tags.length > 0" class="tags">
-              <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">{{ tag }}</span>
+              <span
+                v-for="(tag, i) in article.tags"
+                :key="`tags${i}`"
+                class="tag is-special is-capitalized"
+              >{{ tag }}</span>
             </div>
           </div>
         </div>
@@ -75,27 +94,84 @@
 
 <script>
 // import Carousel from '~/components/articles/Carousel'
+import StoryblokBridge from 'storyblok-nuxt'
 import AlternativeCarousel from '~/components/articles/AlternativeCarousel'
 
 export default {
   components: {
     AlternativeCarousel
   },
-  async asyncData ({ $content, params }) {
-    const article = await $content('articles', params.slug).sortBy('order', 'asc').fetch()
-    return { article }
+  async asyncData (context) {
+    const version =
+      context.query._storyblok || context.isDev ? 'draft' : 'published'
+
+    try {
+      const res = await context.app.$storyapi
+        .get(`cdn/stories/obs-justicia/articles/${context.params.slug}?resolve_relations=Post.author,Post.tags`, {
+          version
+        })
+
+      return {
+        article:
+      {
+        ...res.data.story.content,
+        slug: context.params.slug,
+        tags: res.data.story.content.tags.map(t => res.data.rels.filter(r => r.uuid === t)[0].name)
+      }
+      }
+    } catch (err) {
+      if (!err.response) {
+        console.error(err)
+        context.error({
+          statusCode: 404,
+          message: 'Failed to receive content form api'
+        })
+      } else {
+        console.error(err.response.data)
+        context.error({
+          statusCode: err.response.status,
+          message: err.response.data
+        })
+      }
+    }
+  },
+  data () {
+    return {
+      story: { content: {} }
+    }
+  },
+  mounted () {
+    this.$storybridge(() => {
+      const storyblokInstance = new StoryblokBridge()
+
+      // Use the input event for instant update of content
+      storyblokInstance.on('input', (event) => {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      })
+
+      // Use the bridge to listen the events
+      storyblokInstance.on(['published', 'change'], (event) => {
+        // window.location.reload()
+        this.$nuxt.$router.go({
+          path: this.$nuxt.$router.currentRoute,
+          force: true
+        })
+      })
+    })
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.the-header{
+.the-header {
   margin-top: -140px;
   img {
     border-radius: 8px;
   }
 }
-.filler{
+.filler {
   height: 160px;
   @include from($desktop) {
     height: 230px;
@@ -108,9 +184,9 @@ export default {
   height: 100%;
   opacity: 0.7;
 }
-.content{
+.content {
   hr {
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
     height: 1px;
   }
 }

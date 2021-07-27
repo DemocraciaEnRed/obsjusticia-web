@@ -18,7 +18,7 @@
               <NuxtLink :to="`articulos/${article.slug}`">
                 <div class="card">
                   <div class="card-image">
-                    <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/img/articulos/${article.image}`)})`" />
+                    <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
                   </div>
                   <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
                     <div class="my-1">
@@ -27,7 +27,7 @@
                           {{ article.category }}
                         </p>
                         <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                          {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                          {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}
                         </p>
                       </div>
                       <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
@@ -69,16 +69,21 @@
 export default {
   fetchOnServer: false,
   async fetch () {
-    const articles = await this.$content('articles')
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
-      .sortBy('date', 'desc')
-      .limit(6)
-      .fetch()
-      .catch((err) => {
-        // error({ statusCode: 404, message: 'Page not found' })
-        console.log(err)
+    const version = this.$nuxt.context._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
+
+    const res = await this.$storyapi
+      .get('cdn/stories/', {
+        starts_with: 'obs-justicia/articles/',
+        resolve_relations: 'Post.author,Post.tags',
+        version
       })
-    this.articles = articles
+
+    this.articles = res.data.stories.map(a => (
+      {
+        ...a.content,
+        slug: a.slug,
+        tags: a.content.tags && a.content.tags.map(t => t.content.name)
+      }))
   },
   data () {
     return {
