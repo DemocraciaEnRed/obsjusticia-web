@@ -16,7 +16,7 @@
           <NuxtLink :to="`/articulos/${article.slug}`">
             <div class="card">
               <div class="card-image">
-                <figure class="image is-2by1" :style="`background-image: url(${require(`../../assets/img/articulos/${article.image}`)})`" />
+                <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
               </div>
               <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
                 <div>
@@ -25,7 +25,7 @@
                       {{ article.category }}
                     </p>
                     <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                      {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                      {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}
                     </p>
                   </div>
                   <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
@@ -36,7 +36,7 @@
                   </p>
                 </div>
                 <p class="my-5">
-                  {{article.description}}
+                  {{ article.description }}
                 </p>
                 <div class="tags">
                   <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
@@ -64,17 +64,30 @@ export default {
   },
   fetchOnServer: false,
   async fetch () {
-    const articles = await this.$content('articles')
-      .only(['slug', 'title', 'description', 'date', 'category', 'author', 'image', 'tags', 'order'])
-      .sortBy('order', 'asc')
-      .where({ slug: { $ne: this.skipArticle } })
-      .limit(5)
-      .fetch()
-      .catch((err) => {
-        // error({ statusCode: 404, message: 'Page not found' })
-        console.log(err)
+    const version = this.$nuxt.context._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
+
+    const res = await this.$storyapi
+      .get('cdn/stories/', {
+        starts_with: 'obs-justicia/articles/',
+        resolve_relations: 'Post.author,Post.tags',
+        version
       })
-    this.articles = articles
+
+    const _articles = res.data.stories.map(a => (
+      {
+        ...a.content,
+        order: a.content.order || 99,
+        slug: a.slug,
+        author: a.content.author.name,
+        tags: a.content.tags && a.content.tags.map(t => t.content.name)
+      }))
+      .filter(a => a.slug !== this.skipArticle)
+
+    _articles.sort((a, b) => {
+      return parseInt(a.order) - parseInt(b.order)
+    })
+
+    this.articles = _articles.slice(0, 5)
   },
   data () {
     return {

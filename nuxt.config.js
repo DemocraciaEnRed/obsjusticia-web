@@ -31,7 +31,9 @@ export default {
     { src: '~/plugins/vue-masonry.js', mode: 'client' },
     { src: '~/plugins/vue-scrollactive.js', mode: 'client' },
     { src: '~/plugins/vue-parallel-chart.js', mode: 'client' },
-    { src: '~/plugins/services.js' }
+    { src: '~/plugins/services.js' },
+    { src: '~/plugins/composition-api.js' },
+    { src: '~/plugins/storyblok-rich-text-renderer.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -59,7 +61,13 @@ export default {
     // https://github.com/nuxt-community/modules/tree/master/packages/markdownit
     '@nuxtjs/markdownit',
     // https://content.nuxtjs.org/installation
-    '@nuxt/content'
+    '@nuxt/content',
+    ['storyblok-nuxt',
+      {
+        accessToken: process.env.STORYBLOK_TOKEN,
+        cacheProvider: 'memory'
+      }
+    ]
   ],
   // https://content.nuxtjs.org/installation
   content: {
@@ -78,6 +86,13 @@ export default {
   },
   privateRuntimeConfig: {
     // strapiUrl: process.env.STRAPI_URL
+  },
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        document.full_body = document.text
+      }
+    }
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
