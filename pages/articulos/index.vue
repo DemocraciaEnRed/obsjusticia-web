@@ -14,7 +14,7 @@
         >
           <b-carousel-item v-for="article in articles" :key="article.slug">
             <div class="last-articles-container is-flex">
-              <div class="article-picture" :style="`background-image: url(${require(`~/assets/img/articulos/${article.image}`)})`" />
+              <div class="article-picture" :style="`background-image: url(${article.image}`" />
               <div class="article-text box is-radiusless has-text-centered is-flex is-flex-direction-column is-justify-content-center">
                 <h1 class="title is-3 has-text-black m-0">
                   {{ article.title }}
@@ -26,7 +26,7 @@
                   </p>
                 </div>
                 <div class="is-flex is-flex-direction-ro ending-block">
-                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date.split('T')[0].split('-').reverse().join('-') }}</p>
+                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}</p>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
                       {{ tag }}
@@ -46,7 +46,7 @@
           <h1 class="subtitle is-3">
             Todos los artículos
           </h1>
-          <ArticlesMasonry />
+          <ArticlesMasonry :articles="articles || []" />
         </div>
       </div>
     </div>
@@ -99,17 +99,39 @@ export default {
   components: {
     ArticlesMasonry
   },
-  async asyncData ({ $content, params }) {
-    const articles = await $content('articles')
-      .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags', 'order'])
-      .sortBy('order', 'asc')
-      // .sortBy('date', 'desc')
-      .fetch()
-      // .catch((err) => {
-      // error({ statusCode: 404, message: 'Page not found' })
-      // console.err(err)
-      // })
-    return { articles }
+  async asyncData (context) {
+    const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+
+    try {
+      const res = await context.app.$storyapi
+        .get('cdn/stories/', {
+          starts_with: 'obs-justicia/articles/',
+          resolve_relations: 'Post.author,Post.tags',
+          version
+        })
+
+      const articles = res.data.stories
+      // console.log(articles.map(a => ({ ...a.content, author: a.content.author.content.nombre, tags: a.content.tags.map(t => t.content.name) })))
+      return {
+        articles: articles.map(a => (
+          {
+            ...a.content,
+            slug: a.slug,
+            tags: a.content.tags && a.content.tags.map(t => t.content.name)
+          }))
+      }
+    } catch (err) {
+      console.error(err.response.data)
+      context.error({
+        statusCode: err.response.status,
+        message: err.response.data
+      })
+    }
+
+    // const articles = await $content('articles')
+    //   .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags', 'order'])
+    //   .sortBy('order', 'asc')
+    //   .fetch()
   }
 }
 </script>
