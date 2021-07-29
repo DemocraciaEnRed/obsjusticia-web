@@ -78,7 +78,7 @@ export default {
         },
         {
           title: 'jusTA | justicia transparente y abierta',
-          content: '#JusTA, es una plataforma que busca promover la transparencia e independencia del #PoderJudicial a través de información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento.',
+          content: '#JusTA. El consenso es que la justicia necesita cambios. Pero, ¿qué cambios necesita y quiénes deberían impulsarlos? Necesitamos un debate de calidad, por una Justicia Transparente y Abierta. MIRÁ EL VIDEO >>>',
           urlMore: 'https://youtu.be/B0wMK2QOq6c',
           route: null,
           background: '/bloques/bloqueVideo.png',
