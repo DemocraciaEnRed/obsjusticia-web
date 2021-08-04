@@ -25,7 +25,7 @@ export default {
     importar (articulos) {
       // Initialize the client with the oauth token
       const Storyblok = new StoryblokClient({
-        oauthToken: process.env.STORYBLOK_OAUTH_TOKEN // can be found in your My account section
+        oauthToken: 'OAUTH_TOKEN' // can be found in your My account section
       })
 
       const config = {
@@ -41,11 +41,11 @@ export default {
           content: {
             component: 'Post',
             title: a.title,
+            order: a.order,
             author: a.author,
             description: a.description,
-            order: a.order,
+            body: a.full_body,
             date: a.date,
-            long_text: a.full_body,
             image: a.image,
             category: a.category
           }
@@ -59,8 +59,7 @@ export default {
         }).catch((err) => {
           console.log(`Error: ${err}`)
         })
-      }
-      )
+      })
     }
   }
 }

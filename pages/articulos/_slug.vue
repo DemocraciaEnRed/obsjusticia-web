@@ -68,9 +68,7 @@
                 <i>{{ article.description }}</i>
               </p>
               <hr>
-              <rich-text-renderer
-                :document="article.long_text"
-              />
+              <div v-html="$md.render(article.body)" />
             </div>
             <div v-if="article.tags && article.tags.length > 0" class="tags">
               <span
@@ -116,7 +114,7 @@ export default {
       {
         ...res.data.story.content,
         slug: context.params.slug,
-        tags: res.data.story.content.tags.map(t => res.data.rels.filter(r => r.uuid === t)[0].name)
+        tags: res.data.story.content.tags && res.data.story.content.tags.map(t => res.data.rels.filter(r => r.uuid === t)[0].name)
       }
       }
     } catch (err) {
@@ -137,7 +135,7 @@ export default {
   },
   data () {
     return {
-      story: { content: {} }
+      story: this.article
     }
   },
   mounted () {

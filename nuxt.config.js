@@ -32,8 +32,7 @@ export default {
     { src: '~/plugins/vue-scrollactive.js', mode: 'client' },
     { src: '~/plugins/vue-parallel-chart.js', mode: 'client' },
     { src: '~/plugins/services.js' },
-    { src: '~/plugins/composition-api.js' },
-    { src: '~/plugins/storyblok-rich-text-renderer.js' }
+    { src: '~/plugins/composition-api.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -93,6 +92,10 @@ export default {
         document.full_body = document.text
       }
     }
+  },
+  markdownit: {
+    html: true,
+    runtime: true // Support `$md()`
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
