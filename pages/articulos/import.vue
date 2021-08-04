@@ -29,8 +29,8 @@ export default {
       })
 
       const config = {
-        spaceId: '121062', // can be found in the space settings.
-        parentFolder: '62398156' // navigate into your folder and copy the id from the URL at app.storyblok.com <- last one
+        spaceId: '122014', // can be found in the space settings.
+        parentFolder: '64554705' // navigate into your folder and copy the id from the URL at app.storyblok.com <- last one
       }
 
       articulos.forEach((a) => {
@@ -39,7 +39,7 @@ export default {
           name: a.title,
           parent_id: config.parentFolder,
           content: {
-            component: 'Post',
+            component: 'Articulo',
             title: a.title,
             order: a.order,
             author: a.author,

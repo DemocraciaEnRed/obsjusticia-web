@@ -105,7 +105,7 @@ export default {
 
     try {
       const res = await context.app.$storyapi
-        .get(`cdn/stories/obs-justicia/articles/${context.params.slug}?resolve_relations=Post.author,Post.tags`, {
+        .get(`cdn/stories/articulos/${context.params.slug}?resolve_relations=Articulo.author,Articulo.tags`, {
           version
         })
 

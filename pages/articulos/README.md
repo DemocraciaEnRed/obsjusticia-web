@@ -64,7 +64,7 @@ export default {
             author: a.author,
             description: a.description,
             date: a.date,
-            long_text: a.full_body,
+            body: a.full_body,
             image: a.image,
             category: a.category
           }
