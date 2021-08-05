@@ -3,7 +3,7 @@ title: Impugne para ganar
 description: Estudiamos en detalle 10 concursos finalizados por el Consejo en 2018 y advertimos que lograron mejoras en el puntaje un tercio de quienes objetaron la calificación de sus antecedente.
 date: 2021-08-05
 category: Investigación
-author: ASIJ
+author: ACIJ
 image: 2021-08-05-impugne-para-ganar.jpg
 imageCover: 2021-08-05-impugne-para-ganar.jpg
 tags:
