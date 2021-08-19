@@ -2,7 +2,7 @@
 title: Segundo encuentro del conversatorio “Transformar la Justicia”. Sin datos no puede haber reformas serias, según Bergallo, Cristallo, Castagnola y Chehtman
 description: El intercambio de ideas ocurrió en un ciclo organizado por la Universidad Di Tella y JusTA
 date: 2021-08-19
-author: ASIJ 
+author: ACIJ 
 image: 2021-08-19-transformar-justicia-parte-2.jpg
 imageCover:  2021-08-19-transformar-justicia-parte-2.jpg
 category: Columna
