@@ -15,7 +15,7 @@ highlight: false
 
 
 
-**No sólo falta un sistema, sino que &quot;el avance tecnológico&quot; implicó un retroceso. En ese contexto, es imposible conocer con rigor técnico la productividad de las oficinas y dependencias judiciales. Hay fueros sobre los que no se informa nada desde 2012. Urge revertir esta crisis estadística que impide detectar fallas sistémicas y producir las necesarias reformas institucionales.**
+**No sólo falta un sistema, sino que &quot;el avance tecnológico&quot; implicó un retroceso. En ese contexto, es imposible conocer con rigor técnico la productividad de las oficinas y dependencias   judiciales. Hay fueros sobre los que no se informa nada desde 2012. Urge revertir esta crisis estadística que impide detectar fallas sistémicas y producir las necesarias reformas institucionales.**
 
 Como sucede con cualquier política pública, para mejorar la Justicia hacen falta estadísticas. Aunque sea una verdad de Perogrullo, tener datos es una exigencia indispensable. Y, sin embargo, en épocas de impresionantes avances tecnológicos que hacen más accesible el acceso a los datos, el Poder Judicial de la Nación (PJN) no sólo no avanza, sino que retrocede.
 
