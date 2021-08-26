@@ -71,6 +71,7 @@ export default {
     scss: ['~assets/scss/_variables.scss']
   },
   publicRuntimeConfig: {
+    googleSheetApiKey: process.env.GOOGLE_SHEET_API_KEY,
     dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021',
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID

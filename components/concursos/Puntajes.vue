@@ -168,21 +168,33 @@ export default {
   },
   async fetch () {
     if (this.status == null) {
-      const dataStatus = await fetch(
-        'https://spreadsheets.google.com/feeds/list/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/1/public/full?alt=json'
+      await fetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/Estado?key=${this.$config.googleSheetApiKey}`
+      )
+        .then(res => res.json())
+        .then((dataStatus) => {
+          this.status = this.extractDataStatus(dataStatus)
+          this.fillLugares(this.status)
+          this.sheetSelected = this.lugares[0].key
+        })
+        .then(async () => {
+          const data = await fetch(
+            `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/${this.lugares[0].key}?key=${this.$config.googleSheetApiKey}`
+          ).then((res) => {
+            return res.json()
+          })
+          this.data = this.extractData(data)
+          this.prepareChart(this.data)
+        })
+    } else {
+      const data = await fetch(
+        `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/${this.sheetSelected}?key=${this.$config.googleSheetApiKey}`
       ).then((res) => {
         return res.json()
       })
-      this.status = this.extractDataStatus(dataStatus)
-      this.fillLugares(this.status)
+      this.data = this.extractData(data)
+      this.prepareChart(this.data)
     }
-    const data = await fetch(
-      `https://spreadsheets.google.com/feeds/list/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/${this.sheetSelected}/public/full?alt=json`
-    ).then((res) => {
-      return res.json()
-    })
-    this.data = this.extractData(data)
-    this.prepareChart(this.data)
   },
   fetchOnServer: false,
   data () {
@@ -192,7 +204,6 @@ export default {
       status: null,
       statusKeys: [
         'nombre',
-        'id',
         'estado',
         'mostrar'
       ],
@@ -346,11 +357,13 @@ export default {
     extractDataStatus (data) {
       // eslint-disable-next-line prefer-const
       let output = []
-      data.feed.entry.forEach((entry) => {
+      const theKeys = this.statusKeys
+      const theValues = data.values.slice(1)
+      theValues.forEach((entry) => {
         // eslint-disable-next-line prefer-const
-        let marker = {}
-        this.statusKeys.forEach((key) => {
-          marker[key] = entry[`gsx$${key}`].$t !== '' ? entry[`gsx$${key}`].$t : null
+        const marker = {}
+        theKeys.forEach((k, i) => {
+          marker[k] = entry[i] !== '' ? entry[i] : null
         })
         output.push(marker)
       })
@@ -361,7 +374,7 @@ export default {
       data.forEach((l) => {
         const aux = {
           disabled: l.mostrar !== 'TRUE',
-          key: l.id,
+          key: l.nombre.split(' ')[0],
           label: l.nombre,
           status: l.estado
         }
@@ -372,11 +385,13 @@ export default {
     extractData (data) {
       // eslint-disable-next-line prefer-const
       let output = []
-      data.feed.entry.forEach((entry) => {
+      const theKeys = this.keys
+      const theValues = data.values.slice(1)
+      theValues.forEach((entry) => {
         // eslint-disable-next-line prefer-const
-        let marker = {}
-        this.keys.forEach((key) => {
-          marker[key] = entry[`gsx$${key}`].$t !== '' ? entry[`gsx$${key}`].$t : null
+        const marker = {}
+        theKeys.forEach((k, i) => {
+          marker[k] = entry[i] !== '' ? entry[i] : null
         })
         output.push(marker)
       })
