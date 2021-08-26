@@ -1,10 +1,10 @@
 ---
 title: La verdad estadística permanece vacía
 description: El Poder Judicial prescinde de la "decisión informada”
-date: 2021-08-26
+date: 2021-08-19
 author: Ezequiel Nino
-image: 2021-08-26--verdad-estadistica.jpg
-imageCover: 2021-08-26--verdad-estadistica.jpg
+image: 2021-08-19-verdad-estadistica.jpg
+imageCover: 2021-08-19-verdad-estadistica.jpg
 category: Investigacion
 tags:
 - Acceso a la información pública
