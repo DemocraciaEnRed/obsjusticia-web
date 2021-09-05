@@ -26,7 +26,7 @@
                   </p>
                 </div>
                 <div class="is-flex is-flex-direction-ro ending-block">
-                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}</p>
+                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date && article.date.slice(0,10) }}</p>
                   <div v-if="article.tags && article.tags.length > 0" class="tags">
                     <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
                       {{ tag }}
@@ -117,7 +117,7 @@ export default {
           {
             ...a.content,
             slug: a.slug,
-            tags: a.content.tags && a.content.tags.map(t => t.content.name)
+            tags: a.content.tags && a.content.tags.map(t => t.name)
           }))
       }
     } catch (err) {

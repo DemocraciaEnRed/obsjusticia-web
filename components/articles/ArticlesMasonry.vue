@@ -27,7 +27,7 @@
                       {{ article.category }}
                     </p>
                     <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                      {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}
+                      {{ article.date && article.date.slice(0,10) }}
                     </p>
                   </div>
                   <p class="title is-5 is-raleway has-text-weight-bold is-marginless">

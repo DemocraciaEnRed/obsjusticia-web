@@ -48,7 +48,7 @@
                 <b>Publicado el</b>
               </p>
               <p>
-                {{ article.date.split("T")[0].split("-").reverse().join("-") }}
+                {{ article.date.slice(0,10) }}
               </p>
               <p class="my-2">
                 <b>Tags</b>

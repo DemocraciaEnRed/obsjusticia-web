@@ -25,7 +25,7 @@
                       {{ article.category }}
                     </p>
                     <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                      {{ article.date && article.date.split('T')[0].split('-').reverse().join('-') }}
+                      {{ article.date && article.date.slice(0,10) }}
                     </p>
                   </div>
                   <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
@@ -68,7 +68,7 @@ export default {
 
     const res = await this.$storyapi
       .get('cdn/stories/', {
-        starts_with: 'articulos/',
+        starts_with: 'articulos',
         resolve_relations: 'Articulo.author,Articulo.tags',
         version
       })
@@ -78,8 +78,8 @@ export default {
         ...a.content,
         order: a.content.order || 99,
         slug: a.slug,
-        author: a.content.author.name,
-        tags: a.content.tags && a.content.tags.map(t => t.content.name)
+        author: a.content.author,
+        tags: a.content.tags && a.content.tags.map(t => t.name)
       }))
       .filter(a => a.slug !== this.skipArticle)
 
