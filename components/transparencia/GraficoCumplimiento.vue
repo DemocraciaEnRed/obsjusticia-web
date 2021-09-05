@@ -103,7 +103,7 @@ export default {
   },
   async fetch () {
     const data = await fetch(
-      'https://spreadsheets.google.com/feeds/list/1634V3BFRSSoBWPH4Cu4uPPsJ28clDJhnyso9zHI-M-I/1/public/full?alt=json'
+      `https://sheets.googleapis.com/v4/spreadsheets/1634V3BFRSSoBWPH4Cu4uPPsJ28clDJhnyso9zHI-M-I/values/Sheet1?key=${this.$config.googleSheetApiKey}`
     ).then(res => res.json())
     this.data = this.extractData(data)
   },
@@ -123,11 +123,13 @@ export default {
     extractData (data) {
       // eslint-disable-next-line prefer-const
       let output = []
-      data.feed.entry.forEach((entry) => {
+      const theKeys = this.keys
+      const theValues = data.values.slice(1)
+      theValues.forEach((entry) => {
         // eslint-disable-next-line prefer-const
-        let marker = {}
-        this.keys.forEach((key) => {
-          marker[key] = entry[`gsx$${key}`].$t !== '' ? entry[`gsx$${key}`].$t : null
+        const marker = {}
+        theKeys.forEach((k, i) => {
+          marker[k] = entry[i] !== '' ? entry[i] : null
         })
         output.push(marker)
       })
