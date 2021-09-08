@@ -7,7 +7,7 @@ author: Ezequiel Nino
 category: investigaciones
 image: 2021-05-26-pertenecer-privilegio.jpg
 imageCover: 2021-05-26-pertenecer-privilegio.jpg
-tags: 
+tags:
   - Poder Judicial
   - Concursos
   - Igualdad
@@ -34,7 +34,7 @@ La ley establece que la Corte Suprema es la encargada de reglamentar el mecanism
 
 En efecto, la Corte nunca implementó el mecanismo previsto por la ley pese a que, incluso, dictó un fallo en el que estableció que es una norma vigente: en un caso que le llegó a estudio rechazó un planteo de inconstitucionalidad de un aspirante a ingresar al Ministerio Público Fiscal. En ese pronunciamiento, el Alto Tribunal denegó el planteo de un postulante que consideraba que el sorteo violaba el requisito de la idoneidad previsto en la Constitución como condición para el acceso a los cargos públicos, con el argumento de que el concurso previo alcanza para satisfacer esa exigencia.
 
-Para entender la situación en el Poder Judicial hicimos un pedido de acceso a la información a la Corte  Suprema  [(ver aquí)](https://docs.google.com/document/d/1NChXXPR2cz8E8t-EG002WDoZI2aqfTrp5m--kqYXOFg/edit), las respuestas no son sencillas de desentrañar pero muestran la falta de cumplimiento de la norma y la ausencia de información concreta sobre la materia [(ver aquí)](https://drive.google.com/file/d/1fx2GOLK_D6-dNjVFgjUaXVM0Lvx2cQ0S/view?usp=sharing). Sobre la designación de personal de tribunales inferiores, explica que se encuentra delegada en cada Cámara de Apelaciones o Tribunal Oral la forma de designación de personal y sobre el mecanismo de designación deriva la pregunta al Consejo de la Magistratura (el Consejo de la Magistratura ya había respondido un pedido de información afirmando que es la Corte la encargada del cumplimiento de la ley).
+Para entender la situación en el Poder Judicial hicimos un pedido de acceso a la información a la Corte Suprema [(ver aquí)](https://docs.google.com/document/d/1NChXXPR2cz8E8t-EG002WDoZI2aqfTrp5m--kqYXOFg/edit), las respuestas no son sencillas de desentrañar pero muestran la falta de cumplimiento de la norma y la ausencia de información concreta sobre la materia [(ver aquí)](https://drive.google.com/file/d/1fx2GOLK_D6-dNjVFgjUaXVM0Lvx2cQ0S/view?usp=sharing). Sobre la designación de personal de tribunales inferiores, explica que se encuentra delegada en cada Cámara de Apelaciones o Tribunal Oral la forma de designación de personal y sobre el mecanismo de designación deriva la pregunta al Consejo de la Magistratura (el Consejo de la Magistratura ya había respondido un pedido de información afirmando que es la Corte la encargada del cumplimiento de la ley).
 
 La delegación a la que se refiere el Alto Tribunal había sido contemplada en la Acordada 49/13 en el que estableció que son esos tribunales los encargados de definir la modalidad de selección “hasta que se produzca la efectiva puesta en funcionamiento del régimen de ingreso que contempla la ley 26.861, lo que dispondrá esta Corte como autoridad de aplicación, los tribunales mantendrán las atribuciones de la acordada de Fallos 240:107 para la designación y promoción de empleados, efectivos o interinos, en cargos de planta, o contratados”.
 

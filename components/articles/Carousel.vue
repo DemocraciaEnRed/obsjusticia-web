@@ -25,7 +25,7 @@
                       {{ article.category }}
                     </p>
                     <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                       {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                      {{ article.date.slice(0,10) }}
                     </p>
                   </div>
                   <div>
@@ -69,17 +69,21 @@ export default {
   },
   fetchOnServer: false,
   async fetch () {
-    const articles = await this.$content('articles')
-      .only(['slug', 'title', 'date', 'category', 'author', 'image', 'tags'])
-      .sortBy('date', 'asc')
-      .where({ slug: { $ne: this.skipArticle } })
-      .limit(6)
-      .fetch()
-      .catch((err) => {
-        // error({ statusCode: 404, message: 'Page not found' })
-        console.log(err)
+    const version = this.$nuxt.context._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
+
+    const res = await this.$storyapi
+      .get('cdn/stories/', {
+        starts_with: 'articulos/',
+        resolve_relations: 'Articulo.author,Articulo.tags',
+        version
       })
-    this.articles = articles
+
+    this.articles = res.data.stories.map(a => (
+      {
+        ...a.content,
+        slug: a.slug,
+        tags: a.content.tags && a.content.tags.map(t => t.content.name)
+      }))
   },
   data () {
     return {
