@@ -63,7 +63,7 @@ export default {
     '@nuxt/content',
     ['storyblok-nuxt',
       {
-        accessToken: process.env.STORYBLOK_TOKEN,
+        accessToken: 'bHJMahY4i40O4moOwrmyiwtt',
         cacheProvider: 'memory'
       }
     ]
