@@ -32,6 +32,7 @@ export default {
     { src: '~/plugins/vue-scrollactive.js', mode: 'client' },
     { src: '~/plugins/vue-parallel-chart.js', mode: 'client' },
     { src: '~/plugins/services.js' },
+    { src: '~/plugins/storyblok.js' },
     { src: '~/plugins/composition-api.js' }
   ],
 
@@ -63,7 +64,8 @@ export default {
     '@nuxt/content',
     ['storyblok-nuxt',
       {
-        accessToken: 'bHJMahY4i40O4moOwrmyiwtt',
+        // This really doesnt matter cause we are injecting the accessToken in plugins/storyblock.js but lets keep it here :)
+        accessToken: process.env.STORYBLOK_API_KEY,
         cacheProvider: 'memory'
       }
     ]
@@ -80,6 +82,7 @@ export default {
   publicRuntimeConfig: {
     googleSheetApiKey: process.env.GOOGLE_SHEET_API_KEY,
     dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021',
+    storyblokApiKey: process.env.STORYBLOK_API_KEY,
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID
     }
