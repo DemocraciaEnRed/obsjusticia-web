@@ -70,10 +70,10 @@ export default {
   fetchOnServer: false,
   async fetch () {
     const version = this.$nuxt.context._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
-
     const res = await this.$storyapi
       .get('cdn/stories/', {
         starts_with: 'articulos/',
+        per_page: 10,
         resolve_relations: 'Artiuclo.author,Articulo.tags',
         version
       })
