@@ -14,8 +14,19 @@
         >
           <b-carousel-item v-for="article in articles" :key="article.slug">
             <div class="last-articles-container is-flex">
-              <div class="article-picture" :style="`background-image: url(${article.image}`" />
-              <div class="article-text box is-radiusless has-text-centered is-flex is-flex-direction-column is-justify-content-center">
+              <div
+                class="article-picture"
+                :style="`background-image: url(${article.image}`"
+              />
+              <div
+                class="
+                  article-text
+                  box
+                  is-radiusless
+                  has-text-centered
+                  is-flex is-flex-direction-column is-justify-content-center
+                "
+              >
                 <h1 class="title is-3 has-text-black m-0">
                   {{ article.title }}
                 </h1>
@@ -26,16 +37,30 @@
                   </p>
                 </div>
                 <div class="is-flex is-flex-direction-ro ending-block">
-                  <p>Por {{ article.author }}<span class="mx-2">| </span>  {{ article.date && article.date.slice(0,10) }}</p>
-                  <div v-if="article.tags && article.tags.length > 0" class="tags">
-                    <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-special is-capitalized">
+                  <p>
+                    Por {{ article.author }}<span class="mx-2">| </span>
+                    {{ article.date && article.date.slice(0, 10) }}
+                  </p>
+                  <div
+                    v-if="article.tags && article.tags.length > 0"
+                    class="tags"
+                  >
+                    <span
+                      v-for="(tag, i) in article.tags"
+                      :key="`tags${i}`"
+                      class="tag is-special is-capitalized"
+                    >
                       {{ tag }}
                     </span>
                   </div>
                 </div>
                 <div class="mt-5 has-text-centered">
-                  <nuxt-link :to="`/articulos/${article.slug}`" class="has-text-primary is-size-5">
-                    Ver el artículo completo <i class="fas fa-arrow-right fa-lg" />
+                  <nuxt-link
+                    :to="`/articulos/${article.slug}`"
+                    class="has-text-primary is-size-5"
+                  >
+                    Ver el artículo completo
+                    <i class="fas fa-arrow-right fa-lg" />
                   </nuxt-link>
                 </div>
               </div>
@@ -100,25 +125,25 @@ export default {
     ArticlesMasonry
   },
   async asyncData (context) {
-    const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    const version =
+      context.query._storyblok || context.isDev ? 'draft' : 'published'
 
     try {
-      const res = await context.app.$storyapi
-        .get('cdn/stories/', {
-          starts_with: 'articulos/',
-          resolve_relations: 'Articulo.author,Articulo.tags',
-          version
-        })
+      const res = await context.app.$storyapi.get('cdn/stories/', {
+        starts_with: 'articulos/',
+        resolve_relations: 'Articulo.author,Articulo.tags',
+        per_page: 100,
+        version
+      })
 
       const articles = res.data.stories
       // console.log(articles.map(a => ({ ...a.content, author: a.content.author.content.nombre, tags: a.content.tags.map(t => t.content.name) })))
       return {
-        articles: articles.map(a => (
-          {
-            ...a.content,
-            slug: a.slug,
-            tags: a.content.tags && a.content.tags.map(t => t.name)
-          }))
+        articles: articles.map(a => ({
+          ...a.content,
+          slug: a.slug,
+          tags: a.content.tags && a.content.tags.map(t => t.name)
+        }))
       }
     } catch (err) {
       console.error(err.response.data)
@@ -137,47 +162,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.media .media-left{
+.media .media-left {
   width: 300px;
 }
-.media .media-left figure{
+.media .media-left figure {
   background-size: cover;
   background-position: center center;
 }
-.filler{
+.filler {
   height: 430px;
 }
-.last-articles{
+.last-articles {
   margin-top: -320px;
 }
-.last-articles-container{
+.last-articles-container {
   width: 100%;
   z-index: 10;
-  @media (max-width: $desktop){
+  @media (max-width: $desktop) {
     flex-direction: column;
   }
-  .article-picture{
+  .article-picture {
     background-size: cover;
     background-position: center center;
     min-height: 300px;
-    @include from($desktop){
-      width: 60%
+    @include from($desktop) {
+      width: 60%;
     }
   }
-  .article-text{
-    @include from($desktop){
+  .article-text {
+    @include from($desktop) {
       width: 50%;
       max-height: 400px;
       min-height: 400px;
     }
     padding: 20px 40px;
-    hr{
+    hr {
       width: 200px;
       background-color: #000;
       margin-left: auto;
       margin-right: auto;
     }
-    .text-description{
+    .text-description {
       display: -webkit-box;
       -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
@@ -185,7 +210,7 @@ export default {
       // line-height: normal;
     }
     .ending-block {
-      @media (max-width: $desktop){
+      @media (max-width: $desktop) {
         flex-direction: column;
         .tags {
           margin-top: 10px;
