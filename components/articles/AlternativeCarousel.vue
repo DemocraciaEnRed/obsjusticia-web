@@ -69,6 +69,7 @@ export default {
     const res = await this.$storyapi
       .get('cdn/stories/', {
         starts_with: 'articulos',
+        per_page: 5,
         resolve_relations: 'Articulo.author,Articulo.tags',
         version
       })
@@ -87,7 +88,7 @@ export default {
       return parseInt(a.order) - parseInt(b.order)
     })
 
-    this.articles = _articles.slice(0, 5)
+    this.articles = _articles
   },
   data () {
     return {
