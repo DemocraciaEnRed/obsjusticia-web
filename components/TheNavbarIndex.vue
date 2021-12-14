@@ -29,9 +29,9 @@
             </router-link>
           </div>
           <div class="navbar-item">
-            <router-link to="/corrupcion" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+            <a href="https://causasdecorrupcion.org/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Corrupción
-            </router-link>
+            </a>
           </div>
           <div class="navbar-item">
             <router-link to="/quienes-somos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">

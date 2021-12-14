@@ -16,7 +16,7 @@
       <b-navbar-item tag="nuxt-link" to="/transparencia">
         Transparencia
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/corrupcion">
+      <b-navbar-item tag="a" href="https://causasdecorrupcion.org/">
         Corrupcion
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
