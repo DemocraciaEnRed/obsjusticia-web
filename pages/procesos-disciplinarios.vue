@@ -276,7 +276,7 @@ background-color: #00B1AF;
 .the-graphs{
   width: 100%;
   // width: 100vw;
-  height: 100vh;
+  height: 160vh;
   max-height: 1080px;
   overflow-y: hidden;
 }
