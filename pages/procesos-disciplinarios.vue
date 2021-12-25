@@ -59,12 +59,6 @@
                 </div>
               </div>
             </div>
-            <div class="buttons is-centered mt-6">
-              <a href="#graphs" class="button is-primary"><i class="fas fa-chart-area fa-fw" />&nbsp;GRÁFICOS</a>
-              <a href="#lexico" class="button is-light">Léxico para no especialistas</a>
-              <a href="#fuente" class="button is-light">Fuentes y notas</a>
-              <a href="#creditos" class="button is-light">Créditos</a>
-            </div>
           </div>
         </div>
       </div>
