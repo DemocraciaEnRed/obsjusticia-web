@@ -58,7 +58,7 @@
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-balance-scale" /></p>
-                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS PÓLITICOS<br></span>
+                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS POLÍTICOS<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
