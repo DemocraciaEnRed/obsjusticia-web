@@ -30,7 +30,7 @@
                 1998
               </p>
               <p class="is-pulled-right is-size-5">
-                2020
+                2021
               </p>
             </div>
             <div class="columns mt-3 is-centered">
@@ -84,84 +84,69 @@
         <div class="columns is-centered">
           <div class="column is-9">
             <h1 class="title is-2 has-text-centered">
-              Léxico para no especialistas
+              Glosario
             </h1>
-            <div class="my-4 has-background-white px-6 py-5">
+            <div class="my-4 has-background-white px-5 py-5">
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Desestimada
-                  </h5>
-                  <h5 class="subtitle is-5">
-                    🗑️
+                    🗑 Desestimada
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>La mayoría de las causas fueron desestimadas. Un alto número se desestiman <b><i>inlimines</i></b>, esto significa que no cumplen con los requisitos mínimos establecidos por el consejo de la Magistratura</p>
+                  <p class="is-300">La mayoría de las causas fueron desestimadas. Un alto número se desestiman <b><i>inlimines</i></b>, esto significa que no cumplen con los requisitos mínimos establecidos por el consejo de la Magistratura</p>
                 </div>
               </div>
             </div>
-            <div class="my-4 has-background-white px-6 py-5">
+            <div class="my-4 has-background-white px-5 py-5">
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Causas caducadas
-                  </h5>
-                  <h5 class="subtitle is-5">
-                    📖
+                    ⚰️ Causas caducadas
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son casos de injusticias.</p>
+                  <p class="is-300">(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son casos de injusticias.</p>
                 </div>
               </div>
             </div>
-            <div class="my-4 has-background-white px-6 py-5">
+            <div class="my-4 has-background-white px-5 py-5">
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Juicio Político
-                  </h5>
-                  <h5 class="subtitle is-5">
-                    ⚖️
+                    ⚖️ Juicio Político
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>
+                  <p class="is-300">
                     Algunas denuncias por su nivel de gravedad llegan a un Jurado de Enjuiciamiento
                   </p>
                 </div>
               </div>
             </div>
-            <div class="my-4 has-background-white px-6 py-5">
+            <div class="my-4 has-background-white px-5 py-5">
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Sanción
-                  </h5>
-                  <h5 class="subtitle is-5">
-                    👩‍⚖️
+                    👩‍⚖️ Sanción
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>
+                  <p class="is-300">
                     Estas son las causas que tuvieron una sanción, puede ser una sanción firme, sanción disciplinaria y por esto reciben una advertencia, un apercibimiento o una multa
                   </p>
                 </div>
               </div>
             </div>
-            <div class="my-4 has-background-white px-6 py-5">
+            <div class="my-4 has-background-white px-5 py-5">
               <div class="columns">
                 <div class="column is-4">
                   <h5 class="title is-4">
-                    Renuncia
-                  </h5>
-                  <h5 class="subtitle is-5">
-                    👻
+                    👻 Renuncia
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p>
+                  <p class="is-300">
                     En muchos casos el juez renuncia antes de que la denuncia termine
                   </p>
                 </div>
@@ -287,5 +272,10 @@ background-color: #00B1AF;
   bottom: 20px;
   right: 40px;
   color: #6b6b6b;
+}
+
+.category-separator{
+  width: 70%;
+  height: 3px;
 }
 </style>
