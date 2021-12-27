@@ -38,24 +38,28 @@
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-file" /></p>
                   <span class="is-700 is-size-2">3360</span><br><span class="is-400">DESESTIMADAS<br></span>
+                  <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-exclamation-triangle" /></p>
                   <span class="is-700 is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
+                  <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-gavel" /></p>
                   <span class="is-700 is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
+                  <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-balance-scale" /></p>
-                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS<br>PÓLITICOS<br></span>
+                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS PÓLITICOS<br></span>
+                  <hr class="has-background-black category-separator">
                 </div>
               </div>
             </div>
