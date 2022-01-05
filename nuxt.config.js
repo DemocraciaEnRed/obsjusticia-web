@@ -49,7 +49,7 @@ export default {
   ],
 
   googleAnalytics: {
-    id: 'UA-216355885-1' // Used as fallback if no runtime config is provided
+    id: 'UA-193021243-1' // Used as fallback if no runtime config is provided
   },
   
   // Modules (https://go.nuxtjs.dev/config-modules)
