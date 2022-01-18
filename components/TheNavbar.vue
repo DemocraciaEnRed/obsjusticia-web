@@ -1,6 +1,9 @@
 <template>
   <b-navbar wrapper-class="container" transparent>
     <template slot="end">
+      <b-navbar-item tag="nuxt-link" to="/quienes-somos">
+        <img src="~/assets/images/logo_justa.png" width="70">
+      </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/">
         Inicio
       </b-navbar-item>
@@ -8,19 +11,13 @@
         Artículos
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/procesos-disciplinarios">
-        Disciplina
-      </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/concursos">
-        Concursos
+        Procesos
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/transparencia">
         Transparencia
       </b-navbar-item>
       <b-navbar-item tag="a" href="https://causasdecorrupcion.org/">
-        Corrupcion
-      </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/quienes-somos">
-        JusTA
+        Observatorio
       </b-navbar-item>
       <!-- <a href="/corrupcion">
         Corrupción
