@@ -11,7 +11,7 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end" style="margin: 0 auto;">
           <div class="navbar-item">
-            <router-link to="/" class="nav-link" :class="{'active': $route.name == 'index', 'has-text-dark': dark, 'has-text-white': !dark}">
+            <router-link to="/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               Inicio
             </router-link>
           </div>
@@ -21,8 +21,13 @@
             </router-link>
           </div>
           <div class="navbar-item">
+            <router-link to="/concursos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              Concursos
+            </router-link>
+          </div>
+          <div class="navbar-item">
             <router-link to="/procesos-disciplinarios" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Procesos
+              Disciplina
             </router-link>
           </div>
           <div class="navbar-item">
@@ -32,8 +37,13 @@
           </div>
           <div class="navbar-item">
             <a href="https://causasdecorrupcion.org/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              Observatorio
+              Corrupcion
             </a>
+          </div>
+          <div class="navbar-item">
+            <router-link to="/quienes-somos" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+              JusTA
+            </router-link>
           </div>
         </div>
       </div>
