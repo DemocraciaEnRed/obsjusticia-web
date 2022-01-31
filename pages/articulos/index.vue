@@ -50,7 +50,7 @@
                       :key="`tags${i}`"
                       class="tag is-special is-capitalized"
                     >
-                      {{ tag }}
+                      {{ tag.name }}
                     </span>
                   </div>
                 </div>
@@ -71,7 +71,7 @@
           <h1 class="subtitle is-3">
             Todos los artículos
           </h1>
-          <ArticlesMasonry :articles="articles || []" />
+          <ArticlesMasonry :articles="articles || []" :tags="tags"/>
         </div>
       </div>
     </div>
@@ -119,6 +119,7 @@
 
 <script>
 import ArticlesMasonry from '@/components/articles/ArticlesMasonry'
+import _ from 'lodash'
 
 export default {
   components: {
@@ -137,13 +138,13 @@ export default {
       })
 
       const articles = res.data.stories
-      // console.log(articles.map(a => ({ ...a.content, author: a.content.author.content.nombre, tags: a.content.tags.map(t => t.content.name) })))
+      const tags = _(articles).map(a => a.content.tags).flatten().uniqBy('slug').value()
       return {
         articles: articles.map(a => ({
           ...a.content,
-          slug: a.slug,
-          tags: a.content.tags && a.content.tags.map(t => t.name)
-        }))
+          slug: a.slug
+        })),
+        tags
       }
     } catch (err) {
       console.error(err.response.data)

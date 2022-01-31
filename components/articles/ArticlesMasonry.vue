@@ -13,8 +13,14 @@
           </h4>
         </div> -->
       <!-- <div v-else class=""> -->
+      <div class="filter-tags">
+        <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-tag-container" v-bind:class="{ 'filter-tag-active': tagIsSelected(tag) }">
+          <input class="filter-tag" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="filterTags">
+          <label :for="tag.slug" class="tag-label noSelect">{{ tag.name }}</label>
+        </div>
+      </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-for="(article, index) in articles" :key="index" v-masonry-tile class="articles-card">
+        <div v-for="article in filteredArticles" :key="article.slug" v-masonry-tile class="articles-card">
           <NuxtLink :to="`articulos/${article.slug}`">
             <div class="card">
               <div class="card-image">
@@ -44,7 +50,7 @@
                   {{ article.description }}
                 </p>
                 <div class="tags">
-                  <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
+                  <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
                 </div>
               </div>
             </div>
@@ -59,13 +65,34 @@
   </div>
 </template>
 <script>
+import _ from 'lodash'
+
 export default {
   fetchOnServer: false,
   props: {
-    articles: []
+    articles: [],
+    tags: []
   },
   mounted () {
     this.$redrawVueMasonry()
+  },
+  data () {
+    return {
+      filterTags: []
+    }
+  },
+  computed: {
+    filteredArticles () {
+      const appliedTags = this.filterTags
+      return !_.isEmpty(appliedTags)
+        ? _.filter(this.articles, ({ tags = [] }) => _.find(tags, ({ slug }) => _.includes(appliedTags, slug)))
+        : this.articles
+    }
+  },
+  methods: {
+    tagIsSelected ({ slug }) {
+      return _.includes(this.filterTags, slug)
+    }
   }
 }
 </script>
@@ -96,6 +123,31 @@ export default {
   .card-image .image{
     background-size: cover;
     background-position: center center;
+  }
+  .filter-tag-container{
+    flex: 1 0 21%;
+    margin: 5px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .filter-tag{
+    display: none;
+  }
+  .tag-label{
+    cursor: pointer;
+  }
+  .filter-tag-active{
+    background-color: #6C9EFF;
+  }
+  .noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
   }
   // .image{
   //   overflow: hidden;

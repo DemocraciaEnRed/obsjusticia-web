@@ -19,6 +19,7 @@
     "chroma-js": "^2.1.1",
     "core-js": "^3.11.0",
     "echarts": "^5.1.1",
+    "lodash": "^4.17.21",
     "nuxt": "^2.15.4",
     "nuxt-buefy": "^0.4.7",
     "storyblok-js-client": "^4.1.3",
