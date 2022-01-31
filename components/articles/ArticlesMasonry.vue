@@ -130,12 +130,14 @@ export default {
     background-color: #F5F5F5;
     border-radius: 10px;
     font-size: 12px;
+    padding: 0;
   }
   .filter-tag{
     display: none;
   }
   .tag-label{
     cursor: pointer;
+    padding: 0 9px 0 9px;
   }
   .filter-tag-active{
     background-color: #6C9EFF;
