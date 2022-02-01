@@ -1,12 +1,21 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Justa - ACIJ - Observatorio de Justicia',
+    title: 'JUSTA - Plataforma por una justicia transparente y abierta',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { hid: 'robots', name: 'robots', content: 'noindex' }
+      { hid: 'description', name: 'description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:title', name: 'og:title', content: 'JUSTA - Plataforma por una justicia transparente y abierta' },
+      { hid: 'og:url', name: 'og:url', content: 'https://justa.acij.org.ar/' },
+      { hid: 'og:image', name: 'og:image', content: 'https://justa.acij.org.ar/sharer01.jpg' },
+      { hid: 'og:description', name: 'og:description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', name: 'twitter:url', content: 'https://justa.acij.org.ar/' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'JUSTA - Plataforma por una justicia transparente y abierta' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://justa.acij.org.ar/sharer01.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -51,7 +60,7 @@ export default {
   googleAnalytics: {
     id: 'UA-193021243-1' // Used as fallback if no runtime config is provided
   },
-  
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/buefy
@@ -109,6 +118,6 @@ export default {
   },
 
   router: {
-    linkExactActiveClass: "active"
+    linkExactActiveClass: 'active'
   }
 }
