@@ -17,7 +17,6 @@
             <Conclusiones scroll-id="conclusiones" />
             <InformacionAdicional scroll-id="informacion-adicional" />
             <Fuentes scroll-id="fuentes" />
-            <Creditos scroll-id="creditos" />
           </div>
           <div class="column is-2">
             <Sidebar />
@@ -43,7 +42,6 @@ import Glosario from '~/components/transparencia/Glosario'
 import Conclusiones from '~/components/transparencia/Conclusiones'
 import InformacionAdicional from '~/components/transparencia/InformacionAdicional'
 import Fuentes from '~/components/transparencia/Fuentes'
-import Creditos from '~/components/transparencia/Creditos'
 
 export default {
   name: 'QuienesSomos',
@@ -62,8 +60,7 @@ export default {
     Glosario,
     Conclusiones,
     InformacionAdicional,
-    Fuentes,
-    Creditos
+    Fuentes
   }
 }
 </script>
