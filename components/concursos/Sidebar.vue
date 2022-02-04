@@ -9,7 +9,6 @@
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#lexico" class="scrollactive-item">Léxico no especialistas</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
-    <a href="#creditos" class="scrollactive-item">Créditos</a>
   </scrollactive>
 </template>
 
