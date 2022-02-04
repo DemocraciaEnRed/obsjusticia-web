@@ -75,8 +75,22 @@
         <a href="#creditos" class="button is-light">Créditos</a>
       </div> -->
       <!-- <a href="#graphs" class="go-fullscreen-bottom"><i class="fas fa-arrow-up fa-2x" /></a> -->
-      <iframe id="graphs" src="https://democraciaenred.github.io/obsjusticia-graphs/" class="the-graphs" loading="lazy" />
-      <!-- <iframe id="graphs" src="http://localhost:8000" class="the-graphs" loading="lazy" /> -->
+      <iframe
+        id="graphs"
+        src="https://democraciaenred.github.io/obsjusticia-graphs/"
+        class="the-graphs"
+        loading="lazy"
+        v-resize="{ log: true }"
+        frameborder="0"
+      />
+      <!-- <iframe
+        id="graphs"
+        src="http://localhost:8000"
+        class="the-graphs"
+        loading="lazy"
+        v-resize="{ log: true }"
+        frameborder="0"
+      /> -->
     </div>
     <div id="lexico" class="section">
       <!-- <img id="lexico" src="~/assets/img/001.png" class="image is-centered"> -->
@@ -219,6 +233,8 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import iframeResize from 'iframe-resizer/js/iframeResizer'
 
 export default {
   name: 'QuienesSomos',
@@ -226,6 +242,15 @@ export default {
   components: {
   }
 }
+
+Vue.directive('resize', {
+  bind (el, { value = {} }) {
+    el.addEventListener('load', () => iframeResize(value, el))
+  },
+  unbind (el) {
+    el.iFrameResizer.removeListeners()
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -241,8 +266,6 @@ background-color: #00B1AF;
 }
 .the-graphs{
   width: 100%;
-  // width: 100vw;
-  height: 320vh;
   overflow-y: hidden;
 }
 .specialbg{
