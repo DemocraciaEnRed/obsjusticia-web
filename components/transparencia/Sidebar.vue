@@ -13,7 +13,6 @@
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#informacion-adicional" class="scrollactive-item">Información adicional</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
-    <a href="#creditos" class="scrollactive-item">Créditos</a>
   </scrollactive>
 </template>
 

@@ -13,7 +13,6 @@
             <Conclusiones scroll-id="conclusiones" />
             <Lexico scroll-id="lexico" />
             <Fuentes scroll-id="fuentes" />
-            <Creditos scroll-id="creditos" />
           </div>
           <div class="column is-2">
             <Sidebar />
@@ -35,7 +34,6 @@ import Influencias from '~/components/concursos/Influencias'
 import Conclusiones from '~/components/concursos/Conclusiones'
 import Lexico from '~/components/concursos/Lexico'
 import Fuentes from '~/components/concursos/Fuentes'
-import Creditos from '~/components/concursos/Creditos'
 
 export default {
   name: 'QuienesSomos',
@@ -50,8 +48,7 @@ export default {
     Influencias,
     Conclusiones,
     Lexico,
-    Fuentes,
-    Creditos
+    Fuentes
   }
 }
 </script>
