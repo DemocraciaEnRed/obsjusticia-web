@@ -202,33 +202,6 @@
         </div>
       </div>
     </div>
-    <div id="creditos" class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-2">
-          Créditos
-        </h1>
-        <br>
-        <br>
-        <h6 class="subtitle is-5 mb-3">
-          Idea general
-        </h6>
-        <a href="https://acij.org.ar" target="_blank"><img src="~/assets/img/acij-logo-black.png" width="150" class="image is-centered"></a>
-        <br>
-        <br>
-        <h6 class="subtitle is-5 mb-3">
-          Desarrollado por
-        </h6>
-        <a href="https://democraciaenred.org" target="_blank"><img src="~/assets/img/logo-der-black.svg" width="150" class="image is-centered"></a>
-        <br>
-        <br>
-        <h6 class="subtitle is-5">
-          Visualización de datos
-        </h6>
-        <h6 class="title is-5">
-          Javier Lujan<br><a href=" http://javierlujan.com.ar/" target="_blank">http://javierlujan.com.ar/</a>
-        </h6>
-      </div>
-    </div>
   </section>
 </template>
 
