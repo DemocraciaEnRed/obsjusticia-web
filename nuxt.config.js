@@ -1,20 +1,20 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'JUSTA - Plataforma por una justicia transparente y abierta',
+    title: 'JUSTA: Plataforma por una justicia transparente y abierta',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'description', name: 'description', content: 'Promovemos la independencia, apertura y rendición de cuentas del Poder Judicial publicando información sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento.' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:title', name: 'og:title', content: 'JUSTA - Plataforma por una justicia transparente y abierta' },
+      { hid: 'og:title', name: 'og:title', content: 'JUSTA: Plataforma por una justicia transparente y abierta' },
       { hid: 'og:url', name: 'og:url', content: 'https://justa.acij.org.ar/' },
       { hid: 'og:image', name: 'og:image', content: 'https://justa.acij.org.ar/sharer01.jpg' },
-      { hid: 'og:description', name: 'og:description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'og:description', name: 'og:description', content: 'Promovemos la independencia, apertura y rendición de cuentas del Poder Judicial publicando información sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento.' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:url', name: 'twitter:url', content: 'https://justa.acij.org.ar/' },
-      { hid: 'twitter:title', name: 'twitter:title', content: 'JUSTA - Plataforma por una justicia transparente y abierta' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'Plataforma que busca promover la transparencia e independencia del #PoderJudicial con información relevante sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento. Porque una justicia transparente y abierta es posible.' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'JUSTA: Plataforma por una justicia transparente y abierta' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Promovemos la independencia, apertura y rendición de cuentas del Poder Judicial publicando información sobre los procesos disciplinarios, las formas de selección de sus integrantes y otras cuestiones fundamentales de su funcionamiento.' },
       { hid: 'twitter:image', name: 'twitter:image', content: 'https://justa.acij.org.ar/sharer01.jpg' }
     ],
     link: [

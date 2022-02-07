@@ -158,6 +158,25 @@ export default {
         })
       })
     })
+  },
+  head () {
+    return {
+      title: `${this.article.title} - JUSTA: Plataforma por una justicia transparente y abierta`,
+      meta: [
+        { hid: 'description', name: 'description', content: this.article.description },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
+        { hid: 'article:author', property: 'article:author', content: this.article.author },
+        { hid: 'article:publisher', property: 'article:publisher', content: 'JUSTA' },
+        { hid: 'og:title', property: 'og:title', content: `${this.article.title} - JUSTA: Plataforma por una justicia transparente y abierta` },
+        { hid: 'og:description', property: 'og:description', content: this.article.description },
+        { hid: 'og:image', property: 'og:image', content: `https:${this.article.image}` },
+        { hid: 'og:url', property: 'og:url', content: `https://justa.acij.org.ar/articulos/${this.article.slug}` },
+        { hid: 'twitter:title', property: 'twitter:title', content: `${this.article.title} - JUSTA: Plataforma por una justicia transparente y abierta` },
+        { hid: 'twitter:description', property: 'twitter:description', content: this.article.description },
+        { hid: 'twitter:url', property: 'twitter:url', content: `https://justa.acij.org.ar/articulos/${this.article.slug}` },
+        { hid: 'twitter:image', property: 'twitter:image', content: `https:${this.article.image}` }
+      ]
+    }
   }
 }
 </script>
