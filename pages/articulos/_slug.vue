@@ -81,9 +81,6 @@
         </div>
       </div>
       <div class="container is-fluid">
-        <h1 class="title is-3">
-          Ver otros artículos relacionados
-        </h1>
         <AlternativeCarousel :article="article"/>
       </div>
     </div>
