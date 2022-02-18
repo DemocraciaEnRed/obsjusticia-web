@@ -54,12 +54,13 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   props: {
-    skipArticle: {
-      type: String,
+    article: {
       required: false,
-      default: () => null
+      default: () => {}
     }
   },
   fetchOnServer: false,
@@ -71,7 +72,9 @@ export default {
         starts_with: 'articulos',
         per_page: 5,
         resolve_relations: 'Articulo.author,Articulo.tags',
-        version
+        version,
+        'filter_query[tags][in_array]': _(this.article.tags).map('uuid').join(),
+        'filter_query[title][not_like]': this.article.title
       })
 
     const _articles = res.data.stories.map(a => (
@@ -82,7 +85,7 @@ export default {
         author: a.content.author,
         tags: a.content.tags && a.content.tags.map(t => t.name)
       }))
-      .filter(a => a.slug !== this.skipArticle)
+      .filter(a => a.slug !== this.article.slug)
 
     _articles.sort((a, b) => {
       return parseInt(a.order) - parseInt(b.order)
