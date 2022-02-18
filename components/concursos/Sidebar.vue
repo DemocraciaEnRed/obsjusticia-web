@@ -8,6 +8,7 @@
     <a href="#influencias" class="scrollactive-item">Influencias</a>
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#lexico" class="scrollactive-item">Léxico no especialistas</a>
+    <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
   </scrollactive>
 </template>

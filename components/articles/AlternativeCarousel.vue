@@ -1,7 +1,7 @@
 <template>
-  <section class="">
+  <section class="" :id="scrollId">
     <h1 class="title is-3">
-      Ver otros artículos relacionados
+      Artículos relacionados
     </h1>
     <div v-if="$fetchState.pending" class="section">
       <h4 class="subtitle has-text-white is-4 has-text-centered">
@@ -68,6 +68,11 @@ export default {
     relatedTagUuid: {
       required: false,
       default: () => ''
+    },
+    scrollId: {
+      type: String,
+      required: false,
+      default: () => 'default-id'
     }
   },
   fetchOnServer: false,

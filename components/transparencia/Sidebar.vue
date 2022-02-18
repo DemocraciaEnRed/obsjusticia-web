@@ -12,6 +12,7 @@
     <a href="#glosario" class="scrollactive-item">Glosario</a>
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#informacion-adicional" class="scrollactive-item">Información adicional</a>
+    <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
   </scrollactive>
 </template>

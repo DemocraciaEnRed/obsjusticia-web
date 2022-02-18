@@ -16,8 +16,8 @@
             <Glosario scroll-id="glosario" />
             <Conclusiones scroll-id="conclusiones" />
             <InformacionAdicional scroll-id="informacion-adicional" />
+            <ArticlesAlternativeCarousel relatedTagUuid="d7a60eec-bd2d-4b72-9342-3995837bf443" scroll-id="articulos-relacionados" />
             <Fuentes scroll-id="fuentes" />
-            <ArticlesAlternativeCarousel relatedTagUuid="d7a60eec-bd2d-4b72-9342-3995837bf443" />
           </div>
           <div class="column is-2">
             <Sidebar />
