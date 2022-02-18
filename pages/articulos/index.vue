@@ -71,7 +71,7 @@
           <h1 class="subtitle is-3">
             Todos los artículos
           </h1>
-          <ArticlesMasonry :articles="articles || []" :tags="tags"/>
+          <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories"/>
         </div>
       </div>
     </div>
@@ -139,12 +139,14 @@ export default {
 
       const articles = res.data.stories
       const tags = _(articles).map(a => a.content.tags).flatten().uniqBy('slug').value()
+      const categories = ['columna', 'investigacion', 'entrevista']
       return {
         articles: articles.map(a => ({
           ...a.content,
           slug: a.slug
         })),
-        tags
+        tags,
+        categories
       }
     } catch (err) {
       console.error(err.response.data)
