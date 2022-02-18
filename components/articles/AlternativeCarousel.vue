@@ -1,5 +1,8 @@
 <template>
   <section class="">
+    <h1 class="title is-3">
+      Ver otros artículos relacionados
+    </h1>
     <div v-if="$fetchState.pending" class="section">
       <h4 class="subtitle has-text-white is-4 has-text-centered">
         <i class="fas fa-sync fa-spin" />&nbsp; Cargando artículos
@@ -54,25 +57,35 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   props: {
-    skipArticle: {
-      type: String,
+    article: {
       required: false,
-      default: () => null
+      default: () => {}
+    },
+    relatedTagUuid: {
+      required: false,
+      default: () => ''
     }
   },
   fetchOnServer: false,
   async fetch () {
     const version = this.$nuxt.context._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
 
+    const options = {
+      starts_with: 'articulos',
+      per_page: 5,
+      resolve_relations: 'Articulo.author,Articulo.tags',
+      version,
+      'filter_query[tags][in_array]': this.article ? _(this.article.tags).map('uuid').join() : this.relatedTagUuid
+    }
+
+    const titleFilter = this.article ? { 'filter_query[title][not_like]': this.article.title } : {}
+    const optionsWithTitleFilter = _.assign({}, options, titleFilter)
     const res = await this.$storyapi
-      .get('cdn/stories/', {
-        starts_with: 'articulos',
-        per_page: 5,
-        resolve_relations: 'Articulo.author,Articulo.tags',
-        version
-      })
+      .get('cdn/stories/', optionsWithTitleFilter)
 
     const _articles = res.data.stories.map(a => (
       {
@@ -82,7 +95,7 @@ export default {
         author: a.content.author,
         tags: a.content.tags && a.content.tags.map(t => t.name)
       }))
-      .filter(a => a.slug !== this.skipArticle)
+      .filter(a => this.article ? a.slug !== this.article.slug : true)
 
     _articles.sort((a, b) => {
       return parseInt(a.order) - parseInt(b.order)

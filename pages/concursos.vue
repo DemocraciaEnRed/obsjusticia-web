@@ -13,6 +13,7 @@
             <Conclusiones scroll-id="conclusiones" />
             <Lexico scroll-id="lexico" />
             <Fuentes scroll-id="fuentes" />
+            <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" />
           </div>
           <div class="column is-2">
             <Sidebar />

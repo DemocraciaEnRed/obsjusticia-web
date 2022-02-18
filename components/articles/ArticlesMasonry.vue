@@ -13,8 +13,19 @@
           </h4>
         </div> -->
       <!-- <div v-else class=""> -->
+      <div>
+        <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': tagIsSelected(tag) }">
+          <input class="filter-pill" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="appliedTags">
+          <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
+        </div>
+        </br>
+        <div v-for="category in categories" v-bind:key="category" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': categoryIsSelected(category) }">
+          <input class="filter-pill" type="checkbox" :id="category" :value="category" v-model="appliedCategories">
+          <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
+        </div>
+      </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-for="(article, index) in articles" :key="index" v-masonry-tile class="articles-card">
+        <div v-for="(article, key) in filteredArticles" :key="article.slug + key" v-masonry-tile class="articles-card">
           <NuxtLink :to="`articulos/${article.slug}`">
             <div class="card">
               <div class="card-image">
@@ -44,12 +55,13 @@
                   {{ article.description }}
                 </p>
                 <div class="tags">
-                  <span v-for="(tag,index2) in article.tags" :key="`tag-${index2}`" class="tag is-special is-capitalized">{{ tag }}</span>
+                  <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
                 </div>
               </div>
             </div>
           </NuxtLink>
         </div>
+        <div class="empty-filter-results" v-if="!filteredArticles.length">No hay artículos que coincidan con la búsqueda</div>
       </div>
       <!-- </div>
       </div> -->
@@ -59,13 +71,47 @@
   </div>
 </template>
 <script>
+import _ from 'lodash'
+
 export default {
   fetchOnServer: false,
   props: {
-    articles: []
+    articles: [],
+    tags: [],
+    categories: []
   },
   mounted () {
     this.$redrawVueMasonry()
+  },
+  data () {
+    return {
+      appliedTags: [],
+      appliedCategories: []
+    }
+  },
+  computed: {
+    filteredArticles () {
+      const appliedTags = this.appliedTags
+      const appliedCategories = this.appliedCategories
+      return _.filter(this.articles, ({ tags = [], category }) => {
+        const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
+        category = _.includes(category, 'investigacion') ? 'investigacion' : category
+        const toComparableCategory = category => _.chain(category).toLower().deburr().value()
+        const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableCategory).includes(toComparableCategory(category)) : true
+        return tagsApply && categoryApplies
+      })
+    }
+  },
+  methods: {
+    tagIsSelected ({ slug }) {
+      return _.includes(this.appliedTags, slug)
+    },
+    categoryIsSelected (category) {
+      return _.includes(this.appliedCategories, category)
+    },
+    toUpper (string) {
+      return _.toUpper(string)
+    }
   }
 }
 </script>
@@ -96,6 +142,36 @@ export default {
   .card-image .image{
     background-size: cover;
     background-position: center center;
+  }
+  .filter-pills-container{
+    flex: 1 0 21%;
+    margin: 5px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 0;
+  }
+  .filter-pill{
+    display: none;
+  }
+  .pill-label{
+    cursor: pointer;
+    padding: 0 9px 0 9px;
+  }
+  .filter-pill-active{
+    background-color: #6C9EFF;
+  }
+  .noSelect{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+  .empty-filter-results{
+    margin-top: 30px;
   }
   // .image{
   //   overflow: hidden;

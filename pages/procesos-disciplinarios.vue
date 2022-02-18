@@ -170,6 +170,9 @@
         </div>
       </div>
     </div>
+    <div id="articulos-relacionados" class="section">
+      <ArticlesAlternativeCarousel relatedTagUuid="888b86d9-d663-4289-8caa-9675b2b2421f" />
+    </div>
     <div id="fuente" class="section">
       <div class="container has-text-centered">
         <h1 class="title is-2">

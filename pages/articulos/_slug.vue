@@ -55,10 +55,10 @@
               </p>
               <div v-if="article.tags && article.tags.length > 0" class="tags">
                 <span
-                  v-for="(tag, i) in article.tags"
+                  v-for="({ name }, i) in article.tags"
                   :key="`tags${i}`"
                   class="tag is-special is-capitalized"
-                >{{ tag }}</span>
+                >{{ name }}</span>
               </div>
             </div>
           </div>
@@ -72,19 +72,16 @@
             </div>
             <div v-if="article.tags && article.tags.length > 0" class="tags">
               <span
-                v-for="(tag, i) in article.tags"
+                v-for="({ name }, i) in article.tags"
                 :key="`tags${i}`"
                 class="tag is-special is-capitalized"
-              >{{ tag }}</span>
+              >{{ name }}</span>
             </div>
           </div>
         </div>
       </div>
       <div class="container is-fluid">
-        <h1 class="title is-3">
-          Ver otros artículos relacionados
-        </h1>
-        <AlternativeCarousel :skip-article="article.slug" />
+        <AlternativeCarousel :article="article"/>
       </div>
     </div>
   </section>
@@ -110,12 +107,14 @@ export default {
         })
 
       return {
-        article:
-      {
-        ...res.data.story.content,
-        slug: context.params.slug,
-        tags: res.data.story.content.tags && res.data.story.content.tags.map(t => res.data.rels.filter(r => r.uuid === t)[0].name)
-      }
+        article: {
+          ...res.data.story.content,
+          slug: context.params.slug,
+          tags: res.data.story.content.tags && res.data.story.content.tags.map(t => ({
+            name: res.data.rels.filter(r => r.uuid === t)[0].name,
+            uuid: t
+          }))
+        }
       }
     } catch (err) {
       if (!err.response) {
