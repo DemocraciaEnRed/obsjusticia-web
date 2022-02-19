@@ -33,10 +33,17 @@
           <input class="filter-pill" type="checkbox" :id="category" :value="category" v-model="appliedCategories">
           <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
         </div>
+        <div class="date-sorter-container">
+          <select v-model="dateOrder" class="date-sorter">
+            <option value="" disabled>ORDENAR POR</option>
+            <option value="desc">MÁS RECIENTES</option>
+            <option value="asc">MÁS ANTIGUOS</option>
+          </select>
+        </div>
       </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-if="filteredArticles.length">
-          <div v-for="(article, key) in filteredArticles" :key="article.slug + key" v-masonry-tile class="articles-card" >
+        <div v-if="filteredAndSortedArticles.length">
+          <div v-for="(article, key) in filteredAndSortedArticles" :key="article.slug + key" v-masonry-tile class="articles-card" >
             <NuxtLink :to="`articulos/${article.slug}`">
               <div class="card">
                 <div class="card-image">
@@ -99,22 +106,26 @@ export default {
     return {
       appliedTags: [],
       appliedCategories: [],
-      searchText: ''
+      searchText: '',
+      dateOrder: ''
     }
   },
   computed: {
-    filteredArticles () {
+    filteredAndSortedArticles () {
       const appliedTags = this.appliedTags
       const appliedCategories = this.appliedCategories
       const searchText = this.searchText
-      return _.filter(this.articles, ({ tags = [], category, author }) => {
-        const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
-        category = _.includes(category, 'investigacion') ? 'investigacion' : category
-        const toComparableText = category => _.chain(category).toLower().deburr().value()
-        const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
-        const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
-        return tagsApply && categoryApplies && textMatches
-      })
+      return _(this.articles)
+        .filter(({ tags = [], category, author }) => {
+          const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
+          category = _.includes(category, 'investigacion') ? 'investigacion' : category
+          const toComparableText = category => _.chain(category).toLower().deburr().value()
+          const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
+          const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
+          return tagsApply && categoryApplies && textMatches
+        })
+        .orderBy('date', this.dateOrder)
+        .value()
     }
   },
   methods: {
@@ -222,6 +233,16 @@ export default {
   .filters-title{
     padding-left: 10px;
     margin-bottom: 10px;
+  }
+  .date-sorter-container{
+    padding: 20px 0 10px 10px;
+  }
+  .date-sorter{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px;
+    width: 200px;
+    padding: 10px 0 10px 30px;
   }
   // .image{
   //   overflow: hidden;
