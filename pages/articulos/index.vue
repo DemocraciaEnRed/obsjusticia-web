@@ -68,9 +68,6 @@
           </b-carousel-item>
         </b-carousel>
         <div class="my-6 py-5">
-          <h1 class="subtitle is-3">
-            Todos los artículos
-          </h1>
           <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories"/>
         </div>
       </div>

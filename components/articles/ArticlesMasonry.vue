@@ -14,6 +14,16 @@
         </div> -->
       <!-- <div v-else class=""> -->
       <div>
+        <h1 class="subtitle is-1 search-text-row">
+          Todos los artículos
+        </h1>
+        <div class="search-text-row search-input-container">
+          <i class="fa fa-search"></i>
+          <input v-model="searchText" class="search-input" placeholder="BUSCAR POR AUTOR (NOMBRE/APELLIDO)">
+        </div>
+      </div>
+      <div>
+        <p class="filters-title">Filtros:</p>
         <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': tagIsSelected(tag) }">
           <input class="filter-pill" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="appliedTags">
           <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
@@ -25,43 +35,45 @@
         </div>
       </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-for="(article, key) in filteredArticles" :key="article.slug + key" v-masonry-tile class="articles-card">
-          <NuxtLink :to="`articulos/${article.slug}`">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
-              </div>
-              <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
-                <div>
-                  <div class="is-clearfix mb-3">
-                    <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
-                      {{ article.category }}
+        <div v-if="filteredArticles.length">
+          <div v-for="(article, key) in filteredArticles" :key="article.slug + key" v-masonry-tile class="articles-card" >
+            <NuxtLink :to="`articulos/${article.slug}`">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
+                </div>
+                <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
+                  <div>
+                    <div class="is-clearfix mb-3">
+                      <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
+                        {{ article.category }}
+                      </p>
+                      <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
+                        {{ article.date && article.date.slice(0,10) }}
+                      </p>
+                    </div>
+                    <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
+                      {{ article.title }}
                     </p>
-                    <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                      {{ article.date && article.date.slice(0,10) }}
+                    <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                      {{ article.author }}
                     </p>
+                    <!-- <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                          {{ article.order }}
+                        </p> -->
                   </div>
-                  <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
-                    {{ article.title }}
+                  <p class="my-5">
+                    {{ article.description }}
                   </p>
-                  <p class="subtitle is-6 is-raleway has-text-grey mt-2">
-                    {{ article.author }}
-                  </p>
-                  <!-- <p class="subtitle is-6 is-raleway has-text-grey mt-2">
-                        {{ article.order }}
-                      </p> -->
-                </div>
-                <p class="my-5">
-                  {{ article.description }}
-                </p>
-                <div class="tags">
-                  <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
+                  <div class="tags">
+                    <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </NuxtLink>
+            </NuxtLink>
+          </div>
         </div>
-        <div class="empty-filter-results" v-if="!filteredArticles.length">No hay artículos que coincidan con la búsqueda</div>
+        <div class="empty-filter-results" v-else>No hay artículos que coincidan con la búsqueda</div>
       </div>
       <!-- </div>
       </div> -->
@@ -86,19 +98,22 @@ export default {
   data () {
     return {
       appliedTags: [],
-      appliedCategories: []
+      appliedCategories: [],
+      searchText: ''
     }
   },
   computed: {
     filteredArticles () {
       const appliedTags = this.appliedTags
       const appliedCategories = this.appliedCategories
-      return _.filter(this.articles, ({ tags = [], category }) => {
+      const searchText = this.searchText
+      return _.filter(this.articles, ({ tags = [], category, author }) => {
         const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
         category = _.includes(category, 'investigacion') ? 'investigacion' : category
-        const toComparableCategory = category => _.chain(category).toLower().deburr().value()
-        const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableCategory).includes(toComparableCategory(category)) : true
-        return tagsApply && categoryApplies
+        const toComparableText = category => _.chain(category).toLower().deburr().value()
+        const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
+        const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
+        return tagsApply && categoryApplies && textMatches
       })
     }
   },
@@ -172,6 +187,41 @@ export default {
   }
   .empty-filter-results{
     margin-top: 30px;
+  }
+  .search-text-row{
+    display: inline-block;
+  }
+  .search-input-container{
+    padding-top: 7px;
+    position: relative;
+    float: right;
+    @media (max-width: $desktop){
+      float: none;
+      margin-bottom: 20px;
+    }
+  }
+  .search-input-container i{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    font-size: 20px;
+  }
+  .search-input{
+    width: 500px;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 8px;
+    border-width: 3px;
+    @media (max-width: $desktop){
+      width: 350px;
+    }
+  }
+  ::placeholder {
+    color: black;
+  }
+  .filters-title{
+    padding-left: 10px;
+    margin-bottom: 10px;
   }
   // .image{
   //   overflow: hidden;
