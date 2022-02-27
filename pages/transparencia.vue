@@ -5,6 +5,7 @@
         <div class="columns">
           <div class="column is-8 is-offset-2">
             <Header scroll-id="ley" />
+            <PedidosInformes scroll-id="pedidos-informes" />
             <TransparenciaActiva scroll-id="transparencia-activa" />
             <TransparenciaPasiva scroll-id="transparencia-pasiva" />
             <SujetosObligados scroll-id="sujetos-obligados" />
@@ -31,6 +32,7 @@
 <script>
 import Sidebar from '~/components/transparencia/Sidebar'
 import Header from '~/components/transparencia/Header'
+import PedidosInformes from '~/components/transparencia/PedidosInformes'
 import TransparenciaActiva from '~/components/transparencia/TransparenciaActiva'
 import TransparenciaPasiva from '~/components/transparencia/TransparenciaPasiva'
 import SujetosObligados from '~/components/transparencia/SujetosObligados'
@@ -49,6 +51,7 @@ export default {
   layout: 'default-darknav',
   components: {
     Header,
+    PedidosInformes,
     Sidebar,
     OrganosGarantes,
     SujetosObligados,

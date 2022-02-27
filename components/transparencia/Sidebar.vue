@@ -1,6 +1,7 @@
 <template>
   <scrollactive active-class="active" class="my-nav" :offset="0" :duration="1000" bezier-easing-value=".5,0,.35,1">
     <a href="#ley" class="scrollactive-item">Ley 27.275</a>
+    <a href="#pedidos-informes" class="scrollactive-item">Solicitudes de información</a>
     <a href="#transparencia-activa" class="scrollactive-item">Transparencia Activa</a>
     <a href="#transparencia-pasiva" class="scrollactive-item">Transparencia Pasiva</a>
     <a href="#sujetos-obligados" class="scrollactive-item">Sujetos Obligados</a>
