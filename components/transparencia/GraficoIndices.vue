@@ -26,7 +26,7 @@
           <table class="table">
             <thead>
               <tr>
-                <th />
+                <th width="40%" />
                 <th class="has-text-centered">
                   CMN
                 </th>
@@ -43,36 +43,36 @@
             </thead>
             <tbody>
               <tr>
-                <td class="has-text-right is-size-4">
+                <td class="has-text-right is-size-5">
                   Transparencia Pasiva (TP)*
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].cmn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[0].cmn)}`">
                   {{ data[0].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].csjn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[0].csjn)}`">
                   {{ data[0].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].mpd)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[0].mpd)}`">
                   {{ data[0].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].mpf)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[0].mpf)}`">
                   {{ data[0].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-4">
+                <td class="has-text-right is-size-5">
                   Promedio Transparencia Activa (TA)
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].cmn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[1].cmn)}`">
                   {{ data[1].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].csjn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[1].csjn)}`">
                   {{ data[1].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].mpd)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[1].mpd)}`">
                   {{ data[1].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].mpf)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[1].mpf)}`">
                   {{ data[1].mpf }}
                 </td>
               </tr>
@@ -128,19 +128,19 @@
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-4">
+                <td class="has-text-right is-size-5">
                   Organos Garantes OG
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].cmn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[5].cmn)}`">
                   {{ data[5].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].csjn)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[5].csjn)}`">
                   {{ data[5].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].mpd)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[5].mpd)}`">
                   {{ data[5].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].mpf)}`">
+                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[5].mpf)}`">
                   {{ data[5].mpf }}
                 </td>
               </tr>
