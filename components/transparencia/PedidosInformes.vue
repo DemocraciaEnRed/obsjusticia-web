@@ -1,5 +1,5 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight my-6">
+  <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
@@ -31,34 +31,34 @@
           <table class="table">
             <thead>
               <tr>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4">
                   Pedido  de información
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4">
                   Sujeto obligado
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4">
                   Resumen del pedido
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4">
                   Respuesta
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="({ pedido, respuesta }, index) in pedidos" :key="index">
-                <td class="data-value has-text-centered is-size-4">
+                <td class="data-value has-text-centered is-size-5">
                   {{ pedido.fecha }}
                 </td>
-                <td class="data-value has-text-centered is-size-4">
+                <td class="data-value has-text-centered is-size-5">
                   {{ pedido.sujetoObligado }}
                 </td>
-                <td class="data-value has-text-centered is-size-4">
+                <td class="data-value has-text-centered is-size-5">
                   <p v-for="(detalleResumen, index) in pedido.resumen" :key="index" >
                     {{ detalleResumen }}
                   </p>
                 </td>
-                <td class="data-value has-text-centered is-size-4">
+                <td class="data-value has-text-centered is-size-5">
                   {{ respuesta.fecha }}
                 </td>
               </tr>
