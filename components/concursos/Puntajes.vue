@@ -166,6 +166,7 @@ export default {
       default: () => 'default-id'
     }
   },
+  fetchOnServer: false,
   async fetch () {
     if (this.status == null) {
       await fetch(

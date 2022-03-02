@@ -103,6 +103,7 @@ export default {
       default: () => 'default-id'
     }
   },
+  fetchOnServer: false,
   async fetch () {
     const data = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/14MCUztXQC4eP1xcAae-J0xb61cixFIMVESDia0kIyX4/values/Sheet1?key=${this.$config.googleSheetApiKey}`
