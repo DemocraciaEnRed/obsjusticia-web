@@ -122,7 +122,7 @@ export default {
       return pedidos
     },
     validLink (link) {
-      return link.match(/http(s):\/\//) ? link : null
+      return link && link.match(/http(s):\/\//) ? link : null
     }
   }
 }
@@ -132,6 +132,8 @@ export default {
 .table{
   background-color: transparent;
   margin: 0 auto 50px;
+  overflow: auto;
+  display: block;
   th, td {
     color: black;
   }
