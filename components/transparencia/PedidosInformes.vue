@@ -28,6 +28,12 @@
               Accedé a los pedidos de acceso a la información pública que presentamos ante el Poder Judicial y Ministerio Público y sus respuestas.
             </p>
           </div>
+          <div class="search-input-container-container">
+            <div class="search-text-row search-input-container">
+              <i class="fa fa-search"></i>
+              <input v-model="searchText" class="search-input" placeholder="Busque por sujeto obligado">
+            </div>
+          </div>
           <table class="table">
             <thead>
               <tr>
@@ -46,7 +52,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="({ pedido, respuesta }, index) in pedidos" :key="index">
+              <tr v-for="({ pedido, respuesta }, index) in pedidosFiltrados" :key="index">
                 <td class="data-value has-text-centered is-size-5">
                   {{ pedido.fecha }}
                 </td>
@@ -79,6 +85,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 
 export default {
   props: {
@@ -96,7 +103,8 @@ export default {
   },
   data () {
     return {
-      pedidos: []
+      pedidos: [],
+      searchText: ''
     }
   },
   methods: {
@@ -124,6 +132,15 @@ export default {
     validLink (link) {
       return link && link.match(/http(s):\/\//) ? link : null
     }
+  },
+  computed: {
+    pedidosFiltrados () {
+      const toComparableText = category => _.chain(category).toLower().deburr().value()
+      const searchText = this.searchText
+      return _.filter(this.pedidos, ({ pedido: { sujetoObligado } }) =>
+        !searchText || (searchText.length >= 3 && _.includes(toComparableText(sujetoObligado), toComparableText(searchText)))
+      )
+    }
   }
 }
 </script>
@@ -150,5 +167,40 @@ export default {
 }
 .data-value{
   font-weight: 700;
+}
+.search-text-row{
+  display: inline-block;
+}
+.search-input-container-container{
+  width: 100%;
+  display: inline-block;
+}
+.search-input-container{
+  padding-top: 7px;
+  position: relative;
+  float: right;
+  @media (max-width: $desktop){
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+.search-input-container i{
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  font-size: 20px;
+}
+.search-input{
+  width: 500px;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 8px;
+  border-width: 3px;
+  @media (max-width: $desktop){
+    width: 350px;
+  }
+}
+::placeholder {
+  color: black;
 }
 </style>
