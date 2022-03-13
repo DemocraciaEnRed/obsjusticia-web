@@ -35,47 +35,54 @@
             </div>
           </div>
           <table class="table">
-            <thead>
-              <tr>
-                <th class="has-text-centered is-size-4">
-                  Pedido  de información
-                </th>
-                <th class="has-text-centered is-size-4">
-                  Sujeto obligado
-                </th>
-                <th class="has-text-centered is-size-4">
-                  Resumen del pedido
-                </th>
-                <th class="has-text-centered is-size-4">
-                  Respuesta
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="({ pedido, respuesta }, index) in pedidosFiltrados" :key="index">
-                <td class="data-value has-text-centered is-size-5">
-                  {{ pedido.fecha }}
-                </td>
-                <td class="data-value has-text-centered is-size-5">
-                  {{ pedido.sujetoObligado }}
-                </td>
-                <td class="data-value has-text-centered is-size-5">
-                  <p v-for="(detalleResumen, index) in pedido.resumen" :key="index" >
-                    {{ detalleResumen }}
-                  </p>
-                </td>
-                <td class="data-value has-text-centered is-size-5">
-                  {{ respuesta.fecha }}
-                </td>
-              </tr>
-            </tbody>
+            <div v-if="pedidosFiltrados.length > 0" class="has-text-centered">
+              <thead>
+                <tr>
+                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                    Pedido  de información
+                  </th>
+                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                    Sujeto obligado
+                  </th>
+                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                    Resumen del pedido
+                  </th>
+                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                    Respuesta
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="({ pedido, respuesta }, index) in pedidosFiltrados" :key="index">
+                  <td class="data-value has-text-centered is-size-5 has-text-weight-normal">
+                    {{ pedido.fecha }}
+                  </td>
+                  <td class="data-value has-text-centered is-size-5 has-text-weight-normal">
+                    {{ pedido.sujetoObligado }}
+                  </td>
+                  <td class="data-value has-text-centered is-size-5 has-text-weight-light">
+                    <p v-for="(detalleResumen, index) in pedido.resumen" :key="index" class="pl-4 has-text-left">
+                      {{ detalleResumen }}
+                    </p>
+                  </td>
+                  <td class="data-value has-text-centered is-size-5">
+                    {{ respuesta.fecha }}
+                  </td>
+                </tr>
+              </tbody>
+            </div>
+            <div v-else>
+              <p class="is-size-4">
+                No hay pedidos que coincidan con la búsqueda
+              </p>
+            </div>
           </table>
           <div class="content">
             <p class="is-size-4 line-height-150">
               Solicitá información pública a los órganos del sistema de justicia.
             </p>
             <button>
-              Descarga directa
+              <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank">Descarga directa</a>
             </button>
           </div>
         </div>
@@ -126,7 +133,6 @@ export default {
         }
       }))
 
-      console.log({ pedidos: JSON.stringify(pedidos) })
       return pedidos
     },
     validLink (link) {
@@ -151,18 +157,49 @@ export default {
   margin: 0 auto 50px;
   overflow: auto;
   display: block;
-  th, td {
-    color: black;
+  th {
+    color: white;
+  }
+  td {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   thead{
-    th{
-      border-color: black
+    background-color: #3157AC;
+    tr {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 2px 2px 0px 0px;
     }
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px 2px 0px 0px;
   }
   tbody{
+    tr {
+      border-bottom: 2px solid #C3C3C3;
+      background-color: #EAEAEA;
+    }
     tr td{
       border-bottom: 0;
+    vertical-align: middle;
+
     }
+  }
+  .header-item{
+    vertical-align: middle;
+    position: relative;
+  }
+  .header-item::after{
+    content: "";
+    height: 70%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    margin-top: 15px;
+  }
+  .header-item:last-child:after{
+    display: none;
   }
 }
 .data-value{
@@ -187,20 +224,21 @@ export default {
 .search-input-container i{
   position: absolute;
   right: 15px;
-  top: 16px;
+  top: 46px;
   font-size: 20px;
+  color: #3157AC;
 }
 .search-input{
   width: 500px;
-  background-color: transparent;
-  border-radius: 5px;
   padding: 8px;
-  border-width: 3px;
+  border: 2px solid #3157AC;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   @media (max-width: $desktop){
     width: 350px;
   }
-}
-::placeholder {
-  color: black;
 }
 </style>
