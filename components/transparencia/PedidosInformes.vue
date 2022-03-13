@@ -54,8 +54,14 @@
               </thead>
               <tbody>
                 <tr v-for="({ pedido, respuesta }, index) in pedidosFiltrados" :key="index">
-                  <td class="data-value has-text-centered is-size-5 has-text-weight-normal">
-                    {{ pedido.fecha }}
+                  <td class="data-value has-text-centered is-size-5">
+                    <p class="has-text-weight-normal mb-4">{{ pedido.fecha }}</p>
+                    <div v-if="pedido.fechaReiteracion">
+                      <p class="has-text-weight-bold">Reiterado {{ pedido.fechaReiteracion }}</p>
+                    </div>
+                    <div class="mt-4">
+                      <a :href="pedido.link" target="_blank">Solicitud</a>
+                    </div>
                   </td>
                   <td class="data-value has-text-centered is-size-5 has-text-weight-normal">
                     {{ pedido.sujetoObligado }}
@@ -65,8 +71,17 @@
                       {{ detalleResumen }}
                     </p>
                   </td>
-                  <td class="data-value has-text-centered is-size-5">
-                    {{ respuesta.fecha }}
+                  <td class="data-value has-text-centered is-size-5 has-text-weight-normal">
+                    <p>{{ respuesta.fecha }}</p>
+                    <div v-if="respuesta.link" class="mt-4">
+                      <a :href="respuesta.link" target="_blank">{{ toUpper(respuesta.tipo) }}</a>
+                    </div>
+                    <div v-else-if="respuesta.tipo">
+                      <p>{{ toUpper(respuesta.tipo) }}</p>
+                    </div>
+                    <div v-else>
+                      PENDIENTE
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -137,6 +152,9 @@ export default {
     },
     validLink (link) {
       return link && link.match(/http(s):\/\//) ? link : null
+    },
+    toUpper (string) {
+      return _.toUpper(string)
     }
   },
   computed: {
