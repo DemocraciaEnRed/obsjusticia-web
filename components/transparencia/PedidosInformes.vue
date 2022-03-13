@@ -92,11 +92,11 @@
               </p>
             </div>
           </table>
-          <div class="content">
-            <p class="is-size-4 line-height-150">
+          <div class="content download-section">
+            <p class="is-size-4 line-height-150 download-info">
               Solicitá información pública a los órganos del sistema de justicia.
             </p>
-            <button>
+            <button class="download-button">
               <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank">Descarga directa</a>
             </button>
           </div>
@@ -184,26 +184,26 @@ export default {
   }
   thead{
     background-color: #3157AC;
-    tr {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 2px 2px 0px 0px;
+    th{
+      vertical-align: middle;
     }
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 2px 2px 0px 0px;
   }
   tbody{
     tr {
       border-bottom: 2px solid #C3C3C3;
       background-color: #EAEAEA;
     }
+    tr:last-child{
+      border-bottom: none;
+    }
     tr td{
       border-bottom: 0;
-    vertical-align: middle;
-
+    }
+    td{
+      vertical-align: middle;
     }
   }
   .header-item{
-    vertical-align: middle;
     position: relative;
   }
   .header-item::after{
@@ -258,5 +258,21 @@ export default {
   @media (max-width: $desktop){
     width: 350px;
   }
+}
+.download-section{
+  width: fit-content;
+  margin: 0 auto;
+}
+.download-info{
+  float: left;
+}
+.download-button{
+  background-color: transparent;
+  border: 2px solid #3262C0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 15px;
+  float: left;
+  margin-left: 30px;
 }
 </style>
