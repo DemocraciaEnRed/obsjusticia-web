@@ -117,4 +117,7 @@ background-color: #00B1AF;
 .sidebar{
   padding-right: 50px;
 }
+.columns{
+  margin-right: 0px;
+}
 </style>
