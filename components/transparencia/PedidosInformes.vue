@@ -38,16 +38,16 @@
             <div v-if="pedidosFiltrados.length > 0" class="has-text-centered">
               <thead>
                 <tr>
-                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                  <th class="has-text-centered is-size-5 has-text-weight-normal header-item">
                     Pedido  de información
                   </th>
-                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                  <th class="has-text-centered is-size-5 has-text-weight-normal header-item">
                     Sujeto obligado
                   </th>
-                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                  <th class="has-text-centered is-size-5 has-text-weight-normal header-item">
                     Resumen del pedido
                   </th>
-                  <th class="has-text-centered is-size-4 has-text-weight-normal header-item">
+                  <th class="has-text-centered is-size-5 has-text-weight-normal header-item">
                     Respuesta
                   </th>
                 </tr>
@@ -93,11 +93,13 @@
             </div>
           </table>
           <div class="content download-section">
-            <p class="is-size-4 line-height-150 download-info">
+            <p class="is-size-4 line-height-150 download-info mt-1">
               Solicitá información pública a los órganos del sistema de justicia.
             </p>
             <button class="download-button">
-              <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank">Descarga directa</a>
+              <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank" class="is-size-5">
+                Descarga directa
+              </a>
             </button>
           </div>
         </div>
@@ -175,17 +177,25 @@ export default {
   margin: 0 auto 50px;
   overflow: auto;
   display: block;
-  th {
-    color: white;
+  height: 700px;
+  overflow-y: scroll;
+  thead tr:nth-child(1) th{
+    background-color: #3157AC;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   td {
     padding-top: 30px;
     padding-bottom: 30px;
   }
   thead{
-    background-color: #3157AC;
     th{
+      color: white;
       vertical-align: middle;
+      position: sticky; top: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
   tbody{
