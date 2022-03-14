@@ -2,10 +2,6 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700 is-spaced">
-          Información adicional
-        </h1>
-        <br>
         <div class="columns is-vcentered is-centered my-6">
           <div class="column is-narrow">
             <i class="far fa-file-pdf has-text-orange fa-5x" />

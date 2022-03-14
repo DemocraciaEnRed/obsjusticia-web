@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
-          Indices
+          Índice general
         </h1>
         <br>
         <div v-if="$fetchState.pending" class="p-6 has-text-centered">
@@ -44,7 +44,7 @@
             <tbody>
               <tr>
                 <td class="has-text-right is-size-5">
-                  Transparencia Pasiva (TP)*
+                  Transparencia Pasiva (TP)
                 </td>
                 <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[0].cmn)}`">
                   {{ data[0].cmn }}
@@ -61,7 +61,7 @@
               </tr>
               <tr>
                 <td class="has-text-right is-size-5">
-                  Promedio Transparencia Activa (TA)
+                  Promedio Transparencia Activa (TA)*
                 </td>
                 <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[1].cmn)}`">
                   {{ data[1].cmn }}
@@ -146,14 +146,11 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="content">
-          <p class="is-size-4 line-height-150">
-            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-          </p>
-          <p class="is-size-5">
-            <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
-          </p>
+          <div class="content">
+            <p class="is-size-5">
+              <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
+            </p>
+          </div>
         </div>
       </div>
     </div>

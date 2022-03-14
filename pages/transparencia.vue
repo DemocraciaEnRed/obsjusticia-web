@@ -6,17 +6,13 @@
           <div class="column is-8 is-offset-2">
             <Header scroll-id="ley" />
             <PedidosInformes scroll-id="pedidos-informes" />
-            <TransparenciaActiva scroll-id="transparencia-activa" />
-            <TransparenciaPasiva scroll-id="transparencia-pasiva" />
-            <SujetosObligados scroll-id="sujetos-obligados" />
-            <OrganosGarantes scroll-id="organos-garantes" />
             <Cumplimiento scroll-id="cumplimiento" />
             <GraficoIndices scroll-id="grafico-indices" />
             <GraficoCumplimiento scroll-id="grafico-cumplimiento" />
             <GraficoDesagregacion scroll-id="grafico-desagregacion" />
-            <Glosario scroll-id="glosario" />
-            <Conclusiones scroll-id="conclusiones" />
             <InformacionAdicional scroll-id="informacion-adicional" />
+            <Conclusiones scroll-id="conclusiones" />
+            <Glosario scroll-id="glosario" />
             <ArticlesAlternativeCarousel relatedTagUuid="d7a60eec-bd2d-4b72-9342-3995837bf443" scroll-id="articulos-relacionados" />
             <Fuentes scroll-id="fuentes" />
           </div>
@@ -33,10 +29,6 @@
 import Sidebar from '~/components/transparencia/Sidebar'
 import Header from '~/components/transparencia/Header'
 import PedidosInformes from '~/components/transparencia/PedidosInformes'
-import TransparenciaActiva from '~/components/transparencia/TransparenciaActiva'
-import TransparenciaPasiva from '~/components/transparencia/TransparenciaPasiva'
-import SujetosObligados from '~/components/transparencia/SujetosObligados'
-import OrganosGarantes from '~/components/transparencia/OrganosGarantes'
 import Cumplimiento from '~/components/transparencia/Cumplimiento'
 import GraficoIndices from '~/components/transparencia/GraficoIndices'
 import GraficoCumplimiento from '~/components/transparencia/GraficoCumplimiento'
@@ -53,10 +45,6 @@ export default {
     Header,
     PedidosInformes,
     Sidebar,
-    OrganosGarantes,
-    SujetosObligados,
-    TransparenciaActiva,
-    TransparenciaPasiva,
     Cumplimiento,
     GraficoIndices,
     GraficoCumplimiento,
