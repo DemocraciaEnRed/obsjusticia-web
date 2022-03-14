@@ -6,9 +6,6 @@
           Conclusiones
         </h1>
         <br>
-        <br>
-        <br>
-        <br>
         <h1 class="title is-3 is-700 is-spaced">
           Sobre transparencia pasiva
         </h1>
@@ -18,7 +15,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-wifi has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               La Corte Suprema de Justicia de la Nación es el único sujeto obligado que no cuenta con medios electrónicos para realizar solicitudes de acceso a la información pública.
             </p>
           </div>
@@ -26,7 +23,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-history has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               El CMN y la CSJN respondieron más de un 50% de las solicitudes dentro del plazo de 15 días hábiles establecido por la ley. A su vez, contestaron más de un 15% de los pedidos recibidos en un plazo mayor a 30 días hábiles.
             </p>
           </div>
@@ -34,7 +31,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-reply-all has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               El PJ y MP cuentan con un nivel de respuesta de los pedidos de acceso a la información pública que supera el 90% de los casos.
             </p>
           </div>
@@ -42,7 +39,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-poll has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               El tipo de información más solicitada al CMN y a la CSJN son estadísticas judiciales e información sobre sus autoridades y personal.
             </p>
           </div>
@@ -50,7 +47,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-hourglass-end has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               El MPF y MPD respondieron el 100% de las solicitudes recibidas dentro del plazo de 15 días hábiles establecido por la ley.
             </p>
           </div>
@@ -70,7 +67,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-exclamation-triangle has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               Ninguno de los sujetos obligados publica las declaraciones juradas patrimoniales de sus integrantes para su descarga directa.
             </p>
           </div>
@@ -78,7 +75,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-file-excel has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               La CSJN no publica información sobre permisos, concesiones y autorizaciones otorgados, informes de auditorías y la información sobre cómo y dónde se realiza una solicitud de información pública.
             </p>
           </div>
@@ -86,7 +83,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-random has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               El CMN no publica información sobre transferencias,  permisos, concesiones y autorizaciones otorgados y los trámites y procedimientos que se realicen ante el organismo.
             </p>
           </div>
@@ -94,7 +91,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-poll has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               Ninguno de los sujetos obligados publica de forma completa la información sobre su presupuesto y contrataciones.
             </p>
           </div>
@@ -102,7 +99,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-copy has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               Ni el MPD ni el MPF publican informes de auditoría.
             </p>
           </div>
@@ -122,7 +119,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-balance-scale has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               La Corte Suprema de Justicia de la Nación no creó una Agencia de Acceso a la Información Pública, incumpliendo con lo establecido en la ley 27.275.
             </p>
           </div>
@@ -130,7 +127,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-search has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               Únicamente las reglamentaciones de los órganos garantes del MPD y CMN prevén convocatorias abiertas para la designación de su autoridad.
             </p>
           </div>
@@ -138,7 +135,7 @@
             <h1 class="title is-4 is-700">
               <i class="fas fa-exclamation-triangle has-text-orange fa-2x" />
             </h1>
-            <p class="is-size-5">
+            <p class="is-size-4">
               La reglamentación del MPF es la única que contiene garantías contra la remoción arbitraria de su titular.
             </p>
           </div>
