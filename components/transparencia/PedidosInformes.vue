@@ -265,6 +265,7 @@ export default {
   border-radius: 3px;
   margin-top: 30px;
   margin-bottom: 15px;
+  outline: none;
   @media (max-width: $desktop){
     width: 350px;
   }
