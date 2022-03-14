@@ -7,9 +7,12 @@
             <router-link to="/concursos" class="has-text-white is-size-5 level-item">Concursos</router-link>
             <a href="/procesos-disciplinarios" class="has-text-white is-size-5 level-item">Disciplina</a>
             <router-link to="/transparencia" class="has-text-white is-size-5 level-item">Transparencia</router-link>
-            <a href="/corrupcion" class="has-text-white is-size-5 level-item">Corrupción</a>
+            <a href="https://causasdecorrupcion.org/" class="has-text-white is-size-5 level-item">Corrupción</a>
             <a href="/quienes-somos" class="has-text-white is-size-5 level-item">¿Qué es iniciativa justa?</a>
-            <a href="mailto:info@acij.org.ar" class="has-text-white is-size-5 level-item">¿Encontraste algún error? Contactanos</a>
+            <div class="level-item">
+              <span class="is-size-5">¿Encontraste algún error? </span>
+              <a href="mailto:info@acij.org.ar" class="has-text-white is-size-5 ml-4">CONTACTANOS</a>
+            </div>
         </div>
         <div class="columns py-6 mt-6">
           <div class="column is-12-mobile is-4-desktop has-text-centered">
