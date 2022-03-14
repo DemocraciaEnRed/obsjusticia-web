@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
-          Fuentes
+          Fuentes y notas
         </h1>
         <br>
         <h6 class="subtitle is-4">

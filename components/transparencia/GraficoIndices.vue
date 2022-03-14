@@ -1,5 +1,5 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight my-6">
+  <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
