@@ -27,35 +27,35 @@
             <thead>
               <tr>
                 <th width="40%" />
-                <th class="has-text-centered is-size-6-mobile is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   CMN
                 </th>
-                <th class="has-text-centered is-size-6-mobile is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   CSJN
                 </th>
-                <th class="has-text-centered is-size-6-mobile is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   MPD
                 </th>
-                <th class="has-text-centered is-size-6-mobile is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   MPF
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(area,i) in data" :key="`area-${i}`">
-                <td class="has-text-right is-size-6-mobile is-size-5">
+                <td class="has-text-right is-size-4 is-size-6-mobile">
                   {{ area.area }}
                 </td>
-                <td class="data-value has-text-centered is-size-6-mobile is-size-5" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
                   {{ area.cmn ? area.cmn : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-6-mobile is-size-5" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
                   {{ area.csjn ? area.csjn : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-6-mobile is-size-5" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
                   {{ area.mpd ? area.mpd : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-6-mobile is-size-5" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
                   {{ area.mpf ? area.mpf : '-' }}
                 </td>
               </tr>
@@ -63,16 +63,16 @@
             <tfoot v-if="promedio">
               <tr>
                 <td />
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
                   {{ promedio.cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
                   {{ promedio.csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
                   {{ promedio.mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
                   {{ promedio.mpf }}
                 </td>
               </tr>
