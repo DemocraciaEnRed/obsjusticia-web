@@ -1,9 +1,9 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight my-6">
+  <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
-          Indices
+          Índice general
         </h1>
         <br>
         <div v-if="$fetchState.pending" class="p-6 has-text-centered">
@@ -26,134 +26,131 @@
           <table class="table">
             <thead>
               <tr>
-                <th />
-                <th class="has-text-centered">
+                <th width="40%" />
+                <th class="has-text-centered is-size-4-desktop">
                   CMN
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4-desktop">
                   CSJN
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4-desktop">
                   MPD
                 </th>
-                <th class="has-text-centered">
+                <th class="has-text-centered is-size-4-desktop">
                   MPF
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="has-text-right is-size-4">
-                  Transparencia Pasiva (TP)*
+                <td class="has-text-right is-size-4 is-size-6-mobile">
+                  Transparencia Pasiva (TP)
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].cmn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[0].cmn)}`">
                   {{ data[0].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].csjn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[0].csjn)}`">
                   {{ data[0].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].mpd)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[0].mpd)}`">
                   {{ data[0].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[0].mpf)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[0].mpf)}`">
                   {{ data[0].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-4">
-                  Promedio Transparencia Activa (TA)
+                <td class="has-text-right is-size-4 is-size-6-mobile">
+                  Promedio Transparencia Activa (TA)*
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].cmn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[1].cmn)}`">
                   {{ data[1].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].csjn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[1].csjn)}`">
                   {{ data[1].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].mpd)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[1].mpd)}`">
                   {{ data[1].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[1].mpf)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[1].mpf)}`">
                   {{ data[1].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-5">
+                <td class="has-text-right is-size-5 is-size-7-mobile">
                   Disponibilidad y completitud
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[2].cmn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[2].cmn)}`">
                   {{ data[2].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[2].csjn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[2].csjn)}`">
                   {{ data[2].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[2].mpd)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[2].mpd)}`">
                   {{ data[2].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[2].mpf)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[2].mpf)}`">
                   {{ data[2].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-5">
+                <td class="has-text-right is-size-5 is-size-7-mobile">
                   Formato
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[3].cmn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[3].cmn)}`">
                   {{ data[3].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[3].csjn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[3].csjn)}`">
                   {{ data[3].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[3].mpd)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[3].mpd)}`">
                   {{ data[3].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[3].mpf)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[3].mpf)}`">
                   {{ data[3].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-5">
+                <td class="has-text-right is-size-5 is-size-7-mobile">
                   Actualización
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[4].cmn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[4].cmn)}`">
                   {{ data[4].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[4].csjn)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[4].csjn)}`">
                   {{ data[4].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[4].mpd)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[4].mpd)}`">
                   {{ data[4].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${getColor(data[4].mpf)}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${getColor(data[4].mpf)}`">
                   {{ data[4].mpf }}
                 </td>
               </tr>
               <tr>
-                <td class="has-text-right is-size-4">
+                <td class="has-text-right is-size-4 is-size-6-mobile">
                   Organos Garantes OG
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].cmn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[5].cmn)}`">
                   {{ data[5].cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].csjn)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[5].csjn)}`">
                   {{ data[5].csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].mpd)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[5].mpd)}`">
                   {{ data[5].mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${getColor(data[5].mpf)}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[5].mpf)}`">
                   {{ data[5].mpf }}
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="content">
-          <p class="is-size-4 line-height-150">
-            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-          </p>
-          <p class="is-size-5">
-            <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
-          </p>
+          <div class="content">
+            <p class="is-size-3 is-size-5-mobile">
+              <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
+            </p>
+          </div>
         </div>
       </div>
     </div>

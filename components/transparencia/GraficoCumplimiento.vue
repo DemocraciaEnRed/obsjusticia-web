@@ -77,14 +77,6 @@
             </tbody>
           </table>
         </div>
-        <div class="content mb-6">
-          <p class="is-size-4 line-height-150">
-            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-          </p>
-          <p class="is-size-5 line-height-150">
-            <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
-          </p>
-        </div>
       </div>
     </div>
   </section>

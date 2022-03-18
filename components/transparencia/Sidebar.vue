@@ -1,17 +1,14 @@
 <template>
   <scrollactive active-class="active" class="my-nav" :offset="0" :duration="1000" bezier-easing-value=".5,0,.35,1">
     <a href="#ley" class="scrollactive-item">Ley 27.275</a>
-    <a href="#transparencia-activa" class="scrollactive-item">Transparencia Activa</a>
-    <a href="#transparencia-pasiva" class="scrollactive-item">Transparencia Pasiva</a>
-    <a href="#sujetos-obligados" class="scrollactive-item">Sujetos Obligados</a>
-    <a href="#organos-garantes" class="scrollactive-item">Organos Garantes</a>
-    <a href="#cumplimiento" class="scrollactive-item">Cumplimiento</a>
-    <a href="#grafico-indices" class="scrollactive-item">Indices </a>
-    <a href="#grafico-cumplimiento" class="scrollactive-item">Indice T.A.</a>
+    <a href="#pedidos-informes" class="scrollactive-item">Solicitudes de información</a>
+    <a href="#cumplimiento" class="scrollactive-item">Medición</a>
+    <a href="#grafico-indices" class="scrollactive-item">Índice general</a>
+    <a href="#grafico-cumplimiento" class="scrollactive-item">Índice T.A.</a>
     <a href="#grafico-desagregacion" class="scrollactive-item">Desagregación de indices</a>
-    <a href="#glosario" class="scrollactive-item">Glosario</a>
+    <a href="#informacion-adicional" class="scrollactive-item">Adicionales</a>
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
-    <a href="#informacion-adicional" class="scrollactive-item">Información adicional</a>
+    <a href="#glosario" class="scrollactive-item">Glosario</a>
     <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
   </scrollactive>

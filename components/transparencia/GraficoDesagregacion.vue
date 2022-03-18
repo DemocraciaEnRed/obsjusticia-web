@@ -1,5 +1,5 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight">
+  <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
@@ -27,65 +27,57 @@
             <thead>
               <tr>
                 <th width="40%" />
-                <th class="has-text-centered is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   CMN
                 </th>
-                <th class="has-text-centered is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   CSJN
                 </th>
-                <th class="has-text-centered is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   MPD
                 </th>
-                <th class="has-text-centered is-size-5">
+                <th class="has-text-centered is-size-4 is-size-6-mobile">
                   MPF
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(area,i) in data" :key="`area-${i}`">
-                <td class="has-text-right is-size-5">
+                <td class="has-text-right is-size-4 is-size-6-mobile">
                   {{ area.area }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.cmn ? getColor(area.cmn) : '#777'}`">
                   {{ area.cmn ? area.cmn : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.csjn ? getColor(area.csjn) : '#777'}`">
                   {{ area.csjn ? area.csjn : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.mpd ? getColor(area.mpd) : '#777'}`">
                   {{ area.mpd ? area.mpd : '-' }}
                 </td>
-                <td class="data-value has-text-centered is-size-4" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
+                <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${area.mpf ? getColor(area.mpf) : '#777'}`">
                   {{ area.mpf ? area.mpf : '-' }}
                 </td>
               </tr>
             </tbody>
-            <!-- <tfoot v-if="promedio">
+            <tfoot v-if="promedio">
               <tr>
                 <td />
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.cmn ? getColor(promedio.cmn) : '#777'}`">
                   {{ promedio.cmn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.csjn ? getColor(promedio.csjn) : '#777'}`">
                   {{ promedio.csjn }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.mpd ? getColor(promedio.mpd) : '#777'}`">
                   {{ promedio.mpd }}
                 </td>
-                <td class="data-value has-text-centered is-size-5" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
+                <td class="data-value has-text-centered is-size-5 is-size-7-mobile" :style="`color: ${promedio.mpf ? getColor(promedio.mpf) : '#777'}`">
                   {{ promedio.mpf }}
                 </td>
               </tr>
-            </tfoot> -->
+            </tfoot>
           </table>
-        </div>
-        <div class="content">
-          <p class="is-size-4 line-height-150">
-            <b>El nivel de cumplimiento de las obligaciones de Transparencia Activa se clasifica en función de tres componentes:</b> Disponibilidad y completitud de la información, Formato de la información y Actualización de la información.
-          </p>
-          <p class="is-size-5 line-height-150">
-            <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
-          </p>
         </div>
       </div>
     </div>

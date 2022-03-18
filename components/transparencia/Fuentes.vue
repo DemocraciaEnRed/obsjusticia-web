@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
-          Fuentes
+          Fuentes y notas
         </h1>
         <br>
         <h6 class="subtitle is-4">
@@ -13,7 +13,7 @@
           {{ $config.dataDateUpdated }}
         </h6>
         <div class="content">
-          <p class="is-300 is-size-5">
+          <p class="is-300 is-size-4">
             Las visualizaciones de esta web se basan en el informe realizado por ACIJ sobre el cumplimiento de la Ley de Acceso a la Información Pública — <a href="#" target="_blank" class="has-text-black is-400"><u>proximamente</u> 🔗</a>
           </p>
         </div>

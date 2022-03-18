@@ -7,14 +7,13 @@
         </h1>
         <div class="py-6">
           <h1 class="title is-3 is-700 is-spaced">
-            ¿Qué garantiza la Ley 27.275?
+            Ley 27.275
           </h1>
-          <h1 class="subtitle is-4 line-height-150">
-            En 2016 se sancionó la Ley Acceso a la Información Pública de Argentina que garantiza el derecho de acceso a la información pública y se promueve la participación ciudadana y transparencia de la gestión pública.
+          <h1 class="subtitle is-4 line-height-150 is-500">
+            La 27.275 de Acceso a la Información Pública garantiza el derecho de acceso a la información pública, promueve la participación ciudadana y la transparencia de la gestión pública.
           </h1>
-          <br>
-          <h1 class="title is-4">
-            <a href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm" target="_blank" class="has-text-danger"><u>Ir a la Ley</u></a>
+          <h1 class="subtitle is-4 line-height-150 is-500">
+            El Poder Judicial y Ministerio Público están obligados a entregar la información solicitada por las personas y a publicar proactivamente la información establecida en la ley y cualquier otra de carácter relevante que se encuentre en su poder. También deben crear un organismo con autonomía funcional y para controlar el cumplimiento de la ley y resolver los reclamos ante la denegatoria de entregar información.
           </h1>
         </div>
       </div>
