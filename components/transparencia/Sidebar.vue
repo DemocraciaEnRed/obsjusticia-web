@@ -2,7 +2,7 @@
   <scrollactive active-class="active" class="my-nav" :offset="0" :duration="1000" bezier-easing-value=".5,0,.35,1">
     <a href="#ley" class="scrollactive-item">Ley 27.275</a>
     <a href="#pedidos-informes" class="scrollactive-item">Solicitudes de información</a>
-    <a href="#cumplimiento" class="scrollactive-item">Cumplimiento</a>
+    <a href="#cumplimiento" class="scrollactive-item">Medición</a>
     <a href="#grafico-indices" class="scrollactive-item">Índice general</a>
     <a href="#grafico-cumplimiento" class="scrollactive-item">Índice T.A.</a>
     <a href="#grafico-desagregacion" class="scrollactive-item">Desagregación de indices</a>
