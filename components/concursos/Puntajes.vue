@@ -197,7 +197,6 @@ export default {
       this.prepareChart(this.data)
     }
   },
-  fetchOnServer: false,
   data () {
     return {
       data: null,
