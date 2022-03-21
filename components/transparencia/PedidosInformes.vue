@@ -30,7 +30,7 @@
           </div>
           <div class="search-input-container-container">
             <div class="search-text-row search-input-container">
-              <i class="fa fa-search"></i>
+              <i class="fa fa-search" />
               <input v-model="searchText" class="search-input" placeholder="Busque por sujeto obligado">
             </div>
           </div>
@@ -55,9 +55,13 @@
               <tbody>
                 <tr v-for="({ pedido, respuesta }, index) in pedidosFiltrados" :key="index">
                   <td class="data-value has-text-centered is-size-5">
-                    <p class="has-text-weight-normal mb-4">{{ pedido.fecha }}</p>
+                    <p class="has-text-weight-normal mb-4">
+                      {{ pedido.fecha }}
+                    </p>
                     <div v-if="pedido.fechaReiteracion">
-                      <p class="has-text-weight-bold">Reiterado {{ pedido.fechaReiteracion }}</p>
+                      <p class="has-text-weight-bold">
+                        Reiterado {{ pedido.fechaReiteracion }}
+                      </p>
                     </div>
                     <div class="mt-4">
                       <a :href="pedido.link" target="_blank">Solicitud</a>
@@ -119,6 +123,7 @@ export default {
       default: () => 'default-id'
     }
   },
+  fetchOnServer: false,
   async fetch () {
     const data = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/values/Sheet1?key=${this.$config.googleSheetApiKey}`
@@ -129,6 +134,15 @@ export default {
     return {
       pedidos: [],
       searchText: ''
+    }
+  },
+  computed: {
+    pedidosFiltrados () {
+      const toComparableText = category => _.chain(category).toLower().deburr().value()
+      const searchText = this.searchText
+      return _.filter(this.pedidos, ({ pedido: { sujetoObligado } }) =>
+        !searchText || (searchText.length >= 3 && _.includes(toComparableText(sujetoObligado), toComparableText(searchText)))
+      )
     }
   },
   methods: {
@@ -157,15 +171,6 @@ export default {
     },
     toUpper (string) {
       return _.toUpper(string)
-    }
-  },
-  computed: {
-    pedidosFiltrados () {
-      const toComparableText = category => _.chain(category).toLower().deburr().value()
-      const searchText = this.searchText
-      return _.filter(this.pedidos, ({ pedido: { sujetoObligado } }) =>
-        !searchText || (searchText.length >= 3 && _.includes(toComparableText(sujetoObligado), toComparableText(searchText)))
-      )
     }
   }
 }
