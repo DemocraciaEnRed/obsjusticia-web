@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-2 is-700 is-spaced">
-          Pedidos de informes a insitituciones
+          Pedidos de acceso a la información pública
         </h1>
         <br>
         <div v-if="$fetchState.pending" class="p-6 has-text-centered">
@@ -102,7 +102,12 @@
             </p>
             <button class="download-button">
               <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank" class="is-size-5">
-                Descarga directa
+                Descargar base de datos
+              </a>
+            </button>
+            <button class="download-button-solid">
+              <a href="Cómo-presentar-una-solicitud-aip.pdf" target="_blank" class="is-size-5">
+                Descargar instructivo
               </a>
             </button>
           </div>
@@ -283,6 +288,15 @@ export default {
   float: left;
 }
 .download-button{
+  background-color: transparent;
+  border: 2px solid #3262C0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 15px;
+  float: left;
+  margin-left: 30px;
+}
+.download-button-solid{
   background-color: transparent;
   border: 2px solid #3262C0;
   box-sizing: border-box;

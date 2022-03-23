@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-4 is-400 is-spaced line-height-150">
-          Datos sobre el cumplimiento de la obligación de <span class="is-700">transparencia activa</span> según tipo de información que exige la ley
+          Datos sobre el cumplimiento de la obligación de <span class="is-700">transparencia activa</span> según el tipo de información que exige la ley
         </h1>
         <br>
         <div class="columns">

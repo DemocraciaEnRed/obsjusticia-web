@@ -2,13 +2,29 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <div class="columns is-vcentered is-centered">
-          <div class="column">
+        <div class="">
+          <div class="my-6 is-flex is-flex-direction-column is-align-items-center is-align-content-center">
+            <h1 class="subtitle is-4">
+              Accedé a los datos de las mediciones realizadas en formatos abiertos.
+            </h1>
+            <h1 class="title is-4 has-text-centered pt-5">
+              <a href="/pdf/Datos-de-las-mediciones-sobre-tansparencia-en-el-PJ-y-MPF_Actualización-Marzo-2021.xlsx" target="_blank" class="download-button">Descargar</a>
+            </h1>
+          </div>
+          <div class="pt-6 my-6 is-flex is-flex-direction-column is-align-items-center is-align-content-center">
             <h1 class="subtitle is-4">
               Conocé la metodología utilizada para medir el cumplimiento de la Ley de Acceso a la Información.
             </h1>
             <h1 class="title is-4 has-text-centered pt-5">
               <a href="/pdf/metodologia-medicion-transparencia.pdf" target="_blank" class="download-button">Descargar</a>
+            </h1>
+          </div>
+          <div class="pt-6 my-6 is-flex is-flex-direction-column is-align-items-center is-align-content-center">
+            <h1 class="subtitle is-4">
+              Accedé al informe sobre el cumplimiento de la Ley de Acceso a la Información Pública.
+            </h1>
+            <h1 class="title is-4 has-text-centered pt-5">
+              <a href="/pdf/Metodología-de-medición_transparencia.pdf" target="_blank" class="download-button">Descargar</a>
             </h1>
           </div>
         </div>
@@ -30,8 +46,20 @@ export default {
 
 <style lang="scss" scoped>
 .download-button {
-  color: #000;
-  text-decoration-line: underline;
-  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+
+  position: static;
+  width: 222px;
+  height: 50px;
+  left: 283.5px;
+  top: 38px;
+  color: #fff;
+  background: #3157AC;
+  border-radius: 5px;
+
 }
 </style>

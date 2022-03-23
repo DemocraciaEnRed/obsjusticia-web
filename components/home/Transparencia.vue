@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
 section{
-background-color: #ffeeed;
+background-color: #fff;
 }
 .red-bg{
   color: white;

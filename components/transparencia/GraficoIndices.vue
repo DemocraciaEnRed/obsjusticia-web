@@ -61,7 +61,7 @@
               </tr>
               <tr>
                 <td class="has-text-right is-size-4 is-size-6-mobile">
-                  Promedio Transparencia Activa (TA)*
+                  Promedio Transparencia Activa (TA)
                 </td>
                 <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[1].cmn)}`">
                   {{ data[1].cmn }}
@@ -146,9 +146,14 @@
               </tr>
             </tbody>
           </table>
-          <div class="content">
+          <!-- <div class="content">
             <p class="is-size-3 is-size-5-mobile">
               <b>(*) El indicador no mide la calidad de las respuestas, para ver un análisis sobre la forma en la que responde cada organismo ingresa al siguiente artículo (próximamente)</b>
+            </p>
+          </div> -->
+          <div class="content">
+            <p class="is-size-5 is-size-5-mobile">
+              <b>El mayor puntaje que pueden obtener las instituciones es 1</b>
             </p>
           </div>
         </div>
