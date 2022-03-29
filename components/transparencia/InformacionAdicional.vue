@@ -1,16 +1,17 @@
 <template>
-<BulmaAccordion
- dropdown
+  <BulmaAccordion
+    dropdown
     :icon="'caret'"
-    :caretAnimation="{
-        duration: '.6s',
-        timerFunc: 'ease-in-out'
+    :caret-animation="{
+      duration: '.6s',
+      timerFunc: 'ease-in-out'
     }"
     :slide="{
-        duration: '.9s',
-        timerFunc: 'ease'
-    }">
-  <section :id="scrollId" class="hero is-small">
+      duration: '.9s',
+      timerFunc: 'ease'
+    }"
+  >
+    <section :id="scrollId" class="hero is-small">
       <div class="hero-body px-0 has-text-centered">
         <div class="">
           <BulmaAccordionItem>
@@ -49,21 +50,21 @@
         </div>
       </div>
     </section>
-</BulmaAccordion>
+  </BulmaAccordion>
 </template>
 <script>
 import { BulmaAccordion, BulmaAccordionItem } from 'vue-bulma-accordion'
 export default {
+  components: {
+    BulmaAccordion,
+    BulmaAccordionItem
+  },
   props: {
     scrollId: {
       type: String,
       required: false,
       default: () => 'default-id'
     }
-  },
-  components: {
-    BulmaAccordion,
-    BulmaAccordionItem
   }
 }
 </script>

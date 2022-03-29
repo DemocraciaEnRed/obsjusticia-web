@@ -81,7 +81,9 @@
                       <a :href="respuesta.link" target="_blank">{{ toUpper(respuesta.tipo) }}</a>
                     </div>
                     <div v-else-if="respuesta.tipo">
-                      <p class="has-text-weight-bold">{{ toUpper(respuesta.tipo) }}</p>
+                      <p class="has-text-weight-bold">
+                        {{ toUpper(respuesta.tipo) }}
+                      </p>
                     </div>
                     <div v-else>
                       PENDIENTE
@@ -96,22 +98,32 @@
               </p>
             </div>
           </table>
-          <div class="content download-section">
+        </div>
+        <div class="is-flex is-flex-direction-row is-justify-content-space-between is-align-items-center">
+          <div>
             <p class="is-size-4 line-height-150 download-info mt-1">
               Solicitá información pública a los órganos del sistema de justicia.
             </p>
-            <div>
-              <button class="download-button">
-                <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank" class="is-size-5">
+            <div class="is-hidden-desktop">
+              <br>
+              <div class="buttons is-centered">
+                <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank" class="button download-button is-size-5">
                   Descargar base de datos
                 </a>
-              </button>
-              <button class="download-button-solid">
-                <a href="Cómo-presentar-una-solicitud-aip.pdf" download target="_blank" class="is-size-5">
+                <a href="/pdf/como-presentar-una-solicitud-aip.pdf" target="_blank" class="button download-button-solid is-size-5">
                   Descargar instructivo
                 </a>
-              </button>
+              </div>
             </div>
+          </div>
+
+          <div class="buttons is-right is-hidden-touch">
+            <a href="https://docs.google.com/spreadsheets/d/15xk-4HyFs9OG42tOPPrSkSIUOL1x4cYVCQOa-p9OnCU/edit#gid=0" target="_blank" class="button download-button is-size-5">
+              Descargar base de datos
+            </a>
+            <a href="/pdf/como-presentar-una-solicitud-aip.pdf" target="_blank" class="button download-button-solid is-size-5">
+              Descargar instructivo
+            </a>
           </div>
         </div>
       </div>
@@ -282,34 +294,32 @@ export default {
     width: 350px;
   }
 }
-.download-section{
-  width: fit-content;
-  margin: 0 auto;
-  display: flex;
-}
-.download-info{
-  float: left;
-}
+
 .download-button{
-  width: 80%;
   background-color: transparent;
   border: 2px solid #3262C0;
-  box-sizing: border-box;
+  color: #3262C0;
   border-radius: 5px;
   padding: 10px 15px;
-  float: left;
-  margin-left: 30px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  &:hover{
+    background-color: #3262C0;
+    color: white;
+  }
 }
 .download-button-solid{
-  width: 80%;
   background-color: #3262C0;
   border: 2px solid #3262C0;
-  box-sizing: border-box;
   border-radius: 5px;
   padding: 10px 15px;
-  float: left;
-  margin-left: 30px;
-  color:#fff !important;
+  color:#fff;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  &:hover{
+    background-color: #264e9c;
+    color: white;
+  }
 }
 
 .download-button-solid a{
