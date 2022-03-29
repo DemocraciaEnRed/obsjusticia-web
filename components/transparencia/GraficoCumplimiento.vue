@@ -133,13 +133,13 @@ export default {
       // return scale(value).hex()
       switch (value) {
         case '1':
-          return '#EC6961'
+          return '#CD3D27'
         case '2':
-          return '#e29231'
+          return '#E59D3F'
         case '3':
-          return '#D9BE00'
+          return '#6C9EFF'
         case '4':
-          return '#79C45E'
+          return '#1DD1A1'
       }
     }
   }

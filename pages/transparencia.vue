@@ -76,7 +76,7 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #ffeeed;
+  background-color: #fff;
 }
 .overlay-graphs{
   // min-height: 100vh;

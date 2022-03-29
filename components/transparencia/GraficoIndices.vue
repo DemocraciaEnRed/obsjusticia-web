@@ -209,7 +209,7 @@ export default {
       return output
     },
     getColor (value) {
-      const scale = chroma.scale(['#EC6961', '#e29231', '#D9BE00', '#79C45E'])
+      const scale = chroma.scale(['#CD3D27', '#6C9EFF', '#1DD1A1', '#E59D3F'])
       return scale(value).hex()
     }
   }

@@ -91,6 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 .definicion{
-  background-color: white;
+  background-color: #f3efef !important;
 }
 </style>
