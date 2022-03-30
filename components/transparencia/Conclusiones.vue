@@ -155,3 +155,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+  i{
+    color: #3157AC !important;
+  }
+</style>

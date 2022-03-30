@@ -1,23 +1,7 @@
 <template>
-  <BulmaAccordion
-    dropdown
-    :icon="'caret'"
-    :caret-animation="{
-      duration: '.6s',
-      timerFunc: 'ease-in-out'
-    }"
-    :slide="{
-      duration: '.9s',
-      timerFunc: 'ease'
-    }"
-  >
     <section :id="scrollId" class="hero is-small">
       <div class="hero-body px-0 has-text-centered">
         <div class="">
-          <BulmaAccordionItem>
-            <div slot="title" class="hero-body px-0 has-text-centered hero-config">
-              Desagregacion de los indices
-            </div>
             <div slot="content" class="containe">
               <div class="">
                 <div class="my-6 is-flex is-flex-direction-column is-align-items-center is-align-content-center">
@@ -46,18 +30,13 @@
                 </div>
               </div>
             </div>
-          </BulmaAccordionItem>
         </div>
       </div>
     </section>
-  </BulmaAccordion>
 </template>
 <script>
-import { BulmaAccordion, BulmaAccordionItem } from 'vue-bulma-accordion'
 export default {
   components: {
-    BulmaAccordion,
-    BulmaAccordionItem
   },
   props: {
     scrollId: {
@@ -70,19 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .hero-config{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    text-align: center;
-    text-transform: uppercase;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    background-color: #3157AC;
-    color: #FFFFFF;
-
-  }
 .download-button {
   display: flex;
   flex-direction: row;
