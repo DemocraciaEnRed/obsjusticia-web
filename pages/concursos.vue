@@ -6,20 +6,17 @@
 
         <div class="columns">
           <div class="column is-8 is-offset-2">
-            <Header scroll-id="ley" />
-            <Seleccion scroll-id="seleccion" />
-            <Vacantes scroll-id="vacantes" />
-            <Proceso scroll-id="proceso" />
-            <Puntajes scroll-id="puntajes" />
-            <Influencias scroll-id="influencias" />
-            <Conclusiones scroll-id="conclusiones" />
-            <Lexico scroll-id="lexico" />
-            <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
-            <Fuentes scroll-id="fuentes" />
+            <Header scroll-id="ley" v-model="contestType"/>
+            <div v-if="contestType == 'judges'">
+              <Jueces />
+            </div>
+            <div v-else-if="contestType == 'attorneys'">
+            </div>
+             <div v-if="contestType">
+              <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
+              <Fuentes scroll-id="fuentes" />
+            </div>
           </div>
-          <!-- <div class="column is-2">
-            <Sidebar />
-          </div> -->
         </div>
       </div>
     </div>
@@ -29,14 +26,9 @@
 <script>
 import Sidebar from '~/components/concursos/Sidebar'
 import Header from '~/components/concursos/Header'
-import Seleccion from '~/components/concursos/Seleccion'
-import Vacantes from '~/components/concursos/Vacantes'
-import Proceso from '~/components/concursos/Proceso'
-import Puntajes from '~/components/concursos/Puntajes'
-import Influencias from '~/components/concursos/Influencias'
-import Conclusiones from '~/components/concursos/Conclusiones'
-import Lexico from '~/components/concursos/Lexico'
 import Fuentes from '~/components/concursos/Fuentes'
+import Jueces from '~/components/concursos/jueces'
+import ArticlesAlternativeCarousel from '~/components/articles/AlternativeCarousel'
 
 export default {
   name: 'QuienesSomos',
@@ -44,14 +36,14 @@ export default {
   components: {
     Header,
     Sidebar,
-    Seleccion,
-    Vacantes,
-    Proceso,
-    Puntajes,
-    Influencias,
-    Conclusiones,
-    Lexico,
-    Fuentes
+    Fuentes,
+    ArticlesAlternativeCarousel,
+    Jueces
+  },
+  data () {
+    return {
+      contestType: ''
+    }
   }
 }
 </script>

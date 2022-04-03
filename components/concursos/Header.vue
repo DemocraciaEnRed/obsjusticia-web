@@ -23,87 +23,107 @@
           <br>
           <div class="columns">
             <div class="column">
-              <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
-              <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
-                Jueces y Juezas
-              </h1>
-              <div class="columns my-5 is-mobile">
-                <div class="column">
-                  <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                    <span v-if="$fetchState.pending">
-                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                    </span>
-                    <span v-else-if="$fetchState.error">
-                      <i class="fas fa-times fa-fw fa-lg" />
-                    </span>
-                    <span v-else class="es-oswald">
-                      {{ getValue('vacantesJueces') }}
-                    </span>
-                  </h1>
-                  <h1 class="subtitle is-5 is-chivo">
-                    VACANTES
-                  </h1>
+              <input
+                v-model="value"
+                v-on:input="updateContestType($event.target.value)"
+                type="radio"
+                id="judges"
+                value="judges"
+                class="contest-type-radio"
+              >
+              <label for="judges" class="radio-label judges-label">
+                <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
+                <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
+                  Jueces y Juezas
+                </h1>
+                <div class="columns my-5 is-mobile">
+                  <div class="column">
+                    <h1 class="title is-2 is-500 is-chivo has-text-primary">
+                      <span v-if="$fetchState.pending">
+                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                      </span>
+                      <span v-else-if="$fetchState.error">
+                        <i class="fas fa-times fa-fw fa-lg" />
+                      </span>
+                      <span v-else>
+                        {{ getValue('vacantesJueces') }}
+                      </span>
+                    </h1>
+                    <h1 class="subtitle is-5 is-chivo">
+                      VACANTES
+                    </h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-2 is-500 is-chivo has-text-primary">
+                      <span v-if="$fetchState.pending">
+                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                      </span>
+                      <span v-else-if="$fetchState.error">
+                        <i class="fas fa-times fa-fw fa-lg" />
+                      </span>
+                      <span v-else>
+                        {{ getValue('tramitesEnCursoJueces') }}
+                      </span>
+                    </h1>
+                    <h1 class="subtitle is-5 is-chivo">
+                      TRAMITES<br>EN CURSO
+                    </h1>
+                  </div>
                 </div>
-                <div class="column">
-                  <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                    <span v-if="$fetchState.pending">
-                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                    </span>
-                    <span v-else-if="$fetchState.error">
-                      <i class="fas fa-times fa-fw fa-lg" />
-                    </span>
-                    <span v-else class="es-oswald">
-                      {{ getValue('tramitesEnCursoJueces') }}
-                    </span>
-                  </h1>
-                  <h1 class="subtitle is-5 is-chivo">
-                    TRAMITES<br>EN CURSO
-                  </h1>
-                </div>
-              </div>
+              </label>
             </div>
             <div class="column">
-              <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
-              <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
-                Fiscales
-              </h1>
-              <div class="columns my-5 is-mobile">
-                <div class="column">
-                  <h1 class="title is-2 is-500 is-chivo has-text-secondary">
-                    <span v-if="$fetchState.pending">
-                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                    </span>
-                    <span v-else-if="$fetchState.error">
-                      <i class="fas fa-times fa-fw fa-lg" />
-                    </span>
-                    <span v-else class="es-oswald">
-                      {{ getValue('vacantesFiscales') }}
-                    </span>
-                  </h1>
-                  <h1 class="subtitle is-5 is-chivo">
-                    VACANTES
-                  </h1>
+              <input
+                v-model="value"
+                v-on:input="updateContestType($event.target.value)"
+                type="radio"
+                id="attorneys"
+                value="attroneys"
+                class="contest-type-radio"
+              >
+              <label for="attorneys" class="radio-label attorneys-label">
+                <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
+                <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
+                  Fiscales
+                </h1>
+                <div class="columns my-5 is-mobile">
+                  <div class="column">
+                    <h1 class="title is-2 is-500 is-chivo has-text-secondary">
+                      <span v-if="$fetchState.pending">
+                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                      </span>
+                      <span v-else-if="$fetchState.error">
+                        <i class="fas fa-times fa-fw fa-lg" />
+                      </span>
+                      <span v-else>
+                        {{ getValue('vacantesFiscales') }}
+                      </span>
+                    </h1>
+                    <h1 class="subtitle is-5 is-chivo">
+                      VACANTES
+                    </h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-2 is-500 is-chivo has-text-secondary">
+                      <span v-if="$fetchState.pending">
+                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                      </span>
+                      <span v-else-if="$fetchState.error">
+                        <i class="fas fa-times fa-fw fa-lg" />
+                      </span>
+                      <span v-else>
+                        {{ getValue('tramitesEnCursoFiscales') }}
+                      </span>
+                    </h1>
+                    <h1 class="subtitle is-5 is-chivo">
+                      TRAMITES<br>EN CURSO
+                    </h1>
+                  </div>
                 </div>
-                <div class="column">
-                  <h1 class="title is-2 is-500 is-chivo has-text-secondary">
-                    <span v-if="$fetchState.pending">
-                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                    </span>
-                    <span v-else-if="$fetchState.error">
-                      <i class="fas fa-times fa-fw fa-lg" />
-                    </span>
-                    <span v-else class="es-oswald">
-                      {{ getValue('tramitesEnCursoFiscales') }}
-                    </span>
-                  </h1>
-                  <h1 class="subtitle is-5 is-chivo">
-                    TRAMITES<br>EN CURSO
-                  </h1>
-                </div>
-              </div>
+              </label>
             </div>
           </div>
-          <p class="is-300 is-size-5">
+          <p class="is-300 is-size-5 test">
             <b>(*)</b> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.
           </p>
         </div>
@@ -120,6 +140,10 @@ export default {
       type: String,
       required: false,
       default: () => 'default-id'
+    },
+    value: {
+      type: String,
+      default: () => ''
     }
   },
   fetchOnServer: false,
@@ -156,6 +180,9 @@ export default {
     },
     getValue (key) {
       return (this.data.find(d => d.clave === key)).valor
+    },
+    updateContestType (newContestType) {
+      this.$emit('input', newContestType)
     }
   }
 }
@@ -188,5 +215,28 @@ export default {
 }
 .data-value{
   font-weight: 700;
+}
+.contest-type-radio{
+  opacity: 0;
+}
+.radio-label{
+  padding: 30px 20px 0 20px;
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor:pointer;
+}
+.judges-label{
+  border: 3px solid #467CF6;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.attorneys-label{
+  padding-bottom: 5px;
+  border: 3px solid #3157AC;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.contest-type-radio:checked+label{
+  background-color: #DEE8FF;
 }
 </style>
