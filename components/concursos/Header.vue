@@ -125,7 +125,7 @@
               </label>
             </div>
           </div>
-          <p class="is-300 is-size-5 test">
+          <p class="is-300 is-size-5">
             <b>(*)</b> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.
           </p>
         </div>
