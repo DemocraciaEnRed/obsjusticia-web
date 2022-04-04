@@ -5,7 +5,7 @@
       <div class="my-6 py-6">
 
         <div class="columns">
-          <div v-if="contestType" class="column is-1 is-hidden-mobile">
+          <div v-if="contestType" class="type-picker column is-1 is-hidden-mobile">
             <SideTypePicker v-model="contestType" />
           </div>
           <div class="column is-8" v-bind:class="contestType? 'is-offset-1' : 'is-offset-2'">
@@ -128,5 +128,9 @@ background-color: #00B1AF;
   bottom: 20px;
   right: 40px;
   color: #6b6b6b;
+}
+.type-picker{
+  position: relative;
+  z-index: 1;
 }
 </style>

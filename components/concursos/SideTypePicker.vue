@@ -1,10 +1,16 @@
 <template>
   <div class="picker-container">
-    <div v-if="isPicking || this.value == 'judges'" v-on:click="updateContestType('judges')" class="icon-container">
-      <img src="~/assets/img/concursos/jueces-logo.svg" class="image is-centered" width="50" alt="logo-jueces">
+    <div v-if="isPicking || this.value == 'judges'" v-on:click="updateContestType('judges')" class="columns" v-bind:class="!isPicking ? 'icon-container' : 'icon-with-text judges-with-text'">
+      <div class="column" v-bind:class="isPicking ? 'is-one-third' : ''">
+        <img src="~/assets/img/concursos/jueces-logo.svg" class="image is-centered" width="40" alt="logo-jueces">
+      </div>
+      <span v-if="isPicking" class="column">Jueces y Juezas</span>
     </div>
-    <div v-if="isPicking || this.value == 'attorneys'" v-on:click="updateContestType('attorneys')" class="icon-container">
-      <img src="~/assets/img/concursos/fiscales-logo.svg" class="image is-centered" width="50" alt="logo-fiscales">
+    <div v-if="isPicking || this.value == 'attorneys'" v-on:click="updateContestType('attorneys')" class="columns" v-bind:class="!isPicking ? 'icon-container' : 'icon-with-text attorneys-with-text'">
+      <div class="column" v-bind:class="isPicking ? 'is-one-third' : ''">
+        <img src="~/assets/img/concursos/fiscales-logo.svg" class="image is-centered" width="40" alt="logo-fiscales">
+      </div>
+      <span v-if="isPicking" class="column">Fiscales y Fiscalas</span>
     </div>
   </div>
 </template>
@@ -44,11 +50,31 @@ export default {
 .icon-container{
   background: #C4C4C4;
   border-radius: 100%;
-  height: 80px;
-  width: 80px;
-  margin-bottom: 15px;
+  width: 100%;
+  height: 85px;
+  margin-bottom: 25px;
 }
 .image{
   height: 100%;
+}
+.icon-with-text{
+  background: #C4C4C4;
+  border-radius: 45px;
+  width: 300px;
+  height: 85px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+}
+.judges-with-text{
+  color: #467CF6;
+}
+.attorneys-with-text{
+  color:#3157AC;
 }
 </style>
