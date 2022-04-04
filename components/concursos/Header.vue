@@ -24,7 +24,8 @@
           <div class="columns">
             <div class="column">
               <input
-                v-model="value"
+                name="contestType"
+                :checked="this.contestType == 'judges'"
                 v-on:input="updateContestType($event.target.value)"
                 type="radio"
                 id="judges"
@@ -74,11 +75,12 @@
             </div>
             <div class="column">
               <input
-                v-model="value"
+                name="contestType"
+                :checked="this.contestType == 'attorneys'"
                 v-on:input="updateContestType($event.target.value)"
                 type="radio"
                 id="attorneys"
-                value="attroneys"
+                value="attorneys"
                 class="contest-type-radio"
               >
               <label for="attorneys" class="radio-label attorneys-label">
@@ -183,6 +185,11 @@ export default {
     },
     updateContestType (newContestType) {
       this.$emit('input', newContestType)
+    }
+  },
+  computed: {
+    contestType () {
+      return this.value
     }
   }
 }

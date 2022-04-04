@@ -5,7 +5,10 @@
       <div class="my-6 py-6">
 
         <div class="columns">
-          <div class="column is-8 is-offset-2">
+          <div v-if="contestType" class="column is-1 is-hidden-mobile">
+            <SideTypePicker v-model="contestType" />
+          </div>
+          <div class="column is-8" v-bind:class="contestType? 'is-offset-1' : 'is-offset-2'">
             <Header scroll-id="ley" v-model="contestType"/>
             <div v-if="contestType == 'judges'">
               <Jueces />
@@ -24,21 +27,23 @@
 </template>
 
 <script>
-import Sidebar from '~/components/concursos/Sidebar'
+import SideTypePicker from '~/components/concursos/SideTypePicker'
 import Header from '~/components/concursos/Header'
-import Fuentes from '~/components/concursos/Fuentes'
 import Jueces from '~/components/concursos/jueces'
 import ArticlesAlternativeCarousel from '~/components/articles/AlternativeCarousel'
+import Fuentes from '~/components/concursos/Fuentes'
+import Sidebar from '~/components/concursos/Sidebar'
 
 export default {
   name: 'QuienesSomos',
   layout: 'default-darknav',
   components: {
+    SideTypePicker,
     Header,
-    Sidebar,
-    Fuentes,
+    Jueces,
     ArticlesAlternativeCarousel,
-    Jueces
+    Fuentes,
+    Sidebar
   },
   data () {
     return {
