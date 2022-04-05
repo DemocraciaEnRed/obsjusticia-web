@@ -1,7 +1,9 @@
 <template>
   <section class="specialbg">
+    <Sidebar />
     <div class="py-6">
-      <div class="container my-6 py-6">
+      <div class="my-6 py-6">
+
         <div class="columns">
           <div class="column is-8 is-offset-2">
             <Header scroll-id="ley" />
@@ -15,9 +17,9 @@
             <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
             <Fuentes scroll-id="fuentes" />
           </div>
-          <div class="column is-2">
+          <!-- <div class="column is-2">
             <Sidebar />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -73,7 +75,7 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #edf2fe;
+  background-color: #fff;
 }
 .overlay-graphs{
   // min-height: 100vh;

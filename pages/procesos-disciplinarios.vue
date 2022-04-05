@@ -1,13 +1,14 @@
 <template>
   <section>
+    <Sidebar />
     <section class="section">
       <div class="my-3 py-6" />
       <div class="container">
         <div class="columns is-centered my-6">
           <div class="column is-8">
-            <div class="has-text-centered">
+            <div id="totales" class="has-text-centered">
               <h1 class="title is-2 is-700">
-                Procesos disciplinarios a jueces y juezas
+                Procesos disciplinarios contra jueces y juezas
               </h1>
               <br>
               <p class="is-size-5">
@@ -67,6 +68,7 @@
         </div>
       </div>
     </section>
+    <!-- grafico de cuadraditos -->
     <div class="overlay-graphs container">
       <!-- <a href="#graphs" class="go-fullscreen button is-dark is-outlined"><i class="fas fa-expand" />&nbsp;&nbsp;Centrar</a> -->
       <!-- <div class="the-buttons buttons is-centered">
@@ -97,6 +99,9 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-9">
+            <!-- <h1 class="title is-2 has-text-centered">
+              Conoce el detalle de las causas contra jueces y juezas
+            </h1> -->
             <h1 class="title is-2 has-text-centered">
               Glosario
             </h1>
@@ -108,7 +113,7 @@
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p class="is-300">La mayoría de las causas fueron desestimadas. Un alto número se desestiman <b><i>inlimines</i></b>, esto significa que no cumplen con los requisitos mínimos establecidos por el consejo de la Magistratura</p>
+                  <p class="is-300">Archivo de la causa por considerar que no hay elementos para avanzar con el caso. La desestimación in limine se produce cuando la denuncia no cumple con los requisitos mínimos establecidos por el Consejo de la Magistratura</p>
                 </div>
               </div>
             </div>
@@ -120,7 +125,7 @@
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p class="is-300">(Prescribieron) por la falta de voluntad o impericia del Consejo de la Magistratura: la ley establece que tiene <b>3 años</b> para investigar y determinar un veredicto, caso contrario se cierra por la falta de eficiencia del Consejo. En definitiva, todos esos casos son casos de injusticias.</p>
+                  <p class="is-300">Vecimiento del plazo de 3 años para investigar el caso. Transcurrido dicho plazo, no se podrá avanzar con la investigación y se archivará la causa</p>
                 </div>
               </div>
             </div>
@@ -133,7 +138,7 @@
                 </div>
                 <div class="column is-8">
                   <p class="is-300">
-                    Algunas denuncias por su nivel de gravedad llegan a un Jurado de Enjuiciamiento
+                    Proceso de remoción ante el Jurado de Enjuiciamiento. Se podrá ordernar la suspensión de la persona denunciada.
                   </p>
                 </div>
               </div>
@@ -147,7 +152,7 @@
                 </div>
                 <div class="column is-8">
                   <p class="is-300">
-                    Estas son las causas que tuvieron una sanción, puede ser una sanción firme, sanción disciplinaria y por esto reciben una advertencia, un apercibimiento o una multa
+                    Amonestación establecida por conductas indebidas. Las sanciones podrán incluir una advertencia, un apercibimiento o una multa.
                   </p>
                 </div>
               </div>
@@ -161,7 +166,7 @@
                 </div>
                 <div class="column is-8">
                   <p class="is-300">
-                    En muchos casos el juez renuncia antes de que la denuncia termine
+                    La persona denunciada decide dejar su cargo antes de que el proceso disciplinario finalice.
                   </p>
                 </div>
               </div>
@@ -173,7 +178,7 @@
     <div id="articulos-relacionados" class="section">
       <ArticlesAlternativeCarousel relatedTagUuid="888b86d9-d663-4289-8caa-9675b2b2421f" />
     </div>
-    <div id="fuente" class="section">
+    <div id="fuentes" class="section">
       <div class="container has-text-centered">
         <h1 class="title is-2">
           Fuente y notas
@@ -211,11 +216,12 @@
 <script>
 import Vue from 'vue'
 import iframeResize from 'iframe-resizer/js/iframeResizer'
-
+import Sidebar from '~/components/disciplina/Sidebar.vue'
 export default {
   name: 'QuienesSomos',
   layout: 'default-darknav',
   components: {
+    Sidebar
   }
 }
 
@@ -230,6 +236,9 @@ Vue.directive('resize', {
 </script>
 
 <style lang="scss" scoped>
+body{
+  background-color: #fff;
+}
 .line {
 display:inline-block;
 width: 100px;
@@ -245,7 +254,8 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #ebebeb;
+  // background-color: #ebebeb;
+  background-color: #fff;
 }
 .overlay-graphs{
   // min-height: 100vh;

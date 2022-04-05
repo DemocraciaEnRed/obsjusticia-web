@@ -2,8 +2,10 @@
   <section class="specialbg">
     <div class="py-6">
       <div class="my-6 py-6">
+        <Sidebar />
         <div class="columns">
           <div class="column is-8 is-offset-2">
+
             <Header scroll-id="ley" />
             <PedidosInformes scroll-id="pedidos-informes" />
             <Cumplimiento scroll-id="cumplimiento" />
@@ -16,9 +18,9 @@
             <ArticlesAlternativeCarousel relatedTagUuid="d7a60eec-bd2d-4b72-9342-3995837bf443" scroll-id="articulos-relacionados" />
             <Fuentes scroll-id="fuentes" />
           </div>
-          <div class="column is-2 sidebar">
+          <!-- <div class="column is-2 sidebar">
             <Sidebar />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
