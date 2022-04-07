@@ -2,9 +2,9 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700 is-spaced line-height-150">
+        <h3 class="is-uppercase is-2 is-700 is-spaced line-height-150">
           ¿Cómo se están seleccionando a los jueces y juezas de nuestro país?
-        </h1>
+        </h3>
         <h1 class="subtitle is-4 my-6 line-height-150">
           El proceso de selección consiste en una serie de pasos en los que intervienen distintos órganos: el Consejo de la Magistratura, el Poder Ejecutivo y el Senado.
         </h1>

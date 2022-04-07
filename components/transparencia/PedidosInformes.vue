@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700 is-spaced">
+        <h1 class="title is-uppercase is-2 is-700 is-spaced">
           Pedidos de acceso a la información pública
         </h1>
         <br>
@@ -18,13 +18,13 @@
           <h1 class="title is-3 is-700">
             <i class="fas fa-times fa-2x has-text-orange" />
           </h1>
-          <h1 class="title is-3 is-700 is-spaced">
+          <h1 class="title is-uppercase is-3 is-700 is-spaced">
             Error al cargar los datos... Intente nuevamente
           </h1>
         </div>
         <div v-else>
           <div class="content">
-            <p class="is-size-4 line-height-150">
+            <p class="is-size-4 is-uppercase line-height-150">
               Accedé a los pedidos de acceso a la información pública que presentamos ante el Poder Judicial y Ministerio Público y sus respuestas.
             </p>
           </div>

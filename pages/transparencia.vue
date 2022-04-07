@@ -60,6 +60,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+h1{
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 50pxrem;
+}
+h2 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 40px;
+}
+h3 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 35px;
+}
+h4 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 30px;
+}
+h5 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 22px;
+}
+h6 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 20px;
+}
 .line {
 display:inline-block;
 width: 100px;

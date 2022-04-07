@@ -2,11 +2,11 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700 is-spaced">
+        <h1 class="title is-uppercase is-2 is-700 is-spaced">
           Conclusiones
         </h1>
         <br>
-        <h1 class="title is-3 is-700 is-spaced">
+        <h1 class="title is-uppercase is-uppercase is-3 is-700 is-spaced">
           Sobre transparencia pasiva
         </h1>
         <br>
@@ -58,7 +58,7 @@
         <br>
         <br>
         <br>
-        <h1 class="title is-3 is-700 is-spaced">
+        <h1 class="title is-uppercase is-3 is-700 is-spaced">
           Sobre transparencia activa
         </h1>
         <br>
@@ -110,7 +110,7 @@
         <br>
         <br>
         <br>
-        <h1 class="title is-3 is-700 is-spaced">
+        <h1 class="title is-uppercase is-3 is-700 is-spaced">
           Sobre órganos garantes
         </h1>
         <br>

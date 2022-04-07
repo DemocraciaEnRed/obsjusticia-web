@@ -1,8 +1,41 @@
-h1,h2,h3,h4,h5,h6,.title,.subtitle{
+// h1,h2,h3,h4,h5,h6,.title,.subtitle{
+//   font-family: 'Raleway', $family-sans-serif;
+//   color: #000000;
+// }
+h1{
   font-family: 'Raleway', $family-sans-serif;
   color: #000000;
+  font-size: 50px;
 }
-
+h2 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 40px;
+}
+h3 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 35px;
+}
+h4 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 30px;
+}
+h5 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 22px;
+}
+h6 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 20px;
+}
+.es-oswald{
+  font-family: 'Oswald' !important;
+  font-weight: 700 !important;
+}
 //==========================
 
 @mixin font-weight($weight) {

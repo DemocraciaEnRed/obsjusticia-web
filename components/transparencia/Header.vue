@@ -2,12 +2,12 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-2 is-700 line-height-150">
+        <h1 class="is-uppercase is-700 line-height-150">
           Transparencia y Acceso a la Información en el Poder Judicial y Ministerio Público
         </h1>
         <div class="py-6">
-          <h1 class="title is-3 is-700 is-spaced">
-            Ley 27.275
+          <h1 class="title es-oswald is-3 is-700 is-spaced">
+            LEY 27.275
           </h1>
           <h1 class="subtitle is-4 line-height-150 is-500">
             La Ley 27.275 de Acceso a la Información Pública garantiza el derecho de acceso a la información pública, promueve la participación ciudadana y la transparencia de la gestión pública.
@@ -32,3 +32,6 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+
+</style>

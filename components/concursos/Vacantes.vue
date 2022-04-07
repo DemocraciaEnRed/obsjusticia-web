@@ -20,7 +20,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesJuecesPoderEjecutivo') }}
               </span>
             </h1>
@@ -36,7 +36,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesJuecesSenado') }}
               </span>
             </h1>
@@ -52,7 +52,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesJuecesConsejoMagistratura') }}
               </span>
             </h1>
@@ -68,7 +68,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesJuecesConcursosEnProceso') }}
               </span>
             </h1>
@@ -84,7 +84,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesJuecesVacantesSinTramite') }}
               </span>
             </h1>
@@ -108,7 +108,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesFiscalesPoderEjecutivo') }}
               </span>
             </h1>
@@ -124,7 +124,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesFiscalesSenado') }}
               </span>
             </h1>
@@ -140,7 +140,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesFiscalesMinisterioPublicoFiscal') }}
               </span>
             </h1>
@@ -156,7 +156,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesFiscalesConcursosEnProceso') }}
               </span>
             </h1>
@@ -172,7 +172,7 @@
               <span v-else-if="$fetchState.error">
                 <i class="fas fa-times fa-fw fa-lg" />
               </span>
-              <span v-else>
+              <span v-else class="es-oswald">
                 {{ getValue('vacantesFiscalesVacantesSinTramite') }}
               </span>
             </h1>

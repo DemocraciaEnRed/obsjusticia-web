@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-3 is-700 is-spaced line-height-150">
+        <h1 class="title is-uppercase is-3 is-700 is-spaced line-height-150">
           ¿Cómo cumplen el Poder Judicial y el Ministerio Público con las obligaciones de la ley?
         </h1>
         <h1 class="subtitle is-4 line-height-150">

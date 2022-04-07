@@ -7,7 +7,7 @@
         <div class="columns is-centered my-6">
           <div class="column is-8">
             <div id="totales" class="has-text-centered">
-              <h1 class="title is-2 is-700">
+              <h1 class=" is-uppercase is-2 is-700">
                 Procesos disciplinarios contra jueces y juezas
               </h1>
               <br>
@@ -19,7 +19,7 @@
               <p class="is-size-5">
                 <i class="far fa-calendar fa-2x mb-3" />
               </p>
-              <p class="is-size-3 is-800">
+              <p class="is-size-3 es-oswald is-800">
                 23 AÑOS
               </p>
               <br>
@@ -27,10 +27,10 @@
             </div>
             <hr class="has-background-black">
             <div class="is-clearfix">
-              <p class="is-pulled-left is-size-5">
+              <p class="is-pulled-left es-oswald is-size-5">
                 1998
               </p>
-              <p class="is-pulled-right is-size-5">
+              <p class="is-pulled-right es-oswald is-size-5">
                 2021
               </p>
             </div>
@@ -38,28 +38,28 @@
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-file" /></p>
-                  <span class="is-700 is-size-2">3360</span><br><span class="is-400">DESESTIMADAS<br></span>
+                  <span class="is-700 es-oswald is-size-2">3360</span><br><span class="is-400">DESESTIMADAS<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-exclamation-triangle" /></p>
-                  <span class="is-700 is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
+                  <span class="is-700 es-oswald is-size-2">245</span><br><span class="is-400">CADUCADAS<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-gavel" /></p>
-                  <span class="is-700 is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
+                  <span class="is-700 es-oswald is-size-2">42</span><br><span class="is-400">SANCIONES<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
                   <p class="mb-4"><i class="fas is-size-2 fa-balance-scale" /></p>
-                  <span class="is-700 is-size-2">35</span><br><span class="is-400">JUICIOS POLÍTICOS<br></span>
+                  <span class="is-700 es-oswald is-size-2">35</span><br><span class="is-400">JUICIOS POLÍTICOS<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
@@ -236,6 +236,37 @@ Vue.directive('resize', {
 </script>
 
 <style lang="scss" scoped>
+
+h1{
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 50px;
+}
+h2 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 40px;
+}
+h3 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 35px;
+}
+h4 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 30px;
+}
+h5 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 22px;
+}
+h6 {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 20px;
+}
 body{
   background-color: #fff;
 }

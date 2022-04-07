@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-1 is-700">
+        <h1 class="is-uppercase is-1 is-700">
           Concursos de jueces, juezas y fiscales
         </h1>
         <div class="py-6">
@@ -13,7 +13,7 @@
             <span v-else-if="$fetchState.error">
               <i class="fas fa-times fa-fw fa-lg" />
             </span>
-            <span v-else>
+            <span v-else class="es-oswald">
               {{ getValue('vacantesTotales') }}
             </span>
           </h1>
@@ -36,7 +36,7 @@
                     <span v-else-if="$fetchState.error">
                       <i class="fas fa-times fa-fw fa-lg" />
                     </span>
-                    <span v-else>
+                    <span v-else class="es-oswald">
                       {{ getValue('vacantesJueces') }}
                     </span>
                   </h1>
@@ -52,7 +52,7 @@
                     <span v-else-if="$fetchState.error">
                       <i class="fas fa-times fa-fw fa-lg" />
                     </span>
-                    <span v-else>
+                    <span v-else class="es-oswald">
                       {{ getValue('tramitesEnCursoJueces') }}
                     </span>
                   </h1>
@@ -76,7 +76,7 @@
                     <span v-else-if="$fetchState.error">
                       <i class="fas fa-times fa-fw fa-lg" />
                     </span>
-                    <span v-else>
+                    <span v-else class="es-oswald">
                       {{ getValue('vacantesFiscales') }}
                     </span>
                   </h1>
@@ -92,7 +92,7 @@
                     <span v-else-if="$fetchState.error">
                       <i class="fas fa-times fa-fw fa-lg" />
                     </span>
-                    <span v-else>
+                    <span v-else class="es-oswald">
                       {{ getValue('tramitesEnCursoFiscales') }}
                     </span>
                   </h1>
