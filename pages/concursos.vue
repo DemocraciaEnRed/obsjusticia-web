@@ -5,10 +5,10 @@
       <div class="my-6 py-6">
 
         <div class="columns">
-          <div v-if="contestType" class="type-picker column is-1 is-hidden-mobile">
+          <div class="type-picker column is-1 is-hidden-mobile">
             <SideTypePicker v-model="contestType" />
           </div>
-          <div class="column is-8" v-bind:class="contestType? 'is-offset-1' : 'is-offset-2'">
+          <div class="column is-8 is-offset-1">
             <Header scroll-id="ley" v-model="contestType"/>
             <div v-if="contestType == 'judges'">
               <Jueces />
