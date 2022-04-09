@@ -51,7 +51,7 @@
                       </span>
                     </h1>
                     <h1 class="subtitle is-5 is-chivo">
-                      VACANTES
+                      CARGOS<br>TOTALES
                     </h1>
                   </div>
                   <div class="column">
@@ -67,7 +67,7 @@
                       </span>
                     </h1>
                     <h1 class="subtitle is-5 is-chivo">
-                      TRAMITES<br>EN CURSO
+                      VACANTES
                     </h1>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                       </span>
                     </h1>
                     <h1 class="subtitle is-5 is-chivo">
-                      VACANTES
+                      CARGOS<br>TOTALES
                     </h1>
                   </div>
                   <div class="column">
@@ -118,16 +118,13 @@
                       </span>
                     </h1>
                     <h1 class="subtitle is-5 is-chivo">
-                      TRAMITES<br>EN CURSO
+                      VACANTES
                     </h1>
                   </div>
                 </div>
               </label>
             </div>
           </div>
-          <p class="is-300 is-size-5">
-            <b>(*)</b> Los trámites en curso son aquellas vacantes cuyos concursos ya comenzaron o ya fueron realizados y elevados al Poder Ejecutivo o el Senado. Las restantes vacantes no cuentan aún con trámite de selección iniciado.
-          </p>
         </div>
       </div>
     </div>
