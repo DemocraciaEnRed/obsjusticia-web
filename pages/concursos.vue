@@ -131,6 +131,6 @@ background-color: #00B1AF;
 }
 .type-picker{
   position: relative;
-  z-index: 1;
+  z-index: 1000;
 }
 </style>
