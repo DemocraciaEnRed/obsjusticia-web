@@ -77,10 +77,10 @@
                       Sumatoria Puntajes
                     </th>
                     <th class="is-uppercase has-background-orange">
-                      Orden de<br>Mérito
+                      1º Orden de<br>mérito
                     </th>
                     <th class="is-uppercase">
-                      Impugnación
+                      Suma por impugnación
                     </th>
                     <th class="is-uppercase">
                       Impugnación Oposición
@@ -122,10 +122,10 @@
                       Entrevista
                     </th>
                     <th class="is-uppercase has-background-orange">
-                      Terna<br>comisión
+                      Terna<br>propuesta
                     </th>
                     <th class="is-uppercase has-background-orange">
-                      Terna<br>plenario
+                      Terna<br>final
                     </th>
                   </tr>
                 </thead>
@@ -257,11 +257,11 @@ export default {
           }
         },
         parallelAxis: [
-          { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -20, align: 'left', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Orden de Merito' },
-          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Impugnación' },
-          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Entrevista' },
-          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 0, align: 'center', formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Terna Comisión' },
-          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { formatter: v => `${v}°`, color: 'black', fontWeight: 600, fontSize: 14, padding: [2, 4], backgroundColor: 'white', borderColor: '#CACACA', borderRadius: 4, borderWidth: 1 }, name: 'Terna Plenario' }
+          { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
+          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
+          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
+          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
+          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 10, formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } }
         ],
         color: ['#f0d001', '#3257ab'],
         legend: {
@@ -291,7 +291,7 @@ export default {
             const personData = this.getDataByNombre(a.data.name)
             let aux = `
             <p style="font-size:16px; font-weight: bold; margin-bottom: 10px; text-align: left;">${a.data.name}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Orden de Mérito</b>: ${a.data.value[0]}°</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>1º Orden de mérito</b>: ${a.data.value[0]}°</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion</b>:&nbsp;&nbsp;&nbsp;${personData.oposicion}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Antecedentes</b>:&nbsp;&nbsp;&nbsp;${personData.antecedentes}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px; padding-bottom: 10px;"><b>Sumatoria</b>:&nbsp;&nbsp;&nbsp;${personData.primerasum}</p>
@@ -306,8 +306,8 @@ export default {
             aux += `
             <p style="font-size:11px; text-align: left; line-height: normal;"><b>Nuevo Orden de Mérito</b>:&nbsp;&nbsp;&nbsp;${a.data.value[1]}°</p>
             <p style="font-size:11px; text-align: left; line-height: normal;"><b>Entrevista</b>:&nbsp;&nbsp;&nbsp;${a.data.value[2] ?? 'No pasó / Sin datos'}${a.data.value[2] ? '°' : ''}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna comisión</b>:&nbsp;&nbsp;&nbsp;${a.data.value[3] ?? 'No pasó / Sin datos'}${a.data.value[3] ? '°' : ''}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna plenario</b>:&nbsp;&nbsp;&nbsp;${a.data.value[4] ?? 'No pasó / Sin datos'}${a.data.value[4] ? '°' : ''}</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna propuesta</b>:&nbsp;&nbsp;&nbsp;${a.data.value[3] ?? 'No pasó / Sin datos'}${a.data.value[3] ? '°' : ''}</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna final</b>:&nbsp;&nbsp;&nbsp;${a.data.value[4] ?? 'No pasó / Sin datos'}${a.data.value[4] ? '°' : ''}</p>
             `
             if (personData.ordenentrevista === '*') {
               aux += `
@@ -340,7 +340,7 @@ export default {
           ]
         },
         yAxis: {
-          name: 'Orden de Merito',
+          name: '1º Orden de mérito',
           inverse: true,
           min: 0
         },
