@@ -250,7 +250,6 @@ export default {
           }
         },
         parallelAxis: [
-          { type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } },
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
           { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
           { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
@@ -434,9 +433,31 @@ export default {
         const auxMax = Math.max(...theData.value)
         theMax = theMax > auxMax ? theMax : auxMax
       })
-      this.parallelChartOptions.parallelAxis[0].data = data.map(it => it.nombre.split(' ').slice(0, 3))
+      const parallelAxis = this.parallelChartOptions.parallelAxis
+      if (data.length > 30) {
+        this.parallelChartOptions.parallelAxis = parallelAxis.filter(({ name }) => name !== 'Nombre')
+      } else {
+        if (!parallelAxis.find(({ name }) => name === 'Nombre')) {
+          const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } }
+          this.parallelChartOptions.parallelAxis.unshift(nameAxis)
+        }
+
+        const sortedByPrimerOrdenMerito = data.sort((a, b) => {
+          const primerOrdenMeritoDeA = parseInt(a.primerordenmerito)
+          const primerOrdenMeritoDeB = parseInt(b.primerordenmerito)
+          if (primerOrdenMeritoDeA < primerOrdenMeritoDeB) {
+            return -1
+          } else {
+            if (primerOrdenMeritoDeA > primerOrdenMeritoDeB) {
+              return 1
+            }
+            return 0
+          }
+        })
+        this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3))
+      }
       this.parallelChartOptions.parallelAxis.forEach((d, i) => {
-        if (i === 0) {
+        if (d.name === 'Nombre') {
           return
         }
         this.parallelChartOptions.parallelAxis[i].max = theMax
