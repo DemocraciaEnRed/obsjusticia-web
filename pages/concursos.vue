@@ -1,6 +1,8 @@
 <template>
   <section class="specialbg">
-    <Sidebar />
+    <div v-if="contestType">
+      <Sidebar />
+    </div>
     <div class="py-6">
       <div class="my-6 py-6">
         <SideTypePicker v-model="contestType" class="is-hidden-mobile" />

@@ -2,10 +2,13 @@
   <section :id="scrollId" class="hero is-fullheight">
     <div class="hero-body px-0 has-text-centered">
       <div class="container" style="width: 100%;">
-        <h1 class="subtitle is-4 line-height-150">
-          En el cuadro que sigue encontrarás los puntajes de cada concurso en marcha (algunos anteriores también) y qué candidatos/as se beneficiaron con las impugnaciones y entrevistas personales:
-        </h1>
-        <div class="field has-addons mx-6">
+        <h3 class="is-uppercase is-2 is-500 line-height-150">
+          Elegí el concurso que te interese
+        </h3>
+        <p class="is-size-5 line-height-150">
+          Accedé a la información sobre concursos en trámite y finalizados con los puntajes asignados en cada etapa.
+        </p>
+        <div class="field has-addons m-6">
           <div class="control is-expanded">
             <div class="select">
               <select v-model="sheetSelected">

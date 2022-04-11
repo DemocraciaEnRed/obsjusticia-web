@@ -1,7 +1,7 @@
 <template>
 <div class="">
     <scrollactive active-class="active" class="my-nav" :offset="0" :duration="1000" bezier-easing-value=".5,0,.35,1">
-    <a href="#ley" class="scrollactive-item">Concursos</a>
+    <a href="#ley" class="scrollactive-item">Números</a>
     <a href="#seleccion" class="scrollactive-item">Selección</a>
     <a href="#puntajes" class="scrollactive-item">Concursos</a>
     <a href="#proceso" class="scrollactive-item">Proceso</a>

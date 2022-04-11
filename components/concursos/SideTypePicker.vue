@@ -45,7 +45,7 @@ export default {
 .picker-container{
   z-index: 1000;
   position: sticky;
-  top: 50%;
+  top: 40%;
   left: 20%;
   margin-left: 5%;
 }
