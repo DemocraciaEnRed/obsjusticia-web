@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .picker-container{
+  z-index: 1000;
   position: sticky;
   top: 50%;
   left: 20%;

@@ -7,23 +7,13 @@
         </h1>
         <div class="field has-addons mx-6">
           <div class="control is-expanded">
-            <div class="select is-fullwidth">
+            <div class="select">
               <select v-model="sheetSelected">
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
                   {{ place.label }} ({{ place.status }})
                 </option>
               </select>
             </div>
-          </div>
-          <div class="control">
-            <button class="button is-primary" :class="{'is-outlined': type !== 'table'}" @click="type = 'table'">
-              Tabla
-            </button>
-          </div>
-          <div class="control">
-            <button class="button is-primary" :class="{'is-outlined': type !== 'graph'}" @click="type = 'graph'">
-              Gráfico
-            </button>
           </div>
         </div>
         <div v-if="$fetchState.pending" class="p-6 has-text-centered">
@@ -43,12 +33,13 @@
           </h1>
         </div>
         <div v-else>
-          <div v-if="type == 'graph'">
-            <client-only>
-              <v-parallel-chart class="chart" :option="parallelChartOptions" />
-            </client-only>
-          </div>
-          <div v-else-if="type == 'table'" class="is-flex is-flex-direction-row my-5 px-6">
+          <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
+            CONCURSO: {{ selectedContest() }}
+          </p>
+          <client-only>
+            <v-parallel-chart class="chart" :option="parallelChartOptions" />
+          </client-only>
+          <div class="is-flex is-flex-direction-row my-5 px-6">
             <div class="first-table">
               <table class="table mb-0">
                 <thead>
@@ -200,7 +191,6 @@ export default {
   data () {
     return {
       data: null,
-      type: 'table',
       status: null,
       statusKeys: [
         'nombre',
@@ -456,12 +446,21 @@ export default {
     },
     getValue (key) {
       return (this.data.find(d => d.clave === key)).valor
+    },
+    selectedContest () {
+      const selectedContest = this.lugares.find(it => it.key === this.sheetSelected)
+      return selectedContest && selectedContest.label
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.select{
+  display: grid;
+  width: 60%;
+  margin: 0 auto;
+}
 .chart{
   height: 75vh;
 }

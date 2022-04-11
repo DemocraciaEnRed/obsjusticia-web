@@ -126,8 +126,4 @@ background-color: #00B1AF;
   right: 40px;
   color: #6b6b6b;
 }
-.type-picker{
-  position: relative;
-  z-index: 1000;
-}
 </style>
