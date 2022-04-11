@@ -3,9 +3,8 @@
     <scrollactive active-class="active" class="my-nav" :offset="0" :duration="1000" bezier-easing-value=".5,0,.35,1">
     <a href="#ley" class="scrollactive-item">Concursos</a>
     <a href="#seleccion" class="scrollactive-item">Selección</a>
-    <a href="#vacantes" class="scrollactive-item">Vacantes</a>
+    <a href="#puntajes" class="scrollactive-item">Concursos</a>
     <a href="#proceso" class="scrollactive-item">Proceso</a>
-    <a href="#puntajes" class="scrollactive-item">Puntajes</a>
     <a href="#influencias" class="scrollactive-item">Influencias</a>
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
     <a href="#lexico" class="scrollactive-item">Léxico no especialistas</a>
