@@ -324,28 +324,6 @@ export default {
           }
         },
         series: []
-      },
-      chartOptions: {
-        legend: {
-          type: 'scroll'
-        },
-        xAxis: {
-          type: 'category',
-          data: [
-            'Oposicion',
-            'Antecedentes',
-            'Impugnacion oposición',
-            'Impugnacion Antecedentes',
-            'Entrevista',
-            'Merito Final'
-          ]
-        },
-        yAxis: {
-          name: '1º Orden de mérito',
-          inverse: true,
-          min: 0
-        },
-        series: []
       }
     }
   },
