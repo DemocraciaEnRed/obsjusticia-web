@@ -46,6 +46,7 @@ export default {
   position: sticky;
   top: 50%;
   left: 20%;
+  margin-left: 5%;
 }
 .type-container{
   cursor: pointer;
@@ -54,7 +55,7 @@ export default {
 }
 .icon-container{
   border-radius: 100%;
-  width: 100%;
+  width: 85px;
   height: 85px;
 }
 .image{

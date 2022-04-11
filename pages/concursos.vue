@@ -3,12 +3,9 @@
     <Sidebar />
     <div class="py-6">
       <div class="my-6 py-6">
-
+        <SideTypePicker v-model="contestType" class="is-hidden-mobile" />
         <div class="columns">
-          <div class="type-picker column is-1 is-hidden-mobile">
-            <SideTypePicker v-model="contestType" />
-          </div>
-          <div class="column is-8 is-offset-1">
+          <div class="column is-8 is-offset-2">
             <Header scroll-id="ley" v-model="contestType"/>
             <div v-if="contestType == 'judges'">
               <Jueces />
