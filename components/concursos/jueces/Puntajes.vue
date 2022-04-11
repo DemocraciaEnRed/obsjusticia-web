@@ -257,6 +257,7 @@ export default {
           }
         },
         parallelAxis: [
+          { type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } },
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
           { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
           { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
@@ -462,11 +463,14 @@ export default {
         const auxMax = Math.max(...theData.value)
         theMax = theMax > auxMax ? theMax : auxMax
       })
+      this.parallelChartOptions.parallelAxis[0].data = data.map(it => it.nombre.split(' ').slice(0, 3))
       this.parallelChartOptions.parallelAxis.forEach((d, i) => {
+        if (i === 0) {
+          return
+        }
         this.parallelChartOptions.parallelAxis[i].max = theMax
       })
       this.parallelChartOptions.series = [serieImpugnacionTrue, serieImpugnacionFalse]
-      this.parallelChartOptions.legend.data = ['Impugnaron', 'No impugnaron']
     },
     getColor (value) {
       const scale = chroma.scale(['#f0d001', '#3257ab'])
