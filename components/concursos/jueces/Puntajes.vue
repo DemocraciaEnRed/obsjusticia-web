@@ -465,6 +465,19 @@ export default {
     selectedContest () {
       const selectedContest = this.lugares.find(it => it.key === this.sheetSelected)
       return selectedContest && selectedContest.label
+    },
+    downloadGraphCSV () {
+      const keys = Object.keys(this.data[0]).join(',')
+      let csv = `${keys}\n`
+      this.data.forEach((row) => {
+        csv += Object.values(row).join(',')
+        csv += '\n'
+      })
+      const anchor = document.createElement('a')
+      anchor.href = 'data:text/csvcharset=utf-8,' + encodeURIComponent(csv)
+      anchor.target = '_blank'
+      anchor.download = 'concursos.csv'
+      anchor.click()
     }
   }
 }
