@@ -41,6 +41,9 @@
           </p>
           <client-only>
             <v-parallel-chart class="chart" :option="parallelChartOptions" />
+            <p class="is-size-6 has-text-justified order-explanation">
+              ORDEN DESCENDENTE DE ACUERDO<br>A PUNTAJE OPOSICIÓN
+            </p>
             <div>
               <button class="button is-primary is-outlined" @click="downloadGraphCSV">
                 Descargar gráfico
@@ -247,11 +250,11 @@ export default {
       ],
       parallelChartOptions: {
         parallelAxis: [
-          { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
-          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
-          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
-          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
-          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 10, formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } }
+          { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
+          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
+          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
+          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
+          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 10, formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } }
         ],
         color: ['#f0d001', '#3257ab'],
         legend: {
@@ -569,5 +572,9 @@ export default {
       border-color: black
     }
   }
+}
+.order-explanation{
+  margin-left: 300px;
+  margin-top: -30px;
 }
 </style>
