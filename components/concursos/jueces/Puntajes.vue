@@ -229,26 +229,6 @@ export default {
         'orden-opo-ant-iopo-iant'
       ],
       parallelChartOptions: {
-        toolbox: {
-          show: true,
-          feature: {
-            dataView: {
-              readOnly: false,
-              emphasis: {
-                iconStyle: {
-                  textAlign: 'center'
-                }
-              }
-            },
-            saveAsImage: {
-              emphasis: {
-                iconStyle: {
-                  textAlign: 'right'
-                }
-              }
-            }
-          }
-        },
         parallelAxis: [
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -30, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 12, padding: [2, 4] }, name: '1º Orden de mérito' },
           { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 1, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
@@ -372,8 +352,7 @@ export default {
       return this.data.find(p => p.nombre === name)
     },
     prepareChart (data) {
-      const serieImpugnacionTrue = {
-        name: 'Impugnaron',
+      const parallelSerie = {
         type: 'parallel',
         data: [],
         smooth: false,
@@ -389,26 +368,26 @@ export default {
           }
         }
       }
-      const serieImpugnacionFalse = {
-        name: 'No impugnaron',
-        type: 'parallel',
-        data: [],
-        smooth: false,
-        emphasis: {
-          lineStyle: {
-            color: '#4017f5',
-            opacity: 0.75,
-            width: 5,
-            type: 'dotted',
-            cap: 'butt',
-            join: 'round',
-            dashOffset: 10
-          }
-        }
-      }
       let theMax = 1
       data.forEach((d, index) => {
         // console.log((index / data.length).toFixed(2))
+        const coloredStatus = [
+          {
+            // TODO rename to match 'designación senado' one
+            status: 'ternaplenario',
+            color: '#59D320'
+          },
+          {
+            status: 'ternaplenario',
+            color: '#E59D3F'
+          },
+          {
+            status: 'ternaplenario',
+            color: '#CD3D27'
+          }
+        ]
+        const contestantColoredStatus = coloredStatus.find(({ status }) => d[status]) || coloredStatus.at(-1)
+        const color = contestantColoredStatus.color
         const theData = {
           name: d.nombre,
           value: [
@@ -419,17 +398,12 @@ export default {
             parseInt(d.ternaplenario) ? parseInt(d.ternaplenario) : null
           ],
           lineStyle: {
-            // color: this.getColor(parseFloat(index) / this.data.length),
-            color: d.impugnacion === 'si' ? '#f0d001' : '#3257ab',
+            color,
             opacity: 0.75,
-            width: 4
+            width: 3
           }
         }
-        if (d.impugnacion === 'si') {
-          serieImpugnacionTrue.data.push(theData)
-        } else {
-          serieImpugnacionFalse.data.push(theData)
-        }
+        parallelSerie.data.push(theData)
         const auxMax = Math.max(...theData.value)
         theMax = theMax > auxMax ? theMax : auxMax
       })
@@ -462,7 +436,7 @@ export default {
         }
         this.parallelChartOptions.parallelAxis[i].max = theMax
       })
-      this.parallelChartOptions.series = [serieImpugnacionTrue, serieImpugnacionFalse]
+      this.parallelChartOptions.series = [parallelSerie]
     },
     getColor (value) {
       const scale = chroma.scale(['#f0d001', '#3257ab'])
