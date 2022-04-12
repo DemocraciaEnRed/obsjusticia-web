@@ -454,7 +454,7 @@ export default {
             return 0
           }
         })
-        this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3))
+        this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3).join(' '))
       }
       this.parallelChartOptions.parallelAxis.forEach((d, i) => {
         if (d.name === 'Nombre') {
