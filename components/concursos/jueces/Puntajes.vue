@@ -41,6 +41,23 @@
           </p>
           <client-only>
             <v-parallel-chart class="chart" :option="parallelChartOptions" />
+            <div>
+              <button class="button is-primary is-outlined" @click="downloadGraphCSV">
+                Descargar gráfico
+              </button>
+              <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                class="twitter-share-button"
+                data-size="large"
+                data-text="Mirá los concursos de jueces y fiscales en JUSTA!"
+                data-via="ACIJargentina"
+                data-hashtags="justa,acij"
+                data-lang="es"
+                data-show-count="false"
+              >
+                Tweet
+              </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
           </client-only>
           <div class="is-flex is-flex-direction-row my-5 px-6">
             <div class="first-table">
