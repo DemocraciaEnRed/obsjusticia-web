@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-6">
     <div class="footer">
       <div class="container">
         <div class="is-6-mobile mt-4 is-3-desktop links-columns level">
@@ -8,10 +8,10 @@
             <a href="/procesos-disciplinarios" class="has-text-white is-size-5 level-item">Disciplina</a>
             <router-link to="/transparencia" class="has-text-white is-size-5 level-item">Transparencia</router-link>
             <a href="https://causasdecorrupcion.org/" class="has-text-white is-size-5 level-item">Corrupción</a>
-            <a href="/quienes-somos" class="has-text-white is-size-5 level-item">¿Qué es iniciativa justa?</a>
+            <a href="/quienes-somos" class="has-text-white is-size-5 level-item">¿Qué es JusTA?</a>
             <div class="level-item">
-              <span class="is-size-5">¿Encontraste algún error? </span>
-              <a href="mailto:info@acij.org.ar" class="has-text-white is-size-5 ml-4">CONTACTANOS</a>
+              <!-- <span class="is-size-5">¿Encontraste algún error? </span> -->
+              <a href="mailto:info@acij.org.ar" class="has-text-white is-size-5 ml-4">¡Ayúdanos a mejorar! Contactanos</a>
             </div>
         </div>
         <div class="columns py-6 mt-6">

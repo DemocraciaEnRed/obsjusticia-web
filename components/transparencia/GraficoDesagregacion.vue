@@ -14,8 +14,8 @@
                     >
                   <div class="is-flex hero-config is-justify-content-center is-align-content-center is-align-items-center">
                     <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
-                      <div class="hero-body px-0 has-text-centered">
-                        Desagregacion de los indices
+                      <div class="hero-body is-size-4 has-text-centered">
+                        Desagregación de los indices
                       </div>
                     <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
                   </div>
@@ -24,9 +24,6 @@
             <div class="panel-block">
               <div class="hero-body px-0 has-text-centered">
                 <div class="container">
-                  <h1 class="title is-2 is-700 is-spaced">
-                    Desagregación de los índices
-                  </h1>
                   <br>
                   <div v-if="$fetchState.pending" class="p-6 has-text-centered">
                     <h1 class="title is-4 is-700">
@@ -110,7 +107,7 @@
 </template>
 
 <script>
-import chroma from 'chroma-js'
+// import chroma from 'chroma-js'
 
 export default {
   props: {
@@ -179,8 +176,17 @@ export default {
       return output
     },
     getColor (value) {
-      const scale = chroma.scale(['#CD3D27', '#6C9EFF', '#1DD1A1', '#E59D3F'])
-      return scale(value).hex()
+      // const scale = chroma.scale(['#CD3D27', '#6C9EFF', '#1DD1A1', '#E59D3F'])
+      // return scale(value).hex()
+      if (value >= 0 && value <= 0.3) {
+        return '#CD3D27'
+      } else if (value >= 0.31 && value <= 0.6) {
+        return '#E59D3F'
+      } else if (value >= 0.61 && value <= 0.9) {
+        return '#6C9EFF'
+      } else {
+        return '#1DD1A1'
+      }
     }
   }
 }
@@ -196,10 +202,13 @@ export default {
     text-align: center;
     text-transform: uppercase;
     font-feature-settings: 'pnum' on, 'lnum' on;
+
     background-color: #3157AC;
     color: #FFFFFF;
-    max-height: 100px;
+    max-height: 60px;
+    border-radius: 8px;
   }
+
   .panel-heading{
     background-color: inherit !important;
   }

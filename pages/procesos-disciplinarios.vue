@@ -178,7 +178,7 @@
     <div id="articulos-relacionados" class="section">
       <ArticlesAlternativeCarousel relatedTagUuid="888b86d9-d663-4289-8caa-9675b2b2421f" />
     </div>
-    <div id="fuentes" class="section">
+    <div id="fuentes" class="section mb-6">
       <div class="container has-text-centered">
         <h1 class="title is-2">
           Fuente y notas
@@ -210,6 +210,7 @@
         </div>
       </div>
     </div>
+    <div class="mx-6 pt-6"><br></div>
   </section>
 </template>
 

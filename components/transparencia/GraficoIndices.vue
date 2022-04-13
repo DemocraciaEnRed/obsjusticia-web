@@ -163,7 +163,7 @@
 </template>
 
 <script>
-import chroma from 'chroma-js'
+// import chroma from 'chroma-js'
 
 export default {
   props: {
@@ -179,6 +179,7 @@ export default {
       `https://sheets.googleapis.com/v4/spreadsheets/1l1OuR2hhKVZ8QFpqmgryqthn9iUzSTcV_uiTvDqqoKU/values/Sheet1?key=${this.$config.googleSheetApiKey}`
     ).then(res => res.json())
     this.data = this.extractData(data)
+    console.log('data: \n', this.data)
   },
   data () {
     return {
@@ -209,8 +210,17 @@ export default {
       return output
     },
     getColor (value) {
-      const scale = chroma.scale(['#CD3D27', '#6C9EFF', '#1DD1A1', '#E59D3F'])
-      return scale(value).hex()
+      // const scale = chroma.scale(['#CD3D27', '#E59D3F', '#6C9EFF', '#1DD1A1'])
+      // return scale(value).hex()
+      if (value >= 0 && value <= 0.3) {
+        return '#CD3D27'
+      } else if (value >= 0.31 && value <= 0.6) {
+        return '#E59D3F'
+      } else if (value >= 0.61 && value <= 0.9) {
+        return '#6C9EFF'
+      } else {
+        return '#1DD1A1'
+      }
     }
   }
 }

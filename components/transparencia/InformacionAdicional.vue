@@ -25,7 +25,7 @@
                     Accedé al informe sobre el cumplimiento de la Ley de Acceso a la Información Pública.
                   </h1>
                   <h1 class="title is-4 has-text-centered pt-5">
-                    <a href="/pdf/Metodología-de-medición_transparencia.pdf" target="_blank" class="download-button">Descargar</a>
+                    <a href="https://acij.org.ar/wp-content/uploads/2021/09/Informe-Hacia-la-efectiva-mplementacion-de-la-Ley-de-Acceso-a-la-Informacion.pdf" target="_blank" class="download-button">Descargar</a>
                   </h1>
                 </div>
               </div>

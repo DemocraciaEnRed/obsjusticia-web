@@ -24,6 +24,8 @@
     z-index: 10000;
     justify-content: center;
     justify-items: center;
+    text-align: center;
+
     padding: 1.5rem;
     // -webkit-box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.92);
     // box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.92);

@@ -14,7 +14,7 @@
         </h6>
         <div class="content">
           <p class="is-300 is-size-4">
-            Las visualizaciones de esta web se basan en el informe realizado por ACIJ sobre el cumplimiento de la Ley de Acceso a la Información Pública — <a href="https://acij.org.ar/wp-content/uploads/2021/09/Informe-Hacia-la-efectiva-mplementacion-de-la-Ley-de-Acceso-a-la-Informacion.pdf" target="_blank" class="has-text-black is-400"><u>proximamente</u> 🔗</a>
+            Las visualizaciones de esta web se basan en el informe realizado por ACIJ sobre el cumplimiento de la Ley de Acceso a la Información Pública — <a href="https://acij.org.ar/wp-content/uploads/2021/09/Informe-Hacia-la-efectiva-mplementacion-de-la-Ley-de-Acceso-a-la-Informacion.pdf" target="_blank" class="has-text-black is-400"><u>Link</u> 🔗</a>
           </p>
         </div>
       </div>
