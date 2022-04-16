@@ -184,7 +184,7 @@ export default {
   async fetch () {
     if (this.status == null) {
       await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/Estado?key=${this.$config.googleSheetApiKey}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/Estado?key=${this.$config.googleSheetApiKey}`
       )
         .then(res => res.json())
         .then((dataStatus) => {
@@ -194,7 +194,7 @@ export default {
         })
         .then(async () => {
           const data = await fetch(
-            `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/${this.lugares[0].key}?key=${this.$config.googleSheetApiKey}`
+            `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.lugares[0].key}?key=${this.$config.googleSheetApiKey}`
           ).then((res) => {
             return res.json()
           })
@@ -203,7 +203,7 @@ export default {
         })
     } else {
       const data = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/1SCyb2UYkO6JWrVaOhf3gUT6lQRtw1uH21YHsmAa61gU/values/${this.sheetSelected}?key=${this.$config.googleSheetApiKey}`
+        `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.sheetSelected}?key=${this.$config.googleSheetApiKey}`
       ).then((res) => {
         return res.json()
       })
@@ -238,6 +238,8 @@ export default {
         'ordenentrevista',
         'ternacomision',
         'ternaplenario',
+        'Elección Poder Ejecutivo',
+        'Designación Senado',
         'nota',
         'sum-opo',
         'sum-opo-ant',
@@ -254,7 +256,8 @@ export default {
           { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
           { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
           { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
-          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } }
+          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } },
+          { dim: 5, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => '', color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Designación senado', nameTextStyle: { fontWeight: 'bold' } }
         ],
         color: ['#f0d001', '#3257ab'],
         legend: {
@@ -393,8 +396,7 @@ export default {
         // console.log((index / data.length).toFixed(2))
         const coloredStatus = [
           {
-            // TODO rename to match 'designación senado' one
-            status: 'ternaplenario',
+            status: 'Designación Senado',
             color: '#59D320'
           },
           {
@@ -415,7 +417,8 @@ export default {
             parseInt(d.nuevoordenmerito) ? parseInt(d.nuevoordenmerito) : null,
             parseInt(d.ordenentrevista) ? parseInt(d.ordenentrevista) : null,
             parseInt(d.ternacomision) ? parseInt(d.ternacomision) : null,
-            parseInt(d.ternaplenario) ? parseInt(d.ternaplenario) : null
+            parseInt(d.ternaplenario) ? parseInt(d.ternaplenario) : null,
+            d['Designación Senado'] ? parseInt(d.ternaplenario) : null
           ],
           lineStyle: {
             color,
@@ -574,7 +577,7 @@ export default {
   }
 }
 .order-explanation{
-  margin-left: 300px;
+  margin-left: 250px;
   margin-top: -30px;
 }
 </style>
