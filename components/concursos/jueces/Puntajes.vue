@@ -101,6 +101,7 @@
                     </th>
                     <th>
                       <a href="https://justa.acij.org.ar/concursos" target="_blank">Entrevista</a>
+                      <span class="icon is-align-self-center ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
                     </th>
                     <th>
                       Terna<br>propuesta
@@ -148,6 +149,20 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+          <div class="m-6">
+            <div class="columns">
+              <span class="colum is-one-fifth lost-points-icon"/>
+              <p class="colum m-1">Perdió puntos por impugnación</p>
+            </div>
+            <div class="columns mt-2">
+              <span class="colum won-points-icon"/>
+              <p class="colum m-1">Ganó puntos por impugnación</p>
+            </div>
+            <div class="columns mt-2">
+              <span class="icon is-align-self-center m-1 is-size-4"><i class="fab fa-youtube"></i></span>
+              <p class="colum mt-1 ml-2">Vinculo a entrevistas grabadas</p>
             </div>
           </div>
         </div>
@@ -549,5 +564,19 @@ export default {
 .order-explanation{
   margin-left: 20%;
   margin-top: -30px;
+}
+.lost-points-icon{
+  margin: 6px 8px;
+  width: 15px;
+  height: 15px;
+  background-color: #f14668;
+  display: inline-table;
+}
+.won-points-icon{
+  margin: 6px 8px;
+  width: 15px;
+  height: 15px;
+  background-color: #48c78e;
+  display: inline-table;
 }
 </style>
