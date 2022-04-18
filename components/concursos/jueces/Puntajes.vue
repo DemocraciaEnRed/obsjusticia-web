@@ -100,7 +100,7 @@
                       2º Orden de<br>mérito
                     </th>
                     <th>
-                      Entrevista
+                      <a href="https://justa.acij.org.ar/concursos" target="_blank">Entrevista</a>
                     </th>
                     <th>
                       Terna<br>propuesta
