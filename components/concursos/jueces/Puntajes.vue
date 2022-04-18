@@ -422,7 +422,7 @@ export default {
       if (data.length > 30) {
         this.parallelChartOptions.parallelAxis = parallelAxis.filter(({ name }) => name !== 'Nombre')
       } else {
-        if (!parallelAxis.find(({ name }) => name === 'Nombre')) {
+        if (!parallelAxis.find(({ name }) => name === 'Nombre') && !this.isMobile()) {
           const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } }
           this.parallelChartOptions.parallelAxis.unshift(nameAxis)
         }
@@ -472,6 +472,9 @@ export default {
       anchor.target = '_blank'
       anchor.download = 'concursos.csv'
       anchor.click()
+    },
+    isMobile () {
+      return screen.width <= 760
     }
   }
 }
