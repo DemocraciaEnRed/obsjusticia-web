@@ -547,7 +547,7 @@ export default {
   }
 }
 .order-explanation{
-  margin-left: 250px;
+  margin-left: 20%;
   margin-top: -30px;
 }
 </style>
