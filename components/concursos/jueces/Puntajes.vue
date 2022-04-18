@@ -81,29 +81,38 @@
               <table class="table mb-0">
                 <thead>
                   <tr>
-                    <th class="is-uppercase">
-                      Puntaje Oposición
+                    <th>
+                      Examen<br>escrito
                     </th>
-                    <th class="is-uppercase">
-                      Puntaje Antecedentes
+                    <th>
+                      Curriculum
                     </th>
-                    <th class="is-uppercase">
-                      Sumatoria Puntajes
+                    <th>
+                      Suma de<br>puntajes
                     </th>
-                    <th class="is-uppercase has-background-orange">
+                    <th class="has-background-orange">
                       1º Orden de<br>mérito
                     </th>
-                    <th class="is-uppercase">
+                    <th>
                       Suma por impugnación
                     </th>
-                    <th class="is-uppercase">
-                      Impugnación Oposición
+                    <th class="has-background-orange">
+                      2º Orden de<br>mérito
                     </th>
-                    <th class="is-uppercase">
-                      Impugnación Antecedentes
+                    <th>
+                      Entrevista
                     </th>
-                    <th class="is-uppercase">
-                      Sumatoria Impugnación
+                    <th>
+                      Terna<br>propuesta
+                    </th>
+                    <th>
+                      Terna<br>final
+                    </th>
+                    <th>
+                      Elección<br>Poder<br>Ejecutivo
+                    </th>
+                    <th class="has-background-orange">
+                      Designación<br>Senado
                     </th>
                   </tr>
                 </thead>
@@ -115,47 +124,26 @@
                     <td class="has-background-warning">
                       {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
                     </td>
-                    <td class="is-uppercase" :class="{'has-text-orange': p.impugnacion == 'si'}">
-                      {{ p.impugnacion != null ? p.impugnacion : '-' }}
+                    <td :class="{'has-text-success': p.impugnacion == 'no', 'has-text-danger': p.impugnacion == 'si' }">
+                      {{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}
                     </td>
-                    <td>{{ p.impugnacionopocision != null ? p.impugnacionopocision : '-' }}</td>
-                    <td>{{ p.impugnacionantecedentes != null ? p.impugnacionantecedentes : '-' }}</td>
-                    <td>{{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="third-table">
-              <table class="table mb-0">
-                <thead>
-                  <tr>
-                    <th class="is-uppercase has-background-orange">
-                      Nuevo<br>Orden<br>de Mérito
-                    </th>
-                    <th class="is-uppercase has-background-orange">
-                      Entrevista
-                    </th>
-                    <th class="is-uppercase has-background-orange">
-                      Terna<br>propuesta
-                    </th>
-                    <th class="is-uppercase has-background-orange">
-                      Terna<br>final
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(p,i) in data" :key="`orden-${i}`">
                     <td class="has-background-warning">
                       {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
                     </td>
-                    <td class="has-background-warning">
+                    <td>
                       {{ p.ordenentrevista != null ? p.ordenentrevista : '-' }}
                     </td>
-                    <td class="has-background-warning">
+                    <td>
                       {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
                     </td>
-                    <td class="has-background-warning">
+                    <td>
                       {{ p.ternaplenario != null ? p.ternaplenario : '-' }}
+                    </td>
+                    <td>
+                      {{ p['Elección Poder Ejecutivo'] != null ? p['Elección Poder Ejecutivo'] : '-' }}
+                    </td>
+                    <td class="has-background-warning">
+                      {{ p['Designación Senado'] != null ? p['Designación Senado'] : '-' }}
                     </td>
                   </tr>
                 </tbody>
@@ -534,22 +522,6 @@ export default {
   tbody td{
     border-right: 1px solid black;
     width: 100px;
-  }
-}
-.third-table{
-  margin-bottom: 0;
-  width: 250px;
-  .table {
-    width: 100%;
-  }
-  tbody {
-    box-shadow: -5px 1px 4px -2px #00000078;
-  }
-  thead th {
-    font-size: 0.75rem;
-  }
-  tbody td{
-    border-left: 1px solid black;
   }
 }
 .table{
