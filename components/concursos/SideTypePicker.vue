@@ -46,7 +46,8 @@ export default {
   z-index: 1000;
   position: sticky;
   top: 40%;
-  left: 20%;
+  left: -20%;
+  max-width: 90px;
   margin-left: 5%;
 }
 .type-container{
