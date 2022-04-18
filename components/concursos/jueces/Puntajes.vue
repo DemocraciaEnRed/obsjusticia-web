@@ -8,8 +8,8 @@
         <p class="is-size-5 line-height-150">
           Accedé a la información sobre concursos en trámite y finalizados con los puntajes asignados en cada etapa.
         </p>
-        <div class="field has-addons m-6">
-          <div class="control is-expanded">
+        <div class="field m-6">
+          <div class="control">
             <div class="select">
               <select v-model="sheetSelected">
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
@@ -478,11 +478,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.select{
-  display: grid;
-  width: 60%;
-  margin: 0 auto;
-}
 .chart{
   height: 75vh;
 }
