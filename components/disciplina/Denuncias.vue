@@ -35,37 +35,37 @@
             <div class="columns mt-3 is-centered">
               <div class="column is-narrow">
                 <div class="px-2">
-                  <p class="mb-4"><i class="fas is-size-2 fa-file" /></p>
-                  <span class="is-700 es-oswald is-size-2">{{ valores['activas'] }}</span><br><span class="is-400">ABIERTAS<br></span>
+                  <p class="mb-4"><i class="text-acij fas is-size-2 fa-file" /></p>
+                  <span class="text-acij is-700 es-oswald is-size-2">{{ valores['activas'] }}</span><br><span class="text-acij is-400">ABIERTAS<br></span>
                   <hr class="has-background-black category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                  <p class="mb-4"><i class="fas is-size-2 fa-trash" /></p>
-                  <span class="is-700 es-oswald is-size-2">{{ valores['desestimadas'] }}</span><br><span class="is-400">DESESTIMADAS<br></span>
-                  <hr class="has-background-black category-separator">
+                  <p class="mb-4"><i class="text-acij fas is-size-2 fa-trash" /></p>
+                  <span class="text-acij is-700 es-oswald is-size-2">{{ valores['desestimadas'] }}</span><br><span class="text-acij is-400">DESESTIMADAS<br></span>
+                  <hr class="background-acij category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                  <p class="mb-4"><i class="fas is-size-2 fa-exclamation-triangle" /></p>
-                  <span class="is-700 es-oswald is-size-2">{{ valores['caducadas'] }}</span><br><span class="is-400">CADUCADAS<br></span>
-                  <hr class="has-background-black category-separator">
+                  <p class="mb-4"><i class="text-acij fas is-size-2 fa-exclamation-triangle" /></p>
+                  <span class="text-acij is-700 es-oswald is-size-2">{{ valores['caducadas'] }}</span><br><span class="text-acij is-400">CADUCADAS<br></span>
+                  <hr class="background-acij category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                  <p class="mb-4"><i class="fas is-size-2 fa-gavel" /></p>
-                  <span class="is-700 es-oswald is-size-2">{{ valores['sanciones'] }}</span><br><span class="is-400">SANCIONES<br></span>
-                  <hr class="has-background-black category-separator">
+                  <p class="mb-4"><i class="text-acij fas is-size-2 fa-gavel" /></p>
+                  <span class="text-acij is-700 es-oswald is-size-2">{{ valores['sanciones'] }}</span><br><span class="text-acij is-400">SANCIONES<br></span>
+                  <hr class="background-acij category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
                 <div class="px-2">
-                  <p class="mb-4"><i class="fas is-size-2 fa-balance-scale" /></p>
-                  <span class="is-700 es-oswald is-size-2">{{ valores['juiciosPoliticos'] }}</span><br><span class="is-400">JUICIOS POLÍTICOS<br></span>
-                  <hr class="has-background-black category-separator">
+                  <p class="mb-4"><i class="text-acij fas is-size-2 fa-balance-scale" /></p>
+                  <span class="text-acij is-700 es-oswald is-size-2">{{ valores['juiciosPoliticos'] }}</span><br><span class="text-acij is-400">JUICIOS POLÍTICOS<br></span>
+                  <hr class="background-acij category-separator">
                 </div>
               </div>
             </div>
@@ -115,5 +115,15 @@ export default {
 </script>
 
 <style>
+.category-separator{
+  width: 50%;
+  height: 3px;
+}
 
+.text-acij{
+  color:#3157AC;
+}
+.background-acij{
+  background-color: #3157AC;
+}
 </style>

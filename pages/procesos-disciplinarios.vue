@@ -250,9 +250,4 @@ background-color: #00B1AF;
   right: 40px;
   color: #6b6b6b;
 }
-
-.category-separator{
-  width: 70%;
-  height: 3px;
-}
 </style>
