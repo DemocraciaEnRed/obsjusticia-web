@@ -14,11 +14,8 @@
               </p>
               <br>
               <br>
-              <p class="is-size-5">
-                <i class="far fa-calendar fa-2x mb-3" />
-              </p>
               <p class="is-size-3 es-oswald is-800">
-                23 AÑOS
+                <span class="is-700 es-oswald is-size-2">{{ valores['total'] }}</span><span class="is-400"> DENUNCIAS<br> RECIBIDAS<br></span>
               </p>
               <br>
               <br>
@@ -37,7 +34,7 @@
                 <div class="px-2">
                   <p class="mb-4"><i class="text-acij fas is-size-2 fa-file" /></p>
                   <span class="text-acij is-700 es-oswald is-size-2">{{ valores['activas'] }}</span><br><span class="text-acij is-400">ABIERTAS<br></span>
-                  <hr class="has-background-black category-separator">
+                  <hr class="background-acij category-separator">
                 </div>
               </div>
               <div class="column is-narrow">
