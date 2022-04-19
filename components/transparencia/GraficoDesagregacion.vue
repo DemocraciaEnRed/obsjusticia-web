@@ -122,7 +122,6 @@ export default {
     const data = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/14MCUztXQC4eP1xcAae-J0xb61cixFIMVESDia0kIyX4/values/Sheet1?key=${this.$config.googleSheetApiKey}`
     ).then(res => res.json())
-    console.log(data)
     this.data = this.extractData(data)
   },
   data () {

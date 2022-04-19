@@ -179,7 +179,6 @@ export default {
       `https://sheets.googleapis.com/v4/spreadsheets/1l1OuR2hhKVZ8QFpqmgryqthn9iUzSTcV_uiTvDqqoKU/values/Sheet1?key=${this.$config.googleSheetApiKey}`
     ).then(res => res.json())
     this.data = this.extractData(data)
-    console.log('data: \n', this.data)
   },
   data () {
     return {
