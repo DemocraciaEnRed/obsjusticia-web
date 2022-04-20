@@ -125,7 +125,7 @@
                     <td class="has-background-warning">
                       {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
                     </td>
-                    <td :class="{'has-text-success': p.impugnacion == 'no', 'has-text-danger': p.impugnacion == 'si' }">
+                    <td :class="{'has-text-success': p.nuevasumatoria > p.primerasum, 'has-text-danger': p.nuevasumatoria < p.primerasum }">
                       {{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}
                     </td>
                     <td class="has-background-warning">
