@@ -44,8 +44,8 @@
             <p class="is-size-6 has-text-justified order-explanation">
               ORDEN DESCENDENTE DE ACUERDO<br>A PUNTAJE OPOSICIÓN
             </p>
-            <div>
-              <button class="button is-primary is-outlined" @click="downloadGraphCSV">
+            <div class="mt-6" v-bind:class="!this.isMobile() && 'is-flex is-justify-content-flex-end mr-6'">
+              <button class="button is-primary is-outlined mr-4" @click="downloadGraphCSV">
                 Descargar gráfico
               </button>
               <a
