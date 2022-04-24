@@ -152,18 +152,37 @@
               </table>
             </div>
           </div>
-          <div class="m-6">
-            <div class="columns">
-              <span class="colum is-one-fifth lost-points-icon"/>
-              <p class="colum m-1">Perdió puntos por impugnación</p>
+          <div v-bind:class="!this.isMobile() && 'is-flex is-justify-content-space-between'">
+            <div class="m-6">
+              <div class="columns">
+                <span class="colum is-one-fifth lost-points-icon"/>
+                <p class="colum m-1">Perdió puntos por impugnación</p>
+              </div>
+              <div class="columns mt-2">
+                <span class="colum won-points-icon"/>
+                <p class="colum m-1">Ganó puntos por impugnación</p>
+              </div>
+              <div class="columns mt-2">
+                <span class="icon is-align-self-center m-1 is-size-4"><i class="fab fa-youtube"></i></span>
+                <p class="colum mt-1 ml-2">Vinculo a entrevistas grabadas</p>
+              </div>
             </div>
-            <div class="columns mt-2">
-              <span class="colum won-points-icon"/>
-              <p class="colum m-1">Ganó puntos por impugnación</p>
-            </div>
-            <div class="columns mt-2">
-              <span class="icon is-align-self-center m-1 is-size-4"><i class="fab fa-youtube"></i></span>
-              <p class="colum mt-1 ml-2">Vinculo a entrevistas grabadas</p>
+            <div class="mt-6" v-bind:class="!this.isMobile() && 'is-flex is-justify-content-flex-end mr-6'">
+              <button class="button is-primary is-outlined mr-4" @click="downloadGraphCSV">
+                Descargar tabla completa
+              </button>
+              <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                class="twitter-share-button"
+                data-size="large"
+                data-text="Mirá los concursos de jueces y fiscales en JUSTA!"
+                data-via="ACIJargentina"
+                data-hashtags="justa,acij"
+                data-lang="es"
+                data-show-count="false"
+              >
+                Tweet
+              </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
         </div>
