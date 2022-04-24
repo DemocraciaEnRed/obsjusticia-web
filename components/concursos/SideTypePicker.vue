@@ -10,7 +10,7 @@
       <div class="column" v-bind:class="isPicking ? 'is-one-third' : ''">
         <img src="~/assets/img/concursos/fiscales-logo.svg" class="image is-centered" width="40" alt="logo-fiscales">
       </div>
-      <span v-if="isPicking" class="column">Fiscales y Fiscalas</span>
+      <span v-if="isPicking" class="column">Fiscales y Fiscalías</span>
     </div>
   </div>
 </template>

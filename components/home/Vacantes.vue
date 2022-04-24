@@ -28,7 +28,7 @@
         <div class="column is-6-tablet ">
           <img src="~/assets/img/fiscales-image.svg" height="50" alt="">
           <h3 class="is-size-3 title has-text-weight-bold violet">
-            Fiscales
+            Fiscales y Fiscalías
           </h3>
           <div class="columns">
             <div class="column">

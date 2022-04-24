@@ -86,7 +86,7 @@
               <label for="attorneys" class="radio-label attorneys-label">
                 <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
                 <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
-                  Fiscales
+                  Fiscales y Fiscalías
                 </h1>
                 <div class="columns my-5 is-mobile">
                   <div class="column">
