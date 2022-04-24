@@ -100,8 +100,9 @@
                       2º Orden de<br>mérito
                     </th>
                     <th>
-                      <a href="https://justa.acij.org.ar/concursos" target="_blank">Entrevista</a>
-                      <span class="icon is-align-self-center ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
+                      <a v-if="this.contestInterview()" v-bind:href="this.contestInterview()" target="_blank" class="interview-link">Entrevista</a>
+                      <p v-else>Entrevista</p>
+                      <span class="icon is-align-self-center mt-2 ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
                     </th>
                     <th>
                       Terna<br>propuesta
@@ -196,6 +197,15 @@ export default {
           this.sheetSelected = this.lugares[0].key
         })
         .then(async () => {
+          await fetch(
+          `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/Entrevistas?key=${this.$config.googleSheetApiKey}`
+          )
+            .then(res => res.json())
+            .then((interviewsData) => {
+              this.fillInterviewsLinks(interviewsData)
+            })
+        })
+        .then(async () => {
           const data = await fetch(
             `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.lugares[0].key}?key=${this.$config.googleSheetApiKey}`
           ).then((res) => {
@@ -227,6 +237,11 @@ export default {
         { disabled: false, key: '2', label: 'Cargando' }
       ],
       sheetSelected: '2',
+      interviewsKeys: [
+        'concurso',
+        'link'
+      ],
+      interviewsLinks: [],
       keys: [
         'nombre',
         'oposicion',
@@ -359,6 +374,21 @@ export default {
       })
       this.lugares = output
     },
+    fillInterviewsLinks (data) {
+      // eslint-disable-next-line prefer-const
+      let output = []
+      const theKeys = this.interviewsKeys
+      const theValues = data.values.slice(1)
+      theValues.forEach((entry) => {
+        // eslint-disable-next-line prefer-const
+        const marker = {}
+        theKeys.forEach((k, i) => {
+          marker[k] = entry[i] !== '' ? entry[i] : null
+        })
+        output.push(marker)
+      })
+      this.interviewsLinks = output
+    },
     extractData (data) {
       // eslint-disable-next-line prefer-const
       let output = []
@@ -490,6 +520,14 @@ export default {
     },
     isMobile () {
       return screen.width <= 760
+    },
+    contestInterview () {
+      const contestInterviewLink = this.interviewsLinks.find(({ concurso }) => concurso === this.sheetSelected)
+      if (!contestInterviewLink) {
+        return ''
+      }
+
+      return contestInterviewLink.link
     }
   }
 }
@@ -578,5 +616,9 @@ export default {
   height: 15px;
   background-color: #48c78e;
   display: inline-table;
+}
+.interview-link{
+  color: #6C9EFF;
+  text-decoration-line: underline;
 }
 </style>
