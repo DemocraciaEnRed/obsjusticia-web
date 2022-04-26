@@ -39,7 +39,7 @@
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
             CONCURSO: {{ selectedContest() }}
           </p>
-          <client-only>
+          <client-only class="hero is-medium">
             <v-parallel-chart class="chart" :option="parallelChartOptions" />
             <p class="is-size-6 has-text-justified order-explanation">
               ORDEN DESCENDENTE DE ACUERDO<br>A PUNTAJE OPOSICIÓN
@@ -62,128 +62,130 @@
               </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </client-only>
-          <div class="is-flex is-flex-direction-row my-5 px-6">
-            <div class="first-table">
-              <table class="table mb-0">
-                <thead>
-                  <tr>
-                    <th />
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(p,i) in data" :key="`orden-${i}`">
-                    <td>{{ p.nombre }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="second-table">
-              <table class="table mb-0">
-                <thead>
-                  <tr>
-                    <th>
-                      Examen<br>escrito
-                    </th>
-                    <th>
-                      Curriculum
-                    </th>
-                    <th>
-                      Suma de<br>puntajes
-                    </th>
-                    <th class="has-background-orange">
-                      1º Orden de<br>mérito
-                    </th>
-                    <th>
-                      Suma por impugnación
-                    </th>
-                    <th class="has-background-orange">
-                      2º Orden de<br>mérito
-                    </th>
-                    <th>
-                      <a v-if="this.contestInterview()" v-bind:href="this.contestInterview()" target="_blank" class="interview-link">Entrevista</a>
-                      <p v-else>Entrevista</p>
-                      <span class="icon is-align-self-center mt-2 ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
-                    </th>
-                    <th>
-                      Terna<br>propuesta
-                    </th>
-                    <th>
-                      Terna<br>final
-                    </th>
-                    <th>
-                      Elección<br>Poder<br>Ejecutivo
-                    </th>
-                    <th class="has-background-orange">
-                      Designación<br>Senado
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(p,i) in data" :key="`orden-${i}`">
-                    <td>{{ p.oposicion != null ? p.oposicion : '-' }}</td>
-                    <td>{{ p.antecedentes != null ? p.antecedentes : '-' }}</td>
-                    <td>{{ p.primerasum != null ? p.primerasum : '-' }}</td>
-                    <td class="has-background-warning">
-                      {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
-                    </td>
-                    <td :class="{'has-text-success': p.nuevasumatoria > p.primerasum, 'has-text-danger': p.nuevasumatoria < p.primerasum }">
-                      {{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}
-                    </td>
-                    <td class="has-background-warning">
-                      {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
-                    </td>
-                    <td>
-                      {{ p.ordenentrevista != null ? p.ordenentrevista : '-' }}
-                    </td>
-                    <td>
-                      {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
-                    </td>
-                    <td>
-                      {{ p.ternaplenario != null ? p.ternaplenario : '-' }}
-                    </td>
-                    <td>
-                      {{ p['Elección Poder Ejecutivo'] != null ? p['Elección Poder Ejecutivo'] : '-' }}
-                    </td>
-                    <td class="has-background-warning">
-                      {{ p['Designación Senado'] != null ? p['Designación Senado'] : '-' }}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div v-bind:class="!this.isMobile() && 'is-flex is-justify-content-space-between'">
-            <div class="m-6">
-              <div class="columns">
-                <span class="colum is-one-fifth lost-points-icon"/>
-                <p class="colum m-1">Perdió puntos por impugnación</p>
+          <div>
+              <div class="is-flex is-flex-direction-row my-5 px-6">
+                <div class="first-table">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th />
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(p,i) in data" :key="`orden-${i}`">
+                        <td>{{ p.nombre }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="second-table">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th>
+                          Examen<br>escrito
+                        </th>
+                        <th>
+                          Curriculum
+                        </th>
+                        <th>
+                          Suma de<br>puntajes
+                        </th>
+                        <th class="has-background-orange">
+                          1º Orden de<br>mérito
+                        </th>
+                        <th>
+                          Suma por impugnación
+                        </th>
+                        <th class="has-background-orange">
+                          2º Orden de<br>mérito
+                        </th>
+                        <th>
+                          <a v-if="this.contestInterview()" v-bind:href="this.contestInterview()" target="_blank" class="interview-link">Entrevista</a>
+                          <p v-else>Entrevista</p>
+                          <span class="icon is-align-self-center mt-2 ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
+                        </th>
+                        <th>
+                          Terna<br>propuesta
+                        </th>
+                        <th>
+                          Terna<br>final
+                        </th>
+                        <th>
+                          Elección<br>Poder<br>Ejecutivo
+                        </th>
+                        <th class="has-background-orange">
+                          Designación<br>Senado
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(p,i) in data" :key="`orden-${i}`">
+                        <td>{{ p.oposicion != null ? p.oposicion : '-' }}</td>
+                        <td>{{ p.antecedentes != null ? p.antecedentes : '-' }}</td>
+                        <td>{{ p.primerasum != null ? p.primerasum : '-' }}</td>
+                        <td class="has-background-warning">
+                          {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
+                        </td>
+                        <td :class="{'has-text-success': p.nuevasumatoria > p.primerasum, 'has-text-danger': p.nuevasumatoria < p.primerasum }">
+                          {{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}
+                        </td>
+                        <td class="has-background-warning">
+                          {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
+                        </td>
+                        <td>
+                          {{ p.ordenentrevista != null ? p.ordenentrevista : '-' }}
+                        </td>
+                        <td>
+                          {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
+                        </td>
+                        <td>
+                          {{ p.ternaplenario != null ? p.ternaplenario : '-' }}
+                        </td>
+                        <td>
+                          {{ p['Elección Poder Ejecutivo'] != null ? 'Si' : 'No' }}
+                        </td>
+                        <td class="has-background-warning">
+                          {{ p['Designación Senado'] != null ? 'Si' : 'No' }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <div class="columns mt-2">
-                <span class="colum won-points-icon"/>
-                <p class="colum m-1">Ganó puntos por impugnación</p>
+              <div v-bind:class="!this.isMobile() && 'is-flex is-justify-content-space-between'">
+                <div class="m-6">
+                  <div class="columns">
+                    <span class="colum is-one-fifth lost-points-icon"/>
+                    <p class="colum m-1">Perdió puntos por impugnación</p>
+                  </div>
+                  <div class="columns mt-2">
+                    <span class="colum won-points-icon"/>
+                    <p class="colum m-1">Ganó puntos por impugnación</p>
+                  </div>
+                  <div class="columns mt-2">
+                    <span class="icon is-align-self-center m-1 is-size-4"><i class="fab fa-youtube"></i></span>
+                    <p class="colum mt-1 ml-2">Vinculo a entrevistas grabadas</p>
+                  </div>
+                </div>
+                <div class="mt-6" v-bind:class="!this.isMobile() && 'is-flex is-justify-content-flex-end mr-6'">
+                  <button class="button is-primary is-outlined mr-4" @click="downloadGraphCSV">
+                    Descargar tabla completa
+                  </button>
+                  <a
+                    href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                    class="twitter-share-button"
+                    data-size="large"
+                    data-text="Mirá los concursos de jueces y fiscales en JUSTA!"
+                    data-via="ACIJargentina"
+                    data-hashtags="justa,acij"
+                    data-lang="es"
+                    data-show-count="false"
+                  >
+                    Tweet
+                  </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
               </div>
-              <div class="columns mt-2">
-                <span class="icon is-align-self-center m-1 is-size-4"><i class="fab fa-youtube"></i></span>
-                <p class="colum mt-1 ml-2">Vinculo a entrevistas grabadas</p>
-              </div>
-            </div>
-            <div class="mt-6" v-bind:class="!this.isMobile() && 'is-flex is-justify-content-flex-end mr-6'">
-              <button class="button is-primary is-outlined mr-4" @click="downloadGraphCSV">
-                Descargar tabla completa
-              </button>
-              <a
-                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-                class="twitter-share-button"
-                data-size="large"
-                data-text="Mirá los concursos de jueces y fiscales en JUSTA!"
-                data-via="ACIJargentina"
-                data-hashtags="justa,acij"
-                data-lang="es"
-                data-show-count="false"
-              >
-                Tweet
-              </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
           </div>
         </div>
       </div>
