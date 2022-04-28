@@ -102,7 +102,7 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #fff;
+  background-color: #EDF2FE;
 }
 .overlay-graphs{
   // min-height: 100vh;

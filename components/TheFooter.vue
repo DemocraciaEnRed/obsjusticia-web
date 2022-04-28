@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-6">
+  <div>
     <div class="footer">
       <div class="container">
         <div class="is-6-mobile mt-4 is-3-desktop links-columns level">
