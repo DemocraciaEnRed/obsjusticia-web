@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <p class="is-size-4 line-height-150">
-          La <b>selección de jueces y juezas</b> es un proceso muy importante en el sistema democrático. Estas autoridades deciden conflictos particulares y sobre cuestiones que afectan a la ciudadanía en su conjunto. El proceso de selección consiste en una serie de pasos en los que intervienen el Consejo de la Magistratura, el Poder Ejecutivo y el Senado.
+          La selección de <b>jueces y juezas</b> es un proceso muy importante en el sistema democrático. Estas autoridades deciden conflictos particulares y sobre cuestiones que afectan a la ciudadanía en su conjunto. El proceso de selección consiste en una serie de pasos en los que intervienen el Consejo de la Magistratura, el Poder Ejecutivo y el Senado.
         </p>
         <br>
         <p class="is-size-4 line-height-150">

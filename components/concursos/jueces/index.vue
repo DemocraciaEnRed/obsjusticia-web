@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Seleccion from '~/components/concursos/jueces/Seleccion'
-import Puntajes from '~/components/concursos/jueces/Puntajes'
-import Proceso from '~/components/concursos/jueces/Proceso'
-import Conclusiones from '~/components/concursos/jueces/Conclusiones'
-import Lexico from '~/components/concursos/jueces/Lexico'
+import Seleccion from './Seleccion'
+import Puntajes from './Puntajes'
+import Proceso from './Proceso'
+import Conclusiones from './Conclusiones'
+import Lexico from './Lexico'
 
 export default {
   name: 'QuienesSomos',
