@@ -11,7 +11,8 @@
         <div class="field m-6">
           <div class="control">
             <div class="select">
-              <select v-model="sheetSelected">
+              <select ref="contestSelect" v-model="sheetSelected">
+                <option :value="null" disabled>Elegir concurso</option>
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
                   {{ place.label }} ({{ place.status }})
                 </option>
@@ -34,6 +35,14 @@
           <h1 class="title is-4 is-700 is-spaced">
             Error al cargar los datos... Intente nuevamente
           </h1>
+        </div>
+        <div v-else-if="!this.sheetSelected" class="my-6 select-contest-button-container">
+          <button
+            class="button is-outlined p-6 select-contest-button"
+            v-bind:class="!this.isMobile() && 'is-large'"
+            @click="$refs.contestSelect.focus()">
+            Hacé click aqui para elegir un concurso
+          </button>
         </div>
         <div v-else>
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
@@ -217,7 +226,6 @@ export default {
         .then((dataStatus) => {
           this.status = this.extractDataStatus(dataStatus)
           this.fillLugares(this.status)
-          this.sheetSelected = this.lugares[0].key
         })
         .then(async () => {
           await fetch(
@@ -227,15 +235,6 @@ export default {
             .then((interviewsData) => {
               this.fillInterviewsLinks(interviewsData)
             })
-        })
-        .then(async () => {
-          const data = await fetch(
-            `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.lugares[0].key}?key=${this.$config.googleSheetApiKey}`
-          ).then((res) => {
-            return res.json()
-          })
-          this.data = this.extractData(data)
-          this.prepareChart(this.data)
         })
     } else {
       const data = await fetch(
@@ -259,7 +258,7 @@ export default {
       lugares: [
         { disabled: false, key: '2', label: 'Cargando' }
       ],
-      sheetSelected: '2',
+      sheetSelected: null,
       interviewsKeys: [
         'concurso',
         'link'
@@ -621,6 +620,23 @@ export default {
       border-color: black
     }
   }
+}
+.select-contest-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  border: 2px solid grey;
+  border-radius: 10px;
+  border-style: dashed;
+}
+.select-contest-button{
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 3px solid #9F5EB7;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #9F5EB7;
 }
 .order-explanation{
   margin-left: 20%;
