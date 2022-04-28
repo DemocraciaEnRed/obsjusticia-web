@@ -6,7 +6,7 @@
     <a href="#puntajes" class="scrollactive-item">Concursos</a>
     <a href="#proceso" class="scrollactive-item">Proceso</a>
     <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
-    <a href="#lexico" class="scrollactive-item">Léxico no especialistas</a>
+    <a href="#lexico" class="scrollactive-item">Glosario</a>
     <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
   </scrollactive>
