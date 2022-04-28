@@ -13,6 +13,7 @@
               <Jueces />
             </div>
             <div v-else-if="contestType == 'attorneys'">
+              <Fiscales />
             </div>
              <div v-if="contestType">
               <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
@@ -29,6 +30,7 @@
 import SideTypePicker from '~/components/concursos/SideTypePicker'
 import Header from '~/components/concursos/Header'
 import Jueces from '~/components/concursos/jueces'
+import Fiscales from '~/components/concursos/fiscales'
 import ArticlesAlternativeCarousel from '~/components/articles/AlternativeCarousel'
 import Fuentes from '~/components/concursos/Fuentes'
 import Sidebar from '~/components/concursos/Sidebar'
@@ -40,6 +42,7 @@ export default {
     SideTypePicker,
     Header,
     Jueces,
+    Fiscales,
     ArticlesAlternativeCarousel,
     Fuentes,
     Sidebar
