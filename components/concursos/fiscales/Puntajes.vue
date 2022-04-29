@@ -266,10 +266,10 @@ export default {
       interviewsLinks: [],
       keys: [
         'nombre',
-        'oposicionEscrita',
-        'oposicionOral',
+        'oposicionescrita',
+        'oposicionoral',
         'antecedentes',
-        'primeraSum',
+        'primerasum',
         'primerordenmerito',
         'impugnacion',
         'impugnacionescrito',
@@ -318,30 +318,25 @@ export default {
             const personData = this.getDataByNombre(a.data.name)
             let aux = `
             <p style="font-size:16px; font-weight: bold; margin-bottom: 10px; text-align: left;">${a.data.name}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>1º Orden de mérito</b>: ${a.data.value[0]}°</p>
-            <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion</b>:&nbsp;&nbsp;&nbsp;${personData.oposicion}</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>1º Orden de mérito</b>: ${personData.primerordenmerito}°</p>
+            <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion escrita</b>:&nbsp;&nbsp;&nbsp;${personData.oposicionescrita}</p>
+            <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion oral</b>:&nbsp;&nbsp;&nbsp;${personData.oposicionoral}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px;"><b>Antecedentes</b>:&nbsp;&nbsp;&nbsp;${personData.antecedentes}</p>
             <p style="font-size:9px; text-align: left; line-height: normal; padding-left:12px; padding-bottom: 10px;"><b>Sumatoria</b>:&nbsp;&nbsp;&nbsp;${personData.primerasum}</p>
             <p style="font-size:11px; text-align: left; line-height: normal;"><b>¿Impugnaciones?</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacion != null ? personData.impugnacion.toUpperCase() : '-'}</p>`
             if (personData.impugnacion != null && personData.impugnacion.toLowerCase() === 'si') {
               aux += `
-                <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionopocision}</p>
+                <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion escrita</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionescrito}</p>
+                <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Oposicion oral</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionoral}</p>
                 <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px;"><b>Antecedentes</b>:&nbsp;&nbsp;&nbsp;${personData.impugnacionantecedentes}</p>
                 <p style="font-size:10px; text-align: left; line-height: normal; padding-left:12px; padding-bottom: 10px;"><b>Sumatoria</b>:&nbsp;&nbsp;&nbsp;${personData.nuevasumatoria}</p>
               `
             }
             aux += `
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Nuevo Orden de Mérito</b>:&nbsp;&nbsp;&nbsp;${a.data.value[1]}°</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Entrevista</b>:&nbsp;&nbsp;&nbsp;${a.data.value[2] ?? 'No pasó / Sin datos'}${a.data.value[2] ? '°' : ''}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna propuesta</b>:&nbsp;&nbsp;&nbsp;${a.data.value[3] ?? 'No pasó / Sin datos'}${a.data.value[3] ? '°' : ''}</p>
-            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna final</b>:&nbsp;&nbsp;&nbsp;${a.data.value[4] ?? 'No pasó / Sin datos'}${a.data.value[4] ? '°' : ''}</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Nuevo Orden de Mérito</b>:&nbsp;&nbsp;&nbsp;${personData.nuevoordenmerito}°</p>
+            <p style="font-size:11px; text-align: left; line-height: normal;"><b>Terna final</b>:&nbsp;&nbsp;&nbsp;${personData.ternaplenario ?? 'No pasó / Sin datos'}${personData.ternaplenario ? '°' : ''}</p>
             `
-            if (personData.ordenentrevista === '*') {
-              aux += `
-              <p style="font-size:11px; text-align: left; line-height: normal; padding-top: 10px; ">* Participante renuncio o no se presentó a entrevista</p>
-              `
-            }
-            if (personData.nota !== null) {
+            if (personData.nota) {
               aux += `
               <p style="font-size:11px; text-align: left; line-height: normal; padding-top: 10px; ">${personData.nota}</p>
               `
