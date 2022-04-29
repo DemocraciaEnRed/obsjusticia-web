@@ -9,7 +9,7 @@
           La siguiente infografía muestra los pasos que se deben seguir para llegar a una designación:
         </h1>
         <img src="~/assets/img/concursos/fiscales-desktop.svg" class="image is-centered is-fullwidth is-hidden-mobile my-6" alt="">
-        <img src="~/assets/img/concursos/proceso-mobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt="">
+        <img src="~/assets/img/concursos/fiscales-mobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt="">
       </div>
     </div>
   </section>
