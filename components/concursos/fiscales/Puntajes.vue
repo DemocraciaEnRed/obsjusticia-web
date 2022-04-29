@@ -8,7 +8,10 @@
         <p class="is-size-5 line-height-150">
           Accedé a la información sobre concursos en trámite y finalizados con los puntajes asignados en cada etapa.
         </p>
-        <div class="field m-6">
+        <h3 class="is-uppercase is-2 is-500 line-height-150 my-6">
+          Próximamente
+        </h3>
+        <!--<div class="field m-6">
           <div class="control">
             <div class="select">
               <select ref="contestSelect" v-model="sheetSelected">
@@ -188,7 +191,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </section>
