@@ -266,38 +266,29 @@ export default {
       interviewsLinks: [],
       keys: [
         'nombre',
-        'oposicion',
+        'oposicionEscrita',
+        'oposicionOral',
         'antecedentes',
-        'primerasum',
+        'primeraSum',
         'primerordenmerito',
         'impugnacion',
-        'impugnacionopocision',
+        'impugnacionescrito',
+        'impugnacionoral',
         'impugnacionantecedentes',
         'nuevasumatoria',
         'nuevoordenmerito',
-        'ordenentrevista',
-        'ternacomision',
         'ternaplenario',
         'Elección Poder Ejecutivo',
         'Designación Senado',
-        'nota',
-        'sum-opo',
-        'sum-opo-ant',
-        'sum-opo-ant-iopo',
-        'sum-opo-ant-iopo-iant',
-        'orden-opo',
-        'orden-opo-ant',
-        'orden-opo-ant-iopo',
-        'orden-opo-ant-iopo-iant'
+        'nota'
       ],
       parallelChartOptions: {
         parallelAxis: [
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -40, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: '1º Orden de mérito' },
-          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
-          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
-          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
-          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } },
-          { dim: 5, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => '', color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Designación senado', nameTextStyle: { fontWeight: 'bold' } }
+          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Impugnación' },
+          { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Orden final', nameTextStyle: { fontWeight: 'bold' } },
+          { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Terna plenario', nameTextStyle: { fontWeight: 'bold' } },
+          { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => '', color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Seleccionado', nameTextStyle: { fontWeight: 'bold' } }
         ],
         color: ['#f0d001', '#3257ab'],
         legend: {
@@ -469,9 +460,8 @@ export default {
           name: d.nombre,
           value: [
             parseInt(d.primerordenmerito) ? parseInt(d.primerordenmerito) : null,
+            parseInt(d.impugnacion) ? parseInt(d.impugnacion) : null,
             parseInt(d.nuevoordenmerito) ? parseInt(d.nuevoordenmerito) : null,
-            parseInt(d.ordenentrevista) ? parseInt(d.ordenentrevista) : null,
-            parseInt(d.ternacomision) ? parseInt(d.ternacomision) : null,
             parseInt(d.ternaplenario) ? parseInt(d.ternaplenario) : null,
             d['Designación Senado'] ? parseInt(d.ternaplenario) : null
           ],
