@@ -280,7 +280,16 @@ export default {
         'ternaplenario',
         'Elección Poder Ejecutivo',
         'Designación Senado',
-        'nota'
+        'nota',
+        'sexo',
+        'sum-opo',
+        'sum-opo-ant',
+        'sum-opo-ant-iopo',
+        'sum-opo-ant-iopo-iant',
+        'orden-opo',
+        'orden-opo-ant',
+        'orden-opo-ant-iopo',
+        'orden-opo-ant-iopo-iant'
       ],
       parallelChartOptions: {
         parallelAxis: [
