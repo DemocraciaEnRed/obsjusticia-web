@@ -10,14 +10,31 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 🏛️
-                <span class="is-size-5">Consejo de la Magistratura</span>
+                <span class="is-size-5">Procuración General de la Nación</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
             </div>
             <div class="column is-8">
               <p>
-                Organismo público que se dedica a seleccionar magistrados/as, llevar adelante procesos de disciplina o remoción y la administración del Poder Judicial
+                Cargo ocupado por quien ejerce la titularidad del Ministerio Público Fiscal, y por ende es responsable de su funcionamiento.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="my-4 has-background-white px-6 my-5 py-5">
+          <div class="columns">
+            <div class="column is-4">
+              <h5 class="title is-4">
+                👩
+                <span class="is-size-5">Tribunal Evaluador</span>
+              </h5>
+              <!-- <h5 class="subtitle is-5">
+              </h5> -->
+            </div>
+            <div class="column is-8">
+              <p>
+                Conjunto de personas encargadas de examinar a las y los candidatos que se presentan al concurso.
               </p>
             </div>
           </div>
@@ -27,7 +44,7 @@
             <div class="column is-4">
               <h5 class="title is-4">
                 ✏️
-                <span class="is-size-5">Examen de oposicion</span>
+                <span class="is-size-5">Prueba de oposición</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
@@ -73,32 +90,15 @@
           <div class="columns">
             <div class="column is-4">
               <h5 class="title is-4">
-                👩
-                <span class="is-size-5">Impugnación oposición</span>
-              </h5>
-              <!-- <h5 class="subtitle is-5">
-              </h5> -->
-            </div>
-            <div class="column is-8">
-              <p>
-                Apelación por la nota del examen
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 has-background-white px-6 my-5 py-5">
-          <div class="columns">
-            <div class="column is-4">
-              <h5 class="title is-4">
                 ⚖️
-                <span class="is-size-5">Impugnación de antecedentes</span>
+                <span class="is-size-5">Dictamen vinculante</span>
               </h5>
               <!-- <h5 class="subtitle is-5">
               </h5> -->
             </div>
             <div class="column is-8">
               <p>
-                Apelación por la nota de la evaluación del CV
+                La decisión del Tribunal Evaluador presentada una vez finalizado el concurso es obligatoria para la Procuración General de la Nación
               </p>
             </div>
           </div>
