@@ -97,6 +97,9 @@
                         Examen<br>escrito
                       </th>
                       <th>
+                        Examen<br>oral
+                      </th>
+                      <th>
                         Curriculum
                       </th>
                       <th>
@@ -105,19 +108,11 @@
                       <th class="has-background-orange">
                         1º Orden de<br>mérito
                       </th>
-                      <th>
+                      <th class="has-background-orange">
                         Suma por impugnación
                       </th>
-                      <th class="has-background-orange">
-                        2º Orden de<br>mérito
-                      </th>
                       <th>
-                        <a v-if="this.contestInterview()" v-bind:href="this.contestInterview()" target="_blank" class="interview-link">Entrevista</a>
-                        <p v-else>Entrevista</p>
-                        <span class="icon is-align-self-center mt-2 ml-1 is-size-4"><i class="fab fa-youtube"></i></span>
-                      </th>
-                      <th>
-                        Terna<br>propuesta
+                        Orden final
                       </th>
                       <th>
                         Terna<br>final
@@ -132,23 +127,18 @@
                   </thead>
                   <tbody>
                     <tr v-for="(p,i) in data" :key="`orden-${i}`">
-                      <td>{{ p.oposicion != null ? p.oposicion : '-' }}</td>
+                      <td>{{ p.oposicionescrita != null ? p.oposicionescrita : '-' }}</td>
+                      <td>{{ p.oposicionoral != null ? p.oposicionoral : '-' }}</td>
                       <td>{{ p.antecedentes != null ? p.antecedentes : '-' }}</td>
                       <td>{{ p.primerasum != null ? p.primerasum : '-' }}</td>
                       <td class="has-background-warning">
                         {{ p.primerordenmerito != null ? p.primerordenmerito : '-' }}
                       </td>
-                      <td :class="{'has-text-success': p.nuevasumatoria > p.primerasum, 'has-text-danger': p.nuevasumatoria < p.primerasum }">
+                      <td class="has-background-warning" :class="{'has-text-success': p.nuevasumatoria > p.primerasum, 'has-text-danger': p.nuevasumatoria < p.primerasum }">
                         {{ p.nuevasumatoria != null ? p.nuevasumatoria : '-' }}
                       </td>
-                      <td class="has-background-warning">
+                      <td>
                         {{ p.nuevoordenmerito != null ? p.nuevoordenmerito : '-' }}
-                      </td>
-                      <td>
-                        {{ p.ordenentrevista != null ? p.ordenentrevista : '-' }}
-                      </td>
-                      <td>
-                        {{ p.ternacomision != null ? p.ternacomision.toUpperCase() : '-' }}
                       </td>
                       <td>
                         {{ p.ternaplenario != null ? p.ternaplenario : '-' }}
