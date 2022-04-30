@@ -1,14 +1,23 @@
 <template>
   <section class="section">
-    <div class="container has-text-centered">
-      <img src="~/assets/img/logo-obscorrupcion.png" width="524" class="image is-centered mb-5" alt="Observatorio">
-      <a href="https://causasdecorrupcion.org/" target="_blank" class="button is-orange"><span class="mr-3">Ir al observatorio</span><i class="fas fa-arrow-right" /></a>
-    </div>
+    <div class="image desktop is-hidden-mobile" />
+    <div class="image mobile is-hidden-tablet" />
   </section>
 </template>
 
 <style lang="scss" scoped>
 section{
-  background-color: #161616;
+  padding: 0;
+}
+.image{
+  background-size: cover;
+}
+.desktop{
+  height: 400px;
+  background-image: url("~/assets/img/obscorrupcion.svg");
+}
+.mobile{
+  height: 250px;
+  background-image: url("~/assets/img/obscorrupcion-mobile.svg");
 }
 </style>

@@ -1,35 +1,26 @@
 <template>
   <section style="overflow: auto">
-    <Carousel />
+    <Header />
     <ArticlesCarousel />
-    <Vacantes />
-    <Procesos />
-    <Transparencia />
+    <Suscribe />
     <Observatorio />
-    <Colaborar />
   </section>
 </template>
 
 <script>
-import Carousel from '~/components/home/Carousel'
+import Header from '~/components/home/Header'
 import ArticlesCarousel from '~/components/home/ArticlesCarousel'
-import Vacantes from '~/components/home/Vacantes'
-import Colaborar from '~/components/home/Colaborar'
+import Suscribe from '~/components/home/Suscribe'
 import Observatorio from '~/components/home/Observatorio'
-import Transparencia from '~/components/home/Transparencia'
-import Procesos from '~/components/home/Procesos'
 
 export default {
   name: 'HomePage',
   layout: 'home',
   components: {
-    Carousel,
+    Header,
     ArticlesCarousel,
-    Vacantes,
-    Colaborar,
-    Observatorio,
-    Transparencia,
-    Procesos
+    Suscribe,
+    Observatorio
   }
 }
 </script>

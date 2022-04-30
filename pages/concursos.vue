@@ -1,25 +1,25 @@
 <template>
   <section class="specialbg">
-    <Sidebar />
+    <div v-if="contestType">
+      <Sidebar />
+    </div>
     <div class="py-6">
       <div class="my-6 py-6">
-
+        <SideTypePicker v-model="contestType" class="is-hidden-mobile" />
         <div class="columns">
           <div class="column is-8 is-offset-2">
-            <Header scroll-id="ley" />
-            <Seleccion scroll-id="seleccion" />
-            <Vacantes scroll-id="vacantes" />
-            <Proceso scroll-id="proceso" />
-            <Puntajes scroll-id="puntajes" />
-            <Influencias scroll-id="influencias" />
-            <Conclusiones scroll-id="conclusiones" />
-            <Lexico scroll-id="lexico" />
-            <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
-            <Fuentes scroll-id="fuentes" />
+            <Header scroll-id="ley" v-model="contestType"/>
+            <div v-if="contestType == 'judges'">
+              <Jueces />
+            </div>
+            <div v-else-if="contestType == 'attorneys'">
+              <Fiscales />
+            </div>
+             <div v-if="contestType">
+              <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
+              <Fuentes scroll-id="fuentes" />
+            </div>
           </div>
-          <!-- <div class="column is-2">
-            <Sidebar />
-          </div> -->
         </div>
       </div>
     </div>
@@ -27,31 +27,30 @@
 </template>
 
 <script>
-import Sidebar from '~/components/concursos/Sidebar'
+import SideTypePicker from '~/components/concursos/SideTypePicker'
 import Header from '~/components/concursos/Header'
-import Seleccion from '~/components/concursos/Seleccion'
-import Vacantes from '~/components/concursos/Vacantes'
-import Proceso from '~/components/concursos/Proceso'
-import Puntajes from '~/components/concursos/Puntajes'
-import Influencias from '~/components/concursos/Influencias'
-import Conclusiones from '~/components/concursos/Conclusiones'
-import Lexico from '~/components/concursos/Lexico'
+import Jueces from '~/components/concursos/jueces'
+import Fiscales from '~/components/concursos/fiscales'
+import ArticlesAlternativeCarousel from '~/components/articles/AlternativeCarousel'
 import Fuentes from '~/components/concursos/Fuentes'
+import Sidebar from '~/components/concursos/Sidebar'
 
 export default {
   name: 'QuienesSomos',
   layout: 'default-darknav',
   components: {
+    SideTypePicker,
     Header,
-    Sidebar,
-    Seleccion,
-    Vacantes,
-    Proceso,
-    Puntajes,
-    Influencias,
-    Conclusiones,
-    Lexico,
-    Fuentes
+    Jueces,
+    Fiscales,
+    ArticlesAlternativeCarousel,
+    Fuentes,
+    Sidebar
+  },
+  data () {
+    return {
+      contestType: ''
+    }
   }
 }
 </script>
@@ -106,7 +105,7 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #fff;
+  background-color: #EDF2FE;
 }
 .overlay-graphs{
   // min-height: 100vh;
