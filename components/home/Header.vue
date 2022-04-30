@@ -7,20 +7,26 @@
         <div class="tile is-ancestor">
           <div class="tile is-parent mx-4">
             <article class="tile is-child box">
-              <p class="title">Concursos de magistradas y magistrados</p>
-              <span>Ir</span>
+              <p class="title has-text-left">Concursos de magistradas y magistrados</p>
+              <a class="next-icon is-flex is-justify-content-end" href="/concursos">
+                <i class="fas fa-arrow-right fa-2x"></i>
+              </a>
             </article>
           </div>
           <div class="tile is-parent mx-4">
             <article class="tile is-child box">
-              <p class="title">Denuncias contra juezas y jueces</p>
-              <span>Ir</span>
+              <p class="title has-text-left">Denuncias contra juezas y jueces</p>
+              <a class="next-icon is-flex is-justify-content-end" href="/procesos-disciplinarios">
+                <i class="fas fa-arrow-right fa-2x"></i>
+              </a>
             </article>
           </div>
           <div class="tile is-parent mx-4">
             <article class="tile is-child box">
-              <p class="title">Transparencia del sistema de justicial</p>
-              <span>Ir</span>
+              <p class="title has-text-left">Transparencia del sistema de justicial</p>
+              <a class="next-icon is-flex is-justify-content-end" href="/transparencia">
+                <i class="fas fa-arrow-right fa-2x"></i>
+              </a>
             </article>
           </div>
         </div>
@@ -30,9 +36,8 @@
 </template>
 
 <script>
+
 export default {
-  components: {
-  },
   fetchOnServer: false,
   async fetch () {
     const articles = await this.$content('articles')
@@ -145,5 +150,11 @@ position: relative;
 .cards-container{
   width: 60%;
   margin: 0 auto;
+}
+.title{
+  font-weight: 400;
+}
+.next-icon{
+  color: #1ED0A1;
 }
 </style>
