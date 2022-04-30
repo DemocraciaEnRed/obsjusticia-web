@@ -6,7 +6,9 @@
       </div>
       <div class="column">
         <h1 class="has-text-success is-uppercase">Suscribite al<br>newsletter de justa</h1>
-        <button class="button is-large is-success mt-6">ACÁ</button>
+        <a href="https://preguntarparaacordar.typeform.com/to/X2k0vO5B" target="_blank" class="button is-large is-success mt-6">
+          ACÁ
+        </a>
       </div>
     </div>
   </section>
