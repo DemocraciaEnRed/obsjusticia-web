@@ -13,7 +13,7 @@
           </h4>
         </div>
         <div v-else class="">
-          <VueSlickCarousel v-bind="settings" class="monkey">
+          <VueSlickCarousel v-bind="settings">
             <div v-for="article in articles" :key="`article-${article.slug}`" class="articles-card">
               <NuxtLink :to="`articulos/${article.slug}`">
                 <div class="card">

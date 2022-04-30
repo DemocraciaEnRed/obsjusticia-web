@@ -1,32 +1,28 @@
 <template>
-  <div class="bg-container">
-    <transition name="fade">
-      <!-- // eslint-disable-next-line vue/no-use-v-if-with-v-for -->
-      <div :key="activeBlock" class="imgBg" :style="{backgroundImage: `url(${blocks[activeBlock].background})`}" />>
-    </transition>
-    <div class="container">
-      <div class="columns is-vcentered block-item">
-        <div class="column">
-          <img src="~/assets/img/logo-white.svg" class="iamge" width="480">
-        </div>
-        <div class="column is-6 is-align-self-flex-end carousel-column">
-          <b-carousel
-            v-model="activeBlock"
-            :indicator="true"
-            :indicator-inside="true"
-            indicator-position="is-bottom"
-            :indicator-background="false"
-            indicator-style="is-dots"
-            :interval="8000"
-            icon-pack="fas fa-3x"
-            icon-prev="fa-chevron-left has-text-primary"
-            icon-next="fa-chevron-right has-text-primary"
-            :pause-info="false"
-          >
-            <b-carousel-item v-for="(block, index) in blocks" :key="`block-${index}`">
-              <Block :block="block" />
-            </b-carousel-item>
-          </b-carousel>
+  <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url(${blocks[activeBlock].background})`}">
+    <h1 class="is-uppercase has-text-white header-text is-size-2-mobile">Por una justicia<br>transparente y abierta</h1>
+    <div class="has-text-centered">
+      <h4 class="is-uppercase cards-title">Datos abiertos e interactivos sobre el sistema judicial argentino</h4>
+      <div class="container py-6">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent mx-4">
+            <article class="tile is-child box">
+              <p class="title">Concursos de magistradas y magistrados</p>
+              <span>Ir</span>
+            </article>
+          </div>
+          <div class="tile is-parent mx-4">
+            <article class="tile is-child box">
+              <p class="title">Denuncias contra juezas y jueces</p>
+              <span>Ir</span>
+            </article>
+          </div>
+          <div class="tile is-parent mx-4">
+            <article class="tile is-child box">
+              <p class="title">Transparencia del sistema de justicial</p>
+              <span>Ir</span>
+            </article>
+          </div>
         </div>
       </div>
     </div>
@@ -34,10 +30,8 @@
 </template>
 
 <script>
-import Block from './carousel/Block.vue'
 export default {
   components: {
-    Block
   },
   fetchOnServer: false,
   async fetch () {
@@ -125,49 +119,31 @@ position: relative;
   left: 0;
 }
 .block-item{
-  padding: 30px;
   // padding-bottom: 200px;
 
   @media screen and (min-width: $tablet){
   padding-top: 140px;
   min-height: 700px;
   padding: 0;
-  padding-bottom: 150px;
   }
 }
-.block-text-container{
-  padding: 30px 40px;
-  background-color: #400755b0;
-  background-blend-mode: multiply;
-}
-.upper-logo-container{
-  padding: 2px 8px;
-  // letter-spacing: 1px;
-  background-color: #000;
-}
-// .lower-logo-container{
-//   padding: 4px 12px;
-//   font-size: 3.2rem;
-//   background-color: #FFF;
-// }
-// .imgBg{
-//   position:absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   max-width:100%;
-//   max-height:100%;
-//   height: auto;
-//   width: auto;
-//   z-index: 0;
-// }
 .container{
   z-index: 10;
 }
-.carousel-column {
-  padding-bottom: 40px !important;
-  @include from($desktop) {
-    padding-bottom: 0px !important;
-  }
+.header-text{
+  line-height: 74px;
+  letter-spacing: 0.1em;
+  margin-top: 20vh;
+}
+.cards-title{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  margin-top: 5vh;
+  color: #1DD1A1;
+}
+.cards-container{
+  width: 60%;
+  margin: 0 auto;
 }
 </style>
