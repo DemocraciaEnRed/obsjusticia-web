@@ -2,22 +2,16 @@
   <section style="overflow: auto">
     <Header />
     <ArticlesCarousel />
-    <Vacantes />
-    <Procesos />
-    <Transparencia />
+    <Suscribe />
     <Observatorio />
-    <Colaborar />
   </section>
 </template>
 
 <script>
 import Header from '~/components/home/Header'
 import ArticlesCarousel from '~/components/home/ArticlesCarousel'
-import Vacantes from '~/components/home/Vacantes'
-import Colaborar from '~/components/home/Colaborar'
+import Suscribe from '~/components/home/Suscribe'
 import Observatorio from '~/components/home/Observatorio'
-import Transparencia from '~/components/home/Transparencia'
-import Procesos from '~/components/home/Procesos'
 
 export default {
   name: 'HomePage',
@@ -25,11 +19,8 @@ export default {
   components: {
     Header,
     ArticlesCarousel,
-    Vacantes,
-    Colaborar,
-    Observatorio,
-    Transparencia,
-    Procesos
+    Suscribe,
+    Observatorio
   }
 }
 </script>
