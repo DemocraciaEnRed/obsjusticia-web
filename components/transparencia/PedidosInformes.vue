@@ -2,9 +2,9 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="title is-uppercase is-2 is-700 is-spaced">
+        <h4 class="h4-imp title is-uppercase is-2 is-700 is-spaced">
           Pedidos de acceso a la información pública
-        </h1>
+        </h4>
         <br>
         <div v-if="$fetchState.pending" class="p-6 has-text-centered">
           <h1 class="title is-3 is-700">
@@ -24,7 +24,7 @@
         </div>
         <div v-else>
           <div class="content">
-            <p class="is-size-4 is-uppercase line-height-150">
+            <p class="sub-chivo is-uppercase line-height-150">
               Accedé a los pedidos de acceso a la información pública que presentamos ante el Poder Judicial y Ministerio Público y sus respuestas.
             </p>
           </div>

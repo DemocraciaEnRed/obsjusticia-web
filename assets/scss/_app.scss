@@ -33,10 +33,86 @@ h6 {
   color: #000000;
   font-size: 20px;
 }
+.h1-imp{
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 50px !important;
+}
+.h2-imp {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 40px !important;
+}
+.h3-imp {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 35px !important;
+}
+.h4-imp {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #000000;
+  font-size: 30px !important;
+}
+.h5-imp {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 22px !important;
+}
+.h6-imp {
+  font-family: 'Raleway', $family-sans-serif;
+  color: #000000;
+  font-size: 20px !important;
+}
 .es-oswald{
   font-family: 'Oswald' !important;
   font-weight: 700 !important;
 }
+.es-chivo{
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+.sub-chivo{
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.es-raleway{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  /* or 167% */
+
+  text-align: center;
+
+  color: #000000;
+}
+// fs= font size para forzar algunos font-size por el manual de marca
+
+.fs-24 {
+  font-size: 24px !important;
+}
+.fs-20 {
+  font-size: 24px !important;
+}
+.fs-18 {
+  font-size: 18px !important;
+}
+
 //==========================
 
 @mixin font-weight($weight) {

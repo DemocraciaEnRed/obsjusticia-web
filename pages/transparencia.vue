@@ -1,10 +1,10 @@
 <template>
   <section class="specialbg">
     <div class="py-6">
-      <div class="my-6 py-6">
+      <div >
         <Sidebar />
         <div class="">
-          <div class="section container column is-8 is-offset-2">
+          <div class="section container column">
 
             <Header scroll-id="ley" />
             <PedidosInformes scroll-id="pedidos-informes" />
