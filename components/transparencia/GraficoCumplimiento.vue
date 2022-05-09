@@ -1,5 +1,10 @@
 <template>
   <section :id="scrollId" class="hero is-fullheight my-6">
+    <div class="container">
+        <h1 class="title is-2 is-700 is-spaced">
+          Índice Transparencia Activa
+        </h1>
+    </div>
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="title is-4 is-400 is-spaced line-height-150">

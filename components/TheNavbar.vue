@@ -38,5 +38,13 @@ export default {}
   font-weight: 600;
   // text-transform: uppercase;
   font-family: 'Raleway', $family-primary;
+  font-size: 12px !important;
+}
+.navbar-item a {
+  font-size: 12px !important;
+}
+
+.navbar-item link{
+  font-size: 12px !important;
 }
 </style>
