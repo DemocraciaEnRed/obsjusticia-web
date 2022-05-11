@@ -36,9 +36,9 @@
                       {{ article.author }}
                     </p>
                   </div>
-                  <p class="my-1">
+                  <!-- <p class="my-1">
                     {{ article.description }}
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </NuxtLink>
@@ -104,9 +104,7 @@ export default {
     // min-height: 60px;
   }
 }
-  .card-content{
-    min-height: 300px;
-  }
+
   .card-image .image{
     background-size: cover;
     background-position: center center;

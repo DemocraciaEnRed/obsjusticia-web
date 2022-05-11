@@ -3,30 +3,45 @@
     <h1 class="is-uppercase has-text-white header-text is-size-2-mobile">Por una justicia<br>transparente y abierta</h1>
     <div class="has-text-centered">
       <h4 class="is-uppercase cards-title">Datos abiertos e interactivos sobre el sistema judicial argentino</h4>
-      <div class="container py-6">
+      <div class="container section py-6">
         <div class="tile is-ancestor">
           <div class="tile is-parent mx-4">
-            <article class="tile is-child box">
-              <p class="title has-text-left">Concursos de magistradas y magistrados</p>
-              <a class="next-icon is-flex is-justify-content-end" href="/concursos">
-                <i class="fas fa-arrow-right fa-2x"></i>
-              </a>
+            <article class="tile is-child box box-config">
+              <div>
+                <p class="title has-text-left">Selección</p>
+                <a class="next-icon is-flex is-justify-content-end" href="/concursos">
+                  <i class="fas fa-arrow-right fa-2x"></i>
+                </a>
+              </div>
+              <div class="label-hidden">
+                <p >Accedé a los datos sobre los concursos de magistradas y magistrados en el Poder Judicial y Ministerio Público Fiscal</p>
+              </div>
             </article>
           </div>
           <div class="tile is-parent mx-4">
-            <article class="tile is-child box">
-              <p class="title has-text-left">Denuncias contra juezas y jueces</p>
-              <a class="next-icon is-flex is-justify-content-end" href="/procesos-disciplinarios">
-                <i class="fas fa-arrow-right fa-2x"></i>
-              </a>
+            <article class="tile is-child box box-config">
+              <div>
+                <p class="title has-text-left">Disciplina</p>
+                <a class="next-icon is-flex is-justify-content-end" href="/procesos-disciplinarios">
+                  <i class="fas fa-arrow-right fa-2x"></i>
+                </a>
+              </div>
+              <div class="label-hidden">
+                <p >Accedé a los datos sobre las denuncias presentadas contra juezas y jueces ante el Consejo de la Magistratura de la Nación.</p>
+              </div>
             </article>
           </div>
           <div class="tile is-parent mx-4">
-            <article class="tile is-child box">
-              <p class="title has-text-left">Transparencia del sistema de justicial</p>
-              <a class="next-icon is-flex is-justify-content-end" href="/transparencia">
-                <i class="fas fa-arrow-right fa-2x"></i>
-              </a>
+            <article class="tile is-child box box-config">
+              <div>
+                <p class="title has-text-left">Transparencia</p>
+                <a class="next-icon is-flex is-justify-content-end" href="/transparencia">
+                  <i class="fas fa-arrow-right fa-2x"></i>
+                </a>
+              </div>
+              <div class="label-hidden">
+                <p >Accedé a los datos sobre el nivel de publicación de información pública por parte del Poder Judicial y Ministerio Público</p>
+              </div>
             </article>
           </div>
         </div>
@@ -114,6 +129,9 @@ export default {
 position: relative;
 // overflow: hidden;
 }
+.container-config{
+  margin: 0 120px;
+}
 .imgBg{
   background-size: cover;
   background-position: center center;
@@ -156,5 +174,41 @@ position: relative;
 }
 .next-icon{
   color: #1ED0A1;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  transition: 1s;
+}
+.tile .is-ancestor{
+  width: 100%;
+}
+.box-config{
+  max-width: 250px !important;
+  min-height: 250px !important;
+  position: relative;
+}
+.label-hidden{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1DD1A1;
+  position: absolute;
+  top:0%;
+  left: 0%;
+  border-radius: inherit;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: left;
+  font-family: inherit;
+  color: #fff;
+  font-size: 20px;
+  transition: .5s;
+}
+.box:hover .label-hidden{
+  opacity: 1;
+}
+.box:hover .next-icon{
+  color: #fff;
+  z-index: 1000;
 }
 </style>
