@@ -1,12 +1,12 @@
 <template>
-  <section :id="scrollId" class="hero">
+  <section :id="scrollId" class="hero column is-9 is-offset-1 pl-6">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <h1 class="is-uppercase is-1 is-700">
-          Concursos de jueces, juezas y fiscales
+          Concursos de jueces, juezas, fiscales y Fiscalas
         </h1>
         <div class="py-6">
-          <h1 class="title is-2 is-700 is-chivo">
+          <!-- <h1 class="title is-2 is-700 is-chivo">
             <span v-if="$fetchState.pending">
               <i class="fas fa-sync fa-fw fa-spin fa-lg" />
             </span>
@@ -19,61 +19,75 @@
           </h1>
           <h1 class="subtitle is-5 is-chivo">
             VACANTES TOTALES
-          </h1>
+          </h1> -->
           <br>
           <div class="columns">
             <div class="column">
-              <input
-                name="contestType"
-                :checked="this.contestType == 'judges'"
-                v-on:input="updateContestType($event.target.value)"
-                type="radio"
-                id="judges"
-                value="judges"
-                class="contest-type-radio"
-              >
-              <label for="judges" class="radio-label judges-label">
-                <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
-                <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
-                  Jueces y Juezas
-                </h1>
-                <div class="columns my-5 is-mobile">
-                  <div class="column">
-                    <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                      <span v-if="$fetchState.pending">
-                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                      </span>
-                      <span v-else-if="$fetchState.error">
-                        <i class="fas fa-times fa-fw fa-lg" />
-                      </span>
-                      <span v-else>
-                        {{ getValue('vacantesJueces') }}
-                      </span>
-                    </h1>
-                    <h1 class="subtitle is-5 is-chivo">
-                      CARGOS<br>TOTALES
-                    </h1>
-                  </div>
-                  <div class="column">
-                    <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                      <span v-if="$fetchState.pending">
-                        <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                      </span>
-                      <span v-else-if="$fetchState.error">
-                        <i class="fas fa-times fa-fw fa-lg" />
-                      </span>
-                      <span v-else>
-                        {{ getValue('tramitesEnCursoJueces') }}
-                      </span>
-                    </h1>
-                    <h1 class="subtitle is-5 is-chivo">
-                      VACANTES
-                    </h1>
-                  </div>
+              <div class="label-content">
+                <input
+                  name="contestType"
+                  :checked="this.contestType == 'judges'"
+                  v-on:input="updateContestType($event.target.value)"
+                  type="radio"
+                  id="judges"
+                  value="judges"
+                  class="contest-type-radio"
+                >
+                <div class="label-top" >
+                  <h1 class="radio-label radio-label-red">
+                    Jueces y <br>Juezas
+                  </h1>
                 </div>
-              </label>
+                <label for="judges" class="radio-label radio-label-red label-bottom judges-label">
+                  <!-- <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt=""> -->
+                  <h1 class="title is-4 my-4 is-700 is-chivo has-text-white">
+                    Jueces y Juezas
+                  </h1>
+                  <div class="columns my-5 is-mobile">
+                    <div class="column">
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        DEL TOTAL DE
+                      </h1>
+                      <h1 class="title is-2 is-500 is-chivo has-text-white">
+                        <span v-if="$fetchState.pending">
+                          <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                        </span>
+                        <span v-else-if="$fetchState.error">
+                          <i class="fas fa-times fa-fw fa-lg" />
+                        </span>
+                        <span v-else>
+                          {{ getValue('vacantesJueces') }}
+                        </span>
+                      </h1>
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        CARGOS
+                      </h1>
+                    </div>
+                    <div class="column">
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        HAY
+                      </h1>
+                      <h1 class="title is-2 is-500 is-chivo has-text-white">
+                        <span v-if="$fetchState.pending">
+                          <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                        </span>
+                        <span v-else-if="$fetchState.error">
+                          <i class="fas fa-times fa-fw fa-lg" />
+                        </span>
+                        <span v-else>
+                          {{ getValue('tramitesEnCursoJueces') }}
+                        </span>
+                      </h1>
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        VACANTES
+                      </h1>
+                    </div>
+                  </div>
+                </label>
+              </div>
             </div>
-            <div class="column">
+          <div class="column">
+            <div class="label-content">
               <input
                 name="contestType"
                 :checked="this.contestType == 'attorneys'"
@@ -83,14 +97,19 @@
                 value="attorneys"
                 class="contest-type-radio"
               >
-              <label for="attorneys" class="radio-label attorneys-label">
-                <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt="">
-                <h1 class="title is-4 my-4 is-700 is-chivo has-text-secondary">
+              <div class="label-top">
+                <h1 class=" radio-label radio-label-blue">
+                  Fiscales y Fiscalías
+                </h1>
+              </div>
+              <label for="attorneys" class="radio-label radio-label-blue label-bottom judges-label attorneys-label">
+                <!-- <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt=""> -->
+                <h1 class="title is-4 my-4 is-700 is-chivo has-text-white">
                   Fiscales y Fiscalías
                 </h1>
                 <div class="columns my-5 is-mobile">
                   <div class="column">
-                    <h1 class="title is-2 is-500 is-chivo has-text-secondary">
+                    <h1 class="title is-2 is-500 is-chivo has-text-white">
                       <span v-if="$fetchState.pending">
                         <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                       </span>
@@ -101,12 +120,12 @@
                         {{ getValue('vacantesFiscales') }}
                       </span>
                     </h1>
-                    <h1 class="subtitle is-5 is-chivo">
+                    <h1 class="subtitle is-5 is-chivo has-text-white">
                       CARGOS<br>TOTALES
                     </h1>
                   </div>
                   <div class="column">
-                    <h1 class="title is-2 is-500 is-chivo has-text-secondary">
+                    <h1 class="title is-2 is-500 is-chivo has-text-white">
                       <span v-if="$fetchState.pending">
                         <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                       </span>
@@ -117,13 +136,14 @@
                         {{ getValue('tramitesEnCursoFiscales') }}
                       </span>
                     </h1>
-                    <h1 class="subtitle is-5 is-chivo">
+                    <h1 class="subtitle is-5 is-chivo has-text-white">
                       VACANTES
                     </h1>
                   </div>
                 </div>
               </label>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -228,11 +248,66 @@ export default {
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor:pointer;
+  color: #fff !important;
+  height: 100%;
+  width: 100% !important;
+}
+.radio-label-red{
+  background-color: #CD3D27;
+  font: inherit;
+}
+.radio-label-blue{
+  background-color: #3157AC;
+  font: inherit;
 }
 .judges-label{
-  border: 3px solid #467CF6;
+  // border: 3px solid #467CF6;
   box-sizing: border-box;
   border-radius: 5px;
+  // max-width: 300px;
+}
+.label-content{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.label-top{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800 !important;
+  font-size: 39.5091px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+.label-bottom{
+  position: absolute;
+  transition: 1s;
+  top: 260px;
+  color:#fff !important;
+}
+
+.label-content:hover{
+  .label-top{
+    transform: translateY(-100px);
+    -webkit-transform:translateY(-100px);
+    -moz-transform:translateY(-100px);
+    -ms-transform:translateY(-100px);
+    -o-transform:translateY(-100px);
+  }
+  .label-bottom{
+    transform: translateY(-280px);
+    -webkit-transform:translateY(-280px);
+    -moz-transform:translateY(-280px);
+    -ms-transform:translateY(-280px);
+    -o-transform:translateY(-280px);  }
 }
 .attorneys-label{
   padding-bottom: 5px;

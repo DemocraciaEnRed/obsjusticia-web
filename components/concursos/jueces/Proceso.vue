@@ -1,17 +1,43 @@
 <template>
   <section :id="scrollId" class="hero is-fullheight">
-    <div class="hero-body px-0 has-text-centered">
-      <div class="container">
-        <h3 class="is-2 is-700 is-spaced line-height-150">
-          ¿Cómo se seleccionan jueces y juezas en nuestro país?
-        </h3>
-        <h1 class="subtitle is-4 my-6 line-height-150">
-          La siguiente infografía muestra los pasos que se deben seguir para llegar a una designación:
-        </h1>
-        <img src="~/assets/img/concursos/proceso-desktop.svg" class="image is-centered is-fullwidth is-hidden-mobile my-6" alt="">
-        <img src="~/assets/img/concursos/proceso-mobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt="">
-      </div>
-    </div>
+            <b-collapse
+            aria-id="contentIdForA11y2"
+            class="panel"
+            animation="slide"
+            :open="false"
+            >
+            <template #trigger>
+                <div
+                    class="panel-heading"
+                    role="button"
+                    aria-controls="contentIdForA11y2"
+                    >
+                  <div class="is-flex hero-config is-justify-content-center is-align-content-center is-align-items-center">
+                    <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
+                      <div class="hero-body is-size-4 has-text-centered">
+                       ¿Cómo se seleccionan jueces y juezas?
+                      </div>
+                    <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
+                  </div>
+                </div>
+            </template>
+            <div class="panel-block">
+              <div class="hero-body px-0 has-text-centered">
+                <div class="hero-body px-0 has-text-centered">
+                    <div class="container">
+                      <h3 class="is-2 is-700 is-spaced line-height-150">
+                        ¿Cómo se seleccionan jueces y juezas en nuestro país?
+                      </h3>
+                      <h1 class="subtitle is-4 my-6 line-height-150">
+                        La siguiente infografía muestra los pasos que se deben seguir para llegar a una designación:
+                      </h1>
+                      <img src="~/assets/img/concursos/proceso-desktop.svg" class="image is-centered is-fullwidth is-hidden-mobile my-6" alt="">
+                      <img src="~/assets/img/concursos/proceso-mobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt="">
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </b-collapse>
   </section>
 </template>
 <script>
@@ -25,3 +51,26 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.hero-config{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #FFFFFF;
+    max-height: 60px;
+    border-radius: 8px;
+
+  background-color: #FF6F6F;
+  border-radius: 4.00556px;
+}
+  .panel-heading{
+    background-color: inherit !important;
+  }
+</style>

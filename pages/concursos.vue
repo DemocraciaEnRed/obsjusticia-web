@@ -7,7 +7,7 @@
       <div class="my-6 py-6">
         <SideTypePicker v-model="contestType" class="is-hidden-mobile" />
         <div class="columns">
-          <div class="column is-8 is-offset-2">
+          <div class="column is-10 is-offset-1">
             <Header scroll-id="ley" v-model="contestType"/>
             <div v-if="contestType == 'judges'">
               <Jueces />
@@ -60,7 +60,7 @@ export default {
 h1{
   font-family: 'Raleway', $family-sans-serif;
   color: #000000;
-  font-size: 50pxrem;
+  font-size: 50px;
 }
 h2 {
   font-family: 'Raleway', $family-sans-serif;
@@ -105,7 +105,7 @@ background-color: #00B1AF;
   overflow-y: hidden;
 }
 .specialbg{
-  background-color: #EDF2FE;
+  background-color: #ffffff;
 }
 .overlay-graphs{
   // min-height: 100vh;

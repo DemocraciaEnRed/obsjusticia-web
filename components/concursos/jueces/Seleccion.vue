@@ -14,13 +14,13 @@
         <div>
           <br>
           <br>
-          <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="">
-          <h1 class="title is-4 my-4 is-700 is-chivo has-text-primary">
+          <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt="icono de martillo">
+          <h1 class="title h4-imp is-4 my-4 is-700 is-chivo text-red">
             Vacantes jueces y juezas
           </h1>
-          <div class="columns my-5 is-mobile is-multiline is-centered">
-            <div class="column is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo has-text-primary">
+          <div class="columns my-5 is-mobile is-multiline is-centered column is-8 is-offset-2">
+            <div class="column  has-border is-4-mobile">
+              <h1 class="title is-2 is-500 is-chivo text-red">
                 <span v-if="$fetchState.pending">
                   <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                 </span>
@@ -34,41 +34,43 @@
               <h1 class="subtitle is-6 is-chivo">
                 EN EL CONSEJO DE<br>LA MAGISTRATURA
               </h1>
+              <div class="label-hidden">
+                <div class="column is-4-mobile">
+                  <h1 class="title is-flex is-2 is-500 is-chivo has-text-primary">
+                    <span v-if="$fetchState.pending">
+                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                    </span>
+                    <span v-else-if="$fetchState.error">
+                      <i class="fas fa-times fa-fw fa-lg" />
+                    </span>
+                    <span v-else>
+                      {{ getValue('vacantesJuecesConcursosEnProceso') }}
+                    </span>
+                  </h1>
+                  <h1 class="subtitle is-6 is-chivo">
+                    CONCURSOS EN<br>PROCESO
+                  </h1>
+                </div>
+                <div class="column is-4-mobile">
+                  <h1 class="title is-flex is-2 is-500 is-chivo has-text-primary">
+                    <span v-if="$fetchState.pending">
+                      <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                    </span>
+                    <span v-else-if="$fetchState.error">
+                      <i class="fas fa-times fa-fw fa-lg" />
+                    </span>
+                    <span v-else>
+                      {{ getValue('vacantesJuecesVacantesSinTramite') }}
+                    </span>
+                  </h1>
+                  <h1 class="subtitle is-6 is-chivo">
+                    VACANTES<br>SIN TRÁMITE
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div class="column is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                <span v-if="$fetchState.pending">
-                  <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                </span>
-                <span v-else-if="$fetchState.error">
-                  <i class="fas fa-times fa-fw fa-lg" />
-                </span>
-                <span v-else>
-                  {{ getValue('vacantesJuecesConcursosEnProceso') }}
-                </span>
-              </h1>
-              <h1 class="subtitle is-6 is-chivo">
-                CONCURSOS EN<br>PROCESO
-              </h1>
-            </div>
-            <div class="column is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo has-text-primary">
-                <span v-if="$fetchState.pending">
-                  <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                </span>
-                <span v-else-if="$fetchState.error">
-                  <i class="fas fa-times fa-fw fa-lg" />
-                </span>
-                <span v-else>
-                  {{ getValue('vacantesJuecesVacantesSinTramite') }}
-                </span>
-              </h1>
-              <h1 class="subtitle is-6 is-chivo">
-                VACANTES<br>SIN TRÁMITE
-              </h1>
-            </div>
-            <div class="column is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo has-text-primary">
+            <div class="column  is-4-mobile">
+              <h1 class="title is-2 is-500 is-chivo text-red">
                 <span v-if="$fetchState.pending">
                   <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                 </span>
@@ -83,8 +85,8 @@
                 EN EL PODER<br>EJECUTIVO
               </h1>
             </div>
-            <div class="column is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo has-text-primary">
+            <div class="column  is-4-mobile">
+              <h1 class="title is-2 is-500 is-chivo text-red">
                 <span v-if="$fetchState.pending">
                   <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                 </span>
@@ -153,3 +155,24 @@ export default {
   }
 }
 </script>
+<style scoped>
+.text-red{
+  color: #EC6961;
+}
+.little-boxes{
+  width: 172px;
+  height: 155px;
+  align-items: center;
+  padding: 20px;
+  gap: 12px;
+  background: #FFFFFF;
+}
+.has-border{
+  border: 2px solid #EC6961;
+  border-radius: 10px;
+}
+.label-hidden{
+  background-color: #EC6961;
+  color: #fff !important;
+}
+</style>
