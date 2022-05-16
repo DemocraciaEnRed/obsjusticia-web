@@ -15,11 +15,11 @@
             <div v-else-if="contestType == 'attorneys'">
               <Fiscales />
             </div>
-             <div v-if="contestType">
-              <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
-              <Fuentes scroll-id="fuentes" />
-            </div>
           </div>
+        </div>
+        <div v-if="contestType" class="px-6">
+          <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
+          <Fuentes scroll-id="fuentes" />
         </div>
       </div>
     </div>

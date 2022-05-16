@@ -64,7 +64,7 @@
             </div>
             <div class="column is-8">
               <p>
-                Apelación por la nota del examen o la evaluación de los antecedentes
+                Apelación de la nota del examen o la evaluación de los antecedentes.
               </p>
             </div>
           </div>

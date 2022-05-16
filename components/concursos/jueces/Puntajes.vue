@@ -12,7 +12,7 @@
           <div class="control">
             <div class="select">
               <select ref="contestSelect" v-model="sheetSelected">
-                <option :value="null" disabled>Elegir concurso</option>
+                <option :value="null" disabled>Elegir un concurso</option>
                 <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
                   {{ place.label }} ({{ place.status }})
                 </option>
@@ -37,12 +37,12 @@
           </h1>
         </div>
         <div v-else-if="!this.sheetSelected" class="my-6 select-contest-button-container">
-          <button
+          <!-- <button
             class="button is-outlined p-6 select-contest-button"
             v-bind:class="!this.isMobile() && 'is-large'"
             @click="$refs.contestSelect.focus()">
             Hacé click aqui para elegir un concurso
-          </button>
+          </button> -->
         </div>
         <div v-else>
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
@@ -559,11 +559,31 @@ export default {
 .chart{
   height: 75vh;
 }
+.control{
+  box-sizing: border-box;
+  background: #FF6F6F;
+  border-radius: 5px;
+}
+.control .select{
+  width: 100%;
+  height: auto;
+}
+.control .select i::after{
+  color: #fff !important;
+}
 .field .control select {
   background: transparent;
-  border-color: #467CF6;
-  color: #f0d001;
-  color: #467CF6;
+  border-color: #FF6F6F;
+  width: 100% !important;
+  color: #fff;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 .first-table{
   margin-bottom: 0;
@@ -625,7 +645,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100px;
   border: 2px solid grey;
   border-radius: 10px;
   border-style: dashed;
@@ -660,4 +680,5 @@ export default {
   color: #6C9EFF;
   text-decoration-line: underline;
 }
+
 </style>

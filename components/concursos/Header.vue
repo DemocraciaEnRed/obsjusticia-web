@@ -21,7 +21,7 @@
             VACANTES TOTALES
           </h1> -->
           <br>
-          <div class="columns">
+          <div class="columns my-0 py-0">
             <div class="column">
               <div class="label-content">
                 <input
@@ -33,7 +33,7 @@
                   value="judges"
                   class="contest-type-radio"
                 >
-                <div class="label-top" >
+                <div class="label-top  is-flex is-vcentered">
                   <h1 class="radio-label radio-label-red">
                     Jueces y <br>Juezas
                   </h1>
@@ -269,6 +269,7 @@ export default {
 .label-content{
   position: relative;
   height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 .label-top{
@@ -294,6 +295,9 @@ export default {
   color:#fff !important;
 }
 
+.label-top h1{
+  padding-top: 100px;
+}
 .label-content:hover{
   .label-top{
     transform: translateY(-100px);

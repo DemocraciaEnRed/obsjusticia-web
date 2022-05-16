@@ -1,5 +1,5 @@
 <template>
-  <section :id="scrollId" class="hero is-fullheight">
+  <section :id="scrollId" class="hero">
             <b-collapse
             aria-id="contentIdForA11y2"
             class="panel"
@@ -22,17 +22,17 @@
                 </div>
             </template>
             <div class="panel-block">
-              <div class="hero-body px-0 has-text-centered">
-                <div class="hero-body px-0 has-text-centered">
+              <div class="px-0 has-text-centered">
+                <div class="px-0 has-text-centered">
                     <div class="container">
-                      <h3 class="is-2 is-700 is-spaced line-height-150">
+                      <h3 class="is- is-700 is-spaced line-height-150">
                         ¿Cómo se seleccionan jueces y juezas en nuestro país?
                       </h3>
                       <h1 class="subtitle is-4 my-6 line-height-150">
                         La siguiente infografía muestra los pasos que se deben seguir para llegar a una designación:
                       </h1>
-                      <img src="~/assets/img/concursos/proceso-desktop.svg" class="image is-centered is-fullwidth is-hidden-mobile my-6" alt="">
-                      <img src="~/assets/img/concursos/proceso-mobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt="">
+                      <img src="~/assets/img/concursos/InfografiaJuecesDesktop.svg" class="image is-centered is-hidden-mobile my-6" alt=" infografía que muestra los pasos que se deben seguir para llegar a una designación:">
+                      <img src="~/assets/img/concursos/InfografiaJuecesMobile.svg" class="image is-centered is-fullwidth is-hidden-tablet my-6" alt=" infografía que muestra los pasos que se deben seguir para llegar a una designación:">
                     </div>
                   </div>
               </div>
@@ -73,4 +73,11 @@ export default {
   .panel-heading{
     background-color: inherit !important;
   }
+.container img {
+  object-fit: scale-down !important;
+}
+
+.container img svg{
+  width: 80% !important;
+}
 </style>

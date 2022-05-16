@@ -27,7 +27,7 @@
     padding: 1.5rem;
     // -webkit-box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.92);
     // box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.92);
-    border-top: 1px #3157ac solid;
+    border-top: 1px #EC6961 solid;
     .scrollactive-item{
       display:inline-block;
       padding: 0px 10px 0px 0px;
@@ -37,9 +37,9 @@
       margin: 5px 0px;
       &.active{
       padding: 5px 5px 0px 5px;
-        color: #3157ac;
+        color: #EC6961;
         font-weight: 800;
-        border-left: 5px solid #3157ac;
+        border-left: 5px solid #EC6961;
       }
 
     }

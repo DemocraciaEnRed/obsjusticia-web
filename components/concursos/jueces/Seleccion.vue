@@ -18,25 +18,27 @@
           <h1 class="title h4-imp is-4 my-4 is-700 is-chivo text-red">
             Vacantes jueces y juezas
           </h1>
-          <div class="columns my-5 is-mobile is-multiline is-centered column is-8 is-offset-2">
-            <div class="column  has-border is-4-mobile">
-              <h1 class="title is-2 is-500 is-chivo text-red">
-                <span v-if="$fetchState.pending">
-                  <i class="fas fa-sync fa-fw fa-spin fa-lg" />
-                </span>
-                <span v-else-if="$fetchState.error">
-                  <i class="fas fa-times fa-fw fa-lg" />
-                </span>
-                <span v-else>
-                  {{ getValue('vacantesJuecesConsejoMagistratura') }}
-                </span>
-              </h1>
-              <h1 class="subtitle is-6 is-chivo">
-                EN EL CONSEJO DE<br>LA MAGISTRATURA
-              </h1>
-              <div class="label-hidden">
-                <div class="column is-4-mobile">
-                  <h1 class="title is-flex is-2 is-500 is-chivo has-text-primary">
+          <div class="columns my-5 is-mobile is-multiline is-vcentered is-centered column is-8 is-offset-2">
+            <div class="column is-4-mobile p-0 m-0 has-border little-boxes content-label-hidden">
+              <div class="label-visible pt-6">
+                <h1 class="title is-2 is-500 is-chivo text-red">
+                  <span v-if="$fetchState.pending">
+                    <i class="fas fa-sync fa-fw fa-spin fa-lg" />
+                  </span>
+                  <span v-else-if="$fetchState.error">
+                    <i class="fas fa-times fa-fw fa-lg" />
+                  </span>
+                  <span v-else>
+                    {{ getValue('vacantesJuecesConsejoMagistratura') }}
+                  </span>
+                </h1>
+                <h1 class="subtitle is-6 is-chivo">
+                  EN EL CONSEJO DE<br>LA MAGISTRATURA
+                </h1>
+              </div>
+              <div class="label-hidden has-border">
+                <div class="column is-4-mobile is-flex is-flex-grow-1 is-align-items-center">
+                  <h1 class="title is-2 is-flex-grow-1 is-500 is-chivo has-text-white mr-1">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -47,12 +49,12 @@
                       {{ getValue('vacantesJuecesConcursosEnProceso') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-6 is-chivo  has-text-white mx-3 px-1">
                     CONCURSOS EN<br>PROCESO
                   </h1>
                 </div>
-                <div class="column is-4-mobile">
-                  <h1 class="title is-flex is-2 is-500 is-chivo has-text-primary">
+                <div class="column is-4-mobile is-flex is-align-items-center">
+                  <h1 class="title is-2 is-flex-grow-1 is-500 is-chivo has-text-white mr-2">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -63,7 +65,7 @@
                       {{ getValue('vacantesJuecesVacantesSinTramite') }}
                     </span>
                   </h1>
-                  <h1 class="subtitle is-6 is-chivo">
+                  <h1 class="subtitle is-6 is-chivo  has-text-white mx-4 px-2">
                     VACANTES<br>SIN TRÁMITE
                   </h1>
                 </div>
@@ -85,7 +87,7 @@
                 EN EL PODER<br>EJECUTIVO
               </h1>
             </div>
-            <div class="column  is-4-mobile">
+            <div class="column  is-4-mobile label-visible">
               <h1 class="title is-2 is-500 is-chivo text-red">
                 <span v-if="$fetchState.pending">
                   <i class="fas fa-sync fa-fw fa-spin fa-lg" />
@@ -171,8 +173,25 @@ export default {
   border: 2px solid #EC6961;
   border-radius: 10px;
 }
+.label-visible{
+  height: 100%;
+  width: 100%;
+}
+.content-label-hidden{
+  position: relative;
+}
 .label-hidden{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
   background-color: #EC6961;
   color: #fff !important;
+  margin: 0px;
+  transition: .6s;
+}
+.content-label-hidden:hover .label-hidden{
+  opacity: 1;
 }
 </style>
