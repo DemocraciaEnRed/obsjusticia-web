@@ -10,8 +10,10 @@
   v-on:scroll="onIndex"
   >
     <a href="#totales" class="scrollactive-item">Totales</a>
-    <a href="#data-dot" class="scrollactive-item">Datos</a>
-    <a href="#bar-search" class="scrollactive-item">Buscar Denuncias</a>
+    <a href="#graphs" class="scrollactive-item">Datos</a>
+    <!-- <a href="#data-dot" class="scrollactive-item">Datos</a> -->
+    <!-- <a href="/index.html/#reports-search-input" class="scrollactive-item">Buscar Denuncias</a> -->
+    <a href="#graphs" class="scrollactive-item">Buscar Denuncias</a>
     <a href="#lexico" class="scrollactive-item">Glosario</a>
     <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
     <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>

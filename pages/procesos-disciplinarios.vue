@@ -15,6 +15,7 @@
         id="graphs"
         src="https://democraciaenred.github.io/obsjusticia-graphs/"
         class="the-graphs"
+        scrolling="yes"
         loading="lazy"
         v-resize="{ log: true }"
         frameborder="0"

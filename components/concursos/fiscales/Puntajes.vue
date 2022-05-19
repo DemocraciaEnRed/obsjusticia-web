@@ -8,15 +8,15 @@
         <p class="is-size-5 line-height-150">
           Accedé a la información sobre concursos en trámite y finalizados con los puntajes asignados en cada etapa.
         </p>
-        <h3 class="is-uppercase is-2 is-500 line-height-150 my-6">
+        <!-- <h3 class="is-uppercase is-2 is-500 line-height-150 my-6">
           Próximamente
-        </h3>
-        <!--<div class="field m-6">
+        </h3> -->
+        <div class="field m-6">
           <div class="control">
             <div class="select">
               <select ref="contestSelect" v-model="sheetSelected">
                 <option :value="null" disabled>Elegir concurso</option>
-                <option v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
+                <option class="selectorOPT" v-for="place in lugares" :key="`lugar-${place.key}`" :disabled="place.disabled" :value="place.key">
                   {{ place.label }} ({{ place.status }})
                 </option>
               </select>
@@ -40,12 +40,12 @@
           </h1>
         </div>
         <div v-else-if="!this.sheetSelected" class="my-6 select-contest-button-container">
-          <button
+          <!-- <button
             class="button is-outlined p-6 select-contest-button"
             v-bind:class="!this.isMobile() && 'is-large'"
             @click="$refs.contestSelect.focus()">
             Hacé click aqui para elegir un concurso
-          </button>
+          </button> -->
         </div>
         <div v-else>
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
@@ -70,6 +70,7 @@
                   data-hashtags="justa,acij"
                   data-lang="es"
                   data-show-count="false"
+                  target="_blank"
                 >
                   Tweet
                 </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -185,13 +186,14 @@
                   data-hashtags="justa,acij"
                   data-lang="es"
                   data-show-count="false"
+                  target="_blank"
                 >
                   Tweet
                 </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div>
             </div>
           </div>
-        </div>-->
+        </div>
       </div>
     </div>
   </section>
@@ -543,6 +545,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.twitter-share-button .btn{
+  border: none !important;
+  background: transparent !important;
+  color: #467CF6;
+}
 .chart{
   height: 75vh;
 }
@@ -608,11 +615,39 @@ export default {
     }
   }
 }
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color:#fff !important;
+}
+.control .select{
+  width: 100%;
+  height: auto;
+}
+.control .select i::after{
+  color: #fff !important;
+}
+.field .control select {
+  background: #3157AC;
+  border-color: #3157AC;
+  width: 100% !important;
+  color: #fff;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.field .control select .selectorOPT{
+  color: #fff;
+  background: #3158ac4d !important;
+}
 .select-contest-button-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100px;
   border: 2px solid grey;
   border-radius: 10px;
   border-style: dashed;

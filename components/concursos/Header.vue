@@ -99,13 +99,13 @@
               >
               <div class="label-top">
                 <h1 class=" radio-label radio-label-blue">
-                  Fiscales y Fiscalías
+                  Fiscales y Fiscalas
                 </h1>
               </div>
               <label for="attorneys" class="radio-label radio-label-blue label-bottom judges-label attorneys-label">
                 <!-- <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt=""> -->
                 <h1 class="title is-4 my-4 is-700 is-chivo has-text-white">
-                  Fiscales y Fiscalías
+                  Fiscales y Fiscalas
                 </h1>
                 <div class="columns my-5 is-mobile">
                   <div class="column">

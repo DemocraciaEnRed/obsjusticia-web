@@ -201,6 +201,14 @@
         </div>
       </div>
     </div>
+    <!-- <div class="content-button">
+      <div class="cb-transparent py-5">
+        <a href="" class="">Contactanos</a>
+      </div>
+      <div class="cb-solid py-5">
+        <a href="" class="">Suscribite al newsletter de Concursos</a>
+      </div>
+    </div> -->
   </section>
 </template>
 
@@ -571,8 +579,11 @@ export default {
 .control .select i::after{
   color: #fff !important;
 }
+.field{
+  border-color: #fff !important;
+}
 .field .control select {
-  background: transparent;
+  background: #ff6f6f9c;
   border-color: #FF6F6F;
   width: 100% !important;
   color: #fff;
@@ -680,5 +691,44 @@ export default {
   color: #6C9EFF;
   text-decoration-line: underline;
 }
+.content-button{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 40px;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
 
+}
+.content-button a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 100%;
+}
+
+.cb-solid {
+  height: 60px;
+  width: 30%;
+  background: #3157AC;
+  color: #fff !important;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+}
+ .cb-solid a{
+   color: #fff;
+ }
+.cb-transparent{
+  height: 60px;
+  width: 30%;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #3157AC;
+  border-radius: 5px;
+  color: #3157AC;
+  text-align: center;
+  margin: 10px;
+}
 </style>

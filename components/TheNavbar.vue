@@ -1,7 +1,7 @@
 <template>
   <b-navbar wrapper-class="container" transparent>
     <template slot="end">
-      <b-navbar-item tag="nuxt-link" to="/quienes-somos">
+      <b-navbar-item tag="nuxt-link" to="/">
         <img src="~/assets/images/logo_justa.png" width="70">
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/">
