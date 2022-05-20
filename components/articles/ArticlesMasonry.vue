@@ -36,7 +36,7 @@
         <div class="date-sorter-container">
           <select v-model="dateOrder" class="date-sorter">
             <option value="" disabled>ORDENAR POR</option>
-            <option value="desc">MÁS RECIENTES</option>
+            <option value="desc" selected>MÁS RECIENTES</option>
             <option value="asc">MÁS ANTIGUOS</option>
           </select>
         </div>
@@ -107,7 +107,7 @@ export default {
       appliedTags: [],
       appliedCategories: [],
       searchText: '',
-      dateOrder: ''
+      dateOrder: 'desc'
     }
   },
   computed: {
