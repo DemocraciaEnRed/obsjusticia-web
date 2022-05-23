@@ -5,7 +5,7 @@
         <div class="columns is-centered my-6">
           <div class="column is-8">
             <div id="totales" class="has-text-centered">
-              <h1 class=" is-uppercase is-2 is-700">
+              <h1 class=" is-uppercase is-size-4-mobile is-2 is-700">
                 Procesos disciplinarios contra jueces y juezas
               </h1>
               <br>

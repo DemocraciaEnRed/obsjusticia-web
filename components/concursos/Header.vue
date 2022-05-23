@@ -1,10 +1,12 @@
 <template>
   <section :id="scrollId" class="hero column is-9 is-offset-1 pl-6">
-    <div class="hero-body px-0 has-text-centered">
+    <div class="hero-body has-text-centered">
       <div class="container">
-        <h1 class="is-uppercase is-1 is-700">
-          Concursos de jueces, juezas, fiscales y Fiscalas
-        </h1>
+        <div class="is-flex">
+          <h1 class="is-uppercase is-size-4-mobile is-700">
+            Concursos de jueces, juezas, fiscales y Fiscalas
+          </h1>
+        </div>
         <div class="py-6">
           <!-- <h1 class="title is-2 is-700 is-chivo">
             <span v-if="$fetchState.pending">
@@ -322,4 +324,9 @@ export default {
 .contest-type-radio:checked+label{
   background-color: #DEE8FF;
 }
+// @include mobile{
+//   .avp{
+//     font-size: 10vw !important;
+//   }
+// }
 </style>

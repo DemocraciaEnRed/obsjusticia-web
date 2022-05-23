@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="footer">
+    <div class="footer" :class="{'footer-dark': dark == true}">
       <div class="container">
         <div class="is-6-mobile mt-4 is-3-desktop links-columns level">
             <a href="/articulos" class="has-text-white is-size-5 level-item">Artículos</a>
@@ -36,8 +36,19 @@
     </div>
   </div>
 </template>
+<script>
+
+export default ({
+  props: {
+    dark: Boolean
+  }
+})
+</script>
 
 <style lang="scss" scoped>
+.footer-dark{
+  background: #000 !important;
+}
 .footer-top{
   color: #FFF;
   // .image{

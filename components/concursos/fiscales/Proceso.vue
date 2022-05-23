@@ -12,9 +12,9 @@
                     role="button"
                     aria-controls="contentIdForA11y2"
                     >
-                  <div class="is-flex hero-config is-justify-content-center is-align-content-center is-align-items-center">
-                    <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
-                      <div class="hero-body is-size-4 has-text-centered">
+                  <div class="is-flex-desktop columns is-mobile hero-config is-justify-content-center is-align-content-center is-align-items-center">
+                    <span class="icon is-align-self-center m-6 is-hidden-mobile"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
+                      <div class="hero-body column is-10 is-size-4 is-size-6-mobile has-text-centered">
                        ¿Cómo se seleccionan FIscales y Fiscalas?
                       </div>
                     <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .hero-config{
     font-family: 'Raleway';
     font-style: normal;
@@ -79,5 +79,16 @@ export default {
 
 .container img svg{
   width: 80% !important;
+}
+
+@include mobile{
+  .hero{
+    width: 100% !important;
+  }
+  .hero-config {
+    width: auto ;
+    height: 200px;
+    padding: 0px 10px;
+  }
 }
 </style>

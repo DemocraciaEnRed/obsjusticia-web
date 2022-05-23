@@ -1,8 +1,8 @@
 <template>
-  <section :id="scrollId" class="hero is-medium  mx-6 px-6">
+  <section :id="scrollId" class="hero is-medium  spacing">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h1 class="is-uppercase is-700 line-height-150">
+        <h1 class="is-uppercase is-size-4-mobile is-700 line-height-150">
           Transparencia y Acceso a la Información en el Poder Judicial y Ministerio Público
         </h1>
         <div class="py-6">
@@ -33,5 +33,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.spacing{
+  padding: 0 3rem;
+  margin: 0 3rem;
+}
+@include mobile{
+  .spacing{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
 </style>
