@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <div class="navbar-item">
-            <router-link to="/quienes-somos" class="nav-link" exact-active-class="no-active" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+            <router-link to="/" class="nav-link" exact-active-class="no-active" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
               <img src="~/assets/images/logo_justa.png" width="70">
             </router-link>
           </div>

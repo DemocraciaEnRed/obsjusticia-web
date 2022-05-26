@@ -25,7 +25,7 @@
           <br>
           <div class="columns my-0 py-0">
             <div class="column">
-              <div class="label-content">
+              <div id="lbl-judges" class="label-content">
                 <input
                   name="contestType"
                   :checked="this.contestType == 'judges'"
@@ -89,7 +89,7 @@
               </div>
             </div>
           <div class="column">
-            <div class="label-content">
+            <div id="lbl-attorneys" class="label-content">
               <input
                 name="contestType"
                 :checked="this.contestType == 'attorneys'"
@@ -204,6 +204,13 @@ export default {
     },
     updateContestType (newContestType) {
       this.$emit('input', newContestType)
+      if (newContestType === 'judges') {
+        document.getElementById('lbl-judges').classList.add('label-selected')
+        document.getElementById('lbl-attorneys').classList.remove('label-selected')
+      } else {
+        document.getElementById('lbl-attorneys').classList.add('label-selected')
+        document.getElementById('lbl-judges').classList.remove('label-selected')
+      }
     }
   },
   computed: {
@@ -244,6 +251,7 @@ export default {
 }
 .contest-type-radio{
   opacity: 0;
+  display: none;
 }
 .radio-label{
   padding: 30px 20px 0 20px;
@@ -309,11 +317,11 @@ export default {
     -o-transform:translateY(-100px);
   }
   .label-bottom{
-    transform: translateY(-280px);
-    -webkit-transform:translateY(-280px);
-    -moz-transform:translateY(-280px);
-    -ms-transform:translateY(-280px);
-    -o-transform:translateY(-280px);  }
+    transform: translateY(-260px);
+    -webkit-transform:translateY(-260px);
+    -moz-transform:translateY(-260px);
+    -ms-transform:translateY(-260px);
+    -o-transform:translateY(-260px);  }
 }
 .attorneys-label{
   padding-bottom: 5px;
@@ -329,4 +337,12 @@ export default {
 //     font-size: 10vw !important;
 //   }
 // }
+.label-selected {
+  .label-bottom{
+    transform: translateY(-260px);
+    -webkit-transform:translateY(-260px);
+    -moz-transform:translateY(-260px);
+    -ms-transform:translateY(-260px);
+    -o-transform:translateY(-260px);  }
+}
 </style>

@@ -36,9 +36,9 @@
                   EN EL MINISTERIO<br>PÚBLICO FISCAL
                 </h1>
               </div>
-              <div class="label-hidden has-border">
-                <div class="column is-4-mobile is-flex is-flex-grow-1 is-align-items-center">
-                  <h1 class="title is-2 is-flex-grow-1 is-500 is-chivo has-text-white mr-1">
+              <div class="label-hidden has-border pt-5 pr-3">
+                <div class="is-flex is-flex-grow-1 is-align-items-center">
+                  <h1 class="title is-2 is-flex-grow-1 is-500 is-chivo is-size-3-mobile has-text-white mr-1">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>
@@ -53,8 +53,8 @@
                     CONCURSOS EN<br>PROCESO
                   </h1>
                 </div>
-                <div class="column is-4-mobile is-flex is-align-items-center">
-                  <h1 class="title is-5  is-flex-grow-1 is-500 is-chivo has-text-white mr-2">
+                <div class="is-flex is-align-items-center">
+                  <h1 class="title is-5  is-flex-grow-1 is-500 is-chivo is-size-5-mobile has-text-white mr-2">
                     <span v-if="$fetchState.pending">
                       <i class="fas fa-sync fa-fw fa-spin fa-lg" />
                     </span>

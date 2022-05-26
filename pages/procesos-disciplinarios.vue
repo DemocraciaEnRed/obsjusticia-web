@@ -116,7 +116,7 @@
     <div id="fuentes" class="section mb-6">
       <div class="container has-text-centered">
         <h1 class="title is-2">
-          Fuente y notas
+          Fuentes y notas
         </h1>
         <br>
         <h6 class="subtitle is-5">

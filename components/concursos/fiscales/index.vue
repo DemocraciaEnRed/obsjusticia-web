@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="b-fiscales">
     <Seleccion scroll-id="seleccion" />
     <Puntajes scroll-id="puntajes" />
     <Proceso scroll-id="proceso" />

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="b-jueces">
     <Seleccion scroll-id="seleccion" />
     <Puntajes scroll-id="puntajes" />
     <Proceso scroll-id="proceso" />
@@ -27,3 +27,5 @@ export default {
   }
 }
 </script>
+<style lang="sass" scoped>
+</style>

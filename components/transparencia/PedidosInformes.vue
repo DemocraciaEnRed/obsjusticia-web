@@ -2,7 +2,7 @@
   <section :id="scrollId" class="hero is-medium">
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
-        <h4 class="h4-imp title is-uppercase is-2 is-700 is-spaced">
+        <h4 class="h4-imp is-size-3-mobile title is-uppercase is-2 is-700 is-spaced">
           Pedidos de acceso a la información pública
         </h4>
         <br>

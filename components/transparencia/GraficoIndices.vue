@@ -129,7 +129,7 @@
               </tr>
               <tr>
                 <td class="has-text-right is-size-4 is-size-6-mobile">
-                  Organos Garantes OG
+                  Órganos Garantes (OG)
                 </td>
                 <td class="data-value has-text-centered is-size-4 is-size-6-mobile" :style="`color: ${getColor(data[5].cmn)}`">
                   {{ data[5].cmn }}

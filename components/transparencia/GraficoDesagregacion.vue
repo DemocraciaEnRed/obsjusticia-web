@@ -15,7 +15,7 @@
                   <div class="is-flex hero-config is-justify-content-center is-align-content-center is-align-items-center">
                     <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
                       <div class="hero-body is-size-4 has-text-centered">
-                        Desagregación de los indices
+                        Desagregación de los Índices
                       </div>
                     <span class="icon is-align-self-center m-6"><i class="fas fa-solid fa-arrow-down has-text-white"></i></span>
                   </div>

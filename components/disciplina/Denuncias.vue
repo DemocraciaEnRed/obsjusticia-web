@@ -10,7 +10,7 @@
               </h1>
               <br>
               <p class="is-size-5">
-                ¡Te vamos a mostrar cómo funcionan los procesos de denuncias a jueces de la Nación!
+                Te mostramos cómo funcionan los procesos de denuncias a jueces y juezas del Poder Judicial de la Nación.
               </p>
               <br>
               <br>
