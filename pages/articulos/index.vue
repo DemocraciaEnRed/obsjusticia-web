@@ -1,117 +1,119 @@
 <template>
-  <section class="">
-    <div class="filler has-background-primary" />
-    <div class="section">
-      <div class="container last-articles">
-        <h1 class="title is-1 has-text-white">
-          Últimos artículos
-        </h1>
-        <b-carousel
-          :interval="8000"
-          :pause-info="false"
-          :indicator="false"
-          :arrow="false"
-        >
-          <b-carousel-item v-for="article in articles" :key="article.slug">
-            <div class="last-articles-container is-flex">
-              <div
-                class="article-picture"
-                :style="`background-image: url(${article.image}`"
-              />
-              <div
-                class="
-                  article-text
-                  box
-                  is-radiusless
-                  has-text-centered
-                  is-flex is-flex-direction-column is-justify-content-center
-                "
-              >
-                <h1 class="title is-3 has-text-black m-0">
-                  {{ article.title }}
-                </h1>
-                <hr>
-                <div class="content has-text-justified">
-                  <p class="text-description">
-                    {{ article.description }}
-                  </p>
-                </div>
-                <div class="is-flex is-flex-direction-ro ending-block">
-                  <p>
-                    Por {{ article.author }}<span class="mx-2">| </span>
-                    {{ article.date && article.date.slice(0, 10) }}
-                  </p>
-                  <div
-                    v-if="article.tags && article.tags.length > 0"
-                    class="tags"
-                  >
-                    <span
-                      v-for="(tag, i) in article.tags"
-                      :key="`tags${i}`"
-                      class="tag is-special is-capitalized"
-                    >
-                      {{ tag.name }}
-                    </span>
+  <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered">
+    <section class="">
+      <div class="filler" />
+      <div class="section">
+        <div class="container last-articles">
+          <!-- <h1 class="title is-1 has-text-white">
+            Últimos artículos
+          </h1>
+          <b-carousel
+            :interval="8000"
+            :pause-info="false"
+            :indicator="false"
+            :arrow="false"
+          >
+            <b-carousel-item v-for="article in articles" :key="article.slug">
+              <div class="last-articles-container is-flex">
+                <div
+                  class="article-picture"
+                  :style="`background-image: url(${article.image}`"
+                />
+                <div
+                  class="
+                    article-text
+                    box
+                    is-radiusless
+                    has-text-centered
+                    is-flex is-flex-direction-column is-justify-content-center
+                  "
+                >
+                  <h1 class="title is-3 has-text-black m-0">
+                    {{ article.title }}
+                  </h1>
+                  <hr>
+                  <div class="content has-text-justified">
+                    <p class="text-description">
+                      {{ article.description }}
+                    </p>
                   </div>
-                </div>
-                <div class="mt-5 has-text-centered">
-                  <nuxt-link
-                    :to="`/articulos/${article.slug}`"
-                    class="has-text-primary is-size-5"
-                  >
-                    Ver el artículo completo
-                    <i class="fas fa-arrow-right fa-lg" />
-                  </nuxt-link>
+                  <div class="is-flex is-flex-direction-ro ending-block">
+                    <p>
+                      Por {{ article.author }}<span class="mx-2">| </span>
+                      {{ article.date && article.date.slice(0, 10) }}
+                    </p>
+                    <div
+                      v-if="article.tags && article.tags.length > 0"
+                      class="tags"
+                    >
+                      <span
+                        v-for="(tag, i) in article.tags"
+                        :key="`tags${i}`"
+                        class="tag is-special is-capitalized"
+                      >
+                        {{ tag.name }}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mt-5 has-text-centered">
+                    <nuxt-link
+                      :to="`/articulos/${article.slug}`"
+                      class="has-text-primary is-size-5"
+                    >
+                      Ver el artículo completo
+                      <i class="fas fa-arrow-right fa-lg" />
+                    </nuxt-link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </b-carousel-item>
-        </b-carousel>
-        <div class="my-6 py-5">
-          <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories"/>
-        </div>
-      </div>
-    </div>
-    <!-- <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div v-for="article in articles" :key="article.slug" class="my-6">
-              <nuxt-link :to="`/articulos/${article.slug}`">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-2by1" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
-                  </div>
-                  <div class="media-content">
-                    <p class="is-raleway is-size-5 has-text-black">
-                       {{ article.date.split('T')[0].split('-').reverse().join('-') }}
-                    </p>
-                    <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
-                      {{ article.title }}
-                    </h1>
-                    <p class="subtitle is-raleway is'size-6">
-                      Por {{ article.author }}
-                    </p>
-                  </div>
-                </div>
-                <div class="content my-3">
-                  <i class="is-size-5 is-raleway has-text-justified has-text-black">
-                    {{ article.description }}
-                  </i>
-                  <div v-if="article.tags && article.tags.length > 0" class="tags">
-                    <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary is-capitalized">
-                      {{ tag }}
-                    </span>
-                  </div>
-                  <hr class="has-background-black">
-                </div>
-              </nuxt-link>
-            </div>
+            </b-carousel-item>
+          </b-carousel> -->
+          <div class="my-6 py-5">
+            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories"/>
           </div>
         </div>
       </div>
-    </section> -->
-  </section>
+      <!-- <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div v-for="article in articles" :key="article.slug" class="my-6">
+                <nuxt-link :to="`/articulos/${article.slug}`">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-2by1" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
+                    </div>
+                    <div class="media-content">
+                      <p class="is-raleway is-size-5 has-text-black">
+                        {{ article.date.split('T')[0].split('-').reverse().join('-') }}
+                      </p>
+                      <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
+                        {{ article.title }}
+                      </h1>
+                      <p class="subtitle is-raleway is'size-6">
+                        Por {{ article.author }}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="content my-3">
+                    <i class="is-size-5 is-raleway has-text-justified has-text-black">
+                      {{ article.description }}
+                    </i>
+                    <div v-if="article.tags && article.tags.length > 0" class="tags">
+                      <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary is-capitalized">
+                        {{ tag }}
+                      </span>
+                    </div>
+                    <hr class="has-background-black">
+                  </div>
+                </nuxt-link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </section>
+  </div>
 </template>
 
 <script>
@@ -162,6 +164,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.bg-container{
+  background-image: url('~/assets/img/fondoHeader.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
 .media .media-left {
   width: 300px;
 }

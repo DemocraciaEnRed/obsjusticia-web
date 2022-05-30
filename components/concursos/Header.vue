@@ -40,7 +40,7 @@
                     Jueces y <br>Juezas
                   </h1>
                 </div>
-                <label for="judges" class="radio-label radio-label-red label-bottom judges-label">
+                <label for="judges" class="radio-label radio-label-red label-bottom judges-label" style="padding-top: 4rem">
                   <!-- <img src="~/assets/img/concursos/jueces-image.svg" class="image is-centered" width="90" alt=""> -->
                   <h1 class="title is-4 my-4 is-700 is-chivo has-text-white">
                     Jueces y Juezas
@@ -104,13 +104,16 @@
                   Fiscales y Fiscalas
                 </h1>
               </div>
-              <label for="attorneys" class="radio-label radio-label-blue label-bottom judges-label attorneys-label">
+              <label for="attorneys" class="radio-label radio-label-blue label-bottom judges-label attorneys-label" style="padding-top: 4rem">
                 <!-- <img src="~/assets/img/concursos/fiscales-image.svg" class="image is-centered" width="90" alt=""> -->
                 <h1 class="title is-4 my-4 is-700 is-chivo has-text-white">
                   Fiscales y Fiscalas
                 </h1>
                 <div class="columns my-5 is-mobile">
                   <div class="column">
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        DEL TOTAL DE
+                      </h1>
                     <h1 class="title is-2 is-500 is-chivo has-text-white">
                       <span v-if="$fetchState.pending">
                         <i class="fas fa-sync fa-fw fa-spin fa-lg" />
@@ -123,10 +126,13 @@
                       </span>
                     </h1>
                     <h1 class="subtitle is-5 is-chivo has-text-white">
-                      CARGOS<br>TOTALES
+                      CARGOS
                     </h1>
                   </div>
                   <div class="column">
+                      <h1 class="subtitle is-5 is-chivo has-text-white">
+                        HAY
+                      </h1>
                     <h1 class="title is-2 is-500 is-chivo has-text-white">
                       <span v-if="$fetchState.pending">
                         <i class="fas fa-sync fa-fw fa-spin fa-lg" />

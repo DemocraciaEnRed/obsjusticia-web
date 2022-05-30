@@ -13,33 +13,38 @@
           </h4>
         </div> -->
       <!-- <div v-else class=""> -->
-      <div>
-        <h1 class="subtitle is-1 search-text-row">
-          Todos los artículos
+      <div class="is-flex is-flex-direction-column">
+        <h1 class="es-raleway search-text-row mb-4 has-text-white is-uppercase">
+          Entrevistas, columas e Investigaciones
         </h1>
         <div class="search-text-row search-input-container">
           <i class="fa fa-search"></i>
           <input v-model="searchText" class="search-input" placeholder="BUSCAR POR AUTOR (NOMBRE/APELLIDO)">
         </div>
       </div>
-      <div>
-        <p class="filters-title">Filtros:</p>
-        <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': tagIsSelected(tag) }">
-          <input class="filter-pill" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="appliedTags">
-          <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
-        </div>
-        </br>
-        <div v-for="category in categories" v-bind:key="category" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': categoryIsSelected(category) }">
+      <div class="is-flex is-align-items-center is-align-content-center my-6">
+        <div class="is-uppercase is-align-self-flex-start">
+          <h5>Filtrar por tipo de articulo</h5>
+           <div v-for="category in categories" v-bind:key="category" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': categoryIsSelected(category) }">
           <input class="filter-pill" type="checkbox" :id="category" :value="category" v-model="appliedCategories">
           <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
         </div>
-        <div class="date-sorter-container">
+        </div>
+        <div class="date-sorter-container is-align-self-flex-end">
           <select v-model="dateOrder" class="date-sorter">
             <option value="" disabled>ORDENAR POR</option>
             <option value="desc" selected>MÁS RECIENTES</option>
             <option value="asc">MÁS ANTIGUOS</option>
           </select>
         </div>
+      </div>
+      <div class="has-text-left">
+        <h5 class="filters-title is-uppercase">Filtrar por Tema</h5>
+        <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': tagIsSelected(tag) }">
+          <input class="filter-pill" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="appliedTags">
+          <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
+        </div>
+        </br>
       </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
         <div v-if="filteredAndSortedArticles.length">
@@ -218,11 +223,16 @@ export default {
     font-size: 20px;
   }
   .search-input{
-    width: 500px;
+    width: 100%;
+    max-width: 100%;
     background-color: transparent;
     border-radius: 5px;
     padding: 8px;
     border-width: 3px;
+    background: #FFFFFF;
+    border: 2px solid #3157AC;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
     @media (max-width: $desktop){
       width: 350px;
     }

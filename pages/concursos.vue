@@ -5,7 +5,7 @@
     </div>
     <div class="py-6">
       <div class="my-6 py-6">
-        <SideTypePicker v-model="contestType" class="is-hidden-mobile" />
+        <!-- <SideTypePicker v-model="contestType" class="is-hidden-mobile" /> -->
         <div class="columns">
           <div class="column is-10 is-offset-1">
             <Header scroll-id="ley" v-model="contestType"/>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import SideTypePicker from '~/components/concursos/SideTypePicker'
+// import SideTypePicker from '~/components/concursos/SideTypePicker'
 import Header from '~/components/concursos/Header'
 import Jueces from '~/components/concursos/jueces'
 import Fiscales from '~/components/concursos/fiscales'
@@ -39,7 +39,7 @@ export default {
   name: 'QuienesSomos',
   layout: 'default-darknav',
   components: {
-    SideTypePicker,
+    // SideTypePicker,
     Header,
     Jueces,
     Fiscales,

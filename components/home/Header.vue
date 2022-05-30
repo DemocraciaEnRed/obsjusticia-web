@@ -7,41 +7,47 @@
         <div class="tile is-ancestor">
           <div class="tile is-parent mx-4">
             <article class="tile is-child box box-config">
-              <div>
-                <p class="title has-text-left">Selección</p>
-                <a class="next-icon is-flex is-justify-content-end" href="/concursos">
-                  <i class="fas fa-arrow-right fa-2x"></i>
-                </a>
-              </div>
-              <div class="label-hidden">
-                <p >Accedé a los datos sobre los concursos de magistradas y magistrados en el Poder Judicial y Ministerio Público Fiscal</p>
-              </div>
+              <a  href="/concursos">
+                <div>
+                  <p class="title has-text-left">Concursos de magistradas y magistrados</p>
+                  <div class="next-icon is-flex is-justify-content-end">
+                    <i class="fas fa-arrow-right fa-2x"></i>
+                  </div>
+                </div>
+                <div class="label-hidden">
+                  <p >Analizá los procesos de selección del Poder Judicial y el Ministerio Público Fiscal</p>
+                </div>
+              </a>
             </article>
           </div>
           <div class="tile is-parent mx-4">
             <article class="tile is-child box box-config">
-              <div>
-                <p class="title has-text-left">Disciplina</p>
-                <a class="next-icon is-flex is-justify-content-end" href="/procesos-disciplinarios">
-                  <i class="fas fa-arrow-right fa-2x"></i>
-                </a>
-              </div>
-              <div class="label-hidden">
-                <p >Accedé a los datos sobre las denuncias presentadas contra juezas y jueces ante el Consejo de la Magistratura de la Nación.</p>
-              </div>
+              <a href="/procesos-disciplinarios">
+                <div>
+                  <p class="title has-text-left">Denuncias contra juezas y jueces</p>
+                  <div class="next-icon is-flex is-justify-content-end" >
+                    <i class="fas fa-arrow-right fa-2x"></i>
+                  </div>
+                </div>
+                <div class="label-hidden">
+                  <p >Conocé como el Consejo de la Magistratura controla y sanciona a las y los jueces</p>
+                </div>
+              </a>
             </article>
           </div>
           <div class="tile is-parent mx-4">
             <article class="tile is-child box box-config">
-              <div>
-                <p class="title has-text-left">Transparencia</p>
-                <a class="next-icon is-flex is-justify-content-end" href="/transparencia">
-                  <i class="fas fa-arrow-right fa-2x"></i>
-                </a>
-              </div>
-              <div class="label-hidden">
-                <p >Accedé a los datos sobre el nivel de publicación de información pública por parte del Poder Judicial y Ministerio Público</p>
-              </div>
+              <a href="/transparencia">
+                <div>
+                  <p class="title has-text-left">Transparencia del sistema de justicia</p>
+                  <div class="next-icon is-flex is-justify-content-end" >
+                    <i class="fas fa-arrow-right fa-2x"></i>
+                  </div>
+                </div>
+                <div class="label-hidden">
+                  <p >Consultá que tan transparente es el poder judicial y los organismos del Ministerio Público</p>
+                </div>
+              </a>
             </article>
           </div>
         </div>

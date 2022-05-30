@@ -93,9 +93,13 @@ export default {
     margin-top: -100px;
   }
 }
+.card .card-content {
+  height: 240px!important;
+}
 .articles-card {
   padding: 10px 7px 15px 7px;
   z-index: 100;
+  height:100% !important;
   .title{
      display: -webkit-box;
     -webkit-line-clamp: 3;
