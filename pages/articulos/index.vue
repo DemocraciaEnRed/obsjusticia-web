@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered">
+  <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url('/bloques/bloque01.jpg')`}">
     <section class="">
       <div class="filler" />
-      <div class="section">
+      <div class="section has-background-white">
         <div class="container last-articles">
           <!-- <h1 class="title is-1 has-text-white">
             Últimos artículos
@@ -165,9 +165,9 @@ export default {
 
 <style lang="scss" scoped>
 .bg-container{
-  background-image: url('~/assets/img/fondoHeader.jpg');
+  // background-image: url('~/assets/img/fondoHeader.jpg');
   background-position: top;
-  background-repeat: no-repeat;
+  // background-repeat: repeat-x;
 }
 .media .media-left {
   width: 300px;

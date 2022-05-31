@@ -6,6 +6,6 @@ services:
     ports:
       - 8080:80
     environment: 
-      DATA_DATE_UPDATED: '2021'
+      DATA_DATE_UPDATED: 'Mayo 2022'
       GOOGLE_SHEET_API_KEY: 'AIzaSyC72MroXNh2yj_mViIHr0j1UwqDmlgmUgI'
       STORYBLOK_API_KEY: 'lQM4eus3nnODKongCEpRFgtt'

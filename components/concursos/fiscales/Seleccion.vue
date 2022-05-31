@@ -3,7 +3,7 @@
     <div class="hero-body px-0 has-text-centered">
       <div class="container">
         <p class="is-size-4 line-height-150">
-          La selección de <b>fiscales y fiscalas</b> es un proceso muy importante en el sistema democrático. Estas autoridades deciden conflictos particulares y sobre cuestiones que afectan a la ciudadanía en su conjunto. El proceso de selección consiste en una serie de pasos en los que intervienen el Consejo de la Magistratura, el Poder Ejecutivo y el Senado.
+          La selección de <b>fiscales y fiscalas</b> es un proceso muy importante en el sistema democrático. Estas autoridades deciden conflictos particulares y sobre cuestiones que afectan a la ciudadanía en su conjunto. El proceso de selección consiste en una serie de pasos en los que intervienen el Ministerio Público Fiscal, el Poder Ejecutivo y el Senado.
         </p>
         <br>
         <p class="is-size-4 line-height-150">

@@ -5,10 +5,10 @@
       <a href="#seleccion" class="scrollactive-item">Selección</a>
       <a href="#puntajes" class="scrollactive-item">Concursos</a>
       <a href="#proceso" class="scrollactive-item">Proceso</a>
-      <a href="#conclusiones" class="scrollactive-item">Conclusiones</a>
+      <!-- <a href="#conclusiones" class="scrollactive-item">Conclusiones</a> -->
       <a href="#lexico" class="scrollactive-item">Glosario</a>
       <a href="#articulos-relacionados" class="scrollactive-item">Artículos relacionados</a>
-      <a href="#fuentes" class="scrollactive-item">Fuentes y notas</a>
+      <a href="#fuentes" class="scrollactive-item">Fuentes</a>
   </scrollactive>
 </div>
 </template>

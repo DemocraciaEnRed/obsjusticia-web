@@ -93,7 +93,7 @@ export default {
   },
   publicRuntimeConfig: {
     googleSheetApiKey: process.env.GOOGLE_SHEET_API_KEY,
-    dataDateUpdated: process.env.DATA_DATE_UPDATED || '2021',
+    dataDateUpdated: process.env.DATA_DATE_UPDATED || 'Mayo 2022',
     storyblokApiKey: process.env.STORYBLOK_API_KEY,
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID

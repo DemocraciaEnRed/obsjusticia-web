@@ -19,9 +19,10 @@
         </h1>
         <div class="search-text-row search-input-container">
           <i class="fa fa-search"></i>
-          <input v-model="searchText" class="search-input" placeholder="BUSCAR POR AUTOR (NOMBRE/APELLIDO)">
+          <input v-model="searchText" class="search-input" placeholder="AUTOR/A   (Nombre/Apellido)">
         </div>
       </div>
+      <div class="" style="height:150px"></div>
       <div class="is-flex is-align-items-center is-align-content-center my-6">
         <div class="is-uppercase is-align-self-flex-start">
           <h5>Filtrar por tipo de articulo</h5>
@@ -30,7 +31,7 @@
           <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
         </div>
         </div>
-        <div class="date-sorter-container is-align-self-flex-end">
+        <div class="date-sorter-container is-align-self-flex-end" >
           <select v-model="dateOrder" class="date-sorter">
             <option value="" disabled>ORDENAR POR</option>
             <option value="desc" selected>MÁS RECIENTES</option>
