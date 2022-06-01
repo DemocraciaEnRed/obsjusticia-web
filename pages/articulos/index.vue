@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url('/bloques/bloque01.jpg')`}">
+  <div class="bg-container  is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url('/bloques/bloque01.jpg')`}">
     <section class="">
       <div class="filler" />
       <div class="section has-background-white">

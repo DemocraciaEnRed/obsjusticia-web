@@ -2,7 +2,7 @@
   <div>
     <TheNavbar />
     <nuxt />
-    <TheFooter />
+    <TheFooter :dark='true'/>
   </div>
 </template>
 

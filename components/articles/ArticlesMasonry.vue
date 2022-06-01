@@ -263,4 +263,10 @@ export default {
   //     height: auto;
   //   }
   // }
+
+  @include mobile{
+    .es-raleway{
+      line-height: 50px;
+    }
+  }
 </style>
