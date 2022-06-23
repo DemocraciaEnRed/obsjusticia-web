@@ -246,7 +246,7 @@ export default {
         })
     } else {
       const data = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.sheetSelected}?key=${this.$config.googleSheetApiKey}`
+        `https://sheets.googleapis.com/v4/spreadsheets/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/values/${this.sheetSelected}!A1:Z31?key=${this.$config.googleSheetApiKey}`
       ).then((res) => {
         return res.json()
       })
@@ -494,28 +494,24 @@ export default {
         theMax = theMax > auxMax ? theMax : auxMax
       })
       const parallelAxis = this.parallelChartOptions.parallelAxis
-      if (data.length > 30) {
-        this.parallelChartOptions.parallelAxis = parallelAxis.filter(({ name }) => name !== 'Nombre')
-      } else {
-        if (!parallelAxis.find(({ name }) => name === 'Nombre') && !this.isMobile()) {
-          const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } }
-          this.parallelChartOptions.parallelAxis.unshift(nameAxis)
-        }
-
-        const sortedByPrimerOrdenMerito = data.sort((a, b) => {
-          const primerOrdenMeritoDeA = parseInt(a.primerordenmerito)
-          const primerOrdenMeritoDeB = parseInt(b.primerordenmerito)
-          if (primerOrdenMeritoDeA < primerOrdenMeritoDeB) {
-            return -1
-          } else {
-            if (primerOrdenMeritoDeA > primerOrdenMeritoDeB) {
-              return 1
-            }
-            return 0
-          }
-        })
-        this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3).join(' '))
+      if (!parallelAxis.find(({ name }) => name === 'Nombre') && !this.isMobile()) {
+        const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } }
+        this.parallelChartOptions.parallelAxis.unshift(nameAxis)
       }
+
+      const sortedByPrimerOrdenMerito = data.sort((a, b) => {
+        const primerOrdenMeritoDeA = parseInt(a.primerordenmerito)
+        const primerOrdenMeritoDeB = parseInt(b.primerordenmerito)
+        if (primerOrdenMeritoDeA < primerOrdenMeritoDeB) {
+          return -1
+        } else {
+          if (primerOrdenMeritoDeA > primerOrdenMeritoDeB) {
+            return 1
+          }
+          return 0
+        }
+      })
+      this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3).join(' '))
       this.parallelChartOptions.parallelAxis.forEach((d, i) => {
         if (d.name === 'Nombre') {
           return
