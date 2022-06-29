@@ -209,6 +209,22 @@
         <a href="" class="">Suscribite al newsletter de Concursos</a>
       </div>
     </div> -->
+    <div class="container">
+      <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
+        <a href="https://docs.google.com/spreadsheets/d/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/edit#gid=1113035164"  class="button is-primary is-outlined mr-4">
+          Data Set Original
+        </a>
+        <p class="is-size-3-desktop  is-size-2-touch has-text-centered">
+          Si tenés información sobre algún problema en un concurso o queres recibir novedades sobre cocursos
+        </p>
+        <a  href="mailto:info@acij.org.ar"  class="button btn-solid  is-outlined mr-4">
+         Contactanos
+        </a>
+        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void  is-outlined mr-4">
+          Suscribite al newsletter de Concursos
+        </a>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -566,8 +582,9 @@ export default {
 }
 .control{
   box-sizing: border-box;
-  background: #FF6F6F;
+  background: #FF6F6F !important;
   border-radius: 5px;
+  border: none;
 }
 .control .select{
   width: 100%;
@@ -727,5 +744,28 @@ export default {
   color: #3157AC;
   text-align: center;
   margin: 10px;
+}
+.botonera{
+  max-width: 100%;
+
+}
+.botonera a{
+  width: 400px;
+  margin: 20px
+}
+
+.btn-solid{
+  box-sizing: border-box;
+  background: #6C9EFF !important;
+  border-radius: 5px;
+  border: none;
+  color:#fff;
+}
+.btn-void{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  border: 1px solid #6C9EFF !important;
+  color: #6C9EFF;
 }
 </style>

@@ -20,7 +20,7 @@
         Transparencia
       </b-navbar-item>
       <b-navbar-item tag="a" href="https://causasdecorrupcion.org/">
-        Corrupcion
+        Corrupción
       </b-navbar-item>
       <b-navbar-item tag="nuxt-link" to="/quienes-somos">
         JusTA
