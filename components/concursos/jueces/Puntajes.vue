@@ -212,15 +212,15 @@
     <div class="container">
       <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
         <a href="https://docs.google.com/spreadsheets/d/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/edit#gid=1113035164"  class="button is-primary is-outlined mr-4">
-          Data Set Oriinal
+          Data Set Original
         </a>
         <p class="is-size-3-desktop  is-size-2-touch has-text-centered">
           Si tenés información sobre algún problema en un concurso o queres recibir novedades sobre cocursos
         </p>
-        <a href="https://forms.gle/yyEEG9wkUGrMs3Uz9"  class="button btn-solid  is-outlined mr-4">
+        <a  href="mailto:info@acij.org.ar"  class="button btn-solid  is-outlined mr-4">
          Contactanos
         </a>
-        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd_j4L108My-uKnY8_Y4b_VcFN2kNxv9M6DhqdhScphfiat6g/viewform"  class="button btn-void  is-outlined mr-4">
+        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void  is-outlined mr-4">
           Suscribite al newsletter de Concursos
         </a>
       </div>
