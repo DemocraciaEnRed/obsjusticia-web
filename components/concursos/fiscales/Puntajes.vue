@@ -233,7 +233,7 @@ export default {
         })
     } else {
       const data = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/values/${this.sheetSelected}!A1:Z31?key=${this.$config.googleSheetApiKey}`
+        `https://sheets.googleapis.com/v4/spreadsheets/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/values/${this.sheetSelected}?key=${this.$config.googleSheetApiKey}`
       ).then((res) => {
         return res.json()
       })
@@ -420,6 +420,19 @@ export default {
       return this.data.find(p => p.nombre === name)
     },
     prepareChart (data) {
+      const sortedByPrimerOrdenMerito = data.sort((a, b) => {
+        const primerOrdenMeritoDeA = parseInt(a.primerordenmerito) || 999999
+        const primerOrdenMeritoDeB = parseInt(b.primerordenmerito) || 999999
+        console.log({ a: a.nombre, b: b.nombre, primerOrdenMeritoDeA, primerOrdenMeritoDeB })
+        if (primerOrdenMeritoDeA < primerOrdenMeritoDeB) {
+          return -1
+        } else {
+          if (primerOrdenMeritoDeA > primerOrdenMeritoDeB) {
+            return 1
+          }
+          return 0
+        }
+      })
       const parallelSerie = {
         type: 'parallel',
         data: [],
@@ -437,7 +450,8 @@ export default {
         }
       }
       let theMax = 1
-      data.forEach((d, index) => {
+      const cappedAttorneys = sortedByPrimerOrdenMerito.slice(0, 30)
+      cappedAttorneys.forEach((d, index) => {
         // console.log((index / data.length).toFixed(2))
         const coloredStatus = [
           {
@@ -480,19 +494,7 @@ export default {
         this.parallelChartOptions.parallelAxis.unshift(nameAxis)
       }
 
-      const sortedByPrimerOrdenMerito = data.sort((a, b) => {
-        const primerOrdenMeritoDeA = parseInt(a.primerordenmerito)
-        const primerOrdenMeritoDeB = parseInt(b.primerordenmerito)
-        if (primerOrdenMeritoDeA < primerOrdenMeritoDeB) {
-          return -1
-        } else {
-          if (primerOrdenMeritoDeA > primerOrdenMeritoDeB) {
-            return 1
-          }
-          return 0
-        }
-      })
-      this.parallelChartOptions.parallelAxis[0].data = sortedByPrimerOrdenMerito.map(it => it.nombre.split(' ').slice(0, 3).join(' '))
+      this.parallelChartOptions.parallelAxis[0].data = cappedAttorneys.map(it => it.nombre.split(' ').slice(0, 3).join(' '))
       this.parallelChartOptions.parallelAxis.forEach((d, i) => {
         if (d.name === 'Nombre') {
           return
