@@ -196,7 +196,24 @@
         </div>
       </div>
     </div>
+    <div class="container">
+          <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
+            <a href="https://docs.google.com/spreadsheets/d/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/edit#gid=0"  class="button is-primary is-outlined mr-4">
+              Data Set Oriinal
+            </a>
+            <p class="is-size-3-desktop  is-size-2-touch has-text-centered">
+              Si tenés información sobre algún problema en un concurso o queres recibir novedades sobre cocursos
+            </p>
+            <a href="https://forms.gle/yyEEG9wkUGrMs3Uz9"  class="button btn-solid  is-outlined mr-4">
+            Contactanos
+            </a>
+            <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd_j4L108My-uKnY8_Y4b_VcFN2kNxv9M6DhqdhScphfiat6g/viewform"  class="button btn-void  is-outlined mr-4">
+              Suscribite al newsletter de Concursos
+            </a>
+          </div>
+        </div>
   </section>
+
 </template>
 
 <script>
@@ -677,5 +694,27 @@ export default {
 .interview-link{
   color: #6C9EFF;
   text-decoration-line: underline;
+}
+.botonera{
+  max-width: 100%;
+
+}
+.botonera a{
+  width: 400px;
+  margin: 20px
+}
+.btn-solid{
+  box-sizing: border-box;
+  background: #FF6F6F !important;
+  border-radius: 5px;
+  border: none;
+  color:#fff;
+}
+.btn-void{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  border: 1px solid #FF6F6F !important;
+  color: #FF6F6F;
 }
 </style>
