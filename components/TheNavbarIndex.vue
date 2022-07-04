@@ -36,7 +36,7 @@
             </router-link>
           </div>
           <div class="navbar-item">
-            <a href="https://causasdecorrupcion.org/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
+            <a href="https://causasdecorrupcion.org/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}" target="_blank">
               Corrupcion
             </a>
           </div>

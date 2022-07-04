@@ -211,16 +211,16 @@
     </div> -->
     <div class="container">
       <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
-        <a href="https://docs.google.com/spreadsheets/d/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/edit#gid=1113035164"  class="button is-primary is-outlined mr-4">
+        <a href="https://docs.google.com/spreadsheets/d/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/edit#gid=1113035164"  class="button  btn-void-red is-primary is-raleway fs-18 is-outlined mr-4">
           Data Set Original
         </a>
         <p class="is-size-3-desktop  is-size-2-touch has-text-centered">
           Si tenés información sobre algún problema en un concurso o queres recibir novedades sobre cocursos
         </p>
-        <a  href="mailto:info@acij.org.ar"  class="button btn-solid  is-outlined mr-4">
+        <a  href="mailto:info@acij.org.ar"  class="button btn-solid is-raleway fs-18  is-outlined mr-4">
          Contactanos
         </a>
-        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void  is-outlined mr-4">
+        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void is-raleway fs-18  is-outlined mr-4">
           Suscribite al newsletter de Concursos
         </a>
       </div>
@@ -756,7 +756,7 @@ export default {
 
 .btn-solid{
   box-sizing: border-box;
-  background: #6C9EFF !important;
+  background: #3157AC !important;
   border-radius: 5px;
   border: none;
   color:#fff;
@@ -765,7 +765,21 @@ export default {
   box-sizing: border-box;
   background: none !important;
   border-radius: 5px;
-  border: 1px solid #6C9EFF !important;
-  color: #6C9EFF;
+  border: 2px solid #3157AC !important;
+  color: #3157AC !important;
+}
+.btn-void-red{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  border: 2px solid #CD3D27 !important;
+  color: #CD3D27 !important;
+}
+.btn-void-red:hover{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  background:  #CD3D27 !important;
+  color: #fff !important;
 }
 </style>

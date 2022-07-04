@@ -7,7 +7,7 @@
             <router-link to="/concursos" class="has-text-white is-size-5 level-item">Concursos</router-link>
             <a href="/procesos-disciplinarios" class="has-text-white is-size-5 level-item">Disciplina</a>
             <router-link to="/transparencia" class="has-text-white is-size-5 level-item">Transparencia</router-link>
-            <a href="https://causasdecorrupcion.org/" class="has-text-white is-size-5 level-item">Corrupción</a>
+            <a href="https://causasdecorrupcion.org/" class="has-text-white is-size-5 level-item" target="_blank">Corrupción</a>
             <a href="/quienes-somos" class="has-text-white is-size-5 level-item">¿Qué es JusTA?</a>
             <div class="level-item">
               <!-- <span class="is-size-5">¿Encontraste algún error? </span> -->
@@ -19,12 +19,16 @@
             <img src="~/assets/img/logo-white.svg" width="164">
           </div>
           <div class="column is-12-mobile is-4-desktop has-text-centered">
-            <img src="~/assets/img/acij-logo.png" width="164">
+            <a href="https://justa.acij.org.ar/" target="_blank">
+              <img src="~/assets/img/acij-logo.png" width="164">
+            </a>
           </div>
           <div class="columns column is-12-mobile is-4-desktop has-text-centered">
             <div class="column is-two-fifth"></div>
             <div class="column is-one-fifth">
-              <img src="~/assets/img/der-icon.svg" width="60" alt="Desarrollado con ♥ por Democracia en Red">
+              <a href="https://democraciaenred.org/es/" target="_blank">
+                <img src="~/assets/img/der-icon.svg" width="60" alt="Desarrollado con ♥ por Democracia en Red">
+              </a>
             </div>
             <p class="column is-two-fifths">Desarrollado con ❤️ </br> por <b>Democracia en red</b></p>
           </div>

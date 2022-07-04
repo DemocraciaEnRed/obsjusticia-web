@@ -109,7 +109,7 @@
     </div>
     <div class="container">
       <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
-        <a href="https://docs.google.com/spreadsheets/d/1E4YfgPvMi1My_odfryL0wwX8hvOFkBUK3a7pUaN7YzU/edit#gid=0"  class="button btn-void  is-outlined mr-4">
+        <a href="https://docs.google.com/spreadsheets/d/1E4YfgPvMi1My_odfryL0wwX8hvOFkBUK3a7pUaN7YzU/edit#gid=0"  class="button btn-void-red fs-18 is-raleway  is-outlined mr-4">
           Guía de vacantes
         </a>
       </div>
@@ -224,5 +224,19 @@ export default {
   border-radius: 5px;
   border: 1px solid #EC6961 !important;
   color: #EC6961;
+}
+.btn-void-red{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  border: 2px solid #CD3D27 !important;
+  color: #CD3D27 !important;
+}
+.btn-void-red:hover{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  background:  #CD3D27 !important;
+  color: #fff !important;
 }
 </style>

@@ -198,16 +198,16 @@
     </div>
     <div class="container">
           <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
-            <a href="https://docs.google.com/spreadsheets/d/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/edit#gid=0"  class="button is-primary is-outlined mr-4">
+          <a href="https://docs.google.com/spreadsheets/d/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/edit#gid=0"  class="button btn-void fs-18 is-raleway is-primary is-outlined mr-4">
               Data Set Original
             </a>
             <p class="is-size-3-desktop  is-size-2-touch has-text-centered">
               Si tenés información sobre algún problema en un concurso o queres recibir novedades sobre cocursos
             </p>
-            <a href="mailto:info@acij.org.ar"  class="button btn-solid  is-outlined mr-4">
+          <a href="mailto:info@acij.org.ar"  class="button btn-solid-red fs-18 is-raleway  is-outlined mr-4">
             Contactanos
             </a>
-            <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void  is-outlined mr-4">
+          <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd7yqPdfqJCWU75_bwtsLZW7zvE-kXpVyqzRMMoS_NC7tJe5A/viewform"  class="button btn-void-red fs-18 is-raleway  is-outlined mr-4">
               Suscribite al newsletter de Concursos
             </a>
           </div>
@@ -705,9 +705,17 @@ export default {
   width: 400px;
   margin: 20px
 }
+
+.btn-solid-red{
+  box-sizing: border-box;
+  background: #CD3D27 !important;
+  border-radius: 5px;
+  border: none;
+  color:#fff;
+}
 .btn-solid{
   box-sizing: border-box;
-  background: #FF6F6F !important;
+  background: #3157AC !important;
   border-radius: 5px;
   border: none;
   color:#fff;
@@ -716,7 +724,21 @@ export default {
   box-sizing: border-box;
   background: none !important;
   border-radius: 5px;
-  border: 1px solid #FF6F6F !important;
-  color: #FF6F6F;
+  border: 2px solid #3157AC !important;
+  color: #3157AC !important;
+}
+.btn-void-red{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  border: 2px solid #CD3D27 !important;
+  color: #CD3D27 !important;
+}
+.btn-void-red:hover{
+  box-sizing: border-box;
+  background: none !important;
+  border-radius: 5px;
+  background:  #CD3D27 !important;
+  color: #fff !important;
 }
 </style>
