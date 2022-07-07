@@ -27,8 +27,11 @@
         </div>
         <br>
         <div class="column is-auto">
-            <p class="is-300">
-              Data set original de concursos — <a href="#" target="_blank" class="has-text-black is-400"><u>proximamente</u> 🔗</a>
+            <p v-if="concursType == 'judges'" class="is-300">
+              Data set original de concursos — <a href="https://docs.google.com/spreadsheets/d/1GInMcwjI-jCns4TrUxIcaY_soe-1mkhk5Z1qGJYhu50/edit#gid=1113035164" target="_blank" class="has-text-black is-400"><u>accede aquuí</u> 🔗</a>
+            </p>
+            <p v-else-if="concursType == 'attorneys'" class="is-300">
+              Data set original de concursos — <a href="https://docs.google.com/spreadsheets/d/1dcrgYzQdayxyp-5HDBZRPf69ipQ34i3UdVEhmyRfxXw/edit#gid=0" target="_blank" class="has-text-black is-400"><u>accede aquuí</u> 🔗</a>
             </p>
         </div>
       </div>
@@ -42,6 +45,9 @@ export default {
       type: String,
       required: false,
       default: () => 'default-id'
+    },
+    concursType: {
+      type: String
     }
   }
 }

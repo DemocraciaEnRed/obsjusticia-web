@@ -60,6 +60,18 @@
                   class="tag is-special is-capitalized"
                 >{{ name }}</span>
               </div>
+              <a
+                  href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                  class="twitter-share-button"
+                  data-size="large"
+                  :data-text="article.title"
+                  data-via="ACIJargentina"
+                  data-hashtags="justa,acij"
+                  data-lang="es"
+                  data-show-count="false"
+                >
+                  Tweet
+                </a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
           <div class="column is-8">

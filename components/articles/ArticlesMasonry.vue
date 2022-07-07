@@ -14,8 +14,8 @@
         </div> -->
       <!-- <div v-else class=""> -->
       <div class="is-flex is-flex-direction-column">
-        <h1 class="es-raleway search-text-row mb-4 has-text-white is-uppercase">
-          Entrevistas, columas e Investigaciones
+        <h1 class="es-raleway is-size-1-touch search-text-row mb-4 has-text-white is-uppercase">
+          Entrevistas, columnas e Investigaciones
         </h1>
         <div class="search-text-row search-input-container">
           <i class="fa fa-search"></i>

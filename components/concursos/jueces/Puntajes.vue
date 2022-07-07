@@ -45,6 +45,9 @@
           </button> -->
         </div>
         <div v-else>
+            <p>
+              El gráfico muestra a las y los primeros 30 concursantes    Ordenados según el puntaje obtenido en el primer orden de mérito. La tabla muestra a todas las personas inscriptas y sus respectivos puntajes.
+            </p>
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
             CONCURSO: {{ selectedContest() }}
           </p>
@@ -317,7 +320,7 @@ export default {
       parallelChartOptions: {
         parallelAxis: [
           { dim: 0, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: -40, align: 'left', formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: '1º Orden de mérito' },
-          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Suma impugnación' },
+          { dim: 1, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'impugnación' },
           { dim: 2, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Entrevista', nameTextStyle: { fontWeight: 'bold' } },
           { dim: 3, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { show: false, formatter: v => '' }, name: 'Terna Propuesta' },
           { dim: 4, inverse: true, min: 1, max: 100, minorTick: { show: true }, axisLine: { lineStyle: { width: 2, color: 'black' } }, axisTick: { lineStyle: { width: 2, color: 'black' } }, axisLabel: { margin: 20, formatter: v => `${v}°`, color: 'black', fontSize: 14, padding: [2, 4] }, name: 'Terna Final', nameTextStyle: { fontWeight: 'bold' } },
@@ -524,7 +527,7 @@ export default {
       })
       const parallelAxis = this.parallelChartOptions.parallelAxis
       if (!parallelAxis.find(({ name }) => name === 'Nombre') && !this.isMobile()) {
-        const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 14 } }
+        const nameAxis = { name: 'Nombre', type: 'category', inverse: true, axisLine: { show: false }, axisTick: { show: false }, axisLabel: { margin: -80, align: 'left', fontSize: 11 } }
         this.parallelChartOptions.parallelAxis.unshift(nameAxis)
       }
 

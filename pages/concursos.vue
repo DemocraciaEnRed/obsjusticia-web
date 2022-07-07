@@ -19,7 +19,7 @@
         </div>
         <div v-if="contestType" class="px-6">
           <ArticlesAlternativeCarousel relatedTagUuid="1564af41-303f-4138-8aea-91a442732f53" scroll-id="articulos-relacionados"/>
-          <Fuentes scroll-id="fuentes" />
+          <Fuentes scroll-id="fuentes" :concursType="contestType"/>
         </div>
       </div>
     </div>
@@ -46,6 +46,15 @@ export default {
     ArticlesAlternativeCarousel,
     Fuentes,
     Sidebar
+  },
+  props: {
+    value: String
+  },
+  methods: {
+    concursType () {
+      this.value = this.contestType
+      return this.value
+    }
   },
   data () {
     return {

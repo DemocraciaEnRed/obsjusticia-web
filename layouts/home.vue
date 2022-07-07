@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheNavbar class="is-hidden-desktop" />
-    <TheNavbarIndex class="is-hidden-touch" />
+    <TheNavbarIndex class="is-hidden-touch" :logoDark="false"/>
     <nuxt />
     <TheFooter :dark='true'/>
   </div>

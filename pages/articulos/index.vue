@@ -138,7 +138,7 @@ export default {
 
       const articles = res.data.stories
       const tags = _(articles).map(a => a.content.tags).flatten().uniqBy('slug').value()
-      const categories = ['columna', 'investigacion', 'entrevista']
+      const categories = ['columnas', 'investigacion', 'entrevista']
       return {
         articles: articles.map(a => ({
           ...a.content,

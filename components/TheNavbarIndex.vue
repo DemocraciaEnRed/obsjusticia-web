@@ -2,9 +2,10 @@
   <nav class="navbar index-navbar" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <div class="navbar-item">
-            <router-link to="/" class="nav-link" exact-active-class="no-active" :class="{'has-text-dark': dark, 'has-text-white': !dark}">
-              <img src="~/assets/images/logo_justa.png" width="70">
+        <div class="navbar-item m-0 p-0">
+            <router-link to="/" class="nav-link" exact-active-class="no-active">
+              <img v-if="logoDark" src="~/assets/images/logoNegro.gif" width="150">
+              <img v-else src="~/assets/images/logoBlanco.gif" width="150">
             </router-link>
           </div>
       </div>
@@ -37,7 +38,7 @@
           </div>
           <div class="navbar-item">
             <a href="https://causasdecorrupcion.org/" class="nav-link" :class="{'has-text-dark': dark, 'has-text-white': !dark}" target="_blank">
-              Corrupcion
+              Corrupción
             </a>
           </div>
           <div class="navbar-item">
@@ -58,6 +59,11 @@ export default {
       type: Boolean,
       required: false,
       default: () => false
+    },
+    logoDark: {
+      type: Boolean,
+      required: false,
+      default: () => false
     }
   },
   computed: {
@@ -69,6 +75,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-item img{
+  max-height: none !important;
+}
 .index-navbar{
   position: absolute;
   width: 100%;

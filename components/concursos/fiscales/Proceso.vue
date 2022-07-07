@@ -25,9 +25,9 @@
               <div class="px-0 has-text-centered">
                 <div class="px-0 has-text-centered">
                   <div class="container">
-                    <h3 class="is-2 is-700 is-spaced line-height-150">
+                    <!-- <h3 class="is-2 is-700 is-spaced line-height-150">
                       ¿Cómo se seleccionan fiscales y fiscalías en nuestro país?
-                    </h3>
+                    </h3> -->
                     <h1 class="subtitle is-4 my-6 line-height-150">
                       La siguiente infografía muestra los pasos que se deben seguir para llegar a una designación:
                     </h1>

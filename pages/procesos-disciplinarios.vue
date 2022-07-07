@@ -60,7 +60,7 @@
                   </h5>
                 </div>
                 <div class="column is-8">
-                  <p class="is-300">Vecimiento del plazo de 3 años para investigar el caso. Transcurrido dicho plazo, no se podrá avanzar con la investigación y se archivará la causa</p>
+                  <p class="is-300">Vencimiento del plazo de 3 años para investigar el caso. Transcurrido dicho plazo, no se podrá avanzar con la investigación y se archivará la causa.</p>
                 </div>
               </div>
             </div>

@@ -30,7 +30,7 @@
                   </div>
                 </div>
                 <div class="label-hidden">
-                  <p >Conocé como el Consejo de la Magistratura controla y sanciona a las y los jueces</p>
+                  <p >Conocé cómo el Consejo de la Magistratura controla y sanciona a las y los jueces</p>
                 </div>
               </a>
             </article>
@@ -45,7 +45,7 @@
                   </div>
                 </div>
                 <div class="label-hidden">
-                  <p >Consultá que tan transparente es el poder judicial y los organismos del Ministerio Público</p>
+                  <p >Consultá qué tan transparentes son el Poder Judicial y los organismos del Ministerio Público</p>
                 </div>
               </a>
             </article>
@@ -201,7 +201,7 @@ position: relative;
   position: absolute;
   top:0%;
   left: 0%;
-  border-radius: inherit;
+  border-radius: 6px;
   padding: 10px;
   padding-top: 15px;
   text-align: left;
