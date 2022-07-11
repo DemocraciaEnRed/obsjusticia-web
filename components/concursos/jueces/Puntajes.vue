@@ -46,7 +46,7 @@
         </div>
         <div v-else>
             <p>
-              El gráfico muestra a las y los primeros 30 concursantes    Ordenados según el puntaje obtenido en el primer orden de mérito. La tabla muestra a todas las personas inscriptas y sus respectivos puntajes.
+              El gráfico muestra a las y los primeros 30 concursantes  ordenados según el puntaje obtenido en el primer orden de mérito. La tabla muestra a todas las personas inscriptas y sus respectivos puntajes.
             </p>
           <p class="subtitle is-4 has-text-left is-spaced mt-6 mb-3 line-height-150">
             CONCURSO: {{ selectedContest() }}

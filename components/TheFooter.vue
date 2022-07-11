@@ -19,7 +19,7 @@
             <img src="~/assets/img/logo-white.svg" width="164">
           </div>
           <div class="column is-12-mobile is-4-desktop has-text-centered">
-            <a href="https://justa.acij.org.ar/" target="_blank">
+            <a href="https://acij.org.ar/" target="_blank">
               <img src="~/assets/img/acij-logo.png" width="164">
             </a>
           </div>

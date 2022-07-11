@@ -3,7 +3,7 @@
     <Seleccion scroll-id="seleccion" />
     <Puntajes scroll-id="puntajes" />
     <Proceso scroll-id="proceso" />
-    <Conclusiones scroll-id="conclusiones" />
+    <!-- <Conclusiones scroll-id="conclusiones" /> -->
     <Lexico scroll-id="lexico" />
   </div>
 </template>
@@ -12,7 +12,7 @@
 import Seleccion from './Seleccion'
 import Puntajes from './Puntajes'
 import Proceso from './Proceso'
-import Conclusiones from './Conclusiones'
+// import Conclusiones from './Conclusiones'
 import Lexico from './Lexico'
 
 export default {
@@ -22,7 +22,7 @@ export default {
     Seleccion,
     Puntajes,
     Proceso,
-    Conclusiones,
+    // Conclusiones,
     Lexico
   }
 }

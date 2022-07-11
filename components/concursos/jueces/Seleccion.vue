@@ -110,7 +110,7 @@
     <div class="container">
       <div id="botonera" class="botonera is-flex is-flex-direction-column is-align-content-center is-justify-content-center is-align-items-center">
         <a href="https://docs.google.com/spreadsheets/d/1E4YfgPvMi1My_odfryL0wwX8hvOFkBUK3a7pUaN7YzU/edit#gid=0"  class="button btn-void is-raleway fs-16 is-outlined mr-4">
-          Mapa de jueces y juezas y vacantes del Poder Judicia
+          Mapa de jueces y juezas y vacantes del Poder Judicial
         </a>
       </div>
     </div>

@@ -14,7 +14,7 @@
                 </div>
                 <div class="pt-6 my-6 is-flex is-flex-direction-column is-align-items-center is-align-content-center">
                   <h1 class="subtitle is-4">
-                    Conocé la metodología utilizada para medir el cumplimiento de la Ley de Acceso a la Información.
+                    Conocé la metodología utilizada para medir el cumplimiento de la Ley de Acceso a la Información Pública.
                   </h1>
                   <h1 class="title is-4 has-text-centered pt-5">
                     <a href="/pdf/metodologia-medicion-transparencia.pdf" target="_blank" class="download-button">Descargar</a>

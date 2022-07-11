@@ -26,7 +26,7 @@
                 1998
               </p>
               <p class="is-pulled-right es-oswald is-size-5">
-                2021
+                2022
               </p>
             </div>
             <div class="columns mt-3 is-centered">

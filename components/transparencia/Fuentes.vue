@@ -10,7 +10,9 @@
           Última actualización
         </h6>
         <h6 class="title is-5 is-800">
-          {{ $config.dataDateUpdated }}
+          <!-- harcodeado debido a que esta variable es solo apra algunos updates -->
+          <!-- {{ $config.dataDateUpdated }} -->
+          Mayo 2021
         </h6>
         <div class="content">
           <p class="is-300 is-size-4">
