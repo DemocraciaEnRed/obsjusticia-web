@@ -1,11 +1,13 @@
 <template>
   <section class="section">
-    <div class="image desktop is-hidden-mobile">
-      <a href="https://causasdecorrupcion.org/" target="_blank" rel="Link a Causas de Corrupcion" style="display:block"></a>
+    <div class="image  ">
+      <a href="https://causasdecorrupcion.org/" target="_blank" rel="Link a Causas de Corrupcion" style="display:block">
+        <img src="~/assets/img/obscorrupcion.svg" alt="">
+      </a>
     </div>
-    <div class="image mobile is-hidden-tablet">
+    <!-- <div class="image mobile is-hidden-tablet">
       <a href="https://causasdecorrupcion.org/" target="_blank" rel="Link a Causas de Corrupcion" style="display:block"></a>
-    </div>
+    </div> -->
   </section>
 </template>
 
