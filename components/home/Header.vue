@@ -1,11 +1,11 @@
 <template>
   <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url(${blocks[activeBlock].background})`}">
-    <h1 class="is-uppercase has-text-white header-text is-size-2-mobile">Por una justicia<br>transparente y abierta</h1>
+    <h1 class="is-uppercase has-text-white header-text es-oswald is-size-2-mobile" >Por una justicia<br>transparente y abierta</h1>
     <div class="has-text-centered">
-      <h4 class="is-uppercase cards-title">Datos abiertos e interactivos sobre el sistema judicial argentino</h4>
-      <div class="container section py-6">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent mx-4">
+      <h4 class="is-uppercase cards-title es-oswald">Datos abiertos e interactivos sobre el sistema judicial argentino</h4>
+      <div class="container section es-raleway py-6">
+        <div class="FlexContainer">
+          <div class=" mx-4">
             <article class="tile is-child box box-config">
               <a  href="/concursos">
                 <div>
@@ -20,7 +20,7 @@
               </a>
             </article>
           </div>
-          <div class="tile is-parent mx-4">
+          <div class=" mx-4">
             <article class="tile is-child box box-config">
               <a href="/procesos-disciplinarios">
                 <div>
@@ -35,7 +35,7 @@
               </a>
             </article>
           </div>
-          <div class="tile is-parent mx-4">
+          <div class=" mx-4">
             <article class="tile is-child box box-config">
               <a href="/transparencia">
                 <div>
@@ -217,4 +217,16 @@ position: relative;
   color: #fff;
   z-index: 1000;
 }
+.FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+}
+.FlexContainer div article{
+  margin:0px 100px;
+}
+
 </style>

@@ -5,8 +5,8 @@
         <img src="~/assets/img/suscribe.gif" width="88" class="image gif" alt="">
       </div>
       <div class="column">
-        <h1 class="has-text-success is-uppercase">Suscribite al<br>newsletter de justa</h1>
-        <a href="https://forms.gle/5rKecm22oM2oVP1M9" target="_blank" class="button is-large is-success mt-6">
+        <h1 class="has-text-success is-uppercase es-oswald">Suscribite al<br>newsletter de justa</h1>
+        <a href="https://forms.gle/5rKecm22oM2oVP1M9" target="_blank" class="button is-large es-chivo is-success mt-6">
           ACÁ
         </a>
       </div>

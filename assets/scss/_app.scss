@@ -93,7 +93,7 @@ h6 {
 .es-raleway{
   font-family: 'Raleway';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 600 ;
   line-height: 30px;
   /* or 167% */
 
@@ -101,7 +101,11 @@ h6 {
 
   color: #000000;
 }
+
 // fs= font size para forzar algunos font-size por el manual de marca
+.fs-40{
+  font-size: 40px !important;
+}
 .fs-30{
   font-size: 30px !important;
 }

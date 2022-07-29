@@ -45,7 +45,7 @@
           </div>
           <div class="column articles-card">
             <div class="card articles-redirect-card has-background-success is-flex is-flex-direction-column">
-              <h2 class="has-text-white is-uppercase is-pulled-left pt-6 pl-4 has-text-weight-medium">Más<br>artículos</h2>
+              <h2 class="has-text-white is-uppercase is-pulled-left pt-6 pl-4 is-chivo" style="line-height: 55px;">Más<br>artículos</h2>
               <a class="next-icon is-flex is-justify-content-end" href="/articulos">
                 <i class="fas fa-arrow-right fa-2x"></i>
               </a>
@@ -115,7 +115,16 @@ export default {
   }
   .articles-redirect-card{
     height: 100%;
-    min-height: 400px;
+    max-height: 400px;
+    //  @include from(769px) {
+    //       min-height: 327px;
+    //       font-size: 30px !important;
+
+    // }
+    //  @include from(1280px) {
+    //       min-height: 400px;
+    //       font-size: 40px !important;
+    // }
   }
   .articles-redirect-card .next-icon{
     color: white;
@@ -130,4 +139,41 @@ export default {
   //     height: auto;
   //   }
   // }
+  @include tablet-only{
+    .articles-redirect-card{
+      height: 100%;
+      max-height: 400px;
+      min-height: 327px;
+    }
+}
+@include desktop-only{
+    .articles-redirect-card{
+      height: 100%;
+      max-height: 400px;
+      min-height: 351px;
+    }
+}
+@include widescreen{
+    .articles-redirect-card{
+      height: 100%;
+      max-height: 400px;
+      min-height: 400px;
+    }
+}
+
+ @include tablet-only {
+    .articles-redirect-card h2{
+        font-size: 30px !important;
+    }
+}
+@include desktop-only {
+    .articles-redirect-card h2{
+        font-size: 30px !important;
+    }
+}
+@include widescreen {
+    .articles-redirect-card h2{
+        font-size: 40px !important;
+    }
+}
 </style>
