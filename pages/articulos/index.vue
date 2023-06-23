@@ -69,8 +69,21 @@
             </b-carousel-item>
           </b-carousel> -->
           <div class="my-6 py-5">
-            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories"/>
+            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories" />
           </div>
+          <client-only>
+            <InfiniteLoading @infinite="infiniteHandler">
+              <div slot="no-more">
+                Fin de los articulos
+              </div>
+              <div slot="no-results">
+                No hay articulos
+              </div>
+              <div slot="error">
+                Error al cargar los articulos
+              </div>
+            </InfiniteLoading>
+          </client-only>
         </div>
       </div>
       <!-- <section class="section">
@@ -119,10 +132,12 @@
 <script>
 import ArticlesMasonry from '@/components/articles/ArticlesMasonry'
 import _ from 'lodash'
+import InfiniteLoading from 'vue-infinite-loading'
 
 export default {
   components: {
-    ArticlesMasonry
+    ArticlesMasonry,
+    InfiniteLoading
   },
   async asyncData (context) {
     const version =
@@ -132,10 +147,10 @@ export default {
       const res = await context.app.$storyapi.get('cdn/stories/', {
         starts_with: 'articulos/',
         resolve_relations: 'Articulo.author,Articulo.tags',
-        per_page: 100,
+        per_page: 16,
+        page: 1,
         version
       })
-
       const articles = res.data.stories
       const tags = _(articles).map(a => a.content.tags).flatten().uniqBy('slug').value()
       const categories = ['columnas', 'investigacion', 'entrevista']
@@ -145,7 +160,9 @@ export default {
           slug: a.slug
         })),
         tags,
-        categories
+        categories,
+        totalPages: Math.ceil(res.data.total / 16),
+        page: 2
       }
     } catch (err) {
       console.error(err.response.data)
@@ -159,6 +176,47 @@ export default {
     //   .only(['slug', 'title', 'date', 'author', 'image', 'description', 'tags', 'order'])
     //   .sortBy('order', 'asc')
     //   .fetch()
+  },
+  data () {
+    return {
+      page: 1,
+      articles: [],
+      tags: [],
+      categories: [],
+      storiesPerPage: 16,
+      totalPages: 0,
+      totalStories: 0
+    }
+  },
+  methods: {
+    async infiniteHandler ($state) {
+      try {
+        const version = this.$nuxt.context.query._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
+        const res = await this.$nuxt.context.app.$storyapi.get('cdn/stories/', {
+          starts_with: 'articulos/',
+          resolve_relations: 'Articulo.author,Articulo.tags',
+          per_page: 16,
+          page: this.page++,
+          version
+        })
+        // merge res.data.stories with this.articles
+        if (res.data.stories && res.data.stories.length === 0) {
+          $state.complete()
+          return
+        }
+        this.articles = this.articles.concat(res.data.stories.map(a => ({
+          ...a.content,
+          slug: a.slug
+        })))
+        $state.loaded()
+      } catch (err) {
+        console.error(err.response.data)
+        this.$nuxt.context.error({
+          statusCode: err.response.status,
+          message: err.response.data
+        })
+      }
+    }
   }
 }
 </script>
