@@ -23,7 +23,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap' },
-      { rel: 'text/javascript', href: '/node_modules/bulma-accordion/dist/js/bulma-accordion.min.js'}
+      { rel: 'text/javascript', href: '/node_modules/bulma-accordion/dist/js/bulma-accordion.min.js' }
 
     ]
   },
@@ -56,14 +56,11 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/style-resources'
   ],
-
-  googleAnalytics: {
-    id: 'UA-193021243-1' // Used as fallback if no runtime config is provided
+  'google-gtag': {
+    id: 'G-C95M6CN4MN' // Used as fallback if no runtime config is provided,
   },
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/buefy
@@ -74,6 +71,7 @@ export default {
     '@nuxtjs/markdownit',
     // https://content.nuxtjs.org/installation
     '@nuxt/content',
+    '@nuxtjs/google-gtag',
     ['storyblok-nuxt',
       {
         // This really doesnt matter cause we are injecting the accessToken in plugins/storyblock.js but lets keep it here :)
