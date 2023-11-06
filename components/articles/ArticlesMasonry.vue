@@ -1,55 +1,51 @@
 <template>
   <div>
     <no-ssr>
-      <!-- <div v-if="$fetchState.pending" class="section">
-        <h4 class="subtitle has-text-dark is-4 has-text-centered">
-          <i class="fas fa-sync fa-spin" />&nbsp; Cargando artículos
-        </h4>
-      </div>
-      <div v-else>
-        <div v-if="$fetchState.error" class="section">
-          <h4 class="subtitle has-text-white is-4 has-text-centered">
-            Ocurrió un error obtuviendo la galeria
-          </h4>
-        </div> -->
-      <!-- <div v-else class=""> -->
       <div class="is-flex is-flex-direction-column">
         <h1 class="es-raleway is-size-1-touch search-text-row mb-4 has-text-white is-uppercase">
           Entrevistas, columnas e Investigaciones
         </h1>
         <div class="search-text-row search-input-container">
-          <i class="fa fa-search"></i>
+          <i class="fa fa-search" />
           <input v-model="searchText" class="search-input" placeholder="AUTOR/A   (Nombre/Apellido)">
         </div>
       </div>
-      <div class="" style="height:150px"></div>
+      <div class="" style="height:150px" />
       <div class="is-flex is-align-items-center is-align-content-center my-6">
         <div class="is-uppercase is-align-self-flex-start">
           <h5>Filtrar por tipo de articulo</h5>
-           <div v-for="category in categories" v-bind:key="category" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': categoryIsSelected(category) }">
-          <input class="filter-pill" type="checkbox" :id="category" :value="category" v-model="appliedCategories">
-          <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
+          <div v-for="category in categories" :key="category" class="tag filter-pills-container" :class="{ 'filter-pill-active': categoryIsSelected(category) }">
+            <input :id="category" v-model="appliedCategories" class="filter-pill" type="checkbox" :value="category">
+            <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
+          </div>
         </div>
-        </div>
-        <div class="date-sorter-container is-align-self-flex-end" >
+        <div class="date-sorter-container is-align-self-flex-end">
           <select v-model="dateOrder" class="date-sorter">
-            <option value="" disabled>ORDENAR POR</option>
-            <option value="desc" selected>MÁS RECIENTES</option>
-            <option value="asc">MÁS ANTIGUOS</option>
+            <option value="" disabled>
+              ORDENAR POR
+            </option>
+            <option value="desc" selected>
+              MÁS RECIENTES
+            </option>
+            <option value="asc">
+              MÁS ANTIGUOS
+            </option>
           </select>
         </div>
       </div>
       <div class="has-text-left">
-        <h5 class="filters-title is-uppercase">Filtrar por Tema</h5>
-        <div v-for="tag in tags" v-bind:key="tag.slug" class="tag filter-pills-container" v-bind:class="{ 'filter-pill-active': tagIsSelected(tag) }">
-          <input class="filter-pill" type="checkbox" :id="tag.slug" :value="tag.slug" v-model="appliedTags">
+        <h5 class="filters-title is-uppercase">
+          Filtrar por Tema
+        </h5>
+        <div v-for="tag in tags" :key="tag.slug" class="tag filter-pills-container" :class="{ 'filter-pill-active': tagIsSelected(tag) }">
+          <input :id="tag.slug" class="filter-pill" type="checkbox" :value="tag.slug" @click="toggleTag(tag)">
           <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
         </div>
         </br>
       </div>
       <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-if="filteredAndSortedArticles.length">
-          <div v-for="(article, key) in filteredAndSortedArticles" :key="article.slug + key" v-masonry-tile class="articles-card" >
+        <div v-if="orderedArticles.length">
+          <div v-for="(article, key) in filteredAndSortedArticles" :key="article.slug + key" v-masonry-tile class="articles-card">
             <NuxtLink :to="`articulos/${article.slug}`">
               <div class="card">
                 <div class="card-image">
@@ -86,7 +82,9 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="empty-filter-results" v-else>No hay artículos que coincidan con la búsqueda</div>
+        <div v-else class="empty-filter-results">
+          No hay artículos que coincidan con la búsqueda
+        </div>
       </div>
       <!-- </div>
       </div> -->
@@ -96,54 +94,118 @@
   </div>
 </template>
 <script>
-import _ from 'lodash'
+// import _ from 'lodash'
 
 export default {
   fetchOnServer: false,
   props: {
-    articles: [],
-    tags: [],
-    categories: []
+    articles: {
+      type: Array,
+      required: true,
+      default: () => []
+    },
+    tags: {
+      type: Array,
+      required: true,
+      default: () => []
+    },
+    categories: {
+      type: Array,
+      required: true,
+      default: () => []
+    }
+  },
+  data () {
+    return {
+      // appliedTags: [],
+      // appliedCategories: [],
+      // searchText: '',
+      dateOrder: 'desc',
+      tagsList: [],
+      selectedTags: [],
+      selectedCategory: null,
+      searchText: ''
+    }
+  },
+  // computed: {
+  //   filteredAndSortedArticles () {
+  //     const appliedTags = this.appliedTags
+  //     const appliedCategories = this.appliedCategories
+  //     const searchText = this.searchText
+  //     return _(this.articles)
+  //       .filter(({ tags = [], category, author }) => {
+  //         const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
+  //         category = _.includes(category, 'investigacion') ? 'investigacion' : category
+  //         const toComparableText = category => _.chain(category).toLower().deburr().value()
+  //         const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
+  //         const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
+  //         return tagsApply && categoryApplies && textMatches
+  //       })
+  //       .orderBy('date', this.dateOrder)
+  //       .value()
+  //   }
+  // },
+  computed: {
+    orderedArticles () {
+      // order articles by date
+      const articles = this.articles.slice(0)
+      if (this.dateOrder) {
+        return articles.sort((a, b) => {
+          if (this.dateOrder === 'asc') {
+            return new Date(a.date) - new Date(b.date)
+          } else {
+            return new Date(b.date) - new Date(a.date)
+          }
+        })
+      } else {
+        return this.articles
+      }
+    }
   },
   mounted () {
     this.$redrawVueMasonry()
   },
-  data () {
-    return {
-      appliedTags: [],
-      appliedCategories: [],
-      searchText: '',
-      dateOrder: 'desc'
-    }
-  },
-  computed: {
-    filteredAndSortedArticles () {
-      const appliedTags = this.appliedTags
-      const appliedCategories = this.appliedCategories
-      const searchText = this.searchText
-      return _(this.articles)
-        .filter(({ tags = [], category, author }) => {
-          const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
-          category = _.includes(category, 'investigacion') ? 'investigacion' : category
-          const toComparableText = category => _.chain(category).toLower().deburr().value()
-          const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
-          const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
-          return tagsApply && categoryApplies && textMatches
-        })
-        .orderBy('date', this.dateOrder)
-        .value()
-    }
-  },
   methods: {
-    tagIsSelected ({ slug }) {
-      return _.includes(this.appliedTags, slug)
+    toggleTag (tag) {
+      if (this.selectedTags.includes(tag.id)) {
+        this.selectedTags = this.selectedTags.filter(t => t !== tag)
+      } else {
+        this.selectedTags.push(tag)
+      }
+    },
+    toggleCategory (category) {
+      if (this.selectedCategory === category) {
+        this.selectedCategory = null
+      } else {
+        this.selectedCategory = category
+      }
+    },
+    tagIsSelected (tag) {
+      return this.selectedTags.includes(tag.id)
     },
     categoryIsSelected (category) {
-      return _.includes(this.appliedCategories, category)
+      return this.selectedCategory === category
     },
     toUpper (string) {
-      return _.toUpper(string)
+      return string.toUpperCase()
+    },
+    search () {
+      // signal to parent component
+      this.$emit('search', {
+        selectedTags: this.selectedTags,
+        selectedCategory: this.selectedCategory,
+        searchText: this.searchText
+      })
     }
+    // tagIsSelected ({ slug }) {
+    //   return _.includes(this.appliedTags, slug)
+    // },
+    // categoryIsSelected (category) {
+    //   return _.includes(this.appliedCategories, category)
+    // },
+    // toUpper (string) {
+    //   return _.toUpper(string)
+    // }
   }
 }
 </script>

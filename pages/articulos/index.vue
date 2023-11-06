@@ -69,7 +69,7 @@
             </b-carousel-item>
           </b-carousel> -->
           <div class="my-6 py-5">
-            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories" />
+            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories" @update="reloadSearch" />
           </div>
           <client-only>
             <InfiniteLoading @infinite="infiniteHandler">
@@ -131,7 +131,7 @@
 
 <script>
 import ArticlesMasonry from '@/components/articles/ArticlesMasonry'
-import _ from 'lodash'
+// import _ from 'lodash'
 import InfiniteLoading from 'vue-infinite-loading'
 
 export default {
@@ -152,7 +152,17 @@ export default {
         version
       })
       const articles = res.data.stories
-      const tags = _(articles).map(a => a.content.tags).flatten().uniqBy('slug').value()
+      const resTags = await context.app.$storyapi.get('cdn/stories/', {
+        starts_with: 'tags/',
+        version
+      })
+      const tags = resTags.data.stories.map((tag) => {
+        return {
+          name: tag.name,
+          slug: tag.slug,
+          id: tag.id
+        }
+      })
       const categories = ['columnas', 'investigacion', 'entrevista']
       return {
         articles: articles.map(a => ({
@@ -216,6 +226,21 @@ export default {
           message: err.response.data
         })
       }
+    },
+    async reloadSearch (objQuery) {
+      // const { tags, categories, search } = objQuery
+      // const articles = await this.$app.$storyapi.get('cdn/stories/', {
+      //   starts_with: 'articulos/',
+      //   resolve_relations: 'Articulo.author,Articulo.tags',
+      //   per_page: 16,
+      //   page: 1,
+      //   version: 'published',
+      //   filter_query: {
+      //     tag: {
+      //       in: ''
+      //     }
+      //   }
+      // })
     }
   }
 }
