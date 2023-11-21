@@ -1,131 +1,89 @@
 <template>
-  <div class="bg-container  is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url('/bloques/bloque01.jpg')`}">
-    <section class="">
-      <div class="filler" />
-      <div class="section has-background-white">
-        <div class="container last-articles">
-          <!-- <h1 class="title is-1 has-text-white">
-            Últimos artículos
-          </h1>
-          <b-carousel
-            :interval="8000"
-            :pause-info="false"
-            :indicator="false"
-            :arrow="false"
-          >
-            <b-carousel-item v-for="article in articles" :key="article.slug">
-              <div class="last-articles-container is-flex">
-                <div
-                  class="article-picture"
-                  :style="`background-image: url(${article.image}`"
-                />
-                <div
-                  class="
-                    article-text
-                    box
-                    is-radiusless
-                    has-text-centered
-                    is-flex is-flex-direction-column is-justify-content-center
-                  "
-                >
-                  <h1 class="title is-3 has-text-black m-0">
-                    {{ article.title }}
-                  </h1>
-                  <hr>
-                  <div class="content has-text-justified">
-                    <p class="text-description">
-                      {{ article.description }}
-                    </p>
-                  </div>
-                  <div class="is-flex is-flex-direction-ro ending-block">
-                    <p>
-                      Por {{ article.author }}<span class="mx-2">| </span>
-                      {{ article.date && article.date.slice(0, 10) }}
-                    </p>
-                    <div
-                      v-if="article.tags && article.tags.length > 0"
-                      class="tags"
-                    >
-                      <span
-                        v-for="(tag, i) in article.tags"
-                        :key="`tags${i}`"
-                        class="tag is-special is-capitalized"
-                      >
-                        {{ tag.name }}
-                      </span>
-                    </div>
-                  </div>
-                  <div class="mt-5 has-text-centered">
-                    <nuxt-link
-                      :to="`/articulos/${article.slug}`"
-                      class="has-text-primary is-size-5"
-                    >
-                      Ver el artículo completo
-                      <i class="fas fa-arrow-right fa-lg" />
-                    </nuxt-link>
-                  </div>
-                </div>
-              </div>
-            </b-carousel-item>
-          </b-carousel> -->
-          <div class="my-6 py-5">
-            <ArticlesMasonry :articles="articles || []" :tags="tags" :categories="categories" @update="reloadSearch" />
+  <div>
+    <div class="hero is-black is-medium bg-container2">
+      <div class="hero-body">
+        <div class="container">
+          <div class="is-hidden-mobile">
+            <br>
+            <br>
+            <br>
           </div>
-          <client-only>
-            <InfiniteLoading @infinite="infiniteHandler">
-              <div slot="no-more">
-                Fin de los articulos
-              </div>
-              <div slot="no-results">
-                No hay articulos
-              </div>
-              <div slot="error">
-                Error al cargar los articulos
-              </div>
-            </InfiniteLoading>
-          </client-only>
+          <h2 class="has-text-white has-text-centered has-text-weight-bold is-uppercase">
+            Entrevistas, columnas e Investigaciones
+          </h2>
         </div>
       </div>
-      <!-- <section class="section">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-8">
-              <div v-for="article in articles" :key="article.slug" class="my-6">
-                <nuxt-link :to="`/articulos/${article.slug}`">
-                  <div class="media">
-                    <div class="media-left">
-                      <figure class="image is-2by1" :style="`background-image: url(${require(`~/assets/images/${article.image}`)})`" />
-                    </div>
-                    <div class="media-content">
-                      <p class="is-raleway is-size-5 has-text-black">
-                        {{ article.date.split('T')[0].split('-').reverse().join('-') }}
-                      </p>
-                      <h1 class="is-raleway is-size-4 has-text-black has-text-weight-bold">
-                        {{ article.title }}
-                      </h1>
-                      <p class="subtitle is-raleway is'size-6">
-                        Por {{ article.author }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content my-3">
-                    <i class="is-size-5 is-raleway has-text-justified has-text-black">
-                      {{ article.description }}
-                    </i>
-                    <div v-if="article.tags && article.tags.length > 0" class="tags">
-                      <span v-for="(tag,i) in article.tags" :key="`tags${i}`" class="tag is-primary is-capitalized">
-                        {{ tag }}
-                      </span>
-                    </div>
-                    <hr class="has-background-black">
-                  </div>
-                </nuxt-link>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="box">
+          <p class="is-uppercase is-size-5 mb-3">
+            Filtrar por Autor
+          </p>
+          <div class="field has-addons">
+            <div class="control has-icons-left is-expanded">
+              <input v-model="searchAuthor" class="input" type="text" placeholder="Buscar por autor" @keydown="reloadSearch">
+              <span class="icon is-small is-left">
+                <i class="fas fa-search" />
+              </span>
+            </div>
+            <div class="control">
+              <a class="button is-link" @click="reloadSearch">
+                Buscar
+              </a>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-narrow">
+              <p class="is-uppercase is-size-5 mb-3">
+                Filtrar por tipo de articulo
+              </p>
+              <div class="tags">
+                <span v-for="category in categories" :key="category" class="tag is-light is-medium is-clickable" :class="{ 'is-link': categoryIsSelected(category) }" @click="toggleCategory(category)">{{ category }}</span>
+              </div>
+            </div>
+            <div class="column is-narrow">
+              <p class="is-uppercase is-size-5 mb-3">
+                Filtrar por tipo de articulo
+              </p>
+              <div class="select">
+                <select v-model="dateOrder" class="control" @change="reloadSearch">
+                  <option value="" disabled>
+                    ORDENAR POR
+                  </option>
+                  <option value="desc" selected>
+                    MÁS RECIENTES
+                  </option>
+                  <option value="asc">
+                    MÁS ANTIGUOS
+                  </option>
+                </select>
               </div>
             </div>
           </div>
+          <p class="is-uppercase is-size-5 my-3">
+            Filtrar por tema
+          </p>
+          <div class="tags">
+            <span v-for="tag in tags" :key="tag.slug" class="tag is-light is-medium is-clickable" :class="{ 'is-link': tagIsSelected(tag) }" @click="toggleTag(tag)">{{ tag.name }}</span>
+          </div>
         </div>
-      </section> -->
-    </section>
+        <ArticlesMasonry :articles="articles || []" @update="reloadSearch" />
+        <client-only>
+          <InfiniteLoading @infinite="infiniteHandler">
+            <div slot="no-more">
+              Fin de los articulos
+            </div>
+            <div slot="no-results">
+              No hay articulos
+            </div>
+            <div slot="error">
+              Error al cargar los articulos
+            </div>
+          </InfiniteLoading>
+        </client-only>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -140,37 +98,43 @@ export default {
     InfiniteLoading
   },
   async asyncData (context) {
-    const version =
-      context.query._storyblok || context.isDev ? 'draft' : 'published'
-
     try {
       const res = await context.app.$storyapi.get('cdn/stories/', {
         starts_with: 'articulos/',
         resolve_relations: 'Articulo.author,Articulo.tags',
         per_page: 16,
         page: 1,
-        version
+        version: 'published',
+        sort_by: 'published_at:desc',
+        filter_query: {
+          // author: {
+          //   in: 'Ezequiel Nino'
+          // }
+          // tags: {
+          //   in_array: '301fa125-c866-48d0-be5f-6d9c765306ca'
+          // }
+        }
       })
       const articles = res.data.stories
       const resTags = await context.app.$storyapi.get('cdn/stories/', {
         starts_with: 'tags/',
-        version
+        sort_by: 'name:asc',
+        version: 'published'
       })
       const tags = resTags.data.stories.map((tag) => {
         return {
           name: tag.name,
           slug: tag.slug,
-          id: tag.id
+          id: tag.id,
+          uuid: tag.uuid
         }
       })
-      const categories = ['columnas', 'investigacion', 'entrevista']
       return {
         articles: articles.map(a => ({
           ...a.content,
           slug: a.slug
         })),
         tags,
-        categories,
         totalPages: Math.ceil(res.data.total / 16),
         page: 2
       }
@@ -192,7 +156,11 @@ export default {
       page: 1,
       articles: [],
       tags: [],
-      categories: [],
+      selectedTags: [],
+      categories: ['Columna', 'Investigación', 'Entrevista'],
+      selectedCategory: null,
+      searchAuthor: '',
+      dateOrder: 'desc',
       storiesPerPage: 16,
       totalPages: 0,
       totalStories: 0
@@ -201,13 +169,12 @@ export default {
   methods: {
     async infiniteHandler ($state) {
       try {
-        const version = this.$nuxt.context.query._storyblok || this.$nuxt.context.isDev ? 'draft' : 'published'
         const res = await this.$nuxt.context.app.$storyapi.get('cdn/stories/', {
           starts_with: 'articulos/',
           resolve_relations: 'Articulo.author,Articulo.tags',
           per_page: 16,
           page: this.page++,
-          version
+          version: 'published'
         })
         // merge res.data.stories with this.articles
         if (res.data.stories && res.data.stories.length === 0) {
@@ -227,30 +194,77 @@ export default {
         })
       }
     },
+
     async reloadSearch (objQuery) {
       // const { tags, categories, search } = objQuery
-      // const articles = await this.$app.$storyapi.get('cdn/stories/', {
-      //   starts_with: 'articulos/',
-      //   resolve_relations: 'Articulo.author,Articulo.tags',
-      //   per_page: 16,
-      //   page: 1,
-      //   version: 'published',
-      //   filter_query: {
-      //     tag: {
-      //       in: ''
-      //     }
-      //   }
-      // })
+      const filterQuery = this.getFilters()
+
+      const articles = await this.$nuxt.context.app.$storyapi.get('cdn/stories/', {
+        starts_with: 'articulos/',
+        resolve_relations: 'Articulo.author,Articulo.tags',
+        per_page: 16,
+        page: 1,
+        version: 'published',
+        sort_by: `published_at:${this.dateOrder}`,
+        filter_query: filterQuery
+      })
+      this.articles = articles.data.stories.map(a => ({
+        ...a.content,
+        slug: a.slug
+      }))
+      this.page = 2
+    },
+    categoryIsSelected (category) {
+      return this.selectedCategory === category
+    },
+    tagIsSelected (tag) {
+      return this.selectedTags.includes(tag.uuid)
+    },
+    toggleCategory (category) {
+      if (this.selectedCategory === category) {
+        this.selectedCategory = null
+      } else {
+        this.selectedCategory = category
+      }
+      this.reloadSearch()
+    },
+    toggleTag (tag) {
+      if (this.selectedTags.includes(tag.uuid)) {
+        this.selectedTags = this.selectedTags.filter(t => t !== tag.uuid)
+      } else {
+        this.selectedTags.push(tag.uuid)
+      }
+      this.reloadSearch()
+    },
+    getFilters () {
+      const filterQuery = {}
+      if (this.selectedTags.length > 0) {
+        filterQuery.tags = {
+          in_array: this.selectedTags.join(',')
+        }
+      }
+      if (this.selectedCategory) {
+        filterQuery.category = {
+          in: this.selectedCategory
+        }
+      }
+      if (this.searchAuthor) {
+        filterQuery.author = {
+          like: `*${this.searchAuthor}*`
+        }
+      }
+      return filterQuery
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.bg-container{
-  // background-image: url('~/assets/img/fondoHeader.jpg');
-  background-position: top;
-  // background-repeat: repeat-x;
+.bg-container2{
+  background-image: url('/bloques/bloque01.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .media .media-left {
   width: 300px;
@@ -265,6 +279,26 @@ export default {
 .last-articles {
   margin-top: -320px;
 }
+
+.search-text-row{
+  display: inline-block;
+}
+.search-input-container{
+  padding-top: 7px;
+  position: relative;
+  float: right;
+  @media (max-width: $desktop){
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+.search-input-container i{
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  font-size: 20px;
+}
+
 .last-articles-container {
   width: 100%;
   z-index: 10;

@@ -1,100 +1,49 @@
 <template>
-  <div>
-    <no-ssr>
-      <div class="is-flex is-flex-direction-column">
-        <h1 class="es-raleway is-size-1-touch search-text-row mb-4 has-text-white is-uppercase">
-          Entrevistas, columnas e Investigaciones
-        </h1>
-        <div class="search-text-row search-input-container">
-          <i class="fa fa-search" />
-          <input v-model="searchText" class="search-input" placeholder="AUTOR/A   (Nombre/Apellido)">
-        </div>
-      </div>
-      <div class="" style="height:150px" />
-      <div class="is-flex is-align-items-center is-align-content-center my-6">
-        <div class="is-uppercase is-align-self-flex-start">
-          <h5>Filtrar por tipo de articulo</h5>
-          <div v-for="category in categories" :key="category" class="tag filter-pills-container" :class="{ 'filter-pill-active': categoryIsSelected(category) }">
-            <input :id="category" v-model="appliedCategories" class="filter-pill" type="checkbox" :value="category">
-            <label :for="category" class="pill-label noSelect">{{ toUpper(category) }}</label>
-          </div>
-        </div>
-        <div class="date-sorter-container is-align-self-flex-end">
-          <select v-model="dateOrder" class="date-sorter">
-            <option value="" disabled>
-              ORDENAR POR
-            </option>
-            <option value="desc" selected>
-              MÁS RECIENTES
-            </option>
-            <option value="asc">
-              MÁS ANTIGUOS
-            </option>
-          </select>
-        </div>
-      </div>
-      <div class="has-text-left">
-        <h5 class="filters-title is-uppercase">
-          Filtrar por Tema
-        </h5>
-        <div v-for="tag in tags" :key="tag.slug" class="tag filter-pills-container" :class="{ 'filter-pill-active': tagIsSelected(tag) }">
-          <input :id="tag.slug" class="filter-pill" type="checkbox" :value="tag.slug" @click="toggleTag(tag)">
-          <label :for="tag.slug" class="pill-label noSelect">{{ tag.name }}</label>
-        </div>
-        </br>
-      </div>
-      <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
-        <div v-if="orderedArticles.length">
-          <div v-for="(article, key) in filteredAndSortedArticles" :key="article.slug + key" v-masonry-tile class="articles-card">
-            <NuxtLink :to="`articulos/${article.slug}`">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
+  <div v-masonry transition-duration="0.5s" item-selector=".articles-card" class="masonry-container" horizontal-order="true">
+    <div v-if="articles.length">
+      <div v-for="(article, key) in articles" :key="article.slug + key" v-masonry-tile class="articles-card">
+        <NuxtLink :to="`articulos/${article.slug}`">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1" :style="`background-image: url(${article.image}`" />
+            </div>
+            <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
+              <div>
+                <div class="is-clearfix mb-3">
+                  <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
+                    {{ article.category }}
+                  </p>
+                  <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
+                    {{ article.date && article.date.slice(0,10) }}
+                  </p>
                 </div>
-                <div class="card-content py-5 px-4 is-flex is-flex-direction-column is-justify-content-space-between">
-                  <div>
-                    <div class="is-clearfix mb-3">
-                      <p class="has-text-weight-bold is-raleway is-uppercase is-pulled-left">
-                        {{ article.category }}
-                      </p>
-                      <p class="is-raleway is-uppercase has-text-grey is-pulled-right">
-                        {{ article.date && article.date.slice(0,10) }}
-                      </p>
-                    </div>
-                    <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
-                      {{ article.title }}
-                    </p>
-                    <p class="subtitle is-6 is-raleway has-text-grey mt-2">
-                      {{ article.author }}
-                    </p>
-                    <!-- <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                <p class="title is-5 is-raleway has-text-weight-bold is-marginless">
+                  {{ article.title }}
+                </p>
+                <p class="subtitle is-6 is-raleway has-text-grey mt-2">
+                  {{ article.author }}
+                </p>
+                <!-- <p class="subtitle is-6 is-raleway has-text-grey mt-2">
                           {{ article.order }}
                         </p> -->
-                  </div>
-                  <p class="my-5">
-                    {{ article.description }}
-                  </p>
-                  <div class="tags">
-                    <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
-                  </div>
-                </div>
               </div>
-            </NuxtLink>
+              <p class="my-5">
+                {{ article.description }}
+              </p>
+              <div class="tags">
+                <span v-for="tag in article.tags" :key="tag.slug" class="tag is-special is-capitalized">{{ tag.name }}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div v-else class="empty-filter-results">
-          No hay artículos que coincidan con la búsqueda
-        </div>
+        </NuxtLink>
       </div>
-      <!-- </div>
-      </div> -->
-    </no-ssr>
-  </div>
-  </no-ssr>
+    </div>
+    <div v-else class="empty-filter-results">
+      No hay artículos que coincidan con la búsqueda
+    </div>
   </div>
 </template>
 <script>
-// import _ from 'lodash'
 
 export default {
   fetchOnServer: false,
@@ -103,109 +52,17 @@ export default {
       type: Array,
       required: true,
       default: () => []
-    },
-    tags: {
-      type: Array,
-      required: true,
-      default: () => []
-    },
-    categories: {
-      type: Array,
-      required: true,
-      default: () => []
     }
   },
   data () {
     return {
-      // appliedTags: [],
-      // appliedCategories: [],
-      // searchText: '',
-      dateOrder: 'desc',
-      tagsList: [],
-      selectedTags: [],
-      selectedCategory: null,
-      searchText: ''
+
     }
   },
-  // computed: {
-  //   filteredAndSortedArticles () {
-  //     const appliedTags = this.appliedTags
-  //     const appliedCategories = this.appliedCategories
-  //     const searchText = this.searchText
-  //     return _(this.articles)
-  //       .filter(({ tags = [], category, author }) => {
-  //         const tagsApply = !_.isEmpty(appliedTags) ? _.find(tags, ({ slug }) => _.includes(appliedTags, slug)) : true
-  //         category = _.includes(category, 'investigacion') ? 'investigacion' : category
-  //         const toComparableText = category => _.chain(category).toLower().deburr().value()
-  //         const categoryApplies = !_.isEmpty(appliedCategories) ? _(appliedCategories).map(toComparableText).includes(toComparableText(category)) : true
-  //         const textMatches = searchText && searchText.length >= 3 ? _.includes(toComparableText(author), toComparableText(searchText)) : true
-  //         return tagsApply && categoryApplies && textMatches
-  //       })
-  //       .orderBy('date', this.dateOrder)
-  //       .value()
-  //   }
-  // },
-  computed: {
-    orderedArticles () {
-      // order articles by date
-      const articles = this.articles.slice(0)
-      if (this.dateOrder) {
-        return articles.sort((a, b) => {
-          if (this.dateOrder === 'asc') {
-            return new Date(a.date) - new Date(b.date)
-          } else {
-            return new Date(b.date) - new Date(a.date)
-          }
-        })
-      } else {
-        return this.articles
-      }
-    }
-  },
-  mounted () {
+  beforeMount () {
     this.$redrawVueMasonry()
   },
   methods: {
-    toggleTag (tag) {
-      if (this.selectedTags.includes(tag.id)) {
-        this.selectedTags = this.selectedTags.filter(t => t !== tag)
-      } else {
-        this.selectedTags.push(tag)
-      }
-    },
-    toggleCategory (category) {
-      if (this.selectedCategory === category) {
-        this.selectedCategory = null
-      } else {
-        this.selectedCategory = category
-      }
-    },
-    tagIsSelected (tag) {
-      return this.selectedTags.includes(tag.id)
-    },
-    categoryIsSelected (category) {
-      return this.selectedCategory === category
-    },
-    toUpper (string) {
-      return string.toUpperCase()
-    },
-    search () {
-      // signal to parent component
-      this.$emit('search', {
-        selectedTags: this.selectedTags,
-        selectedCategory: this.selectedCategory,
-        searchText: this.searchText
-      })
-    }
-    // tagIsSelected ({ slug }) {
-    //   return _.includes(this.appliedTags, slug)
-    // },
-    // categoryIsSelected (category) {
-    //   return _.includes(this.appliedCategories, category)
-    // },
-    // toUpper (string) {
-    //   return _.toUpper(string)
-    // }
   }
 }
 </script>
