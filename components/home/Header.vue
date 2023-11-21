@@ -1,21 +1,25 @@
 <template>
   <div class="bg-container block-item is-flex is-flex-direction-column is-justify-content-space-around has-text-centered" :style="{backgroundImage: `url(${blocks[activeBlock].background})`}">
-    <h1 class="is-uppercase has-text-white header-text es-oswald is-size-2-mobile" >Por una justicia<br>transparente y abierta</h1>
+    <h1 class="is-uppercase has-text-white header-text es-oswald is-size-2-mobile">
+      Por una justicia<br>transparente y abierta
+    </h1>
     <div class="has-text-centered">
-      <h4 class="is-uppercase cards-title es-oswald">Datos abiertos e interactivos sobre el sistema judicial argentino</h4>
+      <h4 class="is-uppercase cards-title es-oswald">
+        Datos abiertos e interactivos sobre el sistema judicial argentino
+      </h4>
       <div class="container section es-raleway py-6">
         <div class="FlexContainer">
           <div class=" mx-4">
             <article class="tile is-child box box-config">
-              <a  href="/concursos">
+              <a href="/concursos">
                 <div>
                   <p class="title has-text-left">Concursos de magistradas y magistrados</p>
                   <div class="next-icon is-flex is-justify-content-end">
-                    <i class="fas fa-arrow-right fa-2x"></i>
+                    <i class="fas fa-arrow-right fa-2x" />
                   </div>
                 </div>
                 <div class="label-hidden">
-                  <p >Analizá los procesos de selección del Poder Judicial y el Ministerio Público Fiscal</p>
+                  <p>Analizá los procesos de selección del Poder Judicial y el Ministerio Público Fiscal</p>
                 </div>
               </a>
             </article>
@@ -25,12 +29,12 @@
               <a href="/procesos-disciplinarios">
                 <div>
                   <p class="title has-text-left">Denuncias contra juezas y jueces</p>
-                  <div class="next-icon is-flex is-justify-content-end" >
-                    <i class="fas fa-arrow-right fa-2x"></i>
+                  <div class="next-icon is-flex is-justify-content-end">
+                    <i class="fas fa-arrow-right fa-2x" />
                   </div>
                 </div>
                 <div class="label-hidden">
-                  <p >Conocé cómo el Consejo de la Magistratura controla y sanciona a las y los jueces</p>
+                  <p>Conocé cómo el Consejo de la Magistratura controla y sanciona a las y los jueces</p>
                 </div>
               </a>
             </article>
@@ -40,12 +44,12 @@
               <a href="/transparencia">
                 <div>
                   <p class="title has-text-left">Transparencia del sistema de justicia</p>
-                  <div class="next-icon is-flex is-justify-content-end" >
-                    <i class="fas fa-arrow-right fa-2x"></i>
+                  <div class="next-icon is-flex is-justify-content-end">
+                    <i class="fas fa-arrow-right fa-2x" />
                   </div>
                 </div>
                 <div class="label-hidden">
-                  <p >Consultá qué tan transparentes son el Poder Judicial y los organismos del Ministerio Público</p>
+                  <p>Consultá qué tan transparentes son el Poder Judicial y los organismos del Ministerio Público</p>
                 </div>
               </a>
             </article>
@@ -133,6 +137,8 @@ export default {
 //   -webkit-transition: background 1s linear;
 // transition: background 1s linear;
 position: relative;
+background-size: cover;
+background-position: top center;
 // overflow: hidden;
 }
 .container-config{
